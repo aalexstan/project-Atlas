@@ -22,9 +22,11 @@ Atlas должен помогать проверять, сравнивать и 
 |---|---:|---|
 | API profiles | 4 | DaData, FTS EGRUL/EGRIP integration, Kontur.Focus API, Seldon.Basis API |
 | Comparisons | 1 | Company and counterparty data APIs in Russia |
+| Needs | 1 | Company Verification / Проверка контрагента |
 | Procurement kits | 1 | Counterparty API selection kit |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
+| Needs indexes | 2 | English and Russian |
 | Active templates | 4 | API card and comparison templates in English and Russian |
 
 ## Активные API profiles
@@ -60,6 +62,11 @@ Atlas должен помогать проверять, сравнивать и 
 - Цены веб-версий не используются как цены API.
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
+- Создан первый need-based маршрут `needs/company-verification/`.
+- Создан индекс документации `docs/README.md` / `docs/README.ru.md`.
+- Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.
+- Индексы API, comparisons и needs теперь воспроизводятся через `scripts/generate_indexes.py`.
+- CI проверяет актуальность индексов перед запуском основного validator.
 
 ## Нерешенные вопросы
 

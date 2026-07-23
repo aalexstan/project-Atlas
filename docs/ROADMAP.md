@@ -8,7 +8,7 @@ This roadmap is outcome-based. Dates may change; product principles should not.
 
 Create bilingual project documents, research methodology, profile template, comparison template, migration guidance, and the first research backlog.
 
-**Success:** a new researcher can create a consistent profile without inventing a format.
+**Success:** a new researcher can create a consistent profile without inventing a format. The foundation now also includes a documentation index, a legacy index, deterministic generated indexes, validation CI, and the first need-based route.
 
 ## Phase 2 — Gold Standard Profiles
 
@@ -20,7 +20,7 @@ Initial targets: DaData, relevant Kontur and Seldon products, official registry 
 
 Initial comparisons: company and counterparty data, addresses and geocoding, procurement data, messaging, payments, and financial data.
 
-**Success:** each comparison provides scenario-specific recommendations, evidence, and a review date.
+**Success:** each comparison provides scenario-specific recommendations, evidence, and a review date. Need-based routes should connect common user questions to the relevant profiles, comparisons, and procurement kits.
 
 ## Phase 4 — Distribution and Feedback
 
