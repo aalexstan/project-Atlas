@@ -1,5 +1,9 @@
 # Relationships
 
+Статус: **Legacy / supporting research**
+
+Этот граф сохранен как dataset-centric provenance. В активной API-first модели он может использоваться как supporting evidence или future derived view.
+
 Дата обновления: 2026-06-23
 Статус: граф связей Pass #2
 

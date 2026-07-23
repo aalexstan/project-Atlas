@@ -1,5 +1,9 @@
 # Access Methods: Название Dataset
 
+Статус шаблона: **legacy format**
+
+Этот шаблон сохранен для access-method слоя Pass #2. Для новых активных материалов технический доступ описывается внутри API profile.
+
 Дата исследования: YYYY-MM-DD
 Dataset: `datasets/name.md`
 

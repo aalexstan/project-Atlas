@@ -1,5 +1,9 @@
 # Report 002
 
+Статус: **Legacy / provenance**
+
+Этот отчет фиксирует dataset-centric refactoring Pass #2. После API-first integration он сохранен как исторический контекст, а не как текущая публичная архитектура Atlas.
+
 Дата: 2026-06-23
 Тема: dataset-centric refactoring
 

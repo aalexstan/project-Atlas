@@ -1,0 +1,21 @@
+﻿test_id,scenario,entity_type,identifier_type,identifier,priority,safe_to_share,ready
+TC-01,Large active company,legal_entity,INN,7707083893,High,Yes,Yes
+TC-02,Head office vs branch,branch,INN/KPP,7707083893/540602001,High,Yes,Yes
+TC-03,Individual entrepreneur,sole_proprietor,INN,784806113663,High,Yes,Yes
+TC-04,Affiliation query seed,legal_entity,INN,7736207543,High,Yes,Yes
+TC-05,Liquidating company,,INN,,Critical,Unknown,No
+TC-06,Liquidated company,,INN,,High,Unknown,No
+TC-07,Bankruptcy signal,,INN,,Critical,Unknown,No
+TC-08,Reorganization,,INN,,High,Unknown,No
+TC-09,Many branches,,INN,,High,Unknown,No
+TC-10,Recent address change,,INN,,Critical,Unknown,No
+TC-11,No financial statements,,INN,,High,Unknown,No
+TC-12,Large court history,,INN,,High,Unknown,No
+TC-13,Enforcement proceedings,,INN,,High,Unknown,No
+TC-14,Public procurement supplier,,INN,,High,Unknown,No
+TC-15,Unreliable supplier registry,,INN,,Critical,Unknown,No
+TC-16,Foreign / CIS company,,,,High,Unknown,No
+TC-17,Ambiguous name search,,,,High,Unknown,No
+TC-18,Invalid identifier,,INN,,High,Unknown,No
+TC-19,Rate-limit behavior,,INN,,Critical,Unknown,No
+TC-20,Batch partial failure,,,,Critical,Unknown,No

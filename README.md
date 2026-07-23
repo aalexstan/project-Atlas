@@ -1,69 +1,147 @@
 # Project Atlas
 
-Project Atlas is a research knowledge base about available datasets, data providers, access methods, catalogs, APIs, and practical ways to obtain information.
+[Русская версия](README.ru.md)
 
-The project does not generate startup ideas or product concepts. Its purpose is to understand data first: what exists, who owns it, who collects it, who distributes it, how it can be accessed, what legal and technical limits apply, and whether the dataset is reliable enough for long-term use.
+> **Independent API intelligence for better technical and business decisions.**
 
-## Core Model
+Project Atlas is an independent, evidence-based knowledge base for discovering, verifying, comparing, and selecting APIs.
 
-The main entity of Project Atlas is the Dataset.
+Atlas is not another directory that only lists API names and links. It helps developers, architects, product teams, and businesses answer the harder question:
 
-An API is not the main entity. An API is only one possible access method for a Dataset.
+> **Which API should we use, and why?**
 
-The project now answers the question:
+## What Atlas Does
 
-`What data exists?`
+Atlas turns fragmented provider documentation into decision-ready research:
 
-not only:
+- verifies that an API and its documentation are active;
+- explains authentication, pricing, limits, coverage, and commercial restrictions;
+- identifies strengths, weaknesses, risks, and suitable use cases;
+- compares competing APIs for a concrete task;
+- records sources and verification dates;
+- tracks important changes over time.
 
-`What APIs exist?`
+## How Atlas Is Different
 
-## Architectural Changes
+An API directory helps users **find** an API.
 
-Pass #1 organized the project around API cards. That was useful for discovery, but it made the API look more important than the data itself.
+Atlas helps users:
 
-Pass #2 refactored the knowledge base around datasets:
+1. understand whether it fits the task;
+2. compare it with realistic alternatives;
+3. estimate integration and operating constraints;
+4. make a defensible technical or commercial decision.
 
-- `datasets/` - primary cards for concrete datasets.
-- `providers/` - organizations and systems as data providers, aggregators, owners, sellers, or distributors.
-- `access_methods/` - ways to obtain each dataset, including REST API, Open Data, CSV, XML, FTP, Webhook, partnership, parsing, and other methods.
-- `relationships/` - graphs connecting Dataset -> Provider -> Access Method -> Documentation -> Cost -> License -> Alternatives.
+Catalogs such as API Portal may be used as discovery sources. They are not treated as the final source of truth. Important claims should be checked against official documentation, pricing pages, specifications, provider announcements, and other primary sources.
 
-Legacy folders remain:
+## Core Product Model
 
-- `catalog/` - historical API-centric cards from Pass #1.
-- `companies/` - historical company cards from Pass #1.
+The primary public entity is the **API profile**.
 
-They are not deleted because they preserve provenance and source notes.
+Supporting entities may include:
+
+- providers;
+- use cases and user needs;
+- comparisons;
+- datasets exposed by APIs;
+- evidence and verification records;
+- change history.
+
+Datasets remain important, but they support API evaluation rather than replace the API as the project’s central entity.
+
+## Who Atlas Is For
+
+- Developers selecting an external service.
+- Architects evaluating dependencies and vendor risk.
+- Product teams estimating feasibility and cost.
+- Businesses comparing providers before procurement.
+- Researchers studying API markets and infrastructure.
+
+## Content Types
+
+### API Profiles
+
+Structured, independent profiles covering purpose, best-fit scenarios, authentication, pricing, limits, SDKs, legal constraints, strengths, weaknesses, alternatives, evidence, and verification dates.
+
+### Comparisons
+
+Task-oriented comparisons such as company verification APIs, geocoding APIs, payment APIs, messaging APIs, and delivery APIs. A comparison should end with scenario-specific recommendations rather than a universal winner.
+
+### Research and Change Tracking
+
+Research notes preserve how conclusions were reached. Change records track material changes in pricing, documentation, versions, limits, and product availability.
+
+## Maturity Levels
+
+1. **Discovered** — official provider or product page found.
+2. **Verified** — core facts checked against primary sources.
+3. **Reviewed** — independent analysis, strengths, weaknesses, and risks added.
+4. **Compared** — included in at least one meaningful comparison.
+5. **Gold** — high-confidence profile maintained as a reference standard.
+
+Maturity is not an API quality score. It measures the completeness of Atlas research.
 
 ## Research Principles
 
-- Use official sources first when available.
-- Never invent missing facts.
-- Mark every uncertain item as `не найдено`, `неизвестно`, or `требует проверки`.
-- Separate confirmed facts from assumptions.
-- Record ownership, collection, distribution, licensing, pricing, technical access, and data provenance for each dataset.
-- Keep every file structured so a human researcher can continue the work.
+- Official sources first.
+- Facts before opinions.
+- Every important claim should be traceable.
+- Unknown information must remain unknown.
+- Comparison is more valuable than description.
+- Quality is more important than catalog size.
+- Commercial relationships must not buy ratings or editorial conclusions.
+- Dates matter: pricing, limits, and documentation may change.
 
-## Project Structure
+See:
 
-- `datasets/` - primary dataset cards.
-- `providers/` - data provider cards.
-- `access_methods/` - dataset access-method cards.
-- `relationships/` - graph and relationship maps.
-- `catalog/` - legacy API/source cards from Pass #1.
-- `companies/` - legacy company cards from Pass #1.
-- `industries/` - industry and category coverage maps.
-- `research/` - focused investigations.
-- `reports/` - report for each research run.
-- `ratings/` - comparative scoring tables.
-- `templates/` - reusable card templates.
+- [Vision](docs/VISION.md)
+- [Principles](docs/PRINCIPLES.md)
+- [Methodology](docs/METHODOLOGY.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Glossary](docs/GLOSSARY.md)
+- [Contributing](docs/CONTRIBUTING.md)
+- [Migration](docs/MIGRATION.md)
 
-## Initial Research Route
+## Repository Direction
 
-The first source is API Portal:
+```text
+apis/            Independent API profiles
+comparisons/     Task-oriented comparisons
+providers/       Provider-level context
+needs/           User problems and solution maps
+research/        Research logs and working evidence
+changes/         Material API change records
+templates/       Reusable profile and comparison templates
+docs/            Project rules, methodology, and roadmap
+legacy/          Preserved historical material when migration is complete
+```
 
-- https://apiportal.ru/catalog/
+Existing folders do not need to be deleted immediately. Migration should be incremental and preserve useful research provenance.
 
-After API Portal coverage expands, the research should move dataset by dataset to official provider sites, official documentation, Swagger/OpenAPI specifications, GitHub organizations, government open data portals, primary registries, and other official data catalogs.
-# project-Atlas
+## Initial Scope
+
+Atlas will begin with a small number of high-value API categories:
+
+- company and counterparty data;
+- addresses and geocoding;
+- procurement;
+- payments and finance;
+- messaging and notifications.
+
+The first reference profile, **DaData**, is now published. The first company and counterparty information API comparison is also published.
+
+## Business Direction
+
+Potential revenue streams are downstream of trust:
+
+- paid API selection research;
+- Atlas Pro comparisons, exports, alerts, and change history;
+- API monitoring for organizations;
+- private internal API catalogs;
+- clearly disclosed referral partnerships.
+
+Atlas does not sell favorable rankings.
+
+## Current Status
+
+Atlas is in its foundation phase. The current objective is to maintain a repeatable research standard, improve the first reference profile and comparison, and expand coverage without sacrificing evidence quality.

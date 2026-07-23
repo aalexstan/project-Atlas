@@ -1,5 +1,38 @@
 # Changelog
 
+## 2026-07-24 — API-first handoff integration
+
+### Что интегрировано
+
+- Project Atlas переведен на API-first публичную модель: главная активная сущность теперь API profile.
+- Добавлены двуязычные корневые документы `README.md` и `README.ru.md`.
+- Добавлены активные документы проекта в `docs/`: Vision, Principles, Methodology, Roadmap, Glossary, Contributing и Migration.
+- Добавлены активные API profiles:
+  - `apis/dadata/`
+  - `apis/fns-egrul-egrip-integration/`
+  - `apis/kontur-focus/`
+  - `apis/seldon-basis/`
+- Добавлено сравнение `comparisons/company-counterparty-data-russia/`.
+- Добавлен procurement kit `procurement/counterparty-api-selection/`.
+- Добавлены `API_INDEX.md`, `API_INDEX.ru.md`, `COMPARISON_INDEX.md`, `COMPARISON_INDEX.ru.md`.
+- Добавлен `scripts/validate_atlas.py`.
+- Добавлены активные API-first templates: `API_CARD_TEMPLATE*` и `COMPARISON_TEMPLATE*`.
+
+### Что сохранено
+
+- Исходный dataset-centric root README сохранен как `legacy/README.dataset-centric-2026-06-23.md`.
+- Старые папки `datasets/`, `providers/`, `access_methods/`, `relationships/`, `catalog/`, `companies/`, `research/`, `reports/`, `ratings/` и старые шаблоны сохранены.
+- Dataset-centric слой остается supporting research/provenance, а не удаляется.
+- История проверки домена `api-seldon.ru` сохранена как исторический риск источника. Активная карточка Seldon.Basis теперь использует официальные источники `seldongroup.ru`.
+
+### Методологические решения
+
+- Старые `ratings/` явно помечены как `Legacy / Pre-methodology` и не являются действующим Atlas Score.
+- Старые source/company/dataset/provider/access templates явно помечены как legacy formats.
+- Цены веб-версий не используются как цены API.
+- Ни один profile не помечен как Gold.
+- Excel workbook procurement kit добавлен как binary artifact и не редактировался.
+
 ## 2026-06-23 — Pass #2, dataset-centric refactoring
 
 ### Что исследовано

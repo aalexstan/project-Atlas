@@ -1,5 +1,9 @@
 # Исследование: dataset-centric миграция Project Atlas
 
+Статус: **Legacy / provenance**
+
+Этот документ фиксирует историческую миграцию Pass #2 от 2026-06-23. После API-first integration активное направление проекта описано в `docs/MIGRATION.md` и `docs/METHODOLOGY.md`; dataset-centric выводы сохраняются как supporting research.
+
 Дата исследования: 2026-06-23
 Статус: архитектурная миграция Pass #2
 

@@ -1,0 +1,40 @@
+{
+  "id": "kontur-focus-api",
+  "name": "Kontur.Focus API",
+  "provider": "JSC PF SKB Kontur",
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-23",
+  "live_tested": false,
+  "best_for": [
+    "enterprise counterparty screening",
+    "monitoring",
+    "risk controls",
+    "company enrichment"
+  ],
+  "pricing": {
+    "public_api_price": null,
+    "model": "contract_quote",
+    "warning": "web prices are not API prices"
+  },
+  "authentication": {
+    "type": "developer_key",
+    "details_publicly_verified": false
+  },
+  "sandbox": true,
+  "rate_limits": null,
+  "openapi": null,
+  "sources": [
+    "https://focus.kontur.ru/site/api",
+    "https://focus.kontur.ru/site/api/integration",
+    "https://focus.kontur.ru/site/price/license",
+    "https://focus.kontur.ru/site/features/api"
+  ],
+  "open_questions": [
+    "pricing",
+    "rate limits",
+    "SLA",
+    "data rights",
+    "versioning"
+  ]
+}

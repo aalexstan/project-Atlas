@@ -1,5 +1,9 @@
 # Providers Index
 
+Статус: **Legacy / supporting research**
+
+Этот индекс сохранен как provider-centric слой Pass #2. В активной API-first модели provider context поддерживает API profiles и comparisons.
+
 Дата обновления: 2026-06-23
 Статус: provider-centric индекс Pass #2
 

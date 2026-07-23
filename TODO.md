@@ -2,32 +2,38 @@
 
 ## Высокий приоритет
 
-- Декомпозировать `datasets/moscow_city_open_data.md` на конкретные наборы данных: городская инфраструктура, мероприятия и другие наборы после проверки каталога data.mos.ru.
-- Проверить лицензии для каждого Dataset, а не только для API.
-- Для `datasets/company_registry.md` выяснить первичные источники, поля, права хранения, перепродажи, SaaS и обучения ИИ.
-- Для `datasets/procurement_tender_contracts.md` найти полный список источников, условия хранения и право повторного использования.
-- Для `datasets/russian_address_registry.md` найти официальный источник ФИАС и подтвердить или отвергнуть связь с `kladr-api.ru`.
-- Найти официальную документацию Seldon.Basis и Seldon.Tenders вне сомнительного домена `api-seldon.ru`.
-- Проверить доступность и условия API Портала открытых данных Москвы на `data.mos.ru`.
-- Добавить альтернативных поставщиков для уже найденных Dataset.
+- Поддерживать API-first направление: новые публичные материалы создавать как `apis/<slug>/` или `comparisons/<slug>/`, а не как новые dataset-centric основные карточки.
+- Провести live testing для DaData, Kontur.Focus API, Seldon.Basis API и FTS integration только при наличии законных credentials/test access и сохранить evidence.
+- Для Kontur.Focus API запросить API-specific quote, production limits, SLA, OpenAPI/Swagger или полную спецификацию, storage rights, redistribution rights и contract appendices.
+- Для Seldon.Basis API запросить Swagger, authentication model, method pricing, batch billing, production limits, SLA, storage rights и redistribution rights.
+- Для DaData подтвердить endpoint-specific права хранения, caching, customer-facing display, redistribution/resale и провести quality benchmark на легальной тестовой выборке.
+- Перепроверить FTS EGRUL/EGRIP integration после перехода форматов, запланированного на 2026-08-01.
+- Не использовать `ratings/` как действующий Atlas Score. Любая новая оценка должна следовать `docs/METHODOLOGY.md` и иметь публичные критерии.
+- Поддерживать `API_INDEX.md`, `API_INDEX.ru.md`, `COMPARISON_INDEX.md` и `COMPARISON_INDEX.ru.md` при каждом добавлении активной карточки или сравнения.
 
 ## Средний приоритет
 
-- Создать Dataset-карточки для направлений из API Portal, а не API-карточки: ЕСИА/госуслуги, налоговые сведения, платежи, маркетинговые аудитории, доставка, маркетплейсы.
-- Продолжить разбор первой страницы API Portal только через вопрос `какой Dataset скрывается за этим API`.
-- Сформировать индекс всех поставщиков API Portal с количеством связанных Dataset.
-- Сформировать индекс категорий API Portal с количеством Dataset по категориям.
-- Отдельно исследовать государственные открытые данные России и Москвы.
-- Отдельно исследовать рынок данных проверки контрагентов: Credinform, Seldon, SpectrumData, Актион, Репутация.
-- Для каждого Dataset заполнить `relationships/` альтернативными поставщиками.
+- Мигрировать полезные факты из `catalog/globas-api.md` в API-first профиль ГЛОБАС.API после проверки официальных источников Credinform.
+- Решить, нужен ли отдельный API-first профиль для Seldon.Tenders; старую карточку не удалять.
+- Исследовать official/API-first профиль Moscow Open Data API на основе `data.mos.ru`, не полагаясь только на API Portal.
+- Исследовать address/geocoding comparison: DaData, официальные address registry routes, Yandex, 2GIS и другие подтвержденные API.
+- Декомпозировать `datasets/moscow_city_open_data.md` на supporting dataset notes только после повторной проверки каталога data.mos.ru.
+- Для старого `datasets/company_registry.md` связать подтвержденные факты с активным comparison `comparisons/company-counterparty-data-russia/`.
+- Для старого `datasets/procurement_tender_contracts.md` сохранить факты как supporting evidence для будущего procurement API comparison.
+- Для `datasets/russian_address_registry.md` найти официальный источник ФИАС/GAR и отделить его от неподтвержденного `kladr-api.ru`.
+- Продолжить разбор API Portal только как discovery source: каждую существенную карточку проверять по primary sources.
 
 ## Низкий приоритет
 
-- Добавить таблицу терминов: `Dataset`, `Provider`, `Access Method`, `API`, `OpenData`, `REST`, `SOAP`, `Webhook`, `партнерский доступ`, `перепродажа данных`.
-- Добавить шкалу интерпретации рейтингов 1-10.
-- Обновить legacy-шаблоны `source-card-template.md` и `company-card-template.md`, пометив их как Pass #1 форматы.
+- После ручной проверки перенести исторические-only материалы в `legacy/`, если это улучшит навигацию и не потеряет provenance.
+- Добавить индекс legacy-материалов с объяснением, какие файлы относятся к Pass #1, Pass #2 и API-first migration.
+- Обновить старые provider/dataset/access templates только как legacy formats; новые активные шаблоны уже находятся в `templates/API_CARD_TEMPLATE*.md` и `templates/COMPARISON_TEMPLATE*.md`.
+- Добавить automated generation для API/comparison indexes, если количество активных профилей вырастет.
+- Создать policy для review cadence и владельцев карточек.
 
-## Dataset пока не найдены и требуют исследования
+## Legacy Backlog
+
+Эти направления были найдены в старом dataset-centric backlog и остаются исследовательскими кандидатами. Они не считаются подтвержденными API profiles:
 
 - Цены на топливо.
 - Справочник АЗС.

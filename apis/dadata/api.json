@@ -1,0 +1,155 @@
+{
+  "id": "dadata",
+  "name": "DaData API",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-23",
+  "live_tested": false,
+  "provider": {
+    "name": "ООО «Дейта Кью»",
+    "inn": "7721581040",
+    "website": "https://dadata.ru/"
+  },
+  "atlas": {
+    "languages": [
+      "en",
+      "ru"
+    ],
+    "disclosure": "none_known"
+  },
+  "summary": {
+    "category": [
+      "data-quality",
+      "address",
+      "company-data",
+      "contact-data"
+    ],
+    "primary_markets": [
+      "RU",
+      "BY",
+      "KZ",
+      "UZ"
+    ],
+    "best_for": [
+      "Russian address and company data entry",
+      "Address cleansing and enrichment",
+      "Company lookup by INN/KPP/OGRN"
+    ],
+    "avoid_when": [
+      "Deep worldwide address cleansing is required",
+      "Suggestions would be used for unattended batch cleansing",
+      "OAuth delegated authorization is mandatory"
+    ]
+  },
+  "technical": {
+    "protocols": [
+      "HTTPS",
+      "JSON"
+    ],
+    "suggestions_base_url": "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+    "clean_base_url": "https://cleaner.dadata.ru/api/v1/clean",
+    "authentication": {
+      "suggestions": [
+        "api_token"
+      ],
+      "clean": [
+        "api_token",
+        "secret_key"
+      ]
+    },
+    "openapi": true,
+    "oauth2": "not_found",
+    "webhooks": "not_found",
+    "browser_clean_supported": false
+  },
+  "pricing": {
+    "currency": "RUB",
+    "verified": "2026-07-23",
+    "subscription_minimum": "1 year",
+    "plans": [
+      {
+        "name": "free",
+        "daily_requests": 10000,
+        "annual_price": 0
+      },
+      {
+        "name": "light",
+        "daily_requests": 50000,
+        "annual_price": 14000
+      },
+      {
+        "name": "extended",
+        "daily_requests": 100000,
+        "annual_price": 28000
+      },
+      {
+        "name": "maximum",
+        "daily_requests_from": 200000,
+        "annual_price_from": 56000
+      }
+    ],
+    "unit_examples": [
+      {
+        "service": "address_clean",
+        "price": 0.2,
+        "unit": "record"
+      },
+      {
+        "service": "address_geocode",
+        "price": 0.2,
+        "unit": "record"
+      },
+      {
+        "service": "company_by_email",
+        "price": 7.0,
+        "unit": "email"
+      }
+    ]
+  },
+  "limits": {
+    "suggestions_requests_per_second_per_ip": 30,
+    "clean_requests_per_second_per_ip": 20,
+    "new_connections_per_minute_per_ip": 60,
+    "query_max_characters": 300,
+    "clean_records_per_request": 1
+  },
+  "contract": {
+    "offer_revision": "2026-04-20",
+    "monthly_availability_percent_min": 99,
+    "api_input_output_storage": "offer_states_no_logging_or_storage",
+    "suggestions_automatic_processing": "prohibited_for_addresses_names_email",
+    "redistribution": "requires_confirmation"
+  },
+  "sdk": [
+    {
+      "language": "python",
+      "url": "https://github.com/hflabs/dadata-py",
+      "type": "provider_org"
+    },
+    {
+      "language": "php",
+      "url": "https://github.com/hflabs/dadata-php",
+      "type": "provider_org"
+    },
+    {
+      "language": "csharp",
+      "url": "https://github.com/hflabs/dadata-csharp",
+      "type": "provider_org"
+    },
+    {
+      "language": "go",
+      "url": "https://github.com/ekomobile/dadata",
+      "type": "community_referenced_by_provider"
+    }
+  ],
+  "sources": [
+    "https://dadata.ru/api/",
+    "https://dadata.ru/pricing/",
+    "https://dadata.ru/api/suggest/address/",
+    "https://dadata.ru/api/clean/address/",
+    "https://dadata.ru/api/find-party/",
+    "https://dadata.ru/api/suggest/party/",
+    "https://dadata.ru/offer/",
+    "https://dadata.ru/files/documents/Оферта_DaData.20260420.pdf",
+    "https://status.dadata.ru/"
+  ]
+}
