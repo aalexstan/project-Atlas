@@ -1,5 +1,9 @@
 # Seldon
 
+Статус: **Legacy / source-risk history**
+
+Эта карточка сохранена как исторический материал Pass #1. Она не удаляет риск проверки `api-seldon.ru`; активная API-first карточка Seldon.Basis находится в `../apis/seldon-basis/README.ru.md` и связана с официальными источниками `seldongroup.ru`.
+
 Дата исследования: 2026-06-23
 Статус: первичная карточка
 

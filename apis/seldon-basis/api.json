@@ -1,0 +1,50 @@
+{
+  "id": "seldon-basis-api",
+  "name": "Seldon.Basis API",
+  "provider": "Seldon",
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-23",
+  "live_tested": false,
+  "best_for": [
+    "company enrichment",
+    "relationship analysis",
+    "procurement context",
+    "risk analysis",
+    "Russia and CIS"
+  ],
+  "pricing": {
+    "public_api_price": null,
+    "model": [
+      "universal_package",
+      "individual_per_method"
+    ],
+    "warning": "web prices are not API prices"
+  },
+  "limits": {
+    "individual_plan_requests_per_day_per_method": 10000
+  },
+  "format": {
+    "value": "JSON",
+    "status": "provider_reported"
+  },
+  "batch": {
+    "max_taxpayer_ids": 1000,
+    "status": "provider_reported"
+  },
+  "authentication": null,
+  "trial": true,
+  "sources": [
+    "https://seldongroup.ru/system/basis/api",
+    "https://seldongroup.ru/kakie-dannye-mozhno-poluchit-cherez-api-seldon-basis",
+    "https://seldongroup.ru/system/basis/worldwide"
+  ],
+  "open_questions": [
+    "method pricing",
+    "batch billing",
+    "authentication",
+    "SLA",
+    "data rights",
+    "versioning"
+  ]
+}

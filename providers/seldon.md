@@ -1,5 +1,9 @@
 # Provider: Seldon
 
+Статус: **Legacy / supporting research**
+
+Эта provider-карточка сохранена как материал Pass #2 и сохраняет исторический риск `api-seldon.ru`. Активная API-first карточка Seldon.Basis находится в `../apis/seldon-basis/README.ru.md` и использует официальные источники `seldongroup.ru`.
+
 Дата исследования: 2026-06-23
 Статус: мигрировано из Pass #1; документация требует проверки
 

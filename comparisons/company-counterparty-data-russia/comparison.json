@@ -1,0 +1,106 @@
+{
+  "id": "company-counterparty-data-russia",
+  "title": {
+    "en": "Company and Counterparty Data APIs in Russia",
+    "ru": "API данных о компаниях и проверки контрагентов в России"
+  },
+  "status": "reviewed",
+  "verified_on": "2026-07-23",
+  "next_review": {
+    "fts_formats": "2026-08-03",
+    "full": "2026-10-21"
+  },
+  "region": [
+    "RU"
+  ],
+  "live_testing": false,
+  "candidates": [
+    {
+      "id": "dadata",
+      "product_class": "data_enrichment",
+      "best_for": [
+        "company_autocomplete",
+        "b2b_forms",
+        "crm_enrichment",
+        "fast_self_service_launch"
+      ],
+      "public_pricing": true,
+      "free_tier": "10000_requests_per_day",
+      "published_limit": "30_requests_per_second_per_ip",
+      "verdict": "best_fast_low_cost_start"
+    },
+    {
+      "id": "kontur-focus-api",
+      "product_class": "enterprise_due_diligence",
+      "best_for": [
+        "bulk_checks",
+        "risk_monitoring",
+        "corporate_security",
+        "procurement"
+      ],
+      "public_pricing": "partial_quote_required",
+      "free_tier": false,
+      "demo": "request_required",
+      "published_limit": "unknown_publicly_in_this_research",
+      "verdict": "strongest_enterprise_shortlist"
+    },
+    {
+      "id": "seldon-basis-api",
+      "product_class": "due_diligence_analytics",
+      "best_for": [
+        "relationships",
+        "procurement_data",
+        "cis_companies",
+        "custom_method_set"
+      ],
+      "public_pricing": false,
+      "demo": "request_required",
+      "published_limit": "10000_requests_per_day_per_method_individual_plan",
+      "verdict": "strong_for_broad_analytics_and_cis"
+    },
+    {
+      "id": "fts-egrul-egrip-integration",
+      "product_class": "primary_registry_bulk_data",
+      "best_for": [
+        "internal_registry_database",
+        "custom_etl",
+        "data_provenance"
+      ],
+      "public_pricing": true,
+      "annual_price_rub_per_registry": 150000,
+      "annual_price_rub_both_registries_inferred": 300000,
+      "interface": "xml_archives_and_daily_deltas",
+      "verdict": "best_primary_source_not_turnkey_due_diligence"
+    }
+  ],
+  "recommendations": {
+    "b2b_form": "dadata",
+    "sales_crm_basic": "dadata",
+    "enterprise_due_diligence": [
+      "kontur-focus-api",
+      "seldon-basis-api"
+    ],
+    "cis_and_relationship_analytics": "seldon-basis-api",
+    "internal_registry_platform": "fts-egrul-egrip-integration",
+    "aml_115fz": "evaluate_kontur_compliance_api_separately"
+  },
+  "gold_blockers": [
+    "live_credentials",
+    "common_benchmark",
+    "contract_and_data_rights_review",
+    "comparable_vendor_quotes",
+    "latency_and_availability_measurements"
+  ],
+  "sources": [
+    "https://dadata.ru/api/find-party/",
+    "https://dadata.ru/pricing/",
+    "https://focus.kontur.ru/site/api",
+    "https://focus.kontur.ru/site/api-choice",
+    "https://focus.kontur.ru/site/demo/requisites",
+    "https://seldongroup.ru/system/basis/api",
+    "https://seldongroup.ru/functions",
+    "https://www.nalog.gov.ru/rn77/service/egrip2/",
+    "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
+    "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/"
+  ]
+}

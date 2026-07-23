@@ -1,5 +1,9 @@
 # Provider: Название
 
+Статус шаблона: **legacy format**
+
+Этот шаблон сохранен для provider-centric материалов Pass #2. Для новых активных материалов provider context должен поддерживать API profile или comparison.
+
 Дата исследования: YYYY-MM-DD
 Статус: черновик / первичная карточка / проверено
 

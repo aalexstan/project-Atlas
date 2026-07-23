@@ -1,0 +1,42 @@
+{
+  "id": "fns-egrul-egrip-integration",
+  "name": "FTS EGRUL/EGRIP Data Integration",
+  "provider": "Federal Tax Service of Russia",
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-23",
+  "live_tested": false,
+  "type": "bulk_registry_feed",
+  "transport": "FTP",
+  "format": "XML",
+  "pricing_rub_per_registry": {
+    "annual_subscription": 150000,
+    "one_time_full": 50000,
+    "one_time_update": 5000
+  },
+  "annual_both_registries_rub": 300000,
+  "format_transition": {
+    "old_and_new_parallel_until": "2026-07-31",
+    "new_only_from": "2026-08-01",
+    "egrul": "4.08",
+    "egrip": "4.07"
+  },
+  "authentication": [
+    "access_attributes",
+    "password",
+    "p12_certificate"
+  ],
+  "sources": [
+    "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
+    "https://www.nalog.gov.ru/rn77/service/egrip2/",
+    "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/",
+    "https://www.nalog.gov.ru/rn77/service/egrip2/fillingbill/"
+  ],
+  "open_questions": [
+    "redistribution rights",
+    "infrastructure TCO",
+    "access lead time",
+    "post-cutover behavior",
+    "missing-file recovery"
+  ]
+}

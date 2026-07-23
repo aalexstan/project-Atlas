@@ -1,58 +1,70 @@
 # Summary
 
-Дата обновления: 2026-06-23
+Дата обновления: 2026-07-24
+Статус: API-first foundation integrated; legacy dataset research retained
 
-## Счетчики
+## Активное направление Atlas
 
-- Dataset исследовано: 5
-- API исследовано: 5
-- Поставщиков данных исследовано: 5
-- Способов доступа описано: 5
-- Источников данных найдено: 5
-- Исследовательских отчетов создано: 2
-- Графов связей создано: 1
+Главная публичная сущность Project Atlas теперь **API profile**.
 
-## Покрытые отрасли
+Atlas должен помогать проверять, сравнивать и выбирать API для конкретных задач. Dataset-слой сохраняется, но теперь используется как supporting research: он помогает понимать покрытие данных, происхождение источников, риски лицензий и исторический контекст.
 
-- Проверка контрагентов
-- Комплаенс
-- Закупки
-- Государство
-- Открытые данные
-- Геоданные
-- Карты, маршруты, навигация
-- Выписки
+Активная методика находится в `docs/`:
 
-## Последние изменения
+- `docs/PRINCIPLES.md` / `docs/PRINCIPLES.ru.md`
+- `docs/METHODOLOGY.md` / `docs/METHODOLOGY.ru.md`
+- `docs/MIGRATION.md` / `docs/MIGRATION.ru.md`
+- `docs/VISION.md` / `docs/VISION.ru.md`
 
-- Проведена архитектурная миграция Pass #2 от API-centric модели к dataset-centric модели.
-- Созданы новые основные слои: `datasets/`, `providers/`, `access_methods/`, `relationships/`.
-- Из материалов Pass #1 выделены Dataset: метаданные каталога API, реестр компаний и контрагентов, закупки/тендеры/контракты, открытые городские данные Москвы, адресный реестр России.
-- Старые `catalog/` и `companies/` сохранены как исторический слой и источник происхождения фактов.
-- Добавлен граф связей Dataset -> Provider -> Access Method -> Documentation -> Cost -> License -> Alternatives.
-- Добавлены новые шаблоны: `dataset-card-template.md`, `provider-card-template.md`, `access-method-template.md`.
+## Активные API-first материалы
 
-## Архитектурные изменения
+| Материал | Количество | Комментарий |
+|---|---:|---|
+| API profiles | 4 | DaData, FTS EGRUL/EGRIP integration, Kontur.Focus API, Seldon.Basis API |
+| Comparisons | 1 | Company and counterparty data APIs in Russia |
+| Procurement kits | 1 | Counterparty API selection kit |
+| API indexes | 2 | English and Russian |
+| Comparison indexes | 2 | English and Russian |
+| Active templates | 4 | API card and comparison templates in English and Russian |
 
-Главная сущность проекта теперь Dataset. API считается только одним из способов доступа к Dataset.
+## Активные API profiles
 
-Это изменение нужно потому, что один и тот же набор данных может быть доступен через несколько поставщиков и несколько каналов: REST API, Open Data, CSV, XML, FTP, партнерство, парсинг или ручной сбор. Если хранить знания вокруг API, база дробится по техническим интерфейсам. Если хранить знания вокруг Dataset, можно сравнивать владельцев, поставщиков, лицензии, качество, стоимость и альтернативы на одном уровне.
+| API | Maturity | Last verified | Live test |
+|---|---|---|---|
+| DaData API | reviewed | 2026-07-23 | not performed |
+| FTS EGRUL/EGRIP Data Integration | reviewed | 2026-07-23 | not performed |
+| Kontur.Focus API | reviewed | 2026-07-23 | not performed |
+| Seldon.Basis API | reviewed | 2026-07-23 | not performed |
 
-## Уже найденные Dataset
+## Legacy / Supporting Research
 
-- Метаданные каталога API.
-- Реестр компаний и контрагентов.
-- Закупки, тендеры и контракты.
-- Открытые городские данные Москвы.
-- Адресный реестр России.
+Сохранены старые исследовательские слои:
 
-## Наиболее ценные источники данных
+- `datasets/` - 5 dataset-карточек Pass #2.
+- `providers/` - старый слой поставщиков данных.
+- `access_methods/` - старый слой способов доступа к Dataset.
+- `relationships/` - граф Dataset -> Provider -> Access Method.
+- `catalog/` - исторические API-centric карточки Pass #1.
+- `companies/` - исторические карточки компаний Pass #1.
+- `research/` и `reports/` - журналы и отчеты старых проходов.
+- `ratings/` - Legacy / Pre-methodology; не является действующим Atlas Score.
+- старые dataset/provider/access/source templates - legacy formats.
 
-- Реестр компаний и контрагентов: высокая ценность для проверки контрагентов, комплаенса и обогащения баз.
-- Закупки, тендеры и контракты: высокая ценность для анализа рынка, лидогенерации и конкурентной разведки.
-- Открытые городские данные Москвы: официальный государственный источник, но требует декомпозиции на отдельные Dataset.
-- Адресный реестр России: высокая практическая ценность, но текущий источник требует повторной валидации.
+Исходный dataset-centric корневой README сохранен как `legacy/README.dataset-centric-2026-06-23.md`.
 
-## Качество покрытия
+## Важные решения миграции
 
-Текущий статус: dataset-centric первичная карта. Для всех Dataset лицензии на хранение, перепродажу, SaaS и обучение ИИ не подтверждены, если прямо не указано иное в карточке.
+- API Portal остается полезным discovery source, но не считается final source of truth.
+- История проверки домена `api-seldon.ru` сохранена как исторический риск источника.
+- Активная карточка Seldon.Basis связана с официальными источниками `seldongroup.ru`.
+- Цены веб-версий не используются как цены API.
+- Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
+- Excel workbook procurement kit добавлен как binary artifact и не редактировался.
+
+## Нерешенные вопросы
+
+- Нужны credentialed live tests для API profiles.
+- Для Kontur и Seldon нужны коммерческие предложения, production limits, SLA и права хранения/redistribution.
+- Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
+- Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
+- Legacy-карточки ГЛОБАС.API, Seldon.Tenders, Moscow Open Data API и address/FIAS layer требуют отдельной API-first миграции.

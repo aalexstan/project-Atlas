@@ -1,5 +1,9 @@
 # Datasets Index
 
+Статус: **Legacy / supporting research**
+
+Этот индекс сохранен как dataset-centric слой Pass #2. В активной API-first модели Dataset описывает покрытие и происхождение данных, но главная публичная сущность Atlas — API profile.
+
 Дата обновления: 2026-06-23
 Статус: dataset-centric индекс Pass #2
 

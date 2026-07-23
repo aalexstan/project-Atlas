@@ -1,5 +1,9 @@
 # Dataset: Название
 
+Статус шаблона: **legacy format**
+
+Этот шаблон сохранен для dataset-centric материалов Pass #2. Новая публичная сущность Atlas — API profile; для активных карточек используйте `templates/API_CARD_TEMPLATE.md` или `templates/API_CARD_TEMPLATE.ru.md`.
+
 Дата исследования: YYYY-MM-DD
 Статус: черновик / первичная карточка / проверено
 

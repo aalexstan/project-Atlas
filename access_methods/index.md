@@ -1,5 +1,9 @@
 # Access Methods Index
 
+Статус: **Legacy / supporting research**
+
+Этот индекс сохранен как access-method слой Pass #2. В активной API-first модели технический доступ описывается внутри API profile.
+
 Дата обновления: 2026-06-23
 Статус: access-method слой Pass #2
 
