@@ -1,15 +1,15 @@
 {
   "id": "dadata",
   "name": "DaData API",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-23",
+  "live_tested": false,
   "provider": {
     "name": "ООО «Дейта Кью»",
     "inn": "7721581040",
     "website": "https://dadata.ru/"
   },
   "atlas": {
-    "maturity": "reviewed",
-    "last_verified": "2026-07-23",
-    "live_tested": false,
     "languages": [
       "en",
       "ru"

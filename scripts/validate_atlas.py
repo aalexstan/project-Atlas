@@ -113,25 +113,58 @@ def validate_local_paths_and_secrets() -> None:
                 error(f"Possible secret found in {path.relative_to(ROOT)}")
 
 
-def validate_profile_metadata() -> None:
-    for base_name, json_name in (("apis", "api.json"), ("comparisons", "comparison.json")):
-        base = ROOT / base_name
-        if not base.exists():
+def validate_active_api_metadata() -> None:
+    base = ROOT / "apis"
+    if not base.exists():
+        return
+
+    required_fields = ("id", "name", "maturity", "last_verified", "live_tested", "sources")
+    for directory in sorted(path for path in base.iterdir() if path.is_dir()):
+        json_path = directory / "api.json"
+        if not json_path.exists():
+            warning(f"No api.json: {directory.relative_to(ROOT)}")
             continue
-        for directory in sorted(path for path in base.iterdir() if path.is_dir()):
-            json_path = directory / json_name
-            if not json_path.exists():
-                warning(f"No {json_name}: {directory.relative_to(ROOT)}")
-                continue
-            try:
-                data = json.loads(json_path.read_text(encoding="utf-8"))
-            except Exception:
-                continue
-            if not data.get("id"):
-                error(f"Missing id in {json_path.relative_to(ROOT)}")
-            verified = data.get("last_verified") or data.get("verified_on") or (data.get("atlas") or {}).get("last_verified")
-            if not verified:
-                warning(f"Missing verification date in {json_path.relative_to(ROOT)}")
+        try:
+            data = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+
+        for field in required_fields:
+            if field not in data:
+                error(f"Missing top-level {field} in {json_path.relative_to(ROOT)}")
+
+        for field in ("id", "name", "maturity", "last_verified"):
+            if field in data and not isinstance(data[field], str):
+                error(f"Expected string {field} in {json_path.relative_to(ROOT)}")
+            elif field in data and not data[field].strip():
+                error(f"Empty {field} in {json_path.relative_to(ROOT)}")
+
+        if "live_tested" in data and not isinstance(data["live_tested"], bool):
+            error(f"Expected boolean live_tested in {json_path.relative_to(ROOT)}")
+
+        sources = data.get("sources")
+        if "sources" in data and (not isinstance(sources, list) or not sources):
+            error(f"Expected non-empty sources list in {json_path.relative_to(ROOT)}")
+
+
+def validate_comparison_metadata() -> None:
+    base = ROOT / "comparisons"
+    if not base.exists():
+        return
+
+    for directory in sorted(path for path in base.iterdir() if path.is_dir()):
+        json_path = directory / "comparison.json"
+        if not json_path.exists():
+            warning(f"No comparison.json: {directory.relative_to(ROOT)}")
+            continue
+        try:
+            data = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not data.get("id"):
+            error(f"Missing id in {json_path.relative_to(ROOT)}")
+        if not data.get("verified_on"):
+            warning(f"Missing verification date in {json_path.relative_to(ROOT)}")
 
 
 def main() -> int:
@@ -139,7 +172,8 @@ def main() -> int:
     validate_language_pairs()
     validate_markdown_links()
     validate_local_paths_and_secrets()
-    validate_profile_metadata()
+    validate_active_api_metadata()
+    validate_comparison_metadata()
 
     for item in WARNINGS:
         print(f"WARNING: {item}")

@@ -128,7 +128,7 @@ Atlas will begin with a small number of high-value API categories:
 - payments and finance;
 - messaging and notifications.
 
-The first reference profile is planned for **DaData**, followed by a comparison of company and counterparty information APIs.
+The first reference profile, **DaData**, is now published. The first company and counterparty information API comparison is also published.
 
 ## Business Direction
 
@@ -144,4 +144,4 @@ Atlas does not sell favorable rankings.
 
 ## Current Status
 
-Atlas is in its foundation phase. The immediate objective is to establish a repeatable research standard and publish the first gold-standard API profiles and comparisons.
+Atlas is in its foundation phase. The current objective is to maintain a repeatable research standard, improve the first reference profile and comparison, and expand coverage without sacrificing evidence quality.
