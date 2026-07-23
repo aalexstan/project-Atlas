@@ -1,5 +1,7 @@
 # Доказательства — Seldon.Basis API
 
+[English version](evidence.md)
+
 | Утверждение | Источник | Проверено | Статус |
 |---|---|---|---|
 | API integrates counterparty data into CRM and other systems | https://seldongroup.ru/system/basis/api | 2026-07-23 | verified |

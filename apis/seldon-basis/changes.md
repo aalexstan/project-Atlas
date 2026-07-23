@@ -1,5 +1,7 @@
 # Change History
 
+[Русская версия](changes.ru.md)
+
 | Date | Change |
 |---|---|
 | 2026-07-23 | Initial Reviewed profile |

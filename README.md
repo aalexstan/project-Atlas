@@ -1,8 +1,8 @@
 # Project Atlas
 
-[![Validate Atlas](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml/badge.svg)](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml)
-
 [Русская версия](README.ru.md)
+
+[![Validate Atlas](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml/badge.svg)](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml)
 
 > **Independent API intelligence for better technical and business decisions.**
 
