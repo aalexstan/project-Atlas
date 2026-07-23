@@ -23,5 +23,8 @@ jobs:
           python-version: "3.x"
           check-latest: true
 
+      - name: Check generated indexes
+        run: python3 scripts/generate_indexes.py --check
+
       - name: Run Atlas validator
         run: python3 scripts/validate_atlas.py
