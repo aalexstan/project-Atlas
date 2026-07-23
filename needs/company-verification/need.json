@@ -1,0 +1,86 @@
+{
+  "id": "company-verification",
+  "name": "Company Verification",
+  "name_ru": "Проверка контрагента",
+  "status": "reviewed",
+  "last_verified": "2026-07-23",
+  "primary_question": "Which API or source should we choose for counterparty verification?",
+  "related_apis": [
+    "dadata",
+    "kontur-focus-api",
+    "seldon-basis-api",
+    "fns-egrul-egrip-integration"
+  ],
+  "related_comparisons": [
+    "company-counterparty-data-russia"
+  ],
+  "related_procurement": [
+    "procurement/counterparty-api-selection/"
+  ],
+  "decision_paths": [
+    {
+      "scenario": "fast_requisites_fill_b2b_form_crm",
+      "shortlist": [
+        "dadata"
+      ],
+      "next_document": "apis/dadata/README.md",
+      "main_risk": "Not a complete enterprise risk-analysis platform by default"
+    },
+    {
+      "scenario": "corporate_checks_risk_control_monitoring",
+      "shortlist": [
+        "kontur-focus-api",
+        "seldon-basis-api"
+      ],
+      "next_document": "comparisons/company-counterparty-data-russia/README.md",
+      "main_risk": "No single winner without quotes, SLA, technical documentation and live testing"
+    },
+    {
+      "scenario": "relationships_procurement_extended_context",
+      "shortlist": [
+        "seldon-basis-api"
+      ],
+      "next_document": "apis/seldon-basis/README.md",
+      "main_risk": "Method pricing and batch billing require verification"
+    },
+    {
+      "scenario": "own_egrul_egrip_database",
+      "shortlist": [
+        "fns-egrul-egrip-integration"
+      ],
+      "next_document": "apis/fns-egrul-egrip-integration/README.md",
+      "main_risk": "FTP/XML feed requires internal ETL and operations"
+    },
+    {
+      "scenario": "one_off_official_extract",
+      "shortlist": [
+        "fts-electronic-extract-service"
+      ],
+      "next_document": "comparisons/company-counterparty-data-russia/README.md",
+      "main_risk": "Not a bulk API or complete integration route"
+    },
+    {
+      "scenario": "aml_115fz_sanctions",
+      "shortlist": [
+        "specialized-compliance-products"
+      ],
+      "next_document": "procurement/counterparty-api-selection/README.md",
+      "main_risk": "Standard counterparty API scope may not satisfy legal requirements"
+    }
+  ],
+  "open_questions": [
+    "Commercial API quotes for Kontur.Focus and Seldon.Basis",
+    "Production limits, SLA and technical documentation for enterprise candidates",
+    "Storage, caching, redistribution and SaaS display rights",
+    "Live testing on a lawful common sample",
+    "Three-year TCO including implementation and operations"
+  ],
+  "sources": [
+    "apis/dadata/README.md",
+    "apis/kontur-focus/README.md",
+    "apis/seldon-basis/README.md",
+    "apis/fns-egrul-egrip-integration/README.md",
+    "comparisons/company-counterparty-data-russia/README.md",
+    "procurement/counterparty-api-selection/README.md"
+  ]
+}
