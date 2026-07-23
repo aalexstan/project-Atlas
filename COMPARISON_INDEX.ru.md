@@ -2,4 +2,6 @@
 
 [English version](COMPARISON_INDEX.md)
 
-- [company-counterparty-data-russia](comparisons/company-counterparty-data-russia/README.ru.md)
+| Сравнение | Статус | Последняя проверка |
+| --- | --- | --- |
+| [API данных о компаниях и проверки контрагентов в России](comparisons/company-counterparty-data-russia/README.ru.md) | reviewed | 2026-07-23 |
