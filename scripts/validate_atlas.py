@@ -19,7 +19,7 @@ import generate_indexes  # noqa: E402
 
 ERRORS: list[str] = []
 WARNINGS: list[str] = []
-IGNORED_PARTS = {".git", ".venv", "node_modules", "_codex_inbox"}
+IGNORED_PARTS = {".git", ".venv", "node_modules", "_codex_inbox", "__pycache__"}
 
 
 def error(message: str) -> None:
