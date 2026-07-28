@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-07-29 — Moscow Open Data API blocker research
+
+### Что добавлено
+
+- Добавлены research log и decision memo в `research/moscow-open-data-api/`.
+
+### Методологические решения
+
+- Активная API-first карточка Moscow Open Data API не создана: официальная документация `data.mos.ru` не была доступна в этом проходе, а endpoint, authentication, formats, limits, current status и license/reuse terms не подтверждены.
+- API Portal и старые Atlas-карточки сохранены только как legacy/discovery context, не как final source of truth.
+
 ## 2026-07-29 — Seldon.Tenders legacy decision
 
 ### Что добавлено

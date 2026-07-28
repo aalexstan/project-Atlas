@@ -71,4 +71,5 @@ Atlas должен помогать проверять, сравнивать и 
 - Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
-- Moscow Open Data API и address/FIAS layer требуют отдельной API-first миграции или decision memo.
+- Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
+- Address/FIAS layer требует отдельной API-first миграции или decision memo.

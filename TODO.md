@@ -15,7 +15,7 @@
 
 - Для ГЛОБАС.API запросить у Credinform API specification, endpoint catalog, authentication, field matrix, sandbox/API credentials, method pricing, batch billing, production limits, SLA и data-use rights.
 - Для Seldon.Tenders сохранить legacy-only статус до появления официальной specification, endpoint/auth evidence, API pricing, limits, SLA и data-use rights; решение зафиксировано в `research/seldon-tenders/decision.md`.
-- Исследовать official/API-first профиль Moscow Open Data API на основе `data.mos.ru`, не полагаясь только на API Portal.
+- Для Moscow Open Data API повторить проверку `data.mos.ru`, когда официальная документация доступна; текущий blocker и decision memo сохранены в `research/moscow-open-data-api/`.
 - Исследовать address/geocoding comparison: DaData, официальные address registry routes, Yandex, 2GIS и другие подтвержденные API.
 - Декомпозировать `datasets/moscow_city_open_data.md` на supporting dataset notes только после повторной проверки каталога data.mos.ru.
 - Для старого `datasets/company_registry.md` связать подтвержденные факты с активным comparison `comparisons/company-counterparty-data-russia/`.
