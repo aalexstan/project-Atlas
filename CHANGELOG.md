@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-29 — Seldon.Tenders legacy decision
+
+### Что добавлено
+
+- Добавлен research log `research/seldon-tenders/2026-07-29.md`.
+- Добавлены decision memo `research/seldon-tenders/decision.md` и `research/seldon-tenders/decision.ru.md`.
+
+### Методологические решения
+
+- Старый `api-seldon.ru` не используется как текущий официальный источник; история домена сохранена только как provenance/source-risk note.
+- Официальные страницы `seldongroup.ru` подтверждают `API.Seldon.Tenders` как integration route / extended functionality Seldon 1.7, а web-продукт Seldon.Tenders переименован в Seldon.Win.
+- Активная API-first карточка Seldon.Tenders не создается: публичные specification, endpoint/auth, schemas, limits, SLA, API pricing и data-use rights не найдены.
+- Вариант включения как capability Seldon.Basis не выбран, потому что официальные источники связывают материал с Seldon 1.7 procurement functionality, а не с Seldon.Basis.
+
 ## 2026-07-28 — GLOBAS.API official-source profile
 
 ### Что добавлено

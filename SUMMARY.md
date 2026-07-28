@@ -58,6 +58,7 @@ Atlas должен помогать проверять, сравнивать и 
 - API Portal остается полезным discovery source, но не считается final source of truth.
 - История проверки домена `api-seldon.ru` сохранена как исторический риск источника.
 - Активная карточка Seldon.Basis связана с официальными источниками `seldongroup.ru`.
+- Для Seldon.Tenders создано решение сохранить legacy-only статус: официальные страницы подтверждают `API.Seldon.Tenders` как Seldon 1.7 integration route, но публичной specification/auth/pricing evidence недостаточно для активной карточки.
 - Цены веб-версий не используются как цены API.
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
@@ -70,4 +71,4 @@ Atlas должен помогать проверять, сравнивать и 
 - Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
-- Legacy-карточки Seldon.Tenders, Moscow Open Data API и address/FIAS layer требуют отдельной API-first миграции или decision memo.
+- Moscow Open Data API и address/FIAS layer требуют отдельной API-first миграции или decision memo.
