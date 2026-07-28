@@ -6,6 +6,7 @@
 
 - Добавлен активный двуязычный API-first profile `apis/globas-api/`.
 - Добавлен research log `research/globas-api/2026-07-28.md`.
+- Добавлен provider-request checklist `research/globas-api/provider-request*.md` для запроса недостающих API, pricing, SLA и legal details у Credinform.
 - ГЛОБАС.API добавлен в `comparisons/company-counterparty-data-russia/` как дополнительный enterprise-кандидат.
 - Обновлены `API_INDEX.md`, `API_INDEX.ru.md`, `SUMMARY.md` и `TODO.md`.
 
