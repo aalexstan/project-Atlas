@@ -6,5 +6,6 @@
 |---|---|---|
 | [DaData API](apis/dadata/README.ru.md) | reviewed | 2026-07-23 |
 | [FTS EGRUL/EGRIP Data Integration](apis/fns-egrul-egrip-integration/README.ru.md) | reviewed | 2026-07-23 |
+| [GLOBAS.API](apis/globas-api/README.ru.md) | reviewed | 2026-07-28 |
 | [Kontur.Focus API](apis/kontur-focus/README.ru.md) | reviewed | 2026-07-23 |
 | [Seldon.Basis API](apis/seldon-basis/README.ru.md) | reviewed | 2026-07-23 |

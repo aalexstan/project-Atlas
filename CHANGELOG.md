@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-07-28 — GLOBAS.API official-source profile
+
+### Что добавлено
+
+- Добавлен активный двуязычный API-first profile `apis/globas-api/`.
+- Добавлен research log `research/globas-api/2026-07-28.md`.
+- Обновлены `API_INDEX.md`, `API_INDEX.ru.md`, `SUMMARY.md` и `TODO.md`.
+
+### Методологические решения
+
+- Официальные страницы Credinform подтверждают продуктовую идентичность и назначение ГЛОБАС.API для интеграции данных ГЛОБАС в корпоративные системы.
+- Public API specification, endpoint catalog, authentication, schemas, limits, SLA и API price оставлены как `unknown`.
+- Трехдневный тест системы ГЛОБАС не считается API trial без прямого подтверждения API credentials или sandbox access.
+- «Санкционный комплаенс» рассматривается как отдельная граница продукта/модуля до подтверждения поставщиком.
+- REST-утверждение из API Portal сохранено только как legacy provenance в `catalog/globas-api.md` и не повышено до verified.
+- Live testing не проводился.
+
 ## 2026-07-24 — API-first handoff integration
 
 ### Что интегрировано

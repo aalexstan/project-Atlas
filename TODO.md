@@ -13,7 +13,7 @@
 
 ## Средний приоритет
 
-- Мигрировать полезные факты из `catalog/globas-api.md` в API-first профиль ГЛОБАС.API после проверки официальных источников Credinform.
+- Для ГЛОБАС.API запросить у Credinform API specification, endpoint catalog, authentication, field matrix, sandbox/API credentials, method pricing, batch billing, production limits, SLA и data-use rights.
 - Решить, нужен ли отдельный API-first профиль для Seldon.Tenders; старую карточку не удалять.
 - Исследовать official/API-first профиль Moscow Open Data API на основе `data.mos.ru`, не полагаясь только на API Portal.
 - Исследовать address/geocoding comparison: DaData, официальные address registry routes, Yandex, 2GIS и другие подтвержденные API.

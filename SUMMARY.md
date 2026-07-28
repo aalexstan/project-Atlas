@@ -1,6 +1,6 @@
 # Summary
 
-Дата обновления: 2026-07-24
+Дата обновления: 2026-07-29
 Статус: API-first foundation integrated; legacy dataset research retained
 
 ## Активное направление Atlas
@@ -20,7 +20,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 4 | DaData, FTS EGRUL/EGRIP integration, Kontur.Focus API, Seldon.Basis API |
+| API profiles | 5 | DaData, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
 | Comparisons | 1 | Company and counterparty data APIs in Russia |
 | Procurement kits | 1 | Counterparty API selection kit |
 | API indexes | 2 | English and Russian |
@@ -33,6 +33,7 @@ Atlas должен помогать проверять, сравнивать и 
 |---|---|---|---|
 | DaData API | reviewed | 2026-07-23 | not performed |
 | FTS EGRUL/EGRIP Data Integration | reviewed | 2026-07-23 | not performed |
+| GLOBAS.API | reviewed | 2026-07-28 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
 | Seldon.Basis API | reviewed | 2026-07-23 | not performed |
 
@@ -60,6 +61,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Цены веб-версий не используются как цены API.
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
+- ГЛОБАС.API восстановлен из legacy backlog как активный API-first profile на основе официальных страниц Credinform; REST claim из API Portal сохранен только как legacy provenance.
 
 ## Нерешенные вопросы
 
@@ -67,4 +69,5 @@ Atlas должен помогать проверять, сравнивать и 
 - Для Kontur и Seldon нужны коммерческие предложения, production limits, SLA и права хранения/redistribution.
 - Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
-- Legacy-карточки ГЛОБАС.API, Seldon.Tenders, Moscow Open Data API и address/FIAS layer требуют отдельной API-first миграции.
+- Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
+- Legacy-карточки Seldon.Tenders, Moscow Open Data API и address/FIAS layer требуют отдельной API-first миграции или decision memo.
