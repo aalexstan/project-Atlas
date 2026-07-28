@@ -2,7 +2,7 @@
 
 [Русская версия](evidence.ru.md)
 
-Verified: **2026-07-23**.
+Verified: **2026-07-23**. GLOBAS.API addendum checked: **2026-07-28**.
 
 | ID | Claim | Official source | Status | Note |
 |---|---|---|---|---|
@@ -29,6 +29,12 @@ Verified: **2026-07-23**.
 | SEL-006 | Russia and CIS company data is available | [Seldon.Basis](https://seldongroup.ru/system/basis), [API](https://seldongroup.ru/system/basis/api) | verified | Country coverage depends on product and plan |
 | SEL-007 | Exact public API price was not found | [Official API page](https://seldongroup.ru/system/basis/api) | unknown | Web-subscription prices are not API prices |
 | SEL-008 | The site showed a DDoS / instability notice at the verification date | [API page](https://basis.myseldon.com/ru/home/api) | observed | Temporary notice; must be rechecked |
+| GLO-001 | Credinform/GLOBAS has an official GLOBAS.API product page | [GLOBAS.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | verified | Active official product identity |
+| GLO-002 | Product is positioned for integrating GLOBAS data into corporate systems | [GLOBAS.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | provider_reported | Enterprise integration use case |
+| GLO-003 | Official page describes mass checks, portfolio monitoring, internal-base enrichment, field updates, data verification, archives, and large-database updates | [GLOBAS.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | provider_reported | Useful for CRM/ERP/EDI and portfolio scenarios |
+| GLO-004 | Public API specification, endpoint catalog, authentication, schemas, production limits, SLA and API price were not found in reviewed official pages | [GLOBAS.API](https://globas.credinform.ru/ru-RU/servisy/globas-api), [services](https://globas.credinform.ru/ru-RU/servisy), [requirements](https://globas.credinform.ru/ru-RU/requirements) | observed | Procurement blocker |
+| GLO-005 | Three-day GLOBAS system test is not confirmed as API trial | [GLOBAS.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | observed | Requires provider confirmation of API credentials or sandbox |
+| GLO-006 | Sanctions Compliance is treated as a separate product/module boundary until proven otherwise | [Sanctions Compliance](https://globas.credinform.ru/ru-RU/servisy/sanctions) | observed | Do not assume inclusion in standard API |
 | FTS-001 | The FTS provides EGRUL/EGRIP data for information-system integration | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Dedicated integration mode |
 | FTS-002 | Integration uses archives with XML files and daily changes | [Interaction model](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Not a typical REST API |
 | FTS-003 | An archive may contain up to 100 XML files, with up to 1,000 records per file | [Interaction model](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Official file model |

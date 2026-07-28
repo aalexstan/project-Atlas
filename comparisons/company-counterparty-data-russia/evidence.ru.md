@@ -2,7 +2,7 @@
 
 [English version](evidence.md)
 
-Проверено: **2026-07-23**.
+Проверено: **2026-07-23**. Addendum по ГЛОБАС.API проверен: **2026-07-28**.
 
 | ID | Утверждение | Источник | Статус | Комментарий |
 |---|---|---|---|---|
@@ -29,6 +29,12 @@
 | SEL-006 | Seldon предоставляет данные компаний России и СНГ | [Seldon.Basis](https://seldongroup.ru/system/basis), [API](https://seldongroup.ru/system/basis/api) | verified | Перечень стран зависит от продукта и тарифа |
 | SEL-007 | Точная публичная цена API не найдена | [Официальная API-страница](https://seldongroup.ru/system/basis/api) | unknown | Веб-тарифы нельзя подменять API-тарифами |
 | SEL-008 | На дату проверки сайт показывал предупреждение о DDoS и возможной нестабильности | [Страница API](https://basis.myseldon.com/ru/home/api) | observed | Временное сообщение; требует повторной проверки |
+| GLO-001 | У Credinform/ГЛОБАС есть официальная продуктовая страница ГЛОБАС.API | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | verified | Активная официальная идентичность продукта |
+| GLO-002 | Продукт позиционируется для интеграции данных ГЛОБАС в корпоративные системы | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | provider_reported | Enterprise integration use case |
+| GLO-003 | Официальная страница описывает массовую проверку, мониторинг портфеля, обогащение внутренней базы, обновление полей, верификацию данных, архивы и обновление больших баз | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | provider_reported | Полезно для CRM/ERP/ЭДО и портфельных сценариев |
+| GLO-004 | Public API specification, endpoint catalog, authentication, schemas, production limits, SLA и API price не найдены в проверенных официальных страницах | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api), [сервисы](https://globas.credinform.ru/ru-RU/servisy), [requirements](https://globas.credinform.ru/ru-RU/requirements) | observed | Procurement blocker |
+| GLO-005 | Трехдневный тест системы ГЛОБАС не подтвержден как API trial | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | observed | Нужно подтверждение API credentials или sandbox |
+| GLO-006 | «Санкционный комплаенс» считается отдельной product/module boundary, пока не доказано иное | [Санкционный комплаенс](https://globas.credinform.ru/ru-RU/servisy/sanctions) | observed | Не считать частью стандартного API автоматически |
 | FTS-001 | ФНС предоставляет открытые данные ЕГРЮЛ/ЕГРИП для интеграции в информационные системы | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Отдельный режим доступа |
 | FTS-002 | Интеграция осуществляется через архивы с XML-файлами и ежедневными изменениями | [Модель взаимодействия](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Не обычный REST API |
 | FTS-003 | В архиве может быть до 100 XML-файлов, в файле — до 1 000 записей | [Модель взаимодействия](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Параметры официального формата выгрузок |

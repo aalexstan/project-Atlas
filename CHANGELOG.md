@@ -6,6 +6,7 @@
 
 - Добавлен активный двуязычный API-first profile `apis/globas-api/`.
 - Добавлен research log `research/globas-api/2026-07-28.md`.
+- ГЛОБАС.API добавлен в `comparisons/company-counterparty-data-russia/` как дополнительный enterprise-кандидат.
 - Обновлены `API_INDEX.md`, `API_INDEX.ru.md`, `SUMMARY.md` и `TODO.md`.
 
 ### Методологические решения
@@ -15,6 +16,7 @@
 - Трехдневный тест системы ГЛОБАС не считается API trial без прямого подтверждения API credentials или sandbox access.
 - «Санкционный комплаенс» рассматривается как отдельная граница продукта/модуля до подтверждения поставщиком.
 - REST-утверждение из API Portal сохранено только как legacy provenance в `catalog/globas-api.md` и не повышено до verified.
+- ГЛОБАС.API не объявлен победителем и не заменяет основной enterprise shortlist Контур.Фокус API / Seldon.Basis API без пилота, технической документации и коммерческого предложения.
 - Live testing не проводился.
 
 ## 2026-07-24 — API-first handoff integration

@@ -59,6 +59,20 @@
       "verdict": "strong_for_broad_analytics_and_cis"
     },
     {
+      "id": "globas-api",
+      "product_class": "enterprise_data_integration",
+      "best_for": [
+        "crm_erp_edi_enrichment",
+        "mass_counterparty_checks",
+        "internal_database_enrichment",
+        "portfolio_monitoring"
+      ],
+      "public_pricing": false,
+      "demo": "globas_system_test_reported_api_trial_not_confirmed",
+      "published_limit": "unknown_publicly_in_this_research",
+      "verdict": "additional_enterprise_candidate_requires_documentation_pilot_and_quote"
+    },
+    {
       "id": "fts-egrul-egrip-integration",
       "product_class": "primary_registry_bulk_data",
       "best_for": [
@@ -80,16 +94,29 @@
       "kontur-focus-api",
       "seldon-basis-api"
     ],
+    "enterprise_data_enrichment_rfp": [
+      "kontur-focus-api",
+      "seldon-basis-api",
+      "globas-api"
+    ],
     "cis_and_relationship_analytics": "seldon-basis-api",
+    "additional_enterprise_candidate": "globas-api",
     "internal_registry_platform": "fts-egrul-egrip-integration",
     "aml_115fz": "evaluate_kontur_compliance_api_separately"
   },
+  "partial_updates": [
+    {
+      "date": "2026-07-28",
+      "scope": "Added GLOBAS.API from official Credinform sources without re-verifying the full comparison."
+    }
+  ],
   "gold_blockers": [
     "live_credentials",
     "common_benchmark",
     "contract_and_data_rights_review",
     "comparable_vendor_quotes",
-    "latency_and_availability_measurements"
+    "latency_and_availability_measurements",
+    "globas_api_specification_and_quote"
   ],
   "sources": [
     "https://dadata.ru/api/find-party/",
@@ -99,6 +126,9 @@
     "https://focus.kontur.ru/site/demo/requisites",
     "https://seldongroup.ru/system/basis/api",
     "https://seldongroup.ru/functions",
+    "https://globas.credinform.ru/ru-RU/servisy/globas-api",
+    "https://globas.credinform.ru/ru-RU/servisy",
+    "https://globas.credinform.ru/ru-RU/osisteme/istochniki",
     "https://www.nalog.gov.ru/rn77/service/egrip2/",
     "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
     "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/"
