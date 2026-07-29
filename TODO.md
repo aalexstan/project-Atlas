@@ -28,7 +28,7 @@
 - Для Moscow Open Data API повторить проверку `data.mos.ru`, когда официальная документация доступна; текущий blocker и decision memo сохранены в `research/moscow-open-data-api/`.
 - Рассмотреть коммерческих Nominatim/OSM-провайдеров только отдельными профилями по их официальным terms, SLA и тарифам.
 - Не декомпозировать `datasets/moscow_city_open_data.md` на maintained dataset notes, пока official `data.mos.ru` catalog/API documentation, export formats и reuse terms не станут доступны для проверки.
-- Для будущего procurement/tender API comparison собрать official primary-source evidence по Seldon.Tenders/Seldon.Win, государственным закупочным источникам и альтернативным поставщикам; legacy `datasets/procurement_tender_contracts.md` уже связан как supporting evidence.
+- Для будущего procurement/tender API comparison найти текущую официальную developer/service документацию ЕИС / `zakupki.gov.ru`, затем собрать official primary-source evidence по Seldon.Tenders/Seldon.Win и альтернативным поставщикам; baseline сохранён в `research/procurement-tender/`, legacy `datasets/procurement_tender_contracts.md` связан как supporting evidence.
 - Продолжить разбор API Portal только как discovery source: каждую существенную карточку проверять по primary sources.
 
 ## Низкий приоритет

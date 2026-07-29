@@ -109,6 +109,7 @@ API Portal указывает получение данных в real time. То
 - Первичные официальные источники: указаны как класс источников, но конкретный список не найден в этой legacy-карточке.
 - Active decision memo: `research/seldon-tenders/decision.md` сохраняет Seldon.Tenders как legacy-only до появления official specification/auth/pricing/rights evidence.
 - Future active route: procurement/tender API comparison should be created only after reviewing official primary sources for candidate products and government registries.
+- Current baseline: `research/procurement-tender/2026-07-29-official-source-baseline.md` and `research/procurement-tender/decision.md` keep this direction in research backlog until EIS service docs, Seldon API evidence and data-rights details are available.
 - CSV, XML, FTP, Webhook, GraphQL: не найдено.
 
 ## Неизвестные места
@@ -141,6 +142,9 @@ API Portal указывает получение данных в real time. То
 - `research/seldon-tenders/2026-07-29.md`
 - `research/seldon-tenders/decision.md`
 - `research/seldon-tenders/decision.ru.md`
+- `research/procurement-tender/2026-07-29-official-source-baseline.md`
+- `research/procurement-tender/decision.md`
+- `research/procurement-tender/decision.ru.md`
 - `apis/seldon-basis/README.md`
 - `comparisons/company-counterparty-data-russia/README.md`
 

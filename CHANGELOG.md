@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-07-29 — Procurement and tender research baseline
+
+### Что добавлено
+
+- Добавлен research baseline:
+  - `research/procurement-tender/2026-07-29-official-source-baseline.md`
+  - `research/procurement-tender/decision.md`
+  - `research/procurement-tender/decision.ru.md`
+- Legacy dataset note `datasets/procurement_tender_contracts.md` связана с новым baseline.
+
+### Методологические решения
+
+- ЕИС / `zakupki.gov.ru`, ведомственные open-data datasets и Seldon.Tenders пока не превращаются в активный Atlas comparison без endpoint/auth/schema/rights evidence.
+- Seldon.Tenders остаётся legacy/provenance согласно существующему decision memo.
+- Live testing, credentialed access, benchmark и legal review не проводились.
+
 ## 2026-07-29 — Organization and place search need route
 
 ### Что добавлено

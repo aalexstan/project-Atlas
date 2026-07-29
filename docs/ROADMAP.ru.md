@@ -24,7 +24,7 @@
 
 **Успех:** каждое сравнение содержит рекомендации по сценариям, доказательства и дату пересмотра. Need-based маршруты должны связывать частые вопросы пользователей с релевантными карточками, сравнениями и procurement kits.
 
-**Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need routes и procurement checklist для autocomplete, geocoding, place search, official registry integration и self-hosted OSM geocoding. Organization/place search теперь имеет отдельный маршрут к 2GIS Places API и Yandex Maps Organization Search API. Legacy procurement/tender dataset notes связаны как input для будущего сравнения, но активного procurement API comparison пока нет.
+**Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need routes и procurement checklist для autocomplete, geocoding, place search, official registry integration и self-hosted OSM geocoding. Organization/place search теперь имеет отдельный маршрут к 2GIS Places API и Yandex Maps Organization Search API. Для procurement/tender создан research baseline и связана legacy dataset note, но активного procurement API comparison пока нет.
 
 ## Этап 4 — Распространение и обратная связь
 
