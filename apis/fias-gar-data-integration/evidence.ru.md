@@ -12,10 +12,12 @@
 | ГАР обязаны использовать органы власти и местного самоуправления при оказании услуг. | https://fias-file.nalog.ru/FiasInfo | 2026-07-29 | verified | Релевантно регулируемым процессам. |
 | Объекты адресации включают здания, сооружения, земельные участки, помещения и машино-места. | https://fias-file.nalog.ru/FiasInfo | 2026-07-29 | verified | Scope объектов. |
 | Open-data catalog ФНС указывает dataset identifier `7707329152-fias`, owner ФНС России и XML format. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Open-data route. |
-| Open-data catalog ФНС указывает current data ZIP URL и separate structure ZIP URL для GAR/FIAS dataset. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Atlas не скачивал и не inspected archives. |
+| Open-data catalog ФНС указывает current data ZIP URL и separate structure ZIP URL для GAR/FIAS dataset. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Atlas inspected structure ZIP; data ZIP на 57 GB не скачивался. |
 | Open-data catalog ФНС указывает weekly updates и previous release ZIP files. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | На текущей странице указаны latest modification 2026-07-28 и page update 2026-07-29. |
 | Current official open-data metadata lists `data-28072026-structure-20191024.zip`, structure archive `structure-12032021.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases for `2026-07-24`, `2026-07-21`, `2026-07-17`, `2026-07-14`, and methodological recommendations version `4.0`. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | The actuality date is recorded as official page metadata; Atlas did not verify future data state. |
-| Current package model remains unknown from metadata alone. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | unknown | ZIP archive contents were not downloaded or inspected. |
+| Official structure archive содержит 22 `.xsd` files. | https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip | 2026-07-29 | verified | Temporary archive inspection нашёл schemas for address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects и change history. |
+| Current official data ZIP отвечает как `application/zip` с `Content-Length: 57170912095` и `Last-Modified: Mon, 27 Jul 2026 17:57:53 GMT`. | https://fias.nalog.ru/opendata/7707329152-fias/data-28072026-structure-20191024.zip | 2026-07-29 | verified | HTTP headers only; data archive не скачивался. |
+| Current package model remains unknown from metadata and structure XSDs alone. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | unknown | Содержимое data ZIP на 57 GB, row counts и checksums не inspected. |
 | Developer section содержит пункты «Открытые данные (файловые выгрузки)», «СМЭВ» и «API-сервисы». | https://fias-file.nalog.ru/Frontend | 2026-07-29 | observed | Детальные API docs не видны в static page. |
 | Архивный материал ФНС говорит, что на портале ФИАС опубликованы API и СМЭВ сервисы для получения сведений из ГАР. | https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/ | 2026-07-29 | verified | Архивная страница может содержать устаревшие детали, но подтверждает provenance официальных каналов. |
 | Архивный материал ФНС описывает integration routes: еженедельные выгрузки с публикацией дважды в неделю, СМЭВ с ежедневной публикацией и online API batch provision by request. | https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/ | 2026-07-29 | verified | Cadence рассматривается как official historical context до фиксации текущих developer docs. |
@@ -28,4 +30,4 @@
 
 ## Live Testing
 
-Live integration, file download verification или credentialed API test не проводились.
+Credentialed API integration, SMEV access, portal endpoint test или production data archive ingest не проводились. Atlas only inspected public structure ZIP и checked HTTP headers for public data ZIP.

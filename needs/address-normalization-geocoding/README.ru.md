@@ -55,7 +55,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder, Geoapify и DaData. Добавь
 
 ### Официальные интерфейсы FIAS/GAR
 
-FIAS/GAR — официальный российский registry route. Open-data catalog ФНС подтверждает XML ZIP downloads, structure ZIP, weekly updates и previous release links. Официальные материалы также упоминают SMEV и API services, но current public method catalog, base URL, auth, schemas, quotas и SLA остаются blockers.
+FIAS/GAR — официальный российский registry route. Open-data catalog ФНС подтверждает XML ZIP downloads, structure ZIP, weekly updates и previous release links; Atlas inspected structure ZIP и recorded 22 XSD schema files. Официальные материалы также упоминают SMEV и API services, но current public method catalog, base URL, auth, quotas и SLA остаются blockers, а 57 GB data archive не скачивался.
 
 ### Маршрутизация
 
@@ -75,7 +75,7 @@ DaData наиболее глубока для российских адресн�
 - Общий benchmark качества адресов не выполнялся.
 - SLA и support terms в основном неизвестны публично.
 - Contractual storage, caching, SaaS и redistribution rights требуют legal review.
-- Open-data XML ZIP route FIAS/GAR verified, но archive contents не inspected, а детали API-сервисов остаются неполными в просмотренных публичных страницах.
+- Open-data XML ZIP route и structure XSD archive FIAS/GAR verified, но current data archive contents не inspected, а детали API-сервисов остаются неполными в просмотренных публичных страницах.
 - ODbL implications для Nominatim/OSM derived databases требуют legal review.
 - Nominatim self-hosting всё ещё требует benchmark на target extracts and hardware.
 

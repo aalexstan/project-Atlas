@@ -12,10 +12,12 @@
 | GAR must be used by public authorities and local governments for services, according to FIAS Info page. | https://fias-file.nalog.ru/FiasInfo | 2026-07-29 | verified | Regulated workflow relevance. |
 | Address objects include buildings, structures, land plots, premises and parking spaces. | https://fias-file.nalog.ru/FiasInfo | 2026-07-29 | verified | Scope of address objects. |
 | FNS open-data catalog lists dataset identifier `7707329152-fias`, owner FNS Russia and XML format. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Open-data route. |
-| FNS open-data catalog lists current data ZIP URL and separate structure ZIP URL for the GAR/FIAS dataset. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Atlas did not download or inspect the archives. |
+| FNS open-data catalog lists current data ZIP URL and separate structure ZIP URL for the GAR/FIAS dataset. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Atlas inspected the structure ZIP; the 57 GB data ZIP was not downloaded. |
 | FNS open-data catalog states weekly updates and lists previous release ZIP files. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Current page showed latest modification 2026-07-28 and page update 2026-07-29. |
 | Current official open-data metadata lists `data-28072026-structure-20191024.zip`, structure archive `structure-12032021.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases for `2026-07-24`, `2026-07-21`, `2026-07-17`, `2026-07-14`, and methodological recommendations version `4.0`. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | The actuality date is recorded as official page metadata; Atlas did not verify future data state. |
-| The current package model remains unknown from metadata alone. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | unknown | ZIP archive contents were not downloaded or inspected. |
+| The official structure archive contains 22 `.xsd` files. | https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip | 2026-07-29 | verified | Temporary archive inspection found schemas for address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects and change history. |
+| The current official data ZIP responds as `application/zip` with `Content-Length: 57170912095` and `Last-Modified: Mon, 27 Jul 2026 17:57:53 GMT`. | https://fias.nalog.ru/opendata/7707329152-fias/data-28072026-structure-20191024.zip | 2026-07-29 | verified | HTTP headers only; the data archive was not downloaded. |
+| The current package model remains unknown from metadata and structure XSDs alone. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | unknown | The 57 GB data ZIP contents, row counts and checksums were not inspected. |
 | Developer section exposes Open data/file downloads, SMEV and API services entries. | https://fias-file.nalog.ru/Frontend | 2026-07-29 | observed | Detailed API docs not visible in static page. |
 | FNS archived material states that FIAS portal published API and SMEV services for obtaining GAR information. | https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/ | 2026-07-29 | verified | Archived page may contain outdated details, but supports existence/provenance of official channels. |
 | FNS archived material describes integration routes: weekly portal downloads published twice per week, SMEV daily publication and online API batch provision by request. | https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/ | 2026-07-29 | verified | Treat cadence as official historical context until current developer docs are captured. |
@@ -28,4 +30,4 @@
 
 ## Live Testing
 
-No live integration, file download verification or credentialed API test was performed.
+No credentialed API integration, SMEV access, portal endpoint test or production data archive ingest was performed. Atlas only inspected the public structure ZIP and checked HTTP headers for the public data ZIP.

@@ -73,10 +73,11 @@
 | Open-data file format | XML ZIP указан в official open-data catalog |
 | Open-data update cadence | weekly в official open-data catalog |
 | Current open-data package metadata | official page lists `data-28072026-structure-20191024.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases for `2026-07-24`, `2026-07-21`, `2026-07-17`, `2026-07-14` |
+| Current data archive headers | official data ZIP отвечает как `application/zip` с `Content-Length: 57170912095`; archive не скачивался |
 | Цена файловых выгрузок | monetary price не указана на просмотренной open-data page |
 | Eligibility СМЭВ | unknown |
-| Structure reference | structure ZIP указан в official open-data catalog; содержимое архива не inspected |
-| Current package model | unknown; metadata alone does not prove full, delta or mixed semantics |
+| Structure reference | structure ZIP inspected; внутри 22 XSD files для address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects и change history |
+| Current package model | unknown; structure XSDs и metadata alone не доказывают full, delta или mixed semantics |
 | API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
@@ -91,7 +92,7 @@
 
 ## Рекомендация по сценарию
 
-Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Current open-data page даёт полезную package metadata, но Atlas не inspected archive contents и не доказал full/delta semantics. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
+Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Current open-data page даёт полезную package metadata, и Atlas inspected structure ZIP, но 57 GB data archive не скачивался, а full/delta semantics остаются недоказанными. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
 
 ## Доказательства
 

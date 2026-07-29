@@ -16,7 +16,7 @@
 
 **Успех:** карточки заметно полезнее для выбора, чем описания поставщиков.
 
-**Текущий прогресс:** reviewed address/geocoding profiles уже есть для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software и FIAS/GAR Data Integration. Provider-specific request checklists подготовлены для DaData, Yandex Maps, 2GIS и Geoapify. Open-data XML ZIP route FIAS/GAR теперь включает current package metadata, а Geoapify hosted open-data route и Nominatim self-hosting operations path описаны точнее, но inner ZIP contents, full/delta semantics, детали API/SMEV services, ODbL/legal review и benchmarks остаются blockers. До Gold нужны live tests, подтверждение SLA, проверка прав данных и quality benchmarks.
+**Текущий прогресс:** reviewed address/geocoding profiles уже есть для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software и FIAS/GAR Data Integration. Provider-specific request checklists подготовлены для DaData, Yandex Maps, 2GIS и Geoapify. Open-data XML ZIP route FIAS/GAR теперь включает current package metadata и inspected structure XSDs, а Geoapify hosted open-data route и Nominatim self-hosting operations path описаны точнее, но 57 GB FIAS/GAR data archive contents, full/delta semantics, детали API/SMEV services, ODbL/legal review и benchmarks остаются blockers. До Gold нужны live tests, подтверждение SLA, проверка прав данных и quality benchmarks.
 
 ## Этап 3 — Центр сравнений
 

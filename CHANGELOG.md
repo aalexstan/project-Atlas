@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR structure archive inspection
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-structure-archive.md`.
+- FIAS/GAR profile, evidence, address/geocoding comparison и need route теперь фиксируют inspection official `structure-12032021.zip`: 22 XSD files for address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects and change history.
+- Для current data ZIP `data-28072026-structure-20191024.zip` зафиксированы только HTTP headers: `application/zip`, `Content-Length: 57170912095`, `Last-Modified: Mon, 27 Jul 2026 17:57:53 GMT`.
+
+### Методологические решения
+
+- 57 GB data archive не скачивался и не inspected; full/delta package semantics, row counts, checksums, API/SMEV method details, auth, quotas, costs и legal-use rights остаются blockers.
+- Credentialed API request, SMEV access, portal endpoint test и production archive ingest не проводились.
+
 ## 2026-07-29 — FIAS/GAR package metadata clarification
 
 ### Что добавлено
