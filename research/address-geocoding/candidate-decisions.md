@@ -15,6 +15,7 @@
 | 2GIS Places API | Create [`2gis-places-api`](../../apis/2gis-places-api/README.md) | Later official-source research confirmed a separate Places API for organizations, buildings and places with public package pricing. |
 | 2GIS Suggest API | Create [`2gis-suggest-api`](../../apis/2gis-suggest-api/README.md) | Later official-source research confirmed a separate suggestion product for object, address, street and route-endpoint suggestions. |
 | OpenStreetMap / Nominatim | Create [`nominatim-geocoder-software`](../../apis/nominatim-geocoder-software/README.md) | Later research confirmed Nominatim as an open-source geocoder software/self-hosting route, not a free production public API. |
+| Geoapify Geocoding API | Create [`geoapify-geocoding-api`](../../apis/geoapify-geocoding-api/README.md) | Official-source research confirmed a hosted commercial open-data geocoding API with forward/reverse endpoints, API key, batch geocoding, public pricing and SLA wording. |
 | Moscow Open Data address datasets | Backlog | Potential Moscow-specific data route, but not a replacement for national address registry or geocoder in this pass. |
 
 ## Boundary Decisions
@@ -24,6 +25,8 @@ DaData receives a separate address profile because the existing DaData API profi
 Yandex Maps Geocoder is scoped to geocoding only. Address suggestions belong to Geosuggest; organization search belongs to Organization Search; routing and distance matrix are separate navigation products.
 
 2GIS Geocoder is scoped to direct and reverse geocoding. Places API and Suggest API are active separate profiles because they matter for user scenarios, but they are not folded into the Geocoder capability.
+
+Geoapify is scoped to hosted commercial open-data geocoding. It is not public Nominatim, self-hosted Nominatim, official Russian registry validation or a Russia-specific cleaning API.
 
 FIAS/GAR is an official registry and integration route. It is not documented here as a commercial low-latency address suggestion API.
 

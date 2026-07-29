@@ -9,3 +9,4 @@
 | 2026-07-29 | Refined FIAS/GAR open-data route with XML ZIP, structure ZIP and weekly update evidence. | Separates verified file-feed facts from still-unknown API-service specification. |
 | 2026-07-29 | Added Nominatim self-hosting operations blockers for import sizing, update mode and production deployment. | Makes public-instance, self-hosted and commercial-provider routes harder to confuse. |
 | 2026-07-29 | Added Yandex Maps Organization Search API as a place/organization search candidate. | Completes the Yandex-side place-search scenario without treating it as geocoding or registry validation. |
+| 2026-07-29 | Added Geoapify Geocoding API as a hosted commercial open-data geocoding route. | Adds a managed international/batch geocoding option while keeping ODbL, attribution, DPA and benchmark as blockers. |

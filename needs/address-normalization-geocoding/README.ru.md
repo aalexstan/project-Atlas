@@ -24,12 +24,12 @@
 | Подсказки адреса при вводе | [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md); [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md); [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.ru.md) | DaData ориентирована на адресные формы; Yandex/2GIS подходят, если важен их map/search ecosystem. | Подсказки не являются unattended batch cleaning, а права различаются по поставщикам. | [`Сравнение`](../../comparisons/address-normalization-geocoding/README.ru.md) |
 | Нормализация и очистка адресов | [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md) | Cleaning API возвращает структурные поля, quality indicators, координаты и registry identifiers. | Один адрес в запросе; per-record price; права нужно проверять в договоре. | [`Карточка DaData`](../../apis/dadata-address-api/README.ru.md) |
 | Проверка существования адреса РФ по official registry | [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md); DaData cleaning как коммерческий route | ГАР — официальный реестр; DaData может помочь match/clean адрес. | Для ГАР нужны matching, ETL и search; детали API-сервисов неполные. | [`Карточка ФИАС/ГАР`](../../apis/fias-gar-data-integration/README.ru.md) |
-| Прямое геокодирование | [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md); [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md); DaData; [`Nominatim`](../../apis/nominatim-geocoder-software/README.ru.md) для self-hosting | Hosted geocoders и self-hosted OSM route решают разные operating models. | Нужны проверка storage/display rights, coordinate precision и operations burden. | [`Сравнение`](../../comparisons/address-normalization-geocoding/README.ru.md) |
-| Обратное геокодирование | Yandex Geocoder; 2GIS Geocoder; DaData; self-hosted Nominatim | Documented coordinate-to-address routes есть вне FIAS/GAR. | Уровень возвращаемого объекта может отличаться по провайдеру и локации. | [`Test protocol`](../../procurement/address-geocoding-api-selection/TEST_PROTOCOL.ru.md) |
+| Прямое геокодирование | [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md); [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md); [`Geoapify Geocoding API`](../../apis/geoapify-geocoding-api/README.ru.md); DaData; [`Nominatim`](../../apis/nominatim-geocoder-software/README.ru.md) для self-hosting | Hosted geocoders и self-hosted OSM route решают разные operating models. | Нужны проверка storage/display rights, attribution, coordinate precision и operations burden. | [`Сравнение`](../../comparisons/address-normalization-geocoding/README.ru.md) |
+| Обратное геокодирование | Yandex Geocoder; 2GIS Geocoder; Geoapify; DaData; self-hosted Nominatim | Documented coordinate-to-address routes есть вне FIAS/GAR. | Уровень возвращаемого объекта может отличаться по провайдеру и локации. | [`Test protocol`](../../procurement/address-geocoding-api-selection/TEST_PROTOCOL.ru.md) |
 | Организации и места | [`2GIS Places API`](../../apis/2gis-places-api/README.ru.md); [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.ru.md) | Place search — отдельный класс продукта. | Нельзя выводить place search из geocoder docs или registry validation. | [`Сравнение`](../../comparisons/address-normalization-geocoding/README.ru.md) |
 | Собственная адресная база | [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md) | Official registry provenance и route владения данными. | ETL/search/update operations могут определять TCO. | [`Карточка ФИАС/ГАР`](../../apis/fias-gar-data-integration/README.ru.md) |
-| Open-data geocoding ownership | [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md) | Self-hosting может использовать OSM data без hosted API vendor dependency. | Public Nominatim ограничен; self-hosting и ODbL obligations нетривиальны. | [`Карточка Nominatim`](../../apis/nominatim-geocoder-software/README.ru.md) |
-| Массовая обработка адресов | DaData cleaning; ФИАС/ГАР для собственной базы; self-hosted Nominatim; commercial geocoders после legal check | Разные routes решают cleaning, registry base, geocoding и operational ownership. | Batch rights, per-record costs, ODbL, caching и redistribution. | [`RFP`](../../procurement/address-geocoding-api-selection/RFP.ru.md) |
+| Open-data geocoding ownership | [`Geoapify Geocoding API`](../../apis/geoapify-geocoding-api/README.ru.md); [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md) | Geoapify - hosted commercial route; self-hosting может использовать OSM data без hosted API vendor dependency. | Attribution, ODbL, legal review, benchmark и operations сильно различаются. | [`Сравнение`](../../comparisons/address-normalization-geocoding/README.ru.md) |
+| Массовая обработка адресов | DaData cleaning; ФИАС/ГАР для собственной базы; Geoapify hosted batch geocoding; self-hosted Nominatim; commercial geocoders после legal check | Разные routes решают cleaning, registry base, geocoding и operational ownership. | Batch rights, per-record costs, ODbL, caching и redistribution. | [`RFP`](../../procurement/address-geocoding-api-selection/RFP.ru.md) |
 
 ## Сценарные маршруты
 
@@ -43,7 +43,7 @@
 
 ### Прямое и обратное геокодирование
 
-Shortlist: Yandex Maps Geocoder, 2GIS Geocoder и DaData. Добавьте self-hosted Nominatim, когда важны open data, OSM coverage и operational ownership. Решайте после проверки house-level precision, latency, quotas, storage/caching rights и map-display restrictions.
+Shortlist: Yandex Maps Geocoder, 2GIS Geocoder, Geoapify и DaData. Добавьте self-hosted Nominatim, когда важны open data, OSM coverage и operational ownership. Решайте после проверки house-level precision, latency, quotas, attribution, storage/caching rights и map-display restrictions.
 
 ### Организации и места
 
@@ -51,7 +51,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder и DaData. Добавьте self-
 
 ### Public Nominatim и self-hosting
 
-Публичный `nominatim.openstreetmap.org` ограничен usage policy, запрещает autocomplete и не является бесплатным production API. Self-hosted Nominatim — отдельная operating model с infrastructure, import sizing, update, production deployment, monitoring, security и ODbL responsibilities.
+Публичный `nominatim.openstreetmap.org` ограничен usage policy, запрещает autocomplete и не является бесплатным production API. Geoapify - hosted commercial open-data route, а self-hosted Nominatim - отдельная operating model с infrastructure, import sizing, update, production deployment, monitoring, security и ODbL responsibilities.
 
 ### Официальные интерфейсы FIAS/GAR
 
@@ -92,7 +92,7 @@ DaData наиболее глубока для российских адресн�
 
 ## Ссылки
 
-- API profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.ru.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.ru.md), [`2GIS Places API`](../../apis/2gis-places-api/README.ru.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md)
+- API profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.ru.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.ru.md), [`2GIS Places API`](../../apis/2gis-places-api/README.ru.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md), [`Geoapify Geocoding API`](../../apis/geoapify-geocoding-api/README.ru.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md)
 - Comparison: [`API нормализации адресов, адресных реестров и геокодирования`](../../comparisons/address-normalization-geocoding/README.ru.md)
 - Procurement kit: [`Выбор API адресов и геокодирования`](../../procurement/address-geocoding-api-selection/README.ru.md), [`Self-hosting checklist для Nominatim`](../../procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.ru.md)
 

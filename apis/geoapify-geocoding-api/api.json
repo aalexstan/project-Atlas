@@ -1,0 +1,89 @@
+{
+  "id": "geoapify-geocoding-api",
+  "name": "Geoapify Geocoding API",
+  "provider": {
+    "name": "Geoapify",
+    "website": "https://www.geoapify.com/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "hosted international forward geocoding",
+    "hosted reverse geocoding",
+    "batch geocoding",
+    "commercial open-data geocoding alternative to self-hosted Nominatim"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "credits_per_day",
+    "currency": "USD",
+    "verified_on": "2026-07-29",
+    "free_plan": "3000 credits/day; limited commercial use; up to 5 requests/second",
+    "api_10_monthly": "59 USD/month for 10000 credits/day",
+    "api_250_monthly": "609 USD/month for 250000 credits/day",
+    "custom_from": "860 USD/month on public pricing page",
+    "credit_cost": "1 Geocoding, Reverse Geocoding or Address Autocomplete request = 1 credit",
+    "taxes": "prices exclude taxes and fees"
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "apiKey",
+    "issued_by": "Geoapify MyProjects"
+  },
+  "sandbox": {
+    "free_plan": "3000 credits/day without credit card according to reviewed docs",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "free_requests_per_second": 5,
+    "standard_plan_geocoding_requests_per_second": "up to 30 depending on plan",
+    "dedicated_geocoding_requests_per_second": "provider example up to 50 per dedicated server",
+    "daily_credits": "plan-dependent"
+  },
+  "openapi": {
+    "status": "available_in_reviewed_docs",
+    "documentation": "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/"
+  },
+  "capabilities": {
+    "address_suggestions": "address_autocomplete_documented_in_same_platform_but_not_primary_scope",
+    "address_cleaning": "not_documented_as_russia_specific_cleaning_api",
+    "address_validation": "provider_reported_confidence_not_registry_validation",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "separate_places_api_not_in_primary_scope",
+    "routing": "separate_product_not_in_scope",
+    "batch": "verified"
+  },
+  "coverage": {
+    "geography": "worldwide_provider_reported_requires_benchmark",
+    "data_model": "open_data_with_attribution_requirements",
+    "server_location": "provider_reports_default_european_data_centers"
+  },
+  "data_rights": {
+    "storage": "provider_reports_no_storage_restriction_if_attribution_is_preserved",
+    "attribution": "OpenStreetMap attribution required; Geoapify attribution mandatory on Free plan",
+    "caching": "needs_legal_review",
+    "redistribution": "needs_legal_review",
+    "saas_embedding": "needs_legal_review",
+    "model_training": "unknown"
+  },
+  "sources": [
+    "https://www.geoapify.com/geocoding-api/",
+    "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/",
+    "https://apidocs.geoapify.com/docs/geocoding/reverse-geocoding/",
+    "https://apidocs.geoapify.com/docs/batch/",
+    "https://www.geoapify.com/pricing/",
+    "https://www.geoapify.com/pricing-details/",
+    "https://www.geoapify.com/terms-and-conditions/"
+  ],
+  "open_questions": [
+    "Legal treatment of ODbL, derived databases, cache sharing and SaaS embedding for the intended use",
+    "Whether paid plan contract terms differ from public terms",
+    "Exact DPA/privacy commitments for the target customer geography",
+    "Benchmark quality for target countries, regions, house-level precision and latency",
+    "Batch geocoding operational limits beyond the public 1000-input batch size",
+    "Whether required place-search fields belong to separate Places API pricing"
+  ]
+}

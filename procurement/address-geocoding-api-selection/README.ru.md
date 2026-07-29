@@ -27,12 +27,13 @@
 | DaData address suggestions, cleaning and geocoding | [`provider-request-dadata-address.ru.md`](../../research/address-geocoding/provider-request-dadata-address.ru.md) |
 | Yandex Maps Geosuggest, Geocoder and Organization Search | [`provider-request-yandex-maps.ru.md`](../../research/address-geocoding/provider-request-yandex-maps.ru.md) |
 | 2GIS Suggest, Places and Geocoder | [`provider-request-2gis-search.ru.md`](../../research/address-geocoding/provider-request-2gis-search.ru.md) |
+| Geoapify Geocoding API | [`provider-request.ru.md`](../../research/geoapify-geocoding-api/provider-request.ru.md) |
 
 ## Связанные материалы Atlas
 
 - Need route: [`Нормализация адресов, адресные реестры и геокодирование`](../../needs/address-normalization-geocoding/README.ru.md)
 - Comparison: [`API нормализации адресов, адресных реестров и геокодирования`](../../comparisons/address-normalization-geocoding/README.ru.md)
-- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.ru.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.ru.md), [`2GIS Places API`](../../apis/2gis-places-api/README.ru.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md)
+- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.ru.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.ru.md), [`2GIS Places API`](../../apis/2gis-places-api/README.ru.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md), [`Geoapify Geocoding API`](../../apis/geoapify-geocoding-api/README.ru.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md)
 
 ## Как использовать
 

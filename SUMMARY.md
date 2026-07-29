@@ -21,7 +21,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 14 | DaData, DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
+| API profiles | 15 | DaData, DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
 | Comparisons | 2 | Company and counterparty data APIs in Russia; address normalization and geocoding APIs |
 | Need routes | 3 | Company Verification; Address normalization, address registries and geocoding; Organization and place search |
 | Procurement kits | 2 | Counterparty API selection kit; address/geocoding API selection kit |
@@ -42,6 +42,7 @@ Atlas должен помогать проверять, сравнивать и 
 | FIAS/GAR Data Integration | reviewed | 2026-07-29 | not performed |
 | FTS EGRUL/EGRIP Data Integration | reviewed | 2026-07-23 | not performed |
 | GLOBAS.API | reviewed | 2026-07-28 | not performed |
+| Geoapify Geocoding API | reviewed | 2026-07-29 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
 | Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed |
 | Seldon.Basis API | reviewed | 2026-07-23 | not performed |
@@ -79,15 +80,16 @@ Atlas должен помогать проверять, сравнивать и 
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
 - ГЛОБАС.API восстановлен из legacy backlog как активный API-first profile на основе официальных страниц Credinform; REST claim из API Portal сохранен только как legacy provenance.
-- Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need route и procurement checklist.
+- Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need routes и procurement checklist.
 - Yandex Geosuggest, 2GIS Suggest и 2GIS Places отделены от geocoder profiles, чтобы не смешивать autocomplete, place search и geocoding.
 - Yandex Maps Organization Search API добавлен как отдельный organization/place search profile и не смешивается с Geosuggest, Geocoder или routing.
 - Создан отдельный need route `needs/organization-place-search/`, который связывает Yandex Organization Search и 2GIS Places с практическими сценариями place search.
 - Nominatim описан как open-source geocoder software/self-hosting route; публичный `nominatim.openstreetmap.org` не считается бесплатным production API.
+- Geoapify Geocoding API добавлен как hosted commercial open-data geocoding route; ODbL/attribution, DPA, SaaS/redistribution rights и benchmark остаются blockers.
 - Для Nominatim добавлен self-hosting operations checklist: import sizing, full-planet/extract выбор, update mode, production deployment, monitoring/security и benchmark gates.
 - ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, structure ZIP, weekly updates и previous releases verified по open-data catalog ФНС, а API/SMEV method catalog/auth/schemas остаются blockers.
 - Legacy dataset note `datasets/russian_address_registry.md` связана с активной карточкой `apis/fias-gar-data-integration/`; `kladr-api.ru` сохранен только как historical source-risk/provenance note.
-- Для DaData Address APIs, Yandex Maps Geosuggest/Geocoder/Organization Search и 2GIS Suggest/Places/Geocoder подготовлены provider-request checklists, чтобы запросить endpoint-specific rights, SLA, limits, OpenAPI/Swagger, batch/offline terms and benchmark-support evidence.
+- Для DaData Address APIs, Yandex Maps Geosuggest/Geocoder/Organization Search, 2GIS Suggest/Places/Geocoder и Geoapify Geocoding API подготовлены provider-request checklists, чтобы запросить endpoint-specific rights, SLA, limits, OpenAPI/Swagger, batch/offline terms and benchmark-support evidence.
 - Создан первый need-based маршрут `needs/company-verification/`.
 - Создан индекс документации `docs/README.md` / `docs/README.ru.md`.
 - Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.

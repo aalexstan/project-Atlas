@@ -110,6 +110,21 @@
       "key_risk": "Places and Suggest are separate; caching/storage rights need contract review"
     },
     {
+      "id": "geoapify-geocoding-api",
+      "product_class": "hosted_open_data_geocoding",
+      "best_for": [
+        "hosted_international_geocoding",
+        "direct_geocoding",
+        "reverse_geocoding",
+        "batch_geocoding",
+        "open_data_geocoding_without_self_hosting"
+      ],
+      "public_pricing": true,
+      "free_tier": "3000 credits/day; limited commercial use; up to 5 rps",
+      "published_limit": "up to 30 rps on standard plans; dedicated geocoding example up to 50 rps",
+      "key_risk": "ODbL/attribution/legal review and benchmark still required; not official registry validation"
+    },
+    {
       "id": "nominatim-geocoder-software",
       "product_class": "open_source_geocoder_software",
       "best_for": [
@@ -152,12 +167,14 @@
       "yandex-maps-geocoder-api",
       "2gis-geocoder-api",
       "dadata-address-api",
+      "geoapify-geocoding-api",
       "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "reverse_geocoding": [
       "yandex-maps-geocoder-api",
       "2gis-geocoder-api",
       "dadata-address-api",
+      "geoapify-geocoding-api",
       "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "organization_place_search": [
@@ -168,12 +185,14 @@
       "fias-gar-data-integration"
     ],
     "open_data_geocoding": [
+      "geoapify-geocoding-api_hosted_commercial_route",
       "nominatim-geocoder-software_self_hosting",
       "commercial_nominatim_provider_requires_separate_profile"
     ],
     "bulk_processing": [
       "dadata-address-api_for_cleaning",
       "fias-gar-data-integration_for_owned_registry",
+      "geoapify-geocoding-api_for_hosted_batch_geocoding",
       "nominatim-geocoder-software_for_self_hosting",
       "commercial_geocoders_only_after_storage_batch_rights_confirmed"
     ]
@@ -186,7 +205,9 @@
     "batch_and_async_capability_confirmation",
     "international_coverage_benchmark",
     "odbl_review_for_nominatim_or_osm_derived_data",
-    "fias_gar_method_catalog_auth_schema_and_access_process"
+    "fias_gar_method_catalog_auth_schema_and_access_process",
+    "odbl_attribution_and_derived_database_review_for_geoapify",
+    "geoapify_benchmark_and_dpa_review"
   ],
   "sources": [
     "https://dadata.ru/api/suggest/address/",
@@ -229,6 +250,13 @@
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/",
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/",
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/",
-    "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/",
+    "https://www.geoapify.com/geocoding-api/",
+    "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/",
+    "https://apidocs.geoapify.com/docs/geocoding/reverse-geocoding/",
+    "https://apidocs.geoapify.com/docs/batch/",
+    "https://www.geoapify.com/pricing/",
+    "https://www.geoapify.com/pricing-details/",
+    "https://www.geoapify.com/terms-and-conditions/"
   ]
 }

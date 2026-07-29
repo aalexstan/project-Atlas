@@ -11,6 +11,7 @@
 | [DaData API](apis/dadata/README.md) | reviewed | 2026-07-23 |
 | [FIAS/GAR Data Integration](apis/fias-gar-data-integration/README.md) | reviewed | 2026-07-29 |
 | [FTS EGRUL/EGRIP Data Integration](apis/fns-egrul-egrip-integration/README.md) | reviewed | 2026-07-23 |
+| [Geoapify Geocoding API](apis/geoapify-geocoding-api/README.md) | reviewed | 2026-07-29 |
 | [GLOBAS.API](apis/globas-api/README.md) | reviewed | 2026-07-28 |
 | [Kontur.Focus API](apis/kontur-focus/README.md) | reviewed | 2026-07-23 |
 | [Nominatim Geocoder Software](apis/nominatim-geocoder-software/README.md) | reviewed | 2026-07-29 |

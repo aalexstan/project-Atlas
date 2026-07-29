@@ -27,12 +27,13 @@ Use these checklists after the general RFP when a provider reaches the shortlist
 | DaData address suggestions, cleaning and geocoding | [`provider-request-dadata-address.md`](../../research/address-geocoding/provider-request-dadata-address.md) |
 | Yandex Maps Geosuggest, Geocoder and Organization Search | [`provider-request-yandex-maps.md`](../../research/address-geocoding/provider-request-yandex-maps.md) |
 | 2GIS Suggest, Places and Geocoder | [`provider-request-2gis-search.md`](../../research/address-geocoding/provider-request-2gis-search.md) |
+| Geoapify Geocoding API | [`provider-request.md`](../../research/geoapify-geocoding-api/provider-request.md) |
 
 ## Related Atlas Materials
 
 - Need route: [`Address Normalization, Address Registries and Geocoding`](../../needs/address-normalization-geocoding/README.md)
 - Comparison: [`Address Normalization, Address Registries and Geocoding APIs`](../../comparisons/address-normalization-geocoding/README.md)
-- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md), [`2GIS Places API`](../../apis/2gis-places-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
+- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md), [`2GIS Places API`](../../apis/2gis-places-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`Geoapify Geocoding API`](../../apis/geoapify-geocoding-api/README.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
 
 ## Use Sequence
 

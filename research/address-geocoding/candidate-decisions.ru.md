@@ -15,6 +15,7 @@
 | 2GIS Places API | Создать [`2gis-places-api`](../../apis/2gis-places-api/README.ru.md) | Последующее official-source research подтвердило отдельный Places API для организаций, зданий и мест с public package pricing. |
 | 2GIS Suggest API | Создать [`2gis-suggest-api`](../../apis/2gis-suggest-api/README.ru.md) | Последующее official-source research подтвердило отдельный suggestion product для object, address, street и route-endpoint suggestions. |
 | OpenStreetMap / Nominatim | Создать [`nominatim-geocoder-software`](../../apis/nominatim-geocoder-software/README.ru.md) | Последующее исследование подтвердило Nominatim как open-source geocoder software/self-hosting route, а не бесплатный public production API. |
+| Geoapify Geocoding API | Создать [`geoapify-geocoding-api`](../../apis/geoapify-geocoding-api/README.ru.md) | Official-source research подтвердило hosted commercial open-data geocoding API с forward/reverse endpoints, API key, batch geocoding, public pricing и SLA wording. |
 | Адресные наборы data.mos.ru | Backlog | Потенциальный московский маршрут, но не замена национальному реестру или геокодеру в этом проходе. |
 
 ## Решения о границах
@@ -24,6 +25,8 @@ DaData получает отдельную адресную карточку, п
 Yandex Maps Geocoder описывается только как геокодер. Подсказки адресов относятся к Geosuggest, поиск организаций - к Organization Search, маршрутизация и матрицы расстояний - к отдельным навигационным продуктам.
 
 2GIS Geocoder описывается как прямое и обратное геокодирование. Places API и Suggest API являются отдельными активными profiles, потому что они важны для сценариев, но не включаются в возможности Geocoder.
+
+Geoapify описывается как hosted commercial open-data geocoding. Это не public Nominatim, не self-hosted Nominatim, не official Russian registry validation и не Russia-specific cleaning API.
 
 ФИАС/ГАР - официальный реестр и маршрут интеграции данных. Здесь он не описывается как коммерческий low-latency API подсказок адреса.
 

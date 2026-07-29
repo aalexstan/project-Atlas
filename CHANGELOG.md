@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-07-29 — Geoapify Geocoding API profile
+
+### Что добавлено
+
+- Добавлен активный двуязычный API profile `apis/geoapify-geocoding-api/`.
+- Добавлены research log, decision memo и provider-request checklist:
+  - `research/geoapify-geocoding-api/2026-07-29.md`
+  - `research/geoapify-geocoding-api/decision.md`
+  - `research/geoapify-geocoding-api/decision.ru.md`
+  - `research/geoapify-geocoding-api/provider-request.md`
+  - `research/geoapify-geocoding-api/provider-request.ru.md`
+- Address/geocoding comparison и need route теперь включают Geoapify как hosted commercial open-data geocoding route.
+
+### Методологические решения
+
+- Geoapify отделён от public Nominatim, self-hosted Nominatim, FIAS/GAR registry validation и Russia-specific address cleaning.
+- ODbL/attribution, DPA/privacy, SaaS/redistribution rights, batch edge cases и benchmark оставлены как blockers.
+- Live testing не проводился.
+
 ## 2026-07-29 — Procurement and tender research baseline
 
 ### Что добавлено

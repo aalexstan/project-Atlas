@@ -13,6 +13,7 @@
     "2gis-suggest-api",
     "2gis-places-api",
     "2gis-geocoder-api",
+    "geoapify-geocoding-api",
     "nominatim-geocoder-software",
     "fias-gar-data-integration"
   ],
@@ -48,9 +49,10 @@
         "yandex-maps-geocoder-api",
         "2gis-geocoder-api",
         "dadata-address-api",
+        "geoapify-geocoding-api",
         "nominatim-geocoder-software"
       ],
-      "notes": "Choose after testing precision, display restrictions, storage rights, ODbL obligations and cost.",
+      "notes": "Choose after testing precision, display restrictions, storage rights, attribution, ODbL obligations and cost.",
       "next_document": "procurement/address-geocoding-api-selection/TEST_PROTOCOL.md"
     },
     {
@@ -65,10 +67,11 @@
     {
       "scenario": "open_data_geocoding_ownership",
       "initial_shortlist": [
+        "geoapify-geocoding-api",
         "nominatim-geocoder-software"
       ],
-      "notes": "Use self-hosting or a commercial provider for production; public Nominatim is strictly limited.",
-      "next_document": "apis/nominatim-geocoder-software/README.md"
+      "notes": "Use Geoapify for hosted open-data geocoding or self-hosted Nominatim for operational ownership; public Nominatim is strictly limited.",
+      "next_document": "comparisons/address-normalization-geocoding/README.md"
     },
     {
       "scenario": "own_registry",
@@ -97,6 +100,7 @@
     "apis/2gis-suggest-api/api.json",
     "apis/2gis-places-api/api.json",
     "apis/2gis-geocoder-api/api.json",
+    "apis/geoapify-geocoding-api/api.json",
     "apis/nominatim-geocoder-software/api.json",
     "apis/fias-gar-data-integration/api.json",
     "comparisons/address-normalization-geocoding/comparison.json",
@@ -106,6 +110,7 @@
     "research/address-geocoding/2gis-suggest-places-decision.md",
     "research/address-geocoding/nominatim-decision.md",
     "research/address-geocoding/2026-07-29-nominatim-self-hosting-ops.md",
-    "research/address-geocoding/2026-07-29-fias-gar-interfaces.md"
+    "research/address-geocoding/2026-07-29-fias-gar-interfaces.md",
+    "research/geoapify-geocoding-api/decision.md"
   ]
 }
