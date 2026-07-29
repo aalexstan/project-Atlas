@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-29 — Moscow open data legacy linkage
+
+### Что изменено
+
+- `datasets/moscow_city_open_data.md` связана с `research/moscow-open-data-api/decision.md`.
+- `datasets/index.md` теперь показывает Moscow Open Data API как legacy-only/blocker route без активного API profile.
+- `TODO.md` уточняет, что декомпозиция московских datasets отложена до доступной official `data.mos.ru` catalog/API documentation и reuse terms.
+
+### Методологические решения
+
+- API Portal и secondary undocumented endpoint collections не используются как final source of truth.
+- Active API profile не создается без official endpoint/auth/formats/status/license evidence.
+- Live testing и catalog export inspection не проводились.
+
 ## 2026-07-29 — Procurement dataset legacy linkage
 
 ### Что изменено

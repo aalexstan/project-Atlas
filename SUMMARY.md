@@ -97,4 +97,5 @@ Atlas должен помогать проверять, сравнивать и 
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
 - Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
+- Legacy dataset note `datasets/moscow_city_open_data.md` связана с Moscow Open Data API decision memo; декомпозиция на maintained dataset notes отложена до доступной official documentation/catalog evidence.
 - Для address/geocoding направления нужны письменные ответы на подготовленные provider-request checklists, credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM, Nominatim sizing benchmark на target extracts/hardware, inspection текущих FIAS/GAR ZIP archives и уточнение публичных деталей FIAS/GAR API services.

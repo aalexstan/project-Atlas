@@ -3,6 +3,22 @@
 Дата исследования: 2026-06-23
 Статус: мигрировано из Pass #1; требует декомпозиции на отдельные наборы
 
+## API-first migration note
+
+Дата связки: 2026-07-29
+
+Эта dataset-centric карточка сохранена как **Legacy / supporting research**. Активная API-first карточка Moscow Open Data API пока не создана.
+
+Текущий вывод Atlas: `data.mos.ru` остается вероятным официальным маршрутом для городских открытых данных Москвы, но в повторном проходе официальная developer documentation не была доступна в среде проверки. Endpoint, authentication, formats, limits, current status и reuse/license terms не подтверждены, поэтому Atlas не создает active API profile и не декомпозирует эту крупную карточку на отдельные maintained dataset notes.
+
+Связанные decision материалы:
+
+- `research/moscow-open-data-api/2026-07-29.md`
+- `research/moscow-open-data-api/decision.md`
+- `research/moscow-open-data-api/decision.ru.md`
+
+API Portal ниже сохранен только как discovery/provenance source. Secondary collections of undocumented `mos.ru` endpoints are not sufficient for an active Atlas API profile.
+
 ## Название
 
 Открытые городские данные Москвы.
@@ -78,6 +94,8 @@
 - Open Data: подтверждено.
 - REST API: подтверждено по API Portal.
 - Веб-портал: подтверждено.
+- Active API-first profile: не создан из-за недоступности официальной developer documentation в повторном проходе.
+- Future route: создать active profile или отдельные dataset notes только после доступной official documentation, catalog export, license/reuse terms и подтверждения endpoint/auth/formats/status.
 - CSV, JSON, XML: не подтверждено в текущей базе.
 - FTP, Webhook, GraphQL: не найдено.
 
@@ -95,12 +113,20 @@
 - Риск слишком широкой карточки: `городские открытые данные` должны быть разбиты на отдельные Dataset.
 - Риск непроверенной лицензии.
 - Риск временной недоступности документации.
+- Риск создать active API profile по API Portal или undocumented endpoint collection без current official `data.mos.ru` evidence.
+- Риск смешать каталог открытых данных, web portal и API/documented export route в один технический продукт.
 
 ## Связанные старые карточки
 
 - `catalog/api-open-data-moscow.md`
 - `companies/government-of-moscow.md`
 - `research/documentation-link-risk.md`
+
+## Связанные исследовательские материалы
+
+- `research/moscow-open-data-api/2026-07-29.md`
+- `research/moscow-open-data-api/decision.md`
+- `research/moscow-open-data-api/decision.ru.md`
 
 ## Источники
 
