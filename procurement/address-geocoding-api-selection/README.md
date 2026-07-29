@@ -1,0 +1,34 @@
+# Address and Geocoding API Selection Kit
+
+[Русская версия](README.ru.md)
+
+> Text-only procurement guidance for selecting address suggestions, cleaning, geocoding, place search and official registry integration.
+
+## Purpose
+
+Use this kit before buying or piloting an address/geocoding provider. It helps separate API capability, data rights, geography, quality, pricing and operational fit.
+
+## Documents
+
+| Document | Purpose |
+|---|---|
+| [`RFP.md`](RFP.md) | Questions to send to providers before commercial evaluation. |
+| [`TEST_PROTOCOL.md`](TEST_PROTOCOL.md) | Reproducible benchmark protocol for address quality and geocoding tests. |
+| [`SAMPLE_POLICY.md`](SAMPLE_POLICY.md) | Safe sample-data rules for testing without credentials, private addresses or personal data. |
+| [`SCORING.md`](SCORING.md) | Scenario-weighted scorecard template; not a global Atlas Score. |
+
+## Related Atlas Materials
+
+- Need route: [`Address Normalization, Address Registries and Geocoding`](../../needs/address-normalization-geocoding/README.md)
+- Comparison: [`Address Normalization, Address Registries and Geocoding APIs`](../../comparisons/address-normalization-geocoding/README.md)
+- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
+
+## Use Sequence
+
+1. Pick the primary scenario from the need route.
+2. Send the RFP questions to shortlisted providers.
+3. Agree on a legal, reproducible test sample.
+4. Run the test protocol with provider-approved credentials.
+5. Fill the scorecard with evidence and unresolved risks.
+
+No real benchmark results are included in this kit.
