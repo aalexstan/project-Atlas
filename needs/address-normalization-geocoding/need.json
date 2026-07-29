@@ -9,6 +9,7 @@
     "dadata-address-api",
     "yandex-maps-geosuggest-api",
     "yandex-maps-geocoder-api",
+    "yandex-maps-organization-search-api",
     "2gis-suggest-api",
     "2gis-places-api",
     "2gis-geocoder-api",
@@ -55,10 +56,11 @@
     {
       "scenario": "organization_place_search",
       "initial_shortlist": [
-        "2gis-places-api"
+        "2gis-places-api",
+        "yandex-maps-organization-search-api"
       ],
-      "notes": "Do not infer place search from geocoder profiles; Yandex organization search needs separate research.",
-      "next_document": "apis/2gis-places-api/README.md"
+      "notes": "Do not infer place search from geocoder profiles; choose by map ecosystem, fields, rights and benchmark quality.",
+      "next_document": "comparisons/address-normalization-geocoding/README.md"
     },
     {
       "scenario": "open_data_geocoding_ownership",
@@ -91,6 +93,7 @@
     "apis/dadata-address-api/api.json",
     "apis/yandex-maps-geosuggest-api/api.json",
     "apis/yandex-maps-geocoder-api/api.json",
+    "apis/yandex-maps-organization-search-api/api.json",
     "apis/2gis-suggest-api/api.json",
     "apis/2gis-places-api/api.json",
     "apis/2gis-geocoder-api/api.json",
@@ -99,6 +102,7 @@
     "comparisons/address-normalization-geocoding/comparison.json",
     "research/address-geocoding/candidate-decisions.md",
     "research/address-geocoding/yandex-geosuggest-decision.md",
+    "research/address-geocoding/yandex-organization-search-decision.md",
     "research/address-geocoding/2gis-suggest-places-decision.md",
     "research/address-geocoding/nominatim-decision.md",
     "research/address-geocoding/2026-07-29-nominatim-self-hosting-ops.md",

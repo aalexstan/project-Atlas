@@ -26,7 +26,7 @@ This route helps choose between commercial address APIs, map geocoders, autocomp
 | Check official Russian address existence | [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md); DaData cleaning as commercial route | GAR is the official registry; DaData can help match/clean addresses. | GAR requires matching, ETL and search; API-service details remain incomplete. | [`FIAS/GAR profile`](../../apis/fias-gar-data-integration/README.md) |
 | Direct geocoding | [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md); [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md); DaData; [`Nominatim`](../../apis/nominatim-geocoder-software/README.md) for self-hosting | Hosted geocoders and self-hosted OSM route solve different operating models. | Storage/display rights, coordinate precision and operations burden need testing. | [`Comparison`](../../comparisons/address-normalization-geocoding/README.md) |
 | Reverse geocoding | Yandex Geocoder; 2GIS Geocoder; DaData; self-hosted Nominatim | Documented coordinate-to-address routes exist outside FIAS/GAR. | Returned object level may differ by provider and location. | [`Test protocol`](../../procurement/address-geocoding-api-selection/TEST_PROTOCOL.md) |
-| Organizations and places | [`2GIS Places API`](../../apis/2gis-places-api/README.md); Yandex organization products need separate research | Place search is a separate product class. | Do not infer place search from geocoder docs or registry validation. | [`2GIS Places profile`](../../apis/2gis-places-api/README.md) |
+| Organizations and places | [`2GIS Places API`](../../apis/2gis-places-api/README.md); [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.md) | Place search is a separate product class. | Do not infer place search from geocoder docs or registry validation. | [`Comparison`](../../comparisons/address-normalization-geocoding/README.md) |
 | Own address database | [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md) | Official registry provenance and data ownership route. | ETL/search/update operations can dominate TCO. | [`FIAS/GAR profile`](../../apis/fias-gar-data-integration/README.md) |
 | Open-data geocoding ownership | [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md) | Self-hosting can use OSM data without a hosted API vendor dependency. | Public Nominatim is restricted; self-hosting and ODbL obligations are non-trivial. | [`Nominatim profile`](../../apis/nominatim-geocoder-software/README.md) |
 | Mass address processing | DaData cleaning; FIAS/GAR for owned registry; self-hosted Nominatim; commercial geocoders after legal check | Different routes solve cleaning, registry base, geocoding and operational ownership. | Batch rights, per-record costs, ODbL, caching and redistribution. | [`RFP`](../../procurement/address-geocoding-api-selection/RFP.md) |
@@ -47,7 +47,7 @@ Shortlist Yandex Maps Geocoder, 2GIS Geocoder and DaData. Add self-hosted Nomina
 
 ### Organizations and Places
 
-Do not treat geocoding as organization search. 2GIS Places API is the active profile for 2GIS organization/building/place search. Yandex organization products need separate research before Atlas gives an active profile.
+Do not treat geocoding as organization search. 2GIS Places API and Yandex Maps Organization Search API are active profiles for organization/place search in their respective map ecosystems.
 
 ### Public Nominatim vs Self-Hosting
 
@@ -92,7 +92,7 @@ Ask this before choosing a provider. A technically strong geocoder can be a poor
 
 ## Links
 
-- API profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md), [`2GIS Places API`](../../apis/2gis-places-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
+- API profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md), [`2GIS Places API`](../../apis/2gis-places-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
 - Comparison: [`Address Normalization, Address Registries and Geocoding APIs`](../../comparisons/address-normalization-geocoding/README.md)
 - Procurement kit: [`Address and Geocoding API Selection`](../../procurement/address-geocoding-api-selection/README.md), [`Nominatim Self-Hosting Checklist`](../../procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.md)
 

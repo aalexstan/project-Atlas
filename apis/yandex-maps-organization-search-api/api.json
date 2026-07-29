@@ -1,0 +1,89 @@
+{
+  "id": "yandex-maps-organization-search-api",
+  "name": "Yandex Maps Organization Search API",
+  "provider": {
+    "name": "Yandex",
+    "website": "https://yandex.ru/maps-api/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "organization search in Yandex Maps-centered products",
+    "place and geographic-object search",
+    "local business discovery near a user or map point",
+    "Yandex ecosystem alternative to 2GIS Places API"
+  ],
+  "pricing": {
+    "status": "public_with_contract_review_required",
+    "model": "daily_request_packages",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "annual_basic_from": "195000 RUB for 1000 requests/day",
+    "monthly_basic_from": "20800 RUB for 1000 requests/day",
+    "license_storage_warning": "Reviewed official pages appear inconsistent about Basic/Advanced or storage-capable license wording; request written tariff and rights appendix."
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "apikey",
+    "issued_by": "Yandex developer dashboard"
+  },
+  "sandbox": {
+    "status": "provider_reported_trial_by_request",
+    "trial": "14-day trial key by request with 500 requests/day limit according to official FAQ",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "requests_per_second": "up to 50",
+    "daily_packages": "published in commercial terms",
+    "contract_limits": "needs_contract_review"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://yandex.com/maps-api/docs/geosearch-api/"
+  },
+  "capabilities": {
+    "organization_search": "verified",
+    "place_search": "verified",
+    "geographic_object_search": "verified",
+    "address_suggestions": "separate_yandex_geosuggest_api",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "search_result_not_registry_validation",
+    "direct_geocoding": "separate_yandex_geocoder_api",
+    "reverse_geocoding": "separate_yandex_geocoder_api",
+    "routing": "separate_product_not_in_scope",
+    "batch": "unknown"
+  },
+  "coverage": {
+    "geography": "provider_reported_yandex_maps_coverage_requires_scenario_check",
+    "language": "lang parameter",
+    "object_types": "organizations and geographic objects"
+  },
+  "data_rights": {
+    "storage": "needs_contract_review_due_to_license_wording",
+    "caching": "needs_contract_review",
+    "display": "needs_contract_review",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review",
+    "model_training": "unknown"
+  },
+  "sources": [
+    "https://yandex.com/maps-api/products/geosearch-api",
+    "https://yandex.com/maps-api/docs/geosearch-api/index.html",
+    "https://yandex.com/maps-api/docs/geosearch-api/request.html",
+    "https://yandex.com/maps-api/docs/geosearch-api/response.html",
+    "https://yandex.com/dev/commercial/doc/en/concepts/geosearch",
+    "https://yandex.com/dev/commercial/doc/en/concepts/faq",
+    "https://yandex.ru/dev/commercial/doc/ru/concepts/geosearch",
+    "https://yandex.ru/legal/maps_api/ru/"
+  ],
+  "open_questions": [
+    "Public SLA and support terms for the selected license",
+    "OpenAPI/Swagger availability",
+    "Exact storage, caching, display, SaaS and redistribution rights under the chosen license",
+    "Whether batch/offline organization enrichment is allowed",
+    "Billing of failed, empty, duplicate, retried and cached results",
+    "Independent benchmark for target cities, categories, ambiguous names and latency"
+  ]
+}

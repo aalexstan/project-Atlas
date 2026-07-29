@@ -8,3 +8,4 @@
 | 2026-07-29 | Added routes for Yandex Geosuggest, 2GIS Suggest, 2GIS Places, Nominatim self-hosting and clarified FIAS/GAR API-service blockers. | Makes the route cover autocomplete, place search, hosted geocoding, open-data self-hosting and official registry choices. |
 | 2026-07-29 | Added verified FIAS/GAR open-data ZIP route details while keeping API-service blockers visible. | Helps users separate file-feed integration from REST-like API procurement. |
 | 2026-07-29 | Linked Nominatim self-hosting route to a dedicated operations checklist. | Helps users evaluate self-hosting before treating OSM geocoding as a hosted API replacement. |
+| 2026-07-29 | Added Yandex Maps Organization Search API to the organization/place search route. | Gives users a Yandex ecosystem option alongside 2GIS Places without treating geocoding as place search. |

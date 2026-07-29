@@ -55,6 +55,20 @@
       "key_risk": "free-use display/storage restrictions and map coupling"
     },
     {
+      "id": "yandex-maps-organization-search-api",
+      "product_class": "organization_place_search",
+      "best_for": [
+        "organization_search",
+        "place_search",
+        "geographic_object_search",
+        "yandex_maps_directory_search"
+      ],
+      "public_pricing": true,
+      "free_tier": "14-day trial key by request with 500 requests/day limit according to official FAQ",
+      "published_limit": "up to 50 requests per second in public API documentation",
+      "key_risk": "license/storage wording and batch/offline rights need contract review"
+    },
+    {
       "id": "2gis-suggest-api",
       "product_class": "suggestions_autocomplete",
       "best_for": [
@@ -148,7 +162,7 @@
     ],
     "organization_place_search": [
       "2gis-places-api",
-      "yandex_organization_search_requires_separate_research"
+      "yandex-maps-organization-search-api"
     ],
     "official_registry_base": [
       "fias-gar-data-integration"
@@ -187,6 +201,11 @@
     "https://yandex.com/maps-api/docs/geocoder-api/request.html",
     "https://yandex.ru/legal/maps_api/ru/",
     "https://yandex.ru/dev/tariffs/doc/ru/geocoder/prices/",
+    "https://yandex.com/maps-api/products/geosearch-api",
+    "https://yandex.com/maps-api/docs/geosearch-api/index.html",
+    "https://yandex.com/maps-api/docs/geosearch-api/request.html",
+    "https://yandex.com/maps-api/docs/geosearch-api/response.html",
+    "https://yandex.com/dev/commercial/doc/en/concepts/geosearch",
     "https://docs.2gis.com/en/api/search/overview",
     "https://docs.2gis.com/en/api/search/suggest/overview",
     "https://docs.2gis.com/en/api/search/places/overview",

@@ -10,10 +10,11 @@
 | Yandex Maps Geocoder API | Create [`yandex-maps-geocoder-api`](../../apis/yandex-maps-geocoder-api/README.md) | Official docs confirm direct/reverse geocoding, endpoint, API key auth, JSON response and commercial/free-use terms. |
 | 2GIS Geocoder API | Create [`2gis-geocoder-api`](../../apis/2gis-geocoder-api/README.md) | Official docs confirm direct/reverse geocoding, API key auth, JSON response, package pricing and limits. |
 | FIAS/GAR | Create [`fias-gar-data-integration`](../../apis/fias-gar-data-integration/README.md) | Official FNS sources confirm GAR/FIAS identity and registry role; profile is framed as data integration, not a turnkey REST geocoder. |
-| Yandex Geosuggest | Do not create in this pass | Separate product from Geocoder; relevant to address input, but this pass focuses on mandatory candidates and avoids shallow expansion. |
-| 2GIS Places API | Do not create in this pass | Official product for organization/place search, but separate from Geocoder and not enough time for a full independent profile. |
-| 2GIS Suggest API | Do not create in this pass | Separate product for real-time suggestions; include as related product only. |
-| OpenStreetMap / Nominatim | Backlog | Useful open-data route, but not researched deeply enough in this block. |
+| Yandex Geosuggest | Create [`yandex-maps-geosuggest-api`](../../apis/yandex-maps-geosuggest-api/README.md) | Later official-source research confirmed a separate autocomplete product with endpoint, API key, public tariffs and object-type filters. |
+| Yandex Organization Search | Create [`yandex-maps-organization-search-api`](../../apis/yandex-maps-organization-search-api/README.md) | Later official-source research confirmed a separate organization/place search product with endpoint, API key, public commercial terms and API request limit up to 50 rps. |
+| 2GIS Places API | Create [`2gis-places-api`](../../apis/2gis-places-api/README.md) | Later official-source research confirmed a separate Places API for organizations, buildings and places with public package pricing. |
+| 2GIS Suggest API | Create [`2gis-suggest-api`](../../apis/2gis-suggest-api/README.md) | Later official-source research confirmed a separate suggestion product for object, address, street and route-endpoint suggestions. |
+| OpenStreetMap / Nominatim | Create [`nominatim-geocoder-software`](../../apis/nominatim-geocoder-software/README.md) | Later research confirmed Nominatim as an open-source geocoder software/self-hosting route, not a free production public API. |
 | Moscow Open Data address datasets | Backlog | Potential Moscow-specific data route, but not a replacement for national address registry or geocoder in this pass. |
 
 ## Boundary Decisions
@@ -22,10 +23,10 @@ DaData receives a separate address profile because the existing DaData API profi
 
 Yandex Maps Geocoder is scoped to geocoding only. Address suggestions belong to Geosuggest; organization search belongs to Organization Search; routing and distance matrix are separate navigation products.
 
-2GIS Geocoder is scoped to direct and reverse geocoding. Places API and Suggest API are mentioned because they matter for user scenarios, but they are not folded into the Geocoder capability without proof.
+2GIS Geocoder is scoped to direct and reverse geocoding. Places API and Suggest API are active separate profiles because they matter for user scenarios, but they are not folded into the Geocoder capability.
 
 FIAS/GAR is an official registry and integration route. It is not documented here as a commercial low-latency address suggestion API.
 
 ## Evidence Standard
 
-All active profiles are based on official or primary sources reviewed on 2026-07-29. No live credential testing was performed, no quality benchmark was run, and no profile receives a Gold maturity level.
+All active profiles are based on official or primary sources reviewed on 2026-07-29. No live credential testing was performed, no quality benchmark was run, and no profile receives a Gold maturity level. Later rows in this decision log reflect subsequent 2026-07-29 deepening of the same address/geocoding direction.

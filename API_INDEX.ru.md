@@ -17,3 +17,4 @@
 | [Seldon.Basis API](apis/seldon-basis/README.ru.md) | reviewed | 2026-07-23 |
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.ru.md) | reviewed | 2026-07-29 |
+| [Yandex Maps Organization Search API](apis/yandex-maps-organization-search-api/README.ru.md) | reviewed | 2026-07-29 |

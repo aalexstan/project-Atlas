@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-07-29 — Yandex Organization Search API profile
+
+### Что добавлено
+
+- Добавлен активный двуязычный API profile `apis/yandex-maps-organization-search-api/`.
+- Добавлены research log и decision memo:
+  - `research/address-geocoding/2026-07-29-yandex-organization-search.md`
+  - `research/address-geocoding/yandex-organization-search-decision.md`
+  - `research/address-geocoding/yandex-organization-search-decision.ru.md`
+- Address/geocoding comparison и need route теперь включают Yandex Organization Search как place/organization search candidate.
+- Yandex provider-request checklist расширен на Organization Search.
+
+### Методологические решения
+
+- Yandex Organization Search отделён от Geosuggest, Geocoder и routing.
+- Противоречивые или неоднозначные license/storage wording в official Yandex pages сохранены как contract-review blocker.
+- Live testing, benchmark, SLA confirmation и contract-rights review не проводились.
+
 ## 2026-07-29 — Legacy template index cleanup
 
 ### Что изменено

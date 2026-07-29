@@ -16,7 +16,7 @@
 
 **Успех:** карточки заметно полезнее для выбора, чем описания поставщиков.
 
-**Текущий прогресс:** reviewed address/geocoding profiles уже есть для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software и FIAS/GAR Data Integration. Provider-specific request checklists подготовлены для DaData, Yandex Maps и 2GIS. Open-data XML ZIP route FIAS/GAR и Nominatim self-hosting operations path теперь описаны точнее, но детали API/SMEV services, legal review и benchmarks остаются blockers. До Gold нужны live tests, подтверждение SLA, проверка прав данных и quality benchmarks.
+**Текущий прогресс:** reviewed address/geocoding profiles уже есть для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software и FIAS/GAR Data Integration. Provider-specific request checklists подготовлены для DaData, Yandex Maps и 2GIS. Open-data XML ZIP route FIAS/GAR и Nominatim self-hosting operations path теперь описаны точнее, но детали API/SMEV services, legal review и benchmarks остаются blockers. До Gold нужны live tests, подтверждение SLA, проверка прав данных и quality benchmarks.
 
 ## Этап 3 — Центр сравнений
 

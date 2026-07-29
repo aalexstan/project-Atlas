@@ -1,34 +1,37 @@
-# Запрос поставщику - Yandex Maps Geosuggest и Geocoder APIs
+# Запрос поставщику - Yandex Maps Geosuggest, Geocoder и Organization Search APIs
 
 [English version](provider-request-yandex-maps.md)
 
-Этот checklist подготовлен для разговора с Yandex о Yandex Maps Geosuggest API и Yandex Maps Geocoder API. Он не должен считаться ответами поставщика, пока Yandex не ответит письменно или не предоставит официальную документацию.
+Этот checklist подготовлен для разговора с Yandex о Yandex Maps Geosuggest API, Yandex Maps Geocoder API и Yandex Maps Organization Search API. Он не должен считаться ответами поставщика, пока Yandex не ответит письменно или не предоставит официальную документацию.
 
 ## Контекст
 
-Atlas сейчас рассматривает [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md) и [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md) как отдельные активные reviewed-продукты. Открытые blockers Atlas: production RPS, SLA, точные storage/display/SaaS rights, batch/offline restrictions, OpenAPI availability и независимые quality benchmarks.
+Atlas сейчас рассматривает [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md) и [`Yandex Maps Organization Search API`](../../apis/yandex-maps-organization-search-api/README.ru.md) как отдельные активные reviewed-продукты. Открытые blockers Atlas: production RPS/SLA там, где они не опубликованы, точные storage/display/SaaS rights, batch/offline restrictions, OpenAPI availability и независимые quality benchmarks.
 
 ## Материалы Atlas для приложения
 
 - [`apis/yandex-maps-geosuggest-api/README.ru.md`](../../apis/yandex-maps-geosuggest-api/README.ru.md)
 - [`apis/yandex-maps-geocoder-api/README.ru.md`](../../apis/yandex-maps-geocoder-api/README.ru.md)
+- [`apis/yandex-maps-organization-search-api/README.ru.md`](../../apis/yandex-maps-organization-search-api/README.ru.md)
 - [`apis/yandex-maps-geosuggest-api/evidence.ru.md`](../../apis/yandex-maps-geosuggest-api/evidence.ru.md)
 - [`apis/yandex-maps-geocoder-api/evidence.ru.md`](../../apis/yandex-maps-geocoder-api/evidence.ru.md)
+- [`apis/yandex-maps-organization-search-api/evidence.ru.md`](../../apis/yandex-maps-organization-search-api/evidence.ru.md)
 - [`comparisons/address-normalization-geocoding/README.ru.md`](../../comparisons/address-normalization-geocoding/README.ru.md)
 - [`procurement/address-geocoding-api-selection/RFP.ru.md`](../../procurement/address-geocoding-api-selection/RFP.ru.md)
 - [`procurement/address-geocoding-api-selection/TEST_PROTOCOL.ru.md`](../../procurement/address-geocoding-api-selection/TEST_PROTOCOL.ru.md)
 
 ## Границы продуктов
 
-1. Подтвердите точную границу между Geosuggest API, Geocoder API, Search APIs, organization search, routing, matrix APIs и JavaScript map components.
+1. Подтвердите точную границу между Geosuggest API, Geocoder API, Organization Search API, other Search APIs, routing, matrix APIs и JavaScript map components.
 2. Какие Geosuggest responses предполагается разрешать через Geocoder API, и какие fields или identifiers нужно использовать для handoff?
 3. Даёт ли Geosuggest только organization autocomplete, или его можно использовать как full organization search product?
-4. Даёт ли Geocoder какие-либо address normalization или validation guarantees помимо geocoding precision metadata?
-5. Какие возможности требуют отдельных лицензий или договоров?
+4. Какие Organization Search use cases требуют Organization Search API, а не Geosuggest или Geocoder?
+5. Даёт ли Geocoder какие-либо address normalization или validation guarantees помимо geocoding precision metadata?
+6. Какие возможности требуют отдельных лицензий или договоров?
 
 ## Methods and field matrix
 
-1. Предоставьте complete method and parameter matrix для Geosuggest и Geocoder.
+1. Предоставьте complete method and parameter matrix для Geosuggest, Geocoder и Organization Search.
 2. Какие fields возвращаются для address suggestions, geographic objects, organizations, coordinates, precision, administrative hierarchy и metadata?
 3. Какие fields являются stable identifiers, display labels, provider-internal identifiers, temporary URIs или geocoder handoff values?
 4. Какие parameters влияют на geography, language, bounding boxes, result type, result count и strict bounds?
@@ -37,8 +40,8 @@ Atlas сейчас рассматривает [`Yandex Maps Geosuggest API`](../
 
 ## Protocol, authentication и key handling
 
-1. Подтвердите production base URLs для Geosuggest и Geocoder.
-2. Выпускаются, ограничиваются и тарифицируются ли API keys отдельно для Geosuggest и Geocoder?
+1. Подтвердите production base URLs для Geosuggest, Geocoder и Organization Search.
+2. Выпускаются, ограничиваются и тарифицируются ли API keys отдельно для Geosuggest, Geocoder и Organization Search?
 3. Можно ли ограничить keys по domain, IP, app, environment или API family?
 4. Доступны ли отдельные credentials для test и production?
 5. Как keys ротируются, отзываются и ограничиваются по scope?
@@ -46,7 +49,7 @@ Atlas сейчас рассматривает [`Yandex Maps Geosuggest API`](../
 
 ## Formats, schemas, versioning и errors
 
-1. Доступны ли OpenAPI/Swagger specifications для Geosuggest и Geocoder?
+1. Доступны ли OpenAPI/Swagger specifications для Geosuggest, Geocoder и Organization Search?
 2. Какие request and response formats официально поддерживаются?
 3. Какие error codes и retry guidance применяются к validation errors, authentication failures, quota exhaustion, rate limits, not-found results и provider incidents?
 4. Как устроено API versioning?
@@ -55,16 +58,16 @@ Atlas сейчас рассматривает [`Yandex Maps Geosuggest API`](../
 
 ## Pricing and billing
 
-1. Подтвердите API-specific pricing для Geosuggest и Geocoder по license type и request package.
+1. Подтвердите API-specific pricing для Geosuggest, Geocoder и Organization Search по license type и request package.
 2. Что входит в Standard и Extended licenses для каждого продукта?
 3. Какая license позволяет data storage, и какие именно data можно хранить?
 4. Как тарифицируются additional requests, retries, failed requests, no-result responses, duplicate requests и cached results?
 5. Какие minimum commitment, setup fee, support fee или SLA fee применяются?
-6. Как покупателю считать workflow, где каждый выбранный Geosuggest result вызывает один или несколько Geocoder requests?
+6. Как покупателю считать workflow, где Geosuggest suggestions вызывают Geocoder requests и/или Organization Search requests?
 
 ## Limits, quotas и production suitability
 
-1. Какие production requests-per-second limits действуют для Geosuggest и Geocoder?
+1. Какие production requests-per-second limits действуют для Geosuggest, Geocoder и Organization Search?
 2. Limits считаются per key, account, IP, API family, project, domain или contract?
 3. Можно ли согласовать burst, concurrency, daily и monthly quotas?
 4. Какие limits действуют для test-period keys?
@@ -73,7 +76,7 @@ Atlas сейчас рассматривает [`Yandex Maps Geosuggest API`](../
 
 ## Display, storage and data rights
 
-1. Когда Geosuggest или Geocoder results должны показываться на карте Yandex?
+1. Когда Geosuggest, Geocoder или Organization Search results должны показываться на карте Yandex?
 2. Можно ли показывать results на third-party maps или в non-map UI?
 3. Может ли покупатель хранить suggestions, selected labels, coordinates, geocoder precision, administrative fields и raw responses?
 4. Можно ли cache results? Если да, какие TTL и refresh rules?
