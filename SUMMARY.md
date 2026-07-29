@@ -20,22 +20,28 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 5 | DaData, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
-| Comparisons | 1 | Company and counterparty data APIs in Russia |
-| Procurement kits | 1 | Counterparty API selection kit |
+| API profiles | 9 | DaData, DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
+| Comparisons | 2 | Company and counterparty data APIs in Russia; address normalization and geocoding APIs |
+| Need routes | 1 | Address normalization, address registries and geocoding |
+| Procurement kits | 2 | Counterparty API selection kit; address/geocoding API selection kit |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
+| Needs indexes | 2 | English and Russian |
 | Active templates | 4 | API card and comparison templates in English and Russian |
 
 ## Активные API profiles
 
 | API | Maturity | Last verified | Live test |
 |---|---|---|---|
+| 2GIS Geocoder API | reviewed | 2026-07-29 | not performed |
+| DaData Address APIs | reviewed | 2026-07-29 | not performed |
 | DaData API | reviewed | 2026-07-23 | not performed |
+| FIAS/GAR Data Integration | reviewed | 2026-07-29 | not performed |
 | FTS EGRUL/EGRIP Data Integration | reviewed | 2026-07-23 | not performed |
 | GLOBAS.API | reviewed | 2026-07-28 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
 | Seldon.Basis API | reviewed | 2026-07-23 | not performed |
+| Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
 
 ## Legacy / Supporting Research
 
@@ -63,6 +69,8 @@ Atlas должен помогать проверять, сравнивать и 
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
 - ГЛОБАС.API восстановлен из legacy backlog как активный API-first profile на основе официальных страниц Credinform; REST claim из API Portal сохранен только как legacy provenance.
+- Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API и FIAS/GAR Data Integration, сценарное comparison, need route и procurement checklist.
+- ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder.
 
 ## Нерешенные вопросы
 
@@ -72,4 +80,4 @@ Atlas должен помогать проверять, сравнивать и 
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
 - Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
-- Address/FIAS layer требует отдельной API-first миграции или decision memo.
+- Для address/geocoding направления нужны credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms и уточнение публичных деталей FIAS/GAR API services.

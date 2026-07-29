@@ -1,5 +1,7 @@
 # Доказательства — ФНС ЕГРЮЛ/ЕГРИП
 
+[English version](evidence.md)
+
 | Утверждение | Источник | Проверено | Статус |
 |---|---|---|---|
 | Files are delivered via FTS FTP archives containing XML | https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/ | 2026-07-23 | verified |

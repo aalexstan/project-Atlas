@@ -1,5 +1,7 @@
 # Evidence — FTS EGRUL/EGRIP
 
+[Русская версия](evidence.ru.md)
+
 | Claim | Source | Checked | Status |
 |---|---|---|---|
 | Files are delivered via FTS FTP archives containing XML | https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/ | 2026-07-23 | verified |

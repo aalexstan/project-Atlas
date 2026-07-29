@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-07-29 — Address and geocoding API-first direction
+
+### Что добавлено
+
+- Добавлены research logs и candidate decisions в `research/address-geocoding/`.
+- Добавлены активные двуязычные API profiles:
+  - `apis/dadata-address-api/`
+  - `apis/yandex-maps-geocoder-api/`
+  - `apis/2gis-geocoder-api/`
+  - `apis/fias-gar-data-integration/`
+- Добавлено сценарное сравнение `comparisons/address-normalization-geocoding/`.
+- Добавлен need route `needs/address-normalization-geocoding/`.
+- Добавлен текстовый procurement kit `procurement/address-geocoding-api-selection/`.
+- Добавлены `NEEDS_INDEX.md` и `NEEDS_INDEX.ru.md`.
+- Обновлены API, comparison и root indexes/navigation.
+
+### Методологические решения
+
+- DaData Address APIs отделены от общей карточки DaData, чтобы не смешивать company autocomplete с address autocomplete/cleaning/geocoding.
+- Yandex Maps Geocoder описан только как direct/reverse geocoder; Geosuggest, Organization Search и routing оставлены отдельными продуктами.
+- 2GIS Geocoder описан отдельно от 2GIS Places API и Suggest API.
+- ФИАС/ГАР оформлен как официальный registry/data-integration route, а не как обычный REST geocoder.
+- Не объявлен универсальный победитель: рекомендации зависят от сценария, прав хранения, display restrictions, batch needs and TCO.
+- Live testing и benchmark качества не проводились.
+
 ## 2026-07-29 — Moscow Open Data API blocker research
 
 ### Что добавлено

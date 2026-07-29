@@ -71,6 +71,15 @@ Task-oriented comparisons such as company verification APIs, geocoding APIs, pay
 
 Research notes preserve how conclusions were reached. Change records track material changes in pricing, documentation, versions, limits, and product availability.
 
+## Start with a Need
+
+Not sure which API to inspect first? Start from a user task:
+
+- [Needs Index](NEEDS_INDEX.md)
+- [Address normalization, address registries and geocoding](needs/address-normalization-geocoding/README.md)
+
+Then use the related [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and procurement kits.
+
 ## Maturity Levels
 
 1. **Discovered** — official provider or product page found.
@@ -128,7 +137,7 @@ Atlas will begin with a small number of high-value API categories:
 - payments and finance;
 - messaging and notifications.
 
-The first reference profile, **DaData**, is now published. The first company and counterparty information API comparison is also published.
+The first reference profile, **DaData**, is now published. The first company and counterparty information API comparison is also published. The address and geocoding direction now has active API profiles, a comparison, a need route, and a procurement checklist.
 
 ## Business Direction
 

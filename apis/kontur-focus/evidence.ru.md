@@ -1,5 +1,7 @@
 # Доказательства — Контур.Фокус API
 
+[English version](evidence.md)
+
 | Утверждение | Источник | Проверено | Статус |
 |---|---|---|---|
 | Provider offers automatic counterparty checks through API | https://focus.kontur.ru/site/api | 2026-07-23 | verified |

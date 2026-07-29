@@ -4,8 +4,12 @@
 
 | API | Maturity | Last verified |
 |---|---|---|
+| [2GIS Geocoder API](apis/2gis-geocoder-api/README.md) | reviewed | 2026-07-29 |
+| [DaData Address APIs](apis/dadata-address-api/README.md) | reviewed | 2026-07-29 |
 | [DaData API](apis/dadata/README.md) | reviewed | 2026-07-23 |
+| [FIAS/GAR Data Integration](apis/fias-gar-data-integration/README.md) | reviewed | 2026-07-29 |
 | [FTS EGRUL/EGRIP Data Integration](apis/fns-egrul-egrip-integration/README.md) | reviewed | 2026-07-23 |
 | [GLOBAS.API](apis/globas-api/README.md) | reviewed | 2026-07-28 |
 | [Kontur.Focus API](apis/kontur-focus/README.md) | reviewed | 2026-07-23 |
 | [Seldon.Basis API](apis/seldon-basis/README.md) | reviewed | 2026-07-23 |
+| [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.md) | reviewed | 2026-07-29 |

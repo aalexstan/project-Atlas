@@ -16,11 +16,15 @@ Initial targets: DaData, relevant Kontur and Seldon products, official registry 
 
 **Success:** profiles are materially more useful for selection than provider summaries.
 
+**Current progress:** first reviewed profiles now exist for DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API and FIAS/GAR Data Integration. They still need live tests, SLA confirmation and data-rights review before Gold.
+
 ## Phase 3 — Comparison Hub
 
 Initial comparisons: company and counterparty data, addresses and geocoding, procurement data, messaging, payments, and financial data.
 
 **Success:** each comparison provides scenario-specific recommendations, evidence, and a review date.
+
+**Current progress:** company/counterparty and address/geocoding comparisons are published. Address/geocoding also has a need route and procurement checklist.
 
 ## Phase 4 — Distribution and Feedback
 
