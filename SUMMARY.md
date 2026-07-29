@@ -69,6 +69,7 @@ Atlas должен помогать проверять, сравнивать и 
 - История проверки домена `api-seldon.ru` сохранена как исторический риск источника.
 - Активная карточка Seldon.Basis связана с официальными источниками `seldongroup.ru`.
 - Для Seldon.Tenders создано решение сохранить legacy-only статус: официальные страницы подтверждают `API.Seldon.Tenders` как Seldon 1.7 integration route, но публичной specification/auth/pricing evidence недостаточно для активной карточки.
+- Для Kontur.Focus API и Seldon.Basis API подготовлены provider-request checklists, чтобы запросить API-specific price/spec/limits/SLA/data-rights evidence без смешивания с web-product pricing.
 - Цены веб-версий не используются как цены API.
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
@@ -87,7 +88,7 @@ Atlas должен помогать проверять, сравнивать и 
 ## Нерешенные вопросы
 
 - Нужны credentialed live tests для API profiles.
-- Для Kontur и Seldon нужны коммерческие предложения, production limits, SLA и права хранения/redistribution.
+- Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.
 - Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.

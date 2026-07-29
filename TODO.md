@@ -4,8 +4,8 @@
 
 - Поддерживать API-first направление: новые публичные материалы создавать как `apis/<slug>/` или `comparisons/<slug>/`, а не как новые dataset-centric основные карточки.
 - Провести live testing для DaData, Kontur.Focus API, Seldon.Basis API и FTS integration только при наличии законных credentials/test access и сохранить evidence.
-- Для Kontur.Focus API запросить API-specific quote, production limits, SLA, OpenAPI/Swagger или полную спецификацию, storage rights, redistribution rights и contract appendices.
-- Для Seldon.Basis API запросить Swagger, authentication model, method pricing, batch billing, production limits, SLA, storage rights и redistribution rights.
+- Для Kontur.Focus API отправить подготовленный `research/kontur-focus/provider-request*.md` и получить API-specific quote, production limits, SLA, OpenAPI/Swagger или полную спецификацию, storage rights, redistribution rights и contract appendices.
+- Для Seldon.Basis API отправить подготовленный `research/seldon-basis/provider-request*.md` и получить Swagger, authentication model, method pricing, batch billing, production limits, SLA, storage rights и redistribution rights.
 - Для DaData подтвердить endpoint-specific права хранения, caching, customer-facing display, redistribution/resale и провести quality benchmark на легальной тестовой выборке.
 - Для DaData Address APIs подтвердить права хранения/caching/customer-facing display/SaaS, OpenAPI endpoint scope, async/batch options и benchmark качества адресов.
 - Для Yandex Maps Geosuggest API подтвердить production RPS, SLA, storage/display/SaaS rights, batch/offline restrictions и benchmark autocomplete quality.

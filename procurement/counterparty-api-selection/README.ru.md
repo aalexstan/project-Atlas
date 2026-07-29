@@ -64,3 +64,9 @@
 - [Методика scorecard](docs/SCORING.ru.md)
 - [Методика TCO](docs/TCO.ru.md)
 - [Политика тестовой выборки](docs/SAMPLE_POLICY.ru.md)
+
+## Запросы по конкретным поставщикам
+
+- [Provider request для Kontur.Focus API](../../research/kontur-focus/provider-request.ru.md)
+- [Provider request для Seldon.Basis API](../../research/seldon-basis/provider-request.ru.md)
+- [Provider request для GLOBAS.API](../../research/globas-api/provider-request.ru.md)

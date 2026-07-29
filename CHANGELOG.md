@@ -57,6 +57,22 @@
 - Активная API-first карточка Seldon.Tenders не создается: публичные specification, endpoint/auth, schemas, limits, SLA, API pricing и data-use rights не найдены.
 - Вариант включения как capability Seldon.Basis не выбран, потому что официальные источники связывают материал с Seldon 1.7 procurement functionality, а не с Seldon.Basis.
 
+## 2026-07-29 — Counterparty provider request checklists
+
+### Что добавлено
+
+- Добавлены provider-request checklists:
+  - `research/kontur-focus/provider-request.md`
+  - `research/kontur-focus/provider-request.ru.md`
+  - `research/seldon-basis/provider-request.md`
+  - `research/seldon-basis/provider-request.ru.md`
+
+### Методологические решения
+
+- Документы являются вопросниками для поставщика, а не подтверждением условий.
+- Вопросы сфокусированы на API-specific pricing, method/field matrix, OpenAPI/Swagger, authentication, production limits, SLA, storage/caching/redistribution/SaaS rights and change management.
+- Для Seldon.Basis отдельно сохранён source-risk вопрос по историческому домену `api-seldon.ru` и текущим официальным `seldongroup.ru` материалам.
+
 ## 2026-07-28 — GLOBAS.API official-source profile
 
 ### Что добавлено
