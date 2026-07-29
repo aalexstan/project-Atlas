@@ -72,9 +72,11 @@
 | Цена API-сервисов | unknown |
 | Open-data file format | XML ZIP указан в official open-data catalog |
 | Open-data update cadence | weekly в official open-data catalog |
+| Current open-data package metadata | official page lists `data-28072026-structure-20191024.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases for `2026-07-24`, `2026-07-21`, `2026-07-17`, `2026-07-14` |
 | Цена файловых выгрузок | monetary price не указана на просмотренной open-data page |
 | Eligibility СМЭВ | unknown |
 | Structure reference | structure ZIP указан в official open-data catalog; содержимое архива не inspected |
+| Current package model | unknown; metadata alone does not prove full, delta or mixed semantics |
 | API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
@@ -89,7 +91,7 @@
 
 ## Рекомендация по сценарию
 
-Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
+Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Current open-data page даёт полезную package metadata, но Atlas не inspected archive contents и не доказал full/delta semantics. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
 
 ## Доказательства
 

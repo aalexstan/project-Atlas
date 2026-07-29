@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR package metadata clarification
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-package-metadata.md`.
+- FIAS/GAR profile и address/geocoding comparison теперь фиксируют current official package metadata: `data-28072026-structure-20191024.zip`, structure archive `structure-12032021.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases и methodological recommendations version `4.0`.
+
+### Методологические решения
+
+- ZIP archives не скачивались и не inspected; бинарные артефакты не менялись.
+- Full/delta package semantics, API services method catalog, auth, quotas, SMEV eligibility, costs и legal-use rights остаются blockers.
+
 ## 2026-07-29 — Geoapify Geocoding API profile
 
 ### Что добавлено

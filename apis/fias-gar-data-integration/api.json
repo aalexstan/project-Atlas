@@ -62,6 +62,20 @@
     "open_data_dataset_id": "7707329152-fias",
     "open_data_format": "xml",
     "open_data_update_cadence": "weekly",
+    "current_open_data_package": {
+      "data_url": "https://fias.nalog.ru/opendata/7707329152-fias/data-28072026-structure-20191024.zip",
+      "last_modified": "2026-07-28",
+      "actuality_date_reported_by_page": "2026-08-02",
+      "methodological_recommendations_version": "4.0",
+      "previous_releases_visible": [
+        "2026-07-24",
+        "2026-07-21",
+        "2026-07-17",
+        "2026-07-14"
+      ],
+      "archive_contents_inspected": false,
+      "package_model": "unknown_full_delta_or_mixed"
+    },
     "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
     "kladR_status": "legacy_publication_quarterly_from_2026_07_01_semiannual_from_2027_01_01_ends_2028_01_01",
     "address_objects": [
@@ -91,7 +105,7 @@
     "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ],
   "open_questions": [
-    "Current open-data ZIP archive contents and package structure",
+    "Inner contents and schema files of the current open-data ZIP archive",
     "Whether current ZIP publications are full, delta or mixed packages",
     "Public API service method catalog, base URL, authentication and schemas",
     "Eligibility and process for API services and SMEV access",

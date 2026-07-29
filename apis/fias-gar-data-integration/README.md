@@ -72,9 +72,11 @@ That cost must be included in TCO. A registry feed can be cheaper per request an
 | API service price | unknown |
 | Open-data file format | XML ZIP listed in official open-data catalog |
 | Open-data update cadence | weekly in official open-data catalog |
+| Current open-data package metadata | official page lists `data-28072026-structure-20191024.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases for `2026-07-24`, `2026-07-21`, `2026-07-17`, `2026-07-14` |
 | File download price | no monetary price stated on reviewed open-data page |
 | SMEV eligibility | unknown |
 | Structure reference | structure ZIP listed in official open-data catalog; archive contents not inspected |
+| Current package model | unknown; metadata alone does not prove full, delta or mixed semantics |
 | API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
@@ -89,7 +91,7 @@ That cost must be included in TCO. A registry feed can be cheaper per request an
 
 ## Scenario-Based Recommendation
 
-Choose FIAS/GAR when official Russian address provenance and long-term data ownership matter enough to justify engineering work. Choose a commercial API when the main need is fast address entry, geocoding, support and predictable integration effort.
+Choose FIAS/GAR when official Russian address provenance and long-term data ownership matter enough to justify engineering work. The current open-data page gives useful package metadata, but Atlas has not inspected archive contents or proved full/delta semantics. Choose a commercial API when the main need is fast address entry, geocoding, support and predictable integration effort.
 
 ## Evidence
 

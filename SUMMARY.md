@@ -87,7 +87,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Nominatim описан как open-source geocoder software/self-hosting route; публичный `nominatim.openstreetmap.org` не считается бесплатным production API.
 - Geoapify Geocoding API добавлен как hosted commercial open-data geocoding route; ODbL/attribution, DPA, SaaS/redistribution rights и benchmark остаются blockers.
 - Для Nominatim добавлен self-hosting operations checklist: import sizing, full-planet/extract выбор, update mode, production deployment, monitoring/security и benchmark gates.
-- ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, structure ZIP, weekly updates и previous releases verified по open-data catalog ФНС, а API/SMEV method catalog/auth/schemas остаются blockers.
+- ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, current package metadata `data-28072026-structure-20191024.zip`, structure ZIP, weekly updates и previous releases verified по open-data catalog ФНС, а inner ZIP contents, full/delta semantics и API/SMEV method catalog/auth/schemas остаются blockers.
 - Legacy dataset note `datasets/russian_address_registry.md` связана с активной карточкой `apis/fias-gar-data-integration/`; `kladr-api.ru` сохранен только как historical source-risk/provenance note.
 - Для DaData Address APIs, Yandex Maps Geosuggest/Geocoder/Organization Search, 2GIS Suggest/Places/Geocoder и Geoapify Geocoding API подготовлены provider-request checklists, чтобы запросить endpoint-specific rights, SLA, limits, OpenAPI/Swagger, batch/offline terms and benchmark-support evidence.
 - Создан первый need-based маршрут `needs/company-verification/`.

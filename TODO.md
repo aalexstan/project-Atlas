@@ -16,7 +16,7 @@
 - Для 2GIS Geocoder API отправить подготовленный `research/address-geocoding/provider-request-2gis-search*.md` и получить OpenAPI/Swagger, SLA, storage/caching/display/SaaS rights, on-demand field pricing и данные для precision benchmark.
 - Для Geoapify Geocoding API отправить подготовленный `research/geoapify-geocoding-api/provider-request*.md` и получить ODbL/attribution interpretation, DPA/privacy terms, SaaS/redistribution rights, batch failure/retry billing, paid-plan contract terms и benchmark-support evidence.
 - Для Nominatim Geocoder Software провести legal review ODbL/attribution/derived databases, benchmark exact self-hosting sizing/update operations на target extracts/hardware и не использовать public instance для production/autocomplete/bulk.
-- Для FIAS/GAR Data Integration уточнить содержимое текущих ZIP archives, full/delta package model, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
+- Для FIAS/GAR Data Integration после уточнения official package metadata (`data-28072026-structure-20191024.zip`) проверить inner ZIP contents/schema files, full/delta package model, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
 - Перепроверить FTS EGRUL/EGRIP integration после перехода форматов, запланированного на 2026-08-01.
 - Не использовать `ratings/` как действующий Atlas Score. Любая новая оценка должна следовать `docs/METHODOLOGY.md` и иметь публичные критерии.
 - Поддерживать `API_INDEX*`, `COMPARISON_INDEX*` и `NEEDS_INDEX*` через `python3 scripts/generate_indexes.py`; CI должен проходить `python3 scripts/generate_indexes.py --check`.

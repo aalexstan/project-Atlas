@@ -16,7 +16,7 @@ Initial targets: DaData, relevant Kontur and Seldon products, official registry 
 
 **Success:** profiles are materially more useful for selection than provider summaries.
 
-**Current progress:** reviewed address/geocoding profiles now exist for DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software and FIAS/GAR Data Integration. Provider-specific request checklists are prepared for DaData, Yandex Maps, 2GIS and Geoapify. The FIAS/GAR open-data XML ZIP route, Geoapify hosted open-data route and Nominatim self-hosting operations path are now clearer, while API/SMEV service details, ODbL/legal review and benchmarks remain blockers. The profiles still need live tests, SLA confirmation, data-rights review and quality benchmarks before Gold.
+**Current progress:** reviewed address/geocoding profiles now exist for DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software and FIAS/GAR Data Integration. Provider-specific request checklists are prepared for DaData, Yandex Maps, 2GIS and Geoapify. The FIAS/GAR open-data XML ZIP route now includes current package metadata, and the Geoapify hosted open-data route and Nominatim self-hosting operations path are clearer, while inner ZIP contents, full/delta semantics, API/SMEV service details, ODbL/legal review and benchmarks remain blockers. The profiles still need live tests, SLA confirmation, data-rights review and quality benchmarks before Gold.
 
 ## Phase 3 — Comparison Hub
 
