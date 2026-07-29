@@ -26,7 +26,7 @@
 
 GAR is the State Address Register: the state information resource containing Russian address information. FIAS is the federal information system operated by the Federal Tax Service that maintains and provides access to GAR.
 
-This profile is named "data integration" because reviewed official pages confirm registry identity and developer access modes, but do not expose a complete public REST-style API specification in the captured public documentation.
+This profile is named "data integration" because reviewed official pages confirm registry identity and developer access modes, but do not expose a complete public REST-style API specification in the captured public documentation. FNS materials mention file downloads, SMEV and API services; Atlas does not treat visible website endpoints as supported public APIs unless FNS documentation identifies them as such.
 
 ## Best-Fit Scenarios
 
@@ -44,9 +44,10 @@ This profile is named "data integration" because reviewed official pages confirm
 | Channel | Status | Notes |
 |---|---|---|
 | Public address search | Verified | FIAS public portal exposes address search. |
-| Open data / file downloads | Verified as developer-section entry | Detailed formats and cadence need recheck. |
-| SMEV | Verified as developer-section entry | Eligibility and process are unknown in this profile. |
-| API services | Verified as developer-section entry | Public method catalog, base URL, auth and schemas were not visible in reviewed static pages. |
+| Open data / file downloads | Verified as developer-section entry and official integration route | FNS archived material describes weekly downloads published twice per week; current package formats need recheck. |
+| SMEV | Verified as developer-section entry and official integration route | FNS archived material describes daily publication through SMEV; eligibility and process are unknown in this profile. |
+| API services | Verified as developer-section entry and official integration route | FNS archived material describes online API batch provision by request; public method catalog, base URL, auth and schemas were not visible in reviewed static pages. |
+| Search / Frontend web pages | Verified as user-facing portal | Do not treat discovered web endpoints as supported integration APIs without explicit FNS documentation. |
 
 ## Implementation Implications
 
@@ -70,6 +71,7 @@ That cost must be included in TCO. A registry feed can be cheaper per request an
 | API service price | unknown |
 | File download price | unknown |
 | SMEV eligibility | unknown |
+| File/API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
 

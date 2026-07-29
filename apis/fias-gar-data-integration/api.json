@@ -26,9 +26,10 @@
   },
   "authentication": {
     "public_site_search": "web_service",
-    "file_downloads": "official_developer_section_exists_details_need_recheck",
-    "api_services": "official_developer_section_exists_details_unknown",
-    "smev": "official_developer_section_exists_eligibility_unknown"
+    "file_downloads": "official_developer_section_and_fns_materials_confirm_channel_details_need_recheck",
+    "api_services": "official_developer_section_and_fns_materials_confirm_channel_method_details_unknown",
+    "smev": "official_developer_section_and_fns_materials_confirm_channel_eligibility_unknown",
+    "frontend_search_endpoints": "not_treated_as_supported_public_api_without_explicit_fns_documentation"
   },
   "sandbox": {
     "status": "unknown",
@@ -37,14 +38,15 @@
   "rate_limits": {
     "public_api": "unknown_publicly_in_this_research",
     "file_downloads": "unknown_publicly_in_this_research",
-    "smev": "unknown_publicly_in_this_research"
+    "smev": "unknown_publicly_in_this_research",
+    "historical_context": "FNS archived material reported weekly portal downloads twice per week, daily SMEV publication and online API batch provision by request"
   },
   "openapi": {
     "status": "unknown",
     "documentation": "Public developer section exists but detailed API specification was not visible in reviewed static pages."
   },
   "capabilities": {
-    "address_suggestions": "not_turnkey_requires_own_search",
+    "address_suggestions": "official_api_services_mentioned_but_public_method_details_unknown; otherwise requires_own_search",
     "address_cleaning": "not_turnkey_requires_own_normalization_logic",
     "address_validation": "official_registry_provenance_possible",
     "direct_geocoding": "not_confirmed",
@@ -76,7 +78,10 @@
     "https://fias-file.nalog.ru/",
     "https://fias-file.nalog.ru/FiasInfo",
     "https://fias-file.nalog.ru/Frontend",
-    "https://fias-file.nalog.ru/Search"
+    "https://fias-file.nalog.ru/Search",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/"
   ],
   "open_questions": [
     "Current official file formats and download package structure",

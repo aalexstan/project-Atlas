@@ -26,7 +26,7 @@
 
 ГАР - Государственный адресный реестр, государственный информационный ресурс со сведениями об адресах РФ. ФИАС - федеральная информационная система ФНС, которая обеспечивает формирование, ведение и использование ГАР.
 
-Карточка названа "data integration", потому что официальные страницы подтверждают идентичность реестра и developer access modes, но в просмотренной публичной документации нет полной REST-style спецификации.
+Карточка названа "data integration", потому что официальные страницы подтверждают идентичность реестра и developer access modes, но в просмотренной публичной документации нет полной REST-style спецификации. Материалы ФНС упоминают файловые выгрузки, СМЭВ и API-сервисы; Atlas не считает видимые endpoints сайта поддерживаемыми публичными API, пока ФНС прямо не описывает их как такие.
 
 ## Сценарии
 
@@ -44,9 +44,10 @@
 | Канал | Статус | Примечание |
 |---|---|---|
 | Публичный поиск адреса | Verified | Портал ФИАС предоставляет поиск адреса. |
-| Открытые данные / файловые выгрузки | Verified как пункт developer section | Форматы и cadence требуют перепроверки. |
-| СМЭВ | Verified как пункт developer section | Eligibility и процесс неизвестны в этой карточке. |
-| API-сервисы | Verified как пункт developer section | Public method catalog, base URL, auth и schemas не были видны в просмотренных static pages. |
+| Открытые данные / файловые выгрузки | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает еженедельные выгрузки с публикацией дважды в неделю; текущие package formats требуют перепроверки. |
+| СМЭВ | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает ежедневную публикацию через СМЭВ; eligibility и процесс неизвестны в этой карточке. |
+| API-сервисы | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает online API batch provision by request; public method catalog, base URL, auth и schemas не были видны в просмотренных static pages. |
+| Search / Frontend web pages | Verified как пользовательский портал | Не считать найденные web endpoints поддерживаемыми integration APIs без явной документации ФНС. |
 
 ## Последствия для внедрения
 
@@ -70,6 +71,7 @@
 | Цена API-сервисов | unknown |
 | Цена файловых выгрузок | unknown |
 | Eligibility СМЭВ | unknown |
+| File/API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
 

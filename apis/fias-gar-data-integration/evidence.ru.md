@@ -12,7 +12,11 @@
 | ГАР обязаны использовать органы власти и местного самоуправления при оказании услуг. | https://fias-file.nalog.ru/FiasInfo | 2026-07-29 | verified | Релевантно регулируемым процессам. |
 | Объекты адресации включают здания, сооружения, земельные участки, помещения и машино-места. | https://fias-file.nalog.ru/FiasInfo | 2026-07-29 | verified | Scope объектов. |
 | Developer section содержит пункты «Открытые данные (файловые выгрузки)», «СМЭВ» и «API-сервисы». | https://fias-file.nalog.ru/Frontend | 2026-07-29 | observed | Детальные API docs не видны в static page. |
+| Архивный материал ФНС говорит, что на портале ФИАС опубликованы API и СМЭВ сервисы для получения сведений из ГАР. | https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/ | 2026-07-29 | verified | Архивная страница может содержать устаревшие детали, но подтверждает provenance официальных каналов. |
+| Архивный материал ФНС описывает integration routes: еженедельные выгрузки с публикацией дважды в неделю, СМЭВ с ежедневной публикацией и online API batch provision by request. | https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/ | 2026-07-29 | verified | Cadence рассматривается как official historical context до фиксации текущих developer docs. |
+| Архивный материал ФНС говорит, что файловые выгрузки ГАР можно скачать в developer/open-data section, а также через СМЭВ и API services. | https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/ | 2026-07-29 | verified | Подтверждает разделение file/API/SMEV routes. |
 | На портале ФИАС есть публичный поиск адреса. | https://fias-file.nalog.ru/Search | 2026-07-29 | observed | Web service, не доказательство bulk API. |
+| Search и Frontend pages рассмотрены как пользовательские страницы портала, не как документация поддерживаемого public API. | https://fias-file.nalog.ru/Search | 2026-07-29 | inferred | Не документировать видимые website endpoints как stable integration APIs. |
 | Полный публичный method catalog, base URL, auth, schemas, quotas и SLA не найдены в просмотренных static pages. | Official pages reviewed | 2026-07-29 | unknown | Главный blocker перед API-like maturity. |
 | Direct/reverse geocoding не подтверждены. | Official pages reviewed | 2026-07-29 | unknown | ГАР - адресный реестр, не геокодер. |
 
