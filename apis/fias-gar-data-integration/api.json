@@ -105,6 +105,30 @@
         "AS_NORMATIVE_DOCS_TYPES": 25,
         "AS_NORMATIVE_DOCS_KINDS": 5
       },
+      "sample_region_payload_inspected": true,
+      "sample_region_code": "99",
+      "sample_region_xml_files_inspected": 18,
+      "sample_region_total_rows": 161757,
+      "sample_region_row_counts": {
+        "AS_REESTR_OBJECTS": 21729,
+        "AS_ADDR_OBJ": 220,
+        "AS_HOUSES": 746,
+        "AS_STEADS": 66,
+        "AS_APARTMENTS": 20828,
+        "AS_ROOMS": 0,
+        "AS_CARPLACES": 0,
+        "AS_ADM_HIERARCHY": 21736,
+        "AS_MUN_HIERARCHY": 21729,
+        "AS_CHANGE_HISTORY": 24406,
+        "AS_ADDR_OBJ_DIVISION": 0,
+        "AS_ADDR_OBJ_PARAMS": 828,
+        "AS_STEADS_PARAMS": 503,
+        "AS_HOUSES_PARAMS": 6516,
+        "AS_APARTMENTS_PARAMS": 41656,
+        "AS_ROOMS_PARAMS": 0,
+        "AS_CARPLACES_PARAMS": 0,
+        "AS_NORMATIVE_DOCS": 794
+      },
       "package_model": "unknown_full_delta_or_mixed"
     },
     "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
@@ -167,7 +191,7 @@
     "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ],
   "open_questions": [
-    "Regional XML payload contents, national row counts and CRC validation against the full current data ZIP archive",
+    "Other regional XML payload contents, national row counts and CRC validation against the full current data ZIP archive",
     "Whether current ZIP publications are full, delta or mixed packages",
     "Public API service method catalog, base URL, authentication and schemas",
     "Eligibility and process for API services and SMEV access",

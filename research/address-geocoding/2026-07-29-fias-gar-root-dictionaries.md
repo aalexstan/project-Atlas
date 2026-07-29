@@ -8,6 +8,8 @@ It uses the central-directory offsets recorded in [`2026-07-29-fias-gar-data-zip
 
 It does not decompress regional address-object XML files, count national/regional rows, validate all CRC values against full payload, prove full/delta semantics, verify API-service methods, or perform credentialed live testing.
 
+Follow-up: [`2026-07-29-fias-gar-region-99-sample.md`](2026-07-29-fias-gar-region-99-sample.md) later decompressed and parsed one small regional directory, `99/`, as sample evidence. Other regional payloads, national row counts and full/delta semantics remain unverified.
+
 ## Official Sources Reviewed
 
 | Source | URL | Use |

@@ -76,6 +76,7 @@
 | Current data archive headers | official data ZIP отвечает как `application/zip` с `Content-Length: 57170912095`; XML payload не скачивался |
 | Current data archive file index | ZIP64 central directory inspected через HTTP Range; 1,739 entries, 1,738 XML files, 96 regional directories, root `version.txt` = `2026.07.28` / `v.278` |
 | Root dictionary XML payload | 10 small root-level dictionary XML files inspected; row counts captured для address object types, room/house/apartment types, operation types, parameter types, object levels и normative document types/kinds |
+| Sample regional XML payload | regional directory `99/` inspected как small sample; 18 XML files и 161,757 rows parsed |
 | Цена файловых выгрузок | monetary price не указана на просмотренной open-data page |
 | Eligibility СМЭВ | unknown |
 | Structure reference | structure ZIP inspected; внутри 22 XSD files для address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects и change history |
@@ -94,7 +95,7 @@
 
 ## Рекомендация по сценарию
 
-Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Current open-data page даёт полезную package metadata; Atlas inspected structure ZIP, current data ZIP central directory и small root dictionary XML files. Regional XML payload, national row counts и full/delta semantics остаются недоказанными. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
+Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Current open-data page даёт полезную package metadata; Atlas inspected structure ZIP, current data ZIP central directory, small root dictionary XML files и one small regional sample. Other regional XML payloads, national row counts и full/delta semantics остаются недоказанными. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
 
 ## Доказательства
 

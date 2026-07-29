@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR sample region 99 XML inspection
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-region-99-sample.md`.
+- FIAS/GAR profile, evidence, address/geocoding comparison и need route теперь фиксируют sample regional payload inspection:
+  - 18 XML files in directory `99/`;
+  - 161,757 child records parsed;
+  - row counts by file group for address objects, houses, land plots, apartments, hierarchies, params, change history and normative docs.
+
+### Методологические решения
+
+- Region `99/` используется только как smoke-test/sample evidence.
+- Other regional payloads, national row counts, full CRC validation, full/delta package semantics, API/SMEV method details, auth, quotas, costs и legal-use rights остаются blockers.
+- Credentialed API request, SMEV access, portal endpoint test и production data ingest не проводились.
+
 ## 2026-07-29 — FIAS/GAR root dictionary XML inspection
 
 ### Что добавлено
