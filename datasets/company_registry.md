@@ -3,6 +3,22 @@
 Дата исследования: 2026-06-23
 Статус: мигрировано из Pass #1
 
+## API-first migration note
+
+Дата связки: 2026-07-29
+
+Эта dataset-centric карточка сохранена как **Legacy / supporting research**. Активные API-first материалы для выбора решений по компаниям и контрагентам:
+
+- `comparisons/company-counterparty-data-russia/README.md`
+- `needs/company-verification/README.md`
+- `apis/dadata/README.md`
+- `apis/kontur-focus/README.md`
+- `apis/seldon-basis/README.md`
+- `apis/globas-api/README.md`
+- `apis/fns-egrul-egrip-integration/README.md`
+
+Текущий вывод Atlas: этот dataset полезен для понимания происхождения Pass #1/Pass #2, но активный выбор API должен идти через сценарное сравнение. Старые утверждения API Portal, включая REST-claims и численные coverage claims, не считаются independently verified без официальных источников поставщика или первичного реестра.
+
 ## Название
 
 Реестр компаний и контрагентов.
@@ -100,7 +116,8 @@
 
 - REST API: подтверждено по API Portal для обоих поставщиков.
 - Партнерство / заявка / тестовый доступ: найдено для Глобас, применимость именно к API требует проверки.
-- Прямой сбор из первичных официальных источников: требует исследования; список источников в текущей базе не найден.
+- Прямой сбор из первичных официальных источников: активная карточка ФНС EGRUL/EGRIP описывает registry integration route, но это не turnkey due-diligence API.
+- Active API-first comparison: `comparisons/company-counterparty-data-russia/` сравнивает DaData, Kontur.Focus API, Seldon.Basis API, GLOBAS.API и FTS EGRUL/EGRIP Data Integration по сценариям.
 - CSV, XML, FTP, Webhook, GraphQL: не найдено.
 
 ## Неизвестные места
@@ -117,6 +134,9 @@
 - Высокий лицензионный риск из-за неизвестных условий повторного использования.
 - Риск устаревшей документации Seldon.
 - Риск смешения собственных, государственных, партнерских и агрегированных данных без понятной правовой модели.
+- Риск использования legacy numerical ratings или API Portal summaries как действующего Atlas Score.
+- Риск сравнения web-product pricing с API pricing без API-specific quote.
+- Риск считать Seldon domain history или API Portal REST claims текущим официальным evidence без подтверждения на `seldongroup.ru` или у поставщика.
 
 ## Связанные старые карточки
 
@@ -125,6 +145,20 @@
 - `companies/credinform.md`
 - `companies/seldon.md`
 - `ratings/initial_ratings.md`
+
+## Связанные активные материалы
+
+- `comparisons/company-counterparty-data-russia/README.md`
+- `needs/company-verification/README.md`
+- `procurement/counterparty-api-selection/README.md`
+- `apis/dadata/README.md`
+- `apis/kontur-focus/README.md`
+- `apis/seldon-basis/README.md`
+- `apis/globas-api/README.md`
+- `apis/fns-egrul-egrip-integration/README.md`
+- `research/kontur-focus/provider-request.md`
+- `research/seldon-basis/provider-request.md`
+- `research/globas-api/provider-request.md`
 
 ## Источники
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-29 — Company registry legacy linkage
+
+### Что изменено
+
+- `datasets/company_registry.md` связана с активным comparison `comparisons/company-counterparty-data-russia/`, company verification need route и текущими API profiles.
+- `datasets/index.md` теперь показывает активный маршрут выбора через comparison, а старые API Portal claims оставляет как provenance.
+- Change history comparison фиксирует связь с legacy dataset note.
+
+### Методологические решения
+
+- Старые REST claims, coverage claims и numerical ratings не повышены до verified facts или Atlas Score.
+- API selection направлен в сценарное comparison, procurement kit и provider-request checklists.
+- Live testing, новые vendor quotes и пересчёт оценок не проводились.
+
 ## 2026-07-29 — Russian address registry legacy linkage
 
 ### Что изменено

@@ -4,6 +4,7 @@
 
 | Дата | Изменение | Влияние |
 |---|---|---|
+| 2026-07-29 | Legacy dataset note `datasets/company_registry.md` связана с активным scenario comparison и API profiles. | Сохраняет provenance Pass #2 и направляет выбор API в действующее сравнение. |
 | 2026-07-28 | ГЛОБАС.API добавлен как дополнительный enterprise-кандидат | Расширяет RFI/RFP покрытие без изменения основного enterprise shortlist Контур/Seldon |
 | 2026-07-23 | Создано первое сравнение DaData, Контур.Фокус API, Seldon.Basis API и ФНС | Уровень Reviewed |
 | 2026-08-03 | Запланирована проверка перехода ФНС на новые форматы | Ожидается |

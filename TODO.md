@@ -28,7 +28,6 @@
 - Подготовить отдельное исследование Yandex Organization Search, если сценарий поиска организаций в экосистеме Яндекса станет приоритетным.
 - Рассмотреть коммерческих Nominatim/OSM-провайдеров только отдельными профилями по их официальным terms, SLA и тарифам.
 - Декомпозировать `datasets/moscow_city_open_data.md` на supporting dataset notes только после повторной проверки каталога data.mos.ru.
-- Для старого `datasets/company_registry.md` связать подтвержденные факты с активным comparison `comparisons/company-counterparty-data-russia/`.
 - Для старого `datasets/procurement_tender_contracts.md` сохранить факты как supporting evidence для будущего procurement API comparison.
 - Продолжить разбор API Portal только как discovery source: каждую существенную карточку проверять по primary sources.
 
