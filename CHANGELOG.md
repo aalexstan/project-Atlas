@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-29 — Procurement dataset legacy linkage
+
+### Что изменено
+
+- `datasets/procurement_tender_contracts.md` связана с `research/seldon-tenders/decision.md` и сохранена как supporting evidence для будущего procurement/tender API comparison.
+- `datasets/index.md` теперь показывает Seldon.Tenders как legacy-only candidate, а не активный API profile.
+- `TODO.md` уточняет следующий шаг: будущий procurement comparison требует official primary-source evidence по кандидатам и источникам.
+
+### Методологические решения
+
+- Активная карточка Seldon.Tenders не создаётся только по API Portal summary или старому домену `api-seldon.ru`.
+- Web-продукт Seldon.Tenders/Seldon.Win не смешивается с `API.Seldon.Tenders` без официальной product-boundary evidence.
+- Live testing, vendor quote и field/source matrix не получены.
+
 ## 2026-07-29 — Company registry legacy linkage
 
 ### Что изменено

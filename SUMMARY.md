@@ -69,6 +69,7 @@ Atlas должен помогать проверять, сравнивать и 
 - История проверки домена `api-seldon.ru` сохранена как исторический риск источника.
 - Активная карточка Seldon.Basis связана с официальными источниками `seldongroup.ru`.
 - Для Seldon.Tenders создано решение сохранить legacy-only статус: официальные страницы подтверждают `API.Seldon.Tenders` как Seldon 1.7 integration route, но публичной specification/auth/pricing evidence недостаточно для активной карточки.
+- Legacy dataset note `datasets/procurement_tender_contracts.md` связана с Seldon.Tenders decision memo и оставлена как supporting evidence для будущего procurement/tender API comparison.
 - Для Kontur.Focus API и Seldon.Basis API подготовлены provider-request checklists, чтобы запросить API-specific price/spec/limits/SLA/data-rights evidence без смешивания с web-product pricing.
 - Legacy dataset note `datasets/company_registry.md` связана с активным comparison `comparisons/company-counterparty-data-russia/`; старые API Portal claims сохранены как provenance, а не как действующая recommendation.
 - Цены веб-версий не используются как цены API.

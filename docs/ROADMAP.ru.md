@@ -24,7 +24,7 @@
 
 **Успех:** каждое сравнение содержит рекомендации по сценариям, доказательства и дату пересмотра. Need-based маршруты должны связывать частые вопросы пользователей с релевантными карточками, сравнениями и procurement kits.
 
-**Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need route и procurement checklist для autocomplete, geocoding, place search, official registry integration и self-hosted OSM geocoding.
+**Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need route и procurement checklist для autocomplete, geocoding, place search, official registry integration и self-hosted OSM geocoding. Legacy procurement/tender dataset notes связаны как input для будущего сравнения, но активного procurement API comparison пока нет.
 
 ## Этап 4 — Распространение и обратная связь
 
