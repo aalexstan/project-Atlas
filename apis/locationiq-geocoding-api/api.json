@@ -1,0 +1,114 @@
+{
+  "id": "locationiq-geocoding-api",
+  "name": "LocationIQ Geocoding API",
+  "provider": {
+    "name": "Unwired Labs / LocationIQ",
+    "website": "https://locationiq.com/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "hosted international forward geocoding",
+    "hosted international reverse geocoding",
+    "address autocomplete",
+    "commercial hosted alternative to public Nominatim or self-hosted Nominatim"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "daily_or_monthly_request_allowance_by_plan",
+    "currency": "USD",
+    "verified_on": "2026-07-29",
+    "free_plan": "5000 requests/day; 2 requests/second; 60 requests/minute; limited commercial use with attribution",
+    "developer_monthly": "100 USD/month; 25000 requests/day; 20 requests/second",
+    "startup_monthly": "200 USD/month; 60000 requests/day; 22 requests/second",
+    "growth_plus_monthly": "500 USD/month; 7500000 requests/month; 30 requests/second",
+    "business_plus_monthly": "950 USD/month; 30000000 requests/month; 40 requests/second",
+    "enterprise": "custom pricing, custom request rates, custom contract and SLAs",
+    "notes": "Maps Lite plan wording needs confirmation before treating it as a geocoding production plan."
+  },
+  "authentication": {
+    "type": "access_token",
+    "parameter": "key",
+    "restrictions": [
+      "http_referrer_restrictions",
+      "ip_address_restrictions"
+    ],
+    "notes": "API reference says each API or map-tile request must be authenticated with an access token."
+  },
+  "sandbox": {
+    "free_plan": "5000 requests/day on the public Free plan",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "free_daily": 5000,
+    "free_rps": 2,
+    "free_requests_per_minute": 60,
+    "paid_rps_examples": {
+      "developer": 20,
+      "startup": 22,
+      "growth_plus": 30,
+      "business_plus": 40
+    },
+    "paid_allowance_examples": {
+      "developer": "25000 requests/day",
+      "startup": "60000 requests/day",
+      "growth_plus": "7500000 requests/month",
+      "business_plus": "30000000 requests/month"
+    },
+    "overage": "pricing FAQ says exceeding credits can return HTTP 429 and persistent excess requires a higher plan"
+  },
+  "openapi": {
+    "status": "api_reference_available",
+    "documentation": "https://api-reference.locationiq.com/",
+    "notes": "Docs landing page says endpoint material is available for AI agents in OpenAPI; Atlas did not capture a standalone OpenAPI file."
+  },
+  "capabilities": {
+    "address_suggestions": "verified_autocomplete_endpoint",
+    "address_cleaning": "not_documented_as_russia_specific_cleaning_api",
+    "address_validation": "geocoder_match_and_components_not_registry_validation",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "nearby_poi_related_capability_not_full_places_profile",
+    "routing": "separate_product_not_in_scope",
+    "batch": "no_multi_address_api_request; concurrent_requests_allowed_within_plan_limits; large_batch_processing_may_be_arranged_for_fee"
+  },
+  "coverage": {
+    "geography": "worldwide_provider_reported_requires_benchmark",
+    "endpoint_regions": [
+      "us1",
+      "eu1"
+    ],
+    "data_model": "multiple public and proprietary datasets according to API reference; OpenStreetMap-compatible response concepts and attribution fields appear in docs"
+  },
+  "data_rights": {
+    "storage": "provider_help_says_api_output_can_be_stored_forever",
+    "caching": "free_plan_cache_up_to_48_hours; paid_customer_cache_while_subscribed",
+    "attribution": "free_plan_commercial_use_requires LocationIQ attribution according to pricing FAQ",
+    "redistribution": "needs_legal_review",
+    "saas_embedding": "needs_contract_and_legal_review",
+    "model_training": "unknown"
+  },
+  "sources": [
+    "https://docs.locationiq.com/docs/choose-the-right-api",
+    "https://docs.locationiq.com/docs/search-forward-geocoding",
+    "https://docs.locationiq.com/docs/reverse-geocoding",
+    "https://docs.locationiq.com/docs/autocomplete",
+    "https://api-reference.locationiq.com/",
+    "https://locationiq.com/pricing",
+    "https://locationiq.com/static/tos.html",
+    "https://help.locationiq.com/support/solutions/articles/36000216111-can-i-save-addresses-from-api-output-",
+    "https://help.locationiq.com/support/solutions/articles/36000216034-is-batch-geocoding-supported-",
+    "https://help.locationiq.com/support/solutions/articles/36000216040-can-i-send-addresses-to-geocode-in-a-csv-"
+  ],
+  "open_questions": [
+    "Legal treatment of ODbL, attribution, derived databases, redistribution and SaaS use for the intended product",
+    "Exact enterprise SLA/support terms and whether custom SLA is available for the target plan",
+    "Whether LocationIQ Nearby POI is sufficient for the target place-search scenario or a separate places provider is needed",
+    "Benchmark quality for target countries, languages, house-level precision, autocomplete relevance and latency",
+    "Whether large-batch processing by LocationIQ is available under acceptable price, privacy and evidence terms",
+    "DPA/privacy requirements for submitted addresses and coordinates",
+    "Whether Maps Lite plan can be used for the intended geocoding workload or is maps-focused"
+  ]
+}

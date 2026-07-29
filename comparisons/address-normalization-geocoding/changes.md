@@ -11,6 +11,7 @@
 | 2026-07-29 | Added Yandex Maps Organization Search API as a place/organization search candidate. | Completes the Yandex-side place-search scenario without treating it as geocoding or registry validation. |
 | 2026-07-29 | Added Geoapify Geocoding API as a hosted commercial open-data geocoding route. | Adds a managed international/batch geocoding option while keeping ODbL, attribution, DPA and benchmark as blockers. |
 | 2026-07-29 | Added OpenCage Geocoding API as a second hosted open-data geocoding route. | Expands the open-data hosted shortlist while keeping Geosearch/autosuggest, ODbL/legal review, SLA, DPA and benchmark blockers explicit. |
+| 2026-07-29 | Added LocationIQ Geocoding API as a hosted geocoding/autocomplete route. | Expands the hosted geocoding shortlist while keeping batch, plan scope, storage/caching, ODbL/legal review, SLA, DPA and benchmark blockers explicit. |
 | 2026-07-29 | Added current FIAS/GAR official package metadata while keeping archive contents and full/delta semantics unknown. | Makes the official registry file route more concrete without overstating verification. |
 | 2026-07-29 | Added FIAS/GAR structure archive inspection evidence and data ZIP header size. | Clarifies schema evidence while preserving the blocker on the 57 GB data archive and package semantics. |
 | 2026-07-29 | Added current FIAS/GAR data ZIP central directory evidence. | Confirms file index, archive scale and version marker while keeping XML payload, row counts and full/delta semantics as blockers. |

@@ -140,6 +140,21 @@
       "key_risk": "ODbL/data-license/legal review, SLA/DPA and benchmark still required; not autocomplete, cleaning or registry validation"
     },
     {
+      "id": "locationiq-geocoding-api",
+      "product_class": "hosted_geocoding_autocomplete",
+      "best_for": [
+        "hosted_international_geocoding",
+        "direct_geocoding",
+        "reverse_geocoding",
+        "address_autocomplete",
+        "open_data_geocoding_without_self_hosting"
+      ],
+      "public_pricing": true,
+      "free_tier": "5000 requests/day; 2 rps; 60 requests/minute; limited commercial use with attribution",
+      "published_limit": "paid examples show 20-40 rps; daily or monthly allowance depending on plan",
+      "key_risk": "ODbL/attribution/legal review, SLA/DPA, batch fee and benchmark still required; not official registry validation"
+    },
+    {
       "id": "nominatim-geocoder-software",
       "product_class": "open_source_geocoder_software",
       "best_for": [
@@ -184,6 +199,7 @@
       "dadata-address-api",
       "geoapify-geocoding-api",
       "opencage-geocoding-api",
+      "locationiq-geocoding-api",
       "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "reverse_geocoding": [
@@ -192,6 +208,7 @@
       "dadata-address-api",
       "geoapify-geocoding-api",
       "opencage-geocoding-api",
+      "locationiq-geocoding-api",
       "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "organization_place_search": [
@@ -204,6 +221,7 @@
     "open_data_geocoding": [
       "geoapify-geocoding-api_hosted_commercial_route",
       "opencage-geocoding-api_hosted_commercial_route",
+      "locationiq-geocoding-api_hosted_commercial_route",
       "nominatim-geocoder-software_self_hosting",
       "commercial_nominatim_provider_requires_separate_profile"
     ],
@@ -212,6 +230,7 @@
       "fias-gar-data-integration_for_owned_registry",
       "geoapify-geocoding-api_for_hosted_batch_geocoding",
       "opencage-geocoding-api_for_parallel_or_spreadsheet_geocoding",
+      "locationiq-geocoding-api_for_concurrent_requests_or_provider_arranged_large_batch",
       "nominatim-geocoder-software_for_self_hosting",
       "commercial_geocoders_only_after_storage_batch_rights_confirmed"
     ]
@@ -227,7 +246,8 @@
     "fias_gar_method_catalog_auth_schema_and_access_process",
     "odbl_attribution_and_derived_database_review_for_geoapify",
     "geoapify_benchmark_and_dpa_review",
-    "opencage_odbl_sla_dpa_benchmark_and_redistribution_review"
+    "opencage_odbl_sla_dpa_benchmark_and_redistribution_review",
+    "locationiq_odbl_sla_dpa_batch_plan_scope_and_benchmark_review"
   ],
   "sources": [
     "https://dadata.ru/api/suggest/address/",
@@ -282,6 +302,16 @@
     "https://opencagedata.com/pricing",
     "https://opencagedata.com/terms",
     "https://opencagedata.com/credits",
-    "https://opencagedata.com/privacy"
+    "https://opencagedata.com/privacy",
+    "https://docs.locationiq.com/docs/choose-the-right-api",
+    "https://docs.locationiq.com/docs/search-forward-geocoding",
+    "https://docs.locationiq.com/docs/reverse-geocoding",
+    "https://docs.locationiq.com/docs/autocomplete",
+    "https://api-reference.locationiq.com/",
+    "https://locationiq.com/pricing",
+    "https://locationiq.com/static/tos.html",
+    "https://help.locationiq.com/support/solutions/articles/36000216111-can-i-save-addresses-from-api-output-",
+    "https://help.locationiq.com/support/solutions/articles/36000216034-is-batch-geocoding-supported-",
+    "https://help.locationiq.com/support/solutions/articles/36000216040-can-i-send-addresses-to-geocode-in-a-csv-"
   ]
 }

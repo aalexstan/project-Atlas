@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-07-29 — LocationIQ Geocoding API profile
+
+### Что добавлено
+
+- Добавлен активный двуязычный API profile `apis/locationiq-geocoding-api/`.
+- Добавлены research log, decision memo и provider-request checklist:
+  - `research/locationiq-geocoding-api/2026-07-29.md`
+  - `research/locationiq-geocoding-api/decision.md`
+  - `research/locationiq-geocoding-api/decision.ru.md`
+  - `research/locationiq-geocoding-api/provider-request.md`
+  - `research/locationiq-geocoding-api/provider-request.ru.md`
+- Address/geocoding comparison, need route и procurement kit теперь включают LocationIQ как hosted geocoding/autocomplete route.
+
+### Методологические решения
+
+- LocationIQ отделён от FIAS/GAR registry validation, DaData-style address cleaning, public Nominatim, self-hosted Nominatim и routing APIs.
+- Public pricing зафиксирован как displayed USD plan examples без трактовки как enterprise quote.
+- Nearby POI сохранён как related capability, а не как полноценный organization/place search profile.
+- Storage/caching wording, ODbL/attribution, SaaS/redistribution rights, DPA/privacy, exact plan scope, enterprise SLA, batch fee и benchmark оставлены как blockers.
+- Live testing не проводился.
+
 ## 2026-07-29 — FIAS/GAR sample region 99 XML inspection
 
 ### Что добавлено

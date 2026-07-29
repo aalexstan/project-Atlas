@@ -20,7 +20,7 @@
 
 **Не подходит, если:** нужна official Russian address registry validation, правовая уверенность без ODbL/attribution review, self-hosted open-source stack или Russia-specific address cleaning API.
 
-**Итог:** Geoapify — сильный hosted open-data geocoding route для address/geocoding comparison. Его нужно сравнивать с Yandex, 2GIS, DaData и self-hosted Nominatim по geography, precision, legal rights, attribution, SLA и benchmark quality.
+**Итог:** Geoapify — сильный hosted open-data geocoding route для address/geocoding comparison. Его нужно сравнивать с OpenCage, LocationIQ, Yandex, 2GIS, DaData и self-hosted Nominatim по geography, precision, legal rights, attribution, SLA и benchmark quality.
 
 ## Граница продукта
 
@@ -91,6 +91,8 @@
 
 | Альтернатива | Лучше когда | Главный trade-off |
 |---|---|---|
+| [`OpenCage Geocoding API`](../opencage-geocoding-api/README.ru.md) | Нужен geocoding-only hosted provider с permanent storage-friendly wording | Autocomplete separate, one-location-per-request design требует review. |
+| [`LocationIQ Geocoding API`](../locationiq-geocoding-api/README.ru.md) | Нужны hosted geocoding плюс autocomplete с public USD plan examples | Batch — one address per request unless provider-arranged; storage/caching и ODbL rights требуют review. |
 | [`Nominatim Geocoder Software`](../nominatim-geocoder-software/README.ru.md) | Нужен self-hosted OSM geocoding control | Ваша команда отвечает за import, updates, operations и ODbL compliance. |
 | [`Yandex Maps Geocoder API`](../yandex-maps-geocoder-api/README.ru.md) | Центральны Yandex Maps display и Russia/CIS map ecosystem | Storage/display rights и map coupling требуют review. |
 | [`2GIS Geocoder API`](../2gis-geocoder-api/README.ru.md) | Центральны 2GIS map/catalog workflows | Caching/storage rights и field access требуют review. |

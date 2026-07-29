@@ -20,7 +20,7 @@
 
 **Не подходит, когда:** нужна российская registry validation, address cleaning/normalization, fuzzy autocomplete, routing или batch API, принимающий много locations в одном request.
 
-**Итог:** OpenCage — сильный дополнительный hosted open-data geocoding candidate для address/geocoding comparison. Его нужно сравнивать с Geoapify, Yandex, 2GIS, DaData и self-hosted Nominatim по geography, precision, rights, ODbL/attribution obligations, SLA и benchmark quality.
+**Итог:** OpenCage — сильный дополнительный hosted open-data geocoding candidate для address/geocoding comparison. Его нужно сравнивать с Geoapify, LocationIQ, Yandex, 2GIS, DaData и self-hosted Nominatim по geography, precision, rights, ODbL/attribution obligations, SLA и benchmark quality.
 
 ## Граница продукта
 
@@ -89,6 +89,7 @@
 | Альтернатива | Когда лучше | Главный trade-off |
 |---|---|---|
 | [`Geoapify Geocoding API`](../geoapify-geocoding-api/README.ru.md) | Нужен hosted open-data geocoding with asynchronous batch jobs | ODbL/attribution и batch failure semantics still need review. |
+| [`LocationIQ Geocoding API`](../locationiq-geocoding-api/README.ru.md) | Нужны hosted geocoding плюс autocomplete с public USD plan examples | Batch — one address per request unless provider-arranged; storage/caching и ODbL rights требуют review. |
 | [`Nominatim Geocoder Software`](../nominatim-geocoder-software/README.ru.md) | Нужен self-hosted OSM geocoding control | Вы владеете import, updates, operations и ODbL compliance. |
 | [`Yandex Maps Geocoder API`](../yandex-maps-geocoder-api/README.ru.md) | Central Yandex Maps display and Russia/CIS ecosystem | Storage/display rights and map coupling need review. |
 | [`2GIS Geocoder API`](../2gis-geocoder-api/README.ru.md) | Central 2GIS map/catalog workflows | Caching/storage rights and field access need review. |
