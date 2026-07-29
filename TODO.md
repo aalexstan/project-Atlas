@@ -37,7 +37,6 @@
 - Поддерживать индекс legacy-материалов и обновлять его при появлении новых исторических слоёв.
 - Обновить старые provider/dataset/access templates только как legacy formats; новые активные шаблоны уже находятся в `templates/API_CARD_TEMPLATE*.md` и `templates/COMPARISON_TEMPLATE*.md`.
 - Расширить needs routes после появления новых сравнений и подтверждённых API profiles.
-- Создать policy для review cadence и владельцев карточек.
 
 ## Legacy Backlog
 

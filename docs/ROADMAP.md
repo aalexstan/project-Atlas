@@ -8,7 +8,7 @@ This roadmap is outcome-based. Dates may change; product principles should not.
 
 Create bilingual project documents, research methodology, profile template, comparison template, migration guidance, and the first research backlog.
 
-**Success:** a new researcher can create a consistent profile without inventing a format. The foundation now also includes a documentation index, a legacy index, deterministic generated indexes, validation CI, and the first need-based route.
+**Success:** a new researcher can create a consistent profile without inventing a format. The foundation now also includes a documentation index, a legacy index, deterministic generated indexes, validation CI, the first need-based route, and review cadence policy.
 
 ## Phase 2 — Gold Standard Profiles
 

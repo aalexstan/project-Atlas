@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-07-29 — Review cadence policy
+
+### Что добавлено
+
+- Добавлен двуязычный policy:
+  - `docs/REVIEW_CADENCE.md`
+  - `docs/REVIEW_CADENCE.ru.md`
+- `docs/README*` и `docs/METHODOLOGY*` связаны с новым регламентом.
+
+### Методологические решения
+
+- Ownership описан ролями, а не выдуманными персональными назначениями.
+- `last_verified` нельзя обновлять из-за copy edits, navigation changes, provider-request checklists, legacy linkage или refresh generated indexes.
+- Gold profile требует maintained ownership, актуальных evidence и зелёных validator/index checks.
+
 ## 2026-07-29 — Moscow open data legacy linkage
 
 ### Что изменено

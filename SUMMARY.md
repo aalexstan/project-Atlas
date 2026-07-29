@@ -13,6 +13,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 - `docs/PRINCIPLES.md` / `docs/PRINCIPLES.ru.md`
 - `docs/METHODOLOGY.md` / `docs/METHODOLOGY.ru.md`
+- `docs/REVIEW_CADENCE.md` / `docs/REVIEW_CADENCE.ru.md`
 - `docs/MIGRATION.md` / `docs/MIGRATION.ru.md`
 - `docs/VISION.md` / `docs/VISION.ru.md`
 
@@ -88,6 +89,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.
 - Индексы API, comparisons и needs теперь воспроизводятся через `scripts/generate_indexes.py`.
 - CI проверяет актуальность индексов перед запуском основного validator.
+- Создан review cadence policy с ролевым ownership, review states и правилами обновления `last_verified`.
 
 ## Нерешенные вопросы
 
