@@ -1,0 +1,90 @@
+{
+  "id": "2gis-suggest-api",
+  "name": "2GIS Suggest API",
+  "provider": {
+    "name": "2GIS",
+    "website": "https://dev.2gis.com/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "autocomplete in 2GIS map and catalog search workflows",
+    "address suggestions with 2GIS data",
+    "street suggestions",
+    "object suggestions before Places API lookup"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "monthly_units_package",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "suggest_packages": {
+      "100000_units": "7000 RUB",
+      "300000_units": "15000 RUB",
+      "500000_units": "20000 RUB",
+      "750000_units": "26700 RUB",
+      "1000000_units": "30000 RUB",
+      "5000000_units": "75000 RUB"
+    },
+    "annual_discount": "provider_reports_10_percent_discount_for_annual_subscription"
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "key",
+    "issued_by": "2GIS Platform Manager"
+  },
+  "sandbox": {
+    "demo_key": "available for one month",
+    "demo_search_limit": "1000 total Search-service requests",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "search_units_per_minute": 600,
+    "billing_unit": "successful request",
+    "successful_request_status": "meta.code 200 in response"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://docs.2gis.com/en/api/search/suggest/overview"
+  },
+  "capabilities": {
+    "address_suggestions": "verified",
+    "street_suggestions": "verified",
+    "object_suggestions": "verified",
+    "route_endpoint_suggestions": "verified",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "suggestion_level_not_registry_validation",
+    "direct_geocoding": "separate_2gis_geocoder_api",
+    "reverse_geocoding": "separate_2gis_geocoder_api",
+    "organization_search": "related_2gis_places_api",
+    "routing": "separate_navigation_products_not_in_scope",
+    "batch": "unknown"
+  },
+  "coverage": {
+    "geography": "provider_catalog_coverage_requires_scenario_check",
+    "directory_updates": "provider_reports_monthly_directory_updates"
+  },
+  "data_rights": {
+    "storage": "contract_sensitive",
+    "caching": "official_webapi_offer_says_caching_is_not_provided",
+    "display": "needs_contract_review",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review"
+  },
+  "sources": [
+    "https://docs.2gis.com/en/api/search/overview",
+    "https://docs.2gis.com/en/api/search/suggest/overview",
+    "https://docs.2gis.com/en/platform-manager/subscription/pricing",
+    "https://law.2gis.ru/offer-license-agreement-webapi"
+  ],
+  "open_questions": [
+    "Public SLA and production support tiers",
+    "OpenAPI/Swagger availability",
+    "Batch or asynchronous suggestion support",
+    "Exact storage, caching, attribution, display, SaaS and redistribution rights",
+    "Coverage and quality benchmark for target cities/countries",
+    "Whether target scenario requires a Places API lookup after suggestion"
+  ]
+}

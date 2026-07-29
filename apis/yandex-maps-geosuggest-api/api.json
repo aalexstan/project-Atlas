@@ -1,0 +1,94 @@
+{
+  "id": "yandex-maps-geosuggest-api",
+  "name": "Yandex Maps Geosuggest API",
+  "provider": {
+    "name": "Yandex",
+    "website": "https://yandex.ru/maps-api/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "address autocomplete in Yandex Maps workflows",
+    "geographic object suggestions",
+    "organization-name suggestions before a separate search/geocoding step",
+    "Yandex Maps-centered user input UX"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "daily_request_packages",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "annual_standard_from": "180000 RUB for 10000 requests/day",
+    "annual_extended_with_data_storage_from": "208800 RUB for 10000 requests/day",
+    "monthly_standard_from": "19200 RUB for 10000 requests/day",
+    "test_period": "100 requests/day for up to 7 days without minimum payment",
+    "overage_unit": "price per additional 10000 requests depends on package"
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "apikey",
+    "issued_by": "Yandex developer dashboard"
+  },
+  "sandbox": {
+    "test_period": "100 requests/day for up to 7 days under tariff page",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "max_results_per_request": 10,
+    "default_results_per_request": 7,
+    "paid_daily_packages": [
+      10000,
+      100000,
+      250000,
+      500000,
+      1000000,
+      2000000,
+      3000000
+    ],
+    "requests_per_second": "unknown_publicly_in_this_research"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://yandex.com/maps-api/docs/suggest-api/"
+  },
+  "capabilities": {
+    "address_suggestions": "verified",
+    "organization_suggestions": "verified",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "suggestion_level_not_registry_validation",
+    "direct_geocoding": "related_yandex_geocoder_api_via_uri",
+    "reverse_geocoding": "not_applicable",
+    "organization_search": "related_separate_product",
+    "routing": "separate_product_not_in_scope",
+    "batch": "unknown"
+  },
+  "coverage": {
+    "languages": "lang parameter uses ISO 639-1 language code",
+    "geography": "provider_reported_yandex_maps_coverage_requires_scenario_check",
+    "country_filter": "countries parameter supports ISO country code list"
+  },
+  "data_rights": {
+    "storage": "extended_license_market_positioning_requires_contract_review",
+    "caching": "needs_contract_review",
+    "display": "needs_contract_review",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review"
+  },
+  "sources": [
+    "https://yandex.com/maps-api/products/suggest-api",
+    "https://yandex.com/maps-api/docs/suggest-api/request.html",
+    "https://yandex.com/maps-api/docs/suggest-api/response.html",
+    "https://yandex.ru/dev/tariffs/doc/ru/geosuggest/prices/",
+    "https://yandex.ru/legal/maps_api/ru/"
+  ],
+  "open_questions": [
+    "Public production requests-per-second limits",
+    "Public SLA and support terms",
+    "OpenAPI/Swagger availability",
+    "Exact storage, caching, display, SaaS and redistribution rights under selected license",
+    "Whether planned bulk/offline usage is allowed",
+    "Independent quality benchmark for target countries and address granularity"
+  ]
+}
