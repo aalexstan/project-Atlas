@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-29 — Russian address registry legacy linkage
+
+### Что изменено
+
+- `datasets/russian_address_registry.md` связана с активной API-first карточкой `apis/fias-gar-data-integration/`.
+- `datasets/index.md` теперь показывает ФНС России / ФИАС/ГАР как активный официальный route и сохраняет `kladr-api.ru` только как legacy source-risk note.
+- Change history профиля FIAS/GAR фиксирует связь с legacy dataset note.
+
+### Методологические решения
+
+- Старые утверждения API Portal и `kladr-api.ru` не удалены, но не используются как official FIAS/GAR evidence.
+- Legacy dataset остается supporting research/provenance, а активная рекомендация находится в API-first профиле и address/geocoding comparison.
+- Live testing, archive inspection и API/SMEV method verification не проводились.
+
 ## 2026-07-29 — Address provider request checklists
 
 ### Что добавлено

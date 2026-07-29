@@ -15,7 +15,7 @@
 | Реестр компаний и контрагентов | `company_registry.md` | Credinform, Seldon | ГЛОБАС.API, API Seldon.Basis |
 | Закупки, тендеры и контракты | `procurement_tender_contracts.md` | Seldon | API Seldon.Tenders |
 | Открытые городские данные Москвы | `moscow_city_open_data.md` | Правительство Москвы | API Портала открытых данных города Москвы, веб-портал |
-| Адресный реестр России | `russian_address_registry.md` | ФИАС / источник требует проверки | API ФИАС через `kladr-api.ru`, официальный статус не подтвержден |
+| Адресный реестр России | `russian_address_registry.md` | ФНС России / ФИАС/ГАР; legacy `kladr-api.ru` source-risk note сохранен | Active route: `apis/fias-gar-data-integration/`; legacy API Portal/`kladr-api.ru` claim не считается официальным источником |
 
 ## Что изменилось после Pass #2
 
