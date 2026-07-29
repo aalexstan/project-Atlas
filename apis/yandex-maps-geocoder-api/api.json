@@ -1,0 +1,109 @@
+{
+  "id": "yandex-maps-geocoder-api",
+  "name": "Yandex Maps Geocoder API",
+  "provider": {
+    "name": "Yandex",
+    "website": "https://yandex.ru/maps-api/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "direct geocoding for map display",
+    "reverse geocoding for coordinates selected on a map",
+    "Yandex Maps-centered products",
+    "commercial geocoding where storage rights are explicitly licensed"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "free_limited_use_plus_paid_license",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "free_use": {
+      "limit": "1000 requests per day",
+      "important_restriction": "free Geocoder use is tied to sites or applications using Yandex Maps JavaScript API and Yandex map display"
+    },
+    "paid_tariffs": {
+      "annual_standard_from": "195000 RUB for 1000 requests/day",
+      "annual_extended_with_data_storage_from": "226200 RUB for 1000 requests/day",
+      "monthly_standard_from": "20800 RUB for 1000 requests/day",
+      "test_period": "100 requests/day for up to 7 days without minimum payment",
+      "high_volume": "quote required above 1000000 requests/day"
+    }
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "apikey",
+    "issued_by": "Yandex developer dashboard"
+  },
+  "sandbox": {
+    "test_period": "100 requests/day for up to 7 days under tariff page",
+    "free_use_limit": "1000 requests/day under free-use terms",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "free_daily_requests": 1000,
+    "paid_daily_packages": [
+      1000,
+      10000,
+      25000,
+      50000,
+      100000,
+      200000,
+      300000,
+      500000,
+      1000000
+    ],
+    "requests_per_second": "unknown_publicly_in_this_research"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://yandex.com/maps-api/docs/geocoder-api/"
+  },
+  "capabilities": {
+    "address_suggestions": "separate_product_geosuggest",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "partial_geocoder_precision_not_registry_validation",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "separate_product_organization_search",
+    "routing": "separate_product_not_in_scope",
+    "batch": "unknown"
+  },
+  "coverage": {
+    "languages": [
+      "ru_RU",
+      "uk_UA",
+      "be_BY",
+      "en_RU",
+      "en_US",
+      "tr_TR"
+    ],
+    "geography": "provider_reported_yandex_maps_coverage_requires_scenario_check"
+  },
+  "data_rights": {
+    "free_display": "free Geocoder results may not be displayed on third-party maps under reviewed terms",
+    "caching": "general terms allow only temporary caching up to 30 days for improving functionality unless otherwise agreed",
+    "storage": "Extended license is marketed with data storage; exact rights require contract review",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review"
+  },
+  "sources": [
+    "https://yandex.com/maps-api/docs/geocoder-api/index.html",
+    "https://yandex.com/maps-api/docs/geocoder-api/request.html",
+    "https://yandex.com/maps-api/docs/geocoder-api/response.html",
+    "https://yandex.com/maps-api/docs/",
+    "https://yandex.ru/legal/maps_api/ru/",
+    "https://yandex.ru/dev/tariffs/doc/ru/geocoder/prices/",
+    "https://yandex.ru/maps-api/tariffs"
+  ],
+  "open_questions": [
+    "Public SLA and support terms for the target paid license",
+    "Production requests-per-second limits",
+    "OpenAPI/Swagger availability",
+    "Batch or offline geocoding rights",
+    "Exact storage, caching, display and SaaS rights under the chosen license",
+    "Independent benchmark for match quality, precision and latency"
+  ]
+}

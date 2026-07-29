@@ -1,0 +1,91 @@
+{
+  "id": "2gis-geocoder-api",
+  "name": "2GIS Geocoder API",
+  "provider": {
+    "name": "2GIS",
+    "website": "https://dev.2gis.com/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "direct geocoding in 2GIS map/catalog workflows",
+    "reverse geocoding by coordinates",
+    "applications already using 2GIS Platform",
+    "map-click address lookup"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "monthly_units_package",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "geocoder_packages": {
+      "10000_units": "4700 RUB",
+      "30000_units": "10500 RUB",
+      "50000_units": "14000 RUB",
+      "100000_units": "21000 RUB",
+      "1000000_units": "70000 RUB",
+      "5000000_units": "175000 RUB"
+    },
+    "annual_discount": "provider_reports_10_percent_discount_for_annual_subscription",
+    "on_demand_fields": "some fields require extra paid access"
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "key",
+    "issued_by": "2GIS Platform Manager"
+  },
+  "sandbox": {
+    "demo_key": "available for one month",
+    "demo_search_limit": "1000 total Search-service requests",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "search_units_per_minute": 600,
+    "billing_unit": "successful request",
+    "successful_request_status": "meta.code 200 in reviewed Geocoder documentation"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://docs.2gis.com/en/api/search/geocoder/overview"
+  },
+  "capabilities": {
+    "address_suggestions": "separate_product_suggest_api",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "partial_geocoder_match_not_registry_validation",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "separate_product_places_api",
+    "routing": "separate_navigation_products_not_in_scope",
+    "batch": "unknown"
+  },
+  "coverage": {
+    "geography": "provider_catalog_coverage_requires_scenario_check",
+    "directory_updates": "provider_reports_monthly_directory_updates"
+  },
+  "data_rights": {
+    "storage": "contract_sensitive",
+    "caching": "official_webapi_offer_says_caching_is_not_provided",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review",
+    "display": "needs_contract_review"
+  },
+  "sources": [
+    "https://docs.2gis.com/en/api/search/overview",
+    "https://docs.2gis.com/en/api/search/geocoder/overview",
+    "https://docs.2gis.com/en/api/search/places/overview",
+    "https://docs.2gis.com/en/platform-manager/subscription/services",
+    "https://docs.2gis.com/en/platform-manager/subscription/pricing",
+    "https://docs.2gis.com/en/platform-manager/keys",
+    "https://law.2gis.ru/offer-license-agreement-webapi"
+  ],
+  "open_questions": [
+    "Public SLA and production support tiers",
+    "OpenAPI/Swagger availability",
+    "Exact storage, caching, display, SaaS and redistribution rights",
+    "Batch or asynchronous geocoding support",
+    "Whether required FIAS/OKATO/OKTMO fields need paid on-demand access",
+    "Independent benchmark for match quality, precision and latency"
+  ]
+}
