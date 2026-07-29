@@ -76,7 +76,7 @@ Routing is explicitly out of scope. A geocoder can produce coordinates; routing 
 | SaaS use | Needs contract review | Needs contract review | Needs contract review | Needs contract review | Needs contract review | Needs contract review | ODbL/privacy/ops review | Legal review |
 | SLA | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | No public OSMF SLA found | Unknown |
 | Privacy | Contract review | Yandex terms review | Yandex terms review | Contract review | Contract review | Contract review | Public policy says not to submit confidential/personal data | Legal review |
-| Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | High for self-hosting | High for registry route |
+| Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | High: import, updates, deployment, security and ODbL review | High for registry route |
 | Live test status | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed |
 | Key unknowns | SLA, async batch, data rights | RPS, SLA, exact rights | RPS, SLA, exact rights | SLA, OpenAPI, rights | SLA, on-demand fields, rights | SLA, OpenAPI, rights | Sizing, ODbL, benchmark | API specs, auth, schemas, support, ZIP package contents |
 
@@ -104,7 +104,7 @@ Use FIAS/GAR as the primary official Russian registry route. The open-data route
 
 ### Public Open-Data Geocoding
 
-Do not present public `nominatim.openstreetmap.org` as a free production API. Use it only within its usage policy. For production, evaluate self-hosted Nominatim or a commercial provider.
+Do not present public `nominatim.openstreetmap.org` as a free production API. Use it only within its usage policy. For production, evaluate self-hosted Nominatim or a commercial provider. Self-hosted Nominatim requires import sizing, update planning, production deployment, monitoring, rate limiting, backups and ODbL/legal review.
 
 ### 115-FZ, Sanctions and Compliance
 
@@ -120,6 +120,7 @@ This comparison does not validate compliance coverage. Address APIs and geocoder
 | What SLA and support tiers apply in production? | Enterprise procurement | Request commercial offer and SLA. |
 | What is the exact FIAS/GAR API method catalog and access process? | Official registry strategy | Review developer docs or request FNS channel details. |
 | What are ODbL obligations for the intended cache, database or SaaS product? | Nominatim/self-hosting | Legal review with concrete data-flow diagram. |
+| What hardware, import style and update mode are required for self-hosted Nominatim? | Nominatim/self-hosting | Use the self-hosting checklist and run a benchmark on target extracts. |
 
 ## Method and Sources
 

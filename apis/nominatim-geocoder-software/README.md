@@ -83,13 +83,27 @@ This profile does not cover:
 | Self-hosting cost | Infrastructure and operations, not API subscription | inferred |
 | SLA | No public OSMF SLA found | unknown |
 
+## Self-Hosting Operations
+
+| Area | Verified planning point |
+|---|---|
+| Software stack | PostgreSQL, PostGIS, osm2pgsql and Python are required. |
+| Full-planet hardware | Documentation recommends high-memory machines, at least 1TB disk and fast disks/NVMe. |
+| Full-planet import window | Around 2.5 days on a well-configured machine; 4-5 days may be more realistic on traditional SSDs. |
+| Extract route | Country/regional extracts can reduce database size and import time. |
+| Import styles | `admin`, `street`, `address`, `full` and `extratags` change data scope, import time and database size. |
+| Updates | Replication setup must be planned; systemd-managed one-time updates are preferred over continuous mode. |
+| Production frontend | Use production deployment such as gunicorn behind nginx; do not use the test server in production. |
+
+See the procurement checklist: [`Nominatim Self-Hosting Checklist`](../../procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.md).
+
 ## Commercial and Legal Notes
 
 - Public Nominatim is not a production substitute for a paid geocoder when the product's primary function is geocoding.
 - Public policy requires identifiable clients and attribution.
 - OSM data is ODbL; derived databases, caches and SaaS use require legal review.
 - The public policy asks users not to submit personal or confidential data to OSMF services.
-- Self-hosting requires import, database storage, updates, monitoring, backups and capacity planning.
+- Self-hosting requires import, database storage, updates, monitoring, backups, security/rate limiting and capacity planning.
 
 ## Alternatives
 

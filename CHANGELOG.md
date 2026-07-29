@@ -26,6 +26,7 @@
 - Yandex Maps Geocoder описан только как direct/reverse geocoder; Yandex Geosuggest выделен как отдельный autocomplete API; Organization Search и routing оставлены отдельными будущими продуктами.
 - 2GIS Geocoder, 2GIS Suggest и 2GIS Places описаны как отдельные продукты с разными сценариями, тарифами и рисками.
 - Nominatim оформлен как open-source geocoder software/self-hosting route; публичный OSMF service не представлен как free production API.
+- Для Nominatim добавлен self-hosting operations checklist и уточнены official docs по prerequisites, full-planet/import estimates, update modes и production deployment.
 - ФИАС/ГАР оформлен как официальный registry/data-integration route, а не как обычный REST geocoder; official file downloads, SMEV и API services отмечены без повышения unknown method details.
 - FIAS/GAR open-data route уточнён по official open-data catalog ФНС: dataset `7707329152-fias`, XML ZIP, structure ZIP, weekly updates, previous releases и KLADR sunset path.
 - Не объявлен универсальный победитель: рекомендации зависят от сценария, прав хранения, display restrictions, batch needs and TCO.

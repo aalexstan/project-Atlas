@@ -51,7 +51,7 @@ Do not treat geocoding as organization search. 2GIS Places API is the active pro
 
 ### Public Nominatim vs Self-Hosting
 
-Public `nominatim.openstreetmap.org` is limited by usage policy, forbids autocomplete and is not a free production API. Self-hosted Nominatim is a separate operating model with infrastructure, update and ODbL responsibilities.
+Public `nominatim.openstreetmap.org` is limited by usage policy, forbids autocomplete and is not a free production API. Self-hosted Nominatim is a separate operating model with infrastructure, import sizing, update, production deployment, monitoring, security and ODbL responsibilities.
 
 ### FIAS/GAR Official Interfaces
 
@@ -77,6 +77,7 @@ Ask this before choosing a provider. A technically strong geocoder can be a poor
 - Contractual storage, caching, SaaS and redistribution rights require legal review.
 - FIAS/GAR open-data XML ZIP route is verified, but archive contents were not inspected and API-service details remain incomplete in reviewed public pages.
 - ODbL implications for Nominatim/OSM derived databases require legal review.
+- Nominatim self-hosting still needs a benchmark on target extracts and hardware.
 
 ## Questions Before Procurement
 
@@ -93,7 +94,7 @@ Ask this before choosing a provider. A technically strong geocoder can be a poor
 
 - API profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md), [`2GIS Places API`](../../apis/2gis-places-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
 - Comparison: [`Address Normalization, Address Registries and Geocoding APIs`](../../comparisons/address-normalization-geocoding/README.md)
-- Procurement kit: [`Address and Geocoding API Selection`](../../procurement/address-geocoding-api-selection/README.md)
+- Procurement kit: [`Address and Geocoding API Selection`](../../procurement/address-geocoding-api-selection/README.md), [`Nominatim Self-Hosting Checklist`](../../procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.md)
 
 ## Next Step
 

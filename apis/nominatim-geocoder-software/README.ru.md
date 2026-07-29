@@ -83,13 +83,27 @@
 | Self-hosting cost | Infrastructure и operations, не API subscription | inferred |
 | SLA | Публичный SLA OSMF не найден | unknown |
 
+## Self-hosting operations
+
+| Область | Подтверждённый planning point |
+|---|---|
+| Software stack | Требуются PostgreSQL, PostGIS, osm2pgsql и Python. |
+| Full-planet hardware | Документация рекомендует high-memory machines, at least 1TB disk и fast disks/NVMe. |
+| Full-planet import window | Около 2.5 дней на well-configured machine; на traditional SSDs могут быть реалистичнее 4-5 дней. |
+| Extract route | Country/regional extracts могут уменьшить database size и import time. |
+| Import styles | `admin`, `street`, `address`, `full` и `extratags` меняют data scope, import time и database size. |
+| Updates | Replication setup нужно планировать заранее; systemd-managed one-time updates preferred over continuous mode. |
+| Production frontend | Используйте production deployment, например gunicorn behind nginx; test server нельзя использовать в production. |
+
+См. procurement checklist: [`Self-hosting checklist для Nominatim`](../../procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.ru.md).
+
 ## Коммерческие и юридические замечания
 
 - Public Nominatim не заменяет платный production geocoder, если основная функция продукта — geocoding.
 - Public policy требует identifiable clients и attribution.
 - OSM data лицензирована ODbL; derived databases, caches и SaaS use требуют юридического review.
 - Public policy просит не отправлять персональные или конфиденциальные данные в сервисы OSMF.
-- Self-hosting требует import, database storage, updates, monitoring, backups и capacity planning.
+- Self-hosting требует import, database storage, updates, monitoring, backups, security/rate limiting и capacity planning.
 
 ## Альтернативы
 

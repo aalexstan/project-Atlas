@@ -19,7 +19,8 @@
     "address-normalization-geocoding"
   ],
   "related_procurement": [
-    "procurement/address-geocoding-api-selection/README.md"
+    "procurement/address-geocoding-api-selection/README.md",
+    "procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.md"
   ],
   "decision_paths": [
     {
@@ -100,6 +101,7 @@
     "research/address-geocoding/yandex-geosuggest-decision.md",
     "research/address-geocoding/2gis-suggest-places-decision.md",
     "research/address-geocoding/nominatim-decision.md",
+    "research/address-geocoding/2026-07-29-nominatim-self-hosting-ops.md",
     "research/address-geocoding/2026-07-29-fias-gar-interfaces.md"
   ]
 }

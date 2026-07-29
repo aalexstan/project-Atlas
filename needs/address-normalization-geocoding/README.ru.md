@@ -51,7 +51,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder и DaData. Добавьте self-
 
 ### Public Nominatim и self-hosting
 
-Публичный `nominatim.openstreetmap.org` ограничен usage policy, запрещает autocomplete и не является бесплатным production API. Self-hosted Nominatim — отдельная operating model с infrastructure, update и ODbL responsibilities.
+Публичный `nominatim.openstreetmap.org` ограничен usage policy, запрещает autocomplete и не является бесплатным production API. Self-hosted Nominatim — отдельная operating model с infrastructure, import sizing, update, production deployment, monitoring, security и ODbL responsibilities.
 
 ### Официальные интерфейсы FIAS/GAR
 
@@ -77,6 +77,7 @@ DaData наиболее глубока для российских адресн�
 - Contractual storage, caching, SaaS и redistribution rights требуют legal review.
 - Open-data XML ZIP route FIAS/GAR verified, но archive contents не inspected, а детали API-сервисов остаются неполными в просмотренных публичных страницах.
 - ODbL implications для Nominatim/OSM derived databases требуют legal review.
+- Nominatim self-hosting всё ещё требует benchmark на target extracts and hardware.
 
 ## Вопросы перед закупкой
 
@@ -93,7 +94,7 @@ DaData наиболее глубока для российских адресн�
 
 - API profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.ru.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.ru.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.ru.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.ru.md), [`2GIS Places API`](../../apis/2gis-places-api/README.ru.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.ru.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.ru.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.ru.md)
 - Comparison: [`API нормализации адресов, адресных реестров и геокодирования`](../../comparisons/address-normalization-geocoding/README.ru.md)
-- Procurement kit: [`Выбор API адресов и геокодирования`](../../procurement/address-geocoding-api-selection/README.ru.md)
+- Procurement kit: [`Выбор API адресов и геокодирования`](../../procurement/address-geocoding-api-selection/README.ru.md), [`Self-hosting checklist для Nominatim`](../../procurement/address-geocoding-api-selection/NOMINATIM_SELF_HOSTING.ru.md)
 
 ## Следующий шаг
 

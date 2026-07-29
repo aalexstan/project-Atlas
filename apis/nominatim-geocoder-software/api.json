@@ -34,7 +34,7 @@
   "rate_limits": {
     "public_instance": "absolute maximum 1 request per second",
     "public_bulk": "larger bulk discouraged; regular or long-running scripts restricted",
-    "self_hosted": "operator_defined"
+    "self_hosted": "operator_defined_after_benchmark"
   },
   "openapi": {
     "status": "unknown",
@@ -52,7 +52,42 @@
   },
   "coverage": {
     "geography": "openstreetmap_data_coverage_varies_by_region",
-    "data_source": "OpenStreetMap"
+    "data_source": "OpenStreetMap",
+    "deployment_scope": "full_planet_or_extracts",
+    "import_styles": [
+      "admin",
+      "street",
+      "address",
+      "full",
+      "extratags"
+    ]
+  },
+  "operations": {
+    "software_prerequisites": [
+      "PostgreSQL",
+      "PostGIS",
+      "osm2pgsql",
+      "Python",
+      "pyosmium_for_updates"
+    ],
+    "full_planet_hardware": {
+      "ram": "128GB_or_more_strongly_recommended; less_than_64GB_not_suitable_for_oom_reports",
+      "disk": "at_least_1TB_fast_disk_nvme_recommended",
+      "import_time": "around_2_5_days_on_well_configured_machine; 4_5_days_more_realistic_on_traditional_ssd"
+    },
+    "large_imports": {
+      "flatnode": "recommended_for_large_datasets",
+      "flatnode_free_space": "at_least_75GB"
+    },
+    "updates": {
+      "replication": "online_replication_supported",
+      "continuous_mode": "no_longer_recommended",
+      "recommended_regular_mode": "systemd_managed_one_time_updates"
+    },
+    "production_frontend": {
+      "test_server": "not_for_production",
+      "documented_route": "Python ASGI frontend with gunicorn/systemd/nginx"
+    }
   },
   "data_rights": {
     "license": "ODbL",
@@ -67,13 +102,17 @@
     "https://operations.osmfoundation.org/policies/nominatim/",
     "https://nominatim.org/release-docs/latest/api/Search/",
     "https://nominatim.org/release-docs/latest/api/Reverse/",
+    "https://nominatim.org/release-docs/latest/admin/Installation/",
     "https://nominatim.org/release-docs/latest/admin/Import/",
     "https://nominatim.org/release-docs/latest/admin/Update/",
+    "https://nominatim.org/release-docs/latest/admin/Deployment-Python/",
     "https://www.openstreetmap.org/copyright"
   ],
   "open_questions": [
-    "Hardware sizing for the target geography and throughput",
+    "Hardware sizing for the exact target geography, import style and throughput",
     "Operational update cadence and monitoring model",
+    "Backup, replication, failover and disaster recovery design",
+    "Authentication, rate limiting and abuse protection for any exposed self-hosted endpoint",
     "Address-quality benchmark for target markets",
     "ODbL obligations for the exact derived dataset and SaaS use case",
     "Whether a commercial provider is preferable to self-hosting",

@@ -16,6 +16,7 @@ Use this kit before buying or piloting an address/geocoding provider. It helps s
 | [`TEST_PROTOCOL.md`](TEST_PROTOCOL.md) | Reproducible benchmark protocol for address quality and geocoding tests. |
 | [`SAMPLE_POLICY.md`](SAMPLE_POLICY.md) | Safe sample-data rules for testing without credentials, private addresses or personal data. |
 | [`SCORING.md`](SCORING.md) | Scenario-weighted scorecard template; not a global Atlas Score. |
+| [`NOMINATIM_SELF_HOSTING.md`](NOMINATIM_SELF_HOSTING.md) | Self-hosting operations checklist for Nominatim/OSM geocoding. |
 
 ## Related Atlas Materials
 

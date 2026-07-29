@@ -76,7 +76,7 @@
 | SaaS use | Needs contract review | Needs contract review | Needs contract review | Needs contract review | Needs contract review | Needs contract review | ODbL/privacy/ops review | Legal review |
 | SLA | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | No public OSMF SLA found | Unknown |
 | Privacy | Contract review | Yandex terms review | Yandex terms review | Contract review | Contract review | Contract review | Public policy says not to submit confidential/personal data | Legal review |
-| Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | High for self-hosting | High for registry route |
+| Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | High: import, updates, deployment, security и ODbL review | High for registry route |
 | Live test status | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed |
 | Key unknowns | SLA, async batch, data rights | RPS, SLA, exact rights | RPS, SLA, exact rights | SLA, OpenAPI, rights | SLA, on-demand fields, rights | SLA, OpenAPI, rights | Sizing, ODbL, benchmark | API specs, auth, schemas, support, ZIP package contents |
 
@@ -104,7 +104,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder и DaData. Добавьте self-
 
 ### Public Open-Data Geocoding
 
-Не представляйте публичный `nominatim.openstreetmap.org` как бесплатный production API. Используйте его только в рамках usage policy. Для production оценивайте self-hosted Nominatim или коммерческого провайдера.
+Не представляйте публичный `nominatim.openstreetmap.org` как бесплатный production API. Используйте его только в рамках usage policy. Для production оценивайте self-hosted Nominatim или коммерческого провайдера. Self-hosted Nominatim требует import sizing, update planning, production deployment, monitoring, rate limiting, backups и ODbL/legal review.
 
 ### 115-ФЗ, санкции и compliance
 
@@ -120,6 +120,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder и DaData. Добавьте self-
 | Какие SLA и support tiers действуют в production? | Enterprise procurement | Запросить commercial offer и SLA. |
 | Каков точный FIAS/GAR API method catalog и access process? | Official registry strategy | Изучить developer docs или запросить детали канала ФНС. |
 | Какие ODbL obligations возникают для cache, database или SaaS product? | Nominatim/self-hosting | Legal review с конкретной data-flow diagram. |
+| Какие hardware, import style и update mode нужны для self-hosted Nominatim? | Nominatim/self-hosting | Использовать self-hosting checklist и провести benchmark на target extracts. |
 
 ## Метод и источники
 

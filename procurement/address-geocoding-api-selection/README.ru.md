@@ -16,6 +16,7 @@
 | [`TEST_PROTOCOL.ru.md`](TEST_PROTOCOL.ru.md) | Воспроизводимый protocol benchmark'а качества адресов и геокодирования. |
 | [`SAMPLE_POLICY.ru.md`](SAMPLE_POLICY.ru.md) | Правила безопасной тестовой выборки без credentials, частных адресов и персональных данных. |
 | [`SCORING.ru.md`](SCORING.ru.md) | Scenario-weighted scorecard; не глобальный Atlas Score. |
+| [`NOMINATIM_SELF_HOSTING.ru.md`](NOMINATIM_SELF_HOSTING.ru.md) | Operations checklist для self-hosted Nominatim/OSM geocoding. |
 
 ## Связанные материалы Atlas
 

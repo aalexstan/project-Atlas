@@ -107,7 +107,7 @@
       "public_pricing": "not_commercial_api_price",
       "free_tier": "public instance has no monetary fee in policy but strict usage limits",
       "published_limit": "public instance absolute max 1 rps; autocomplete forbidden; self-host operator-defined",
-      "key_risk": "public instance is not a free production API; self-hosting creates ODbL and operations obligations"
+      "key_risk": "public instance is not a free production API; self-hosting creates import, update, deployment, ODbL and operations obligations"
     },
     {
       "id": "fias-gar-data-integration",
@@ -196,8 +196,10 @@
     "https://operations.osmfoundation.org/policies/nominatim/",
     "https://nominatim.org/release-docs/latest/api/Search/",
     "https://nominatim.org/release-docs/latest/api/Reverse/",
+    "https://nominatim.org/release-docs/latest/admin/Installation/",
     "https://nominatim.org/release-docs/latest/admin/Import/",
     "https://nominatim.org/release-docs/latest/admin/Update/",
+    "https://nominatim.org/release-docs/latest/admin/Deployment-Python/",
     "https://www.openstreetmap.org/copyright",
     "https://www.nalog.gov.ru/rn77/service/fias/",
     "https://www.nalog.gov.ru/opendata/7707329152-fias/",
