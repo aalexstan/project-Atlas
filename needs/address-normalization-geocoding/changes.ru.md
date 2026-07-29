@@ -6,3 +6,4 @@
 |---|---|---|
 | 2026-07-29 | Создан первый need-based маршрут для подсказок адреса, очистки, геокодирования, интеграции с реестром и закупочных решений. | Добавляет вход в новое адресное направление Atlas от задачи пользователя. |
 | 2026-07-29 | Добавлены маршруты для Yandex Geosuggest, 2GIS Suggest, 2GIS Places, Nominatim self-hosting и уточнены blockers API-сервисов FIAS/GAR. | Маршрут теперь покрывает autocomplete, place search, hosted geocoding, open-data self-hosting и official registry choices. |
+| 2026-07-29 | Добавлены verified детали FIAS/GAR open-data ZIP route с сохранением blockers API-сервисов. | Помогает отделить file-feed integration от REST-like API procurement. |

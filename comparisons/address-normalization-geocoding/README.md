@@ -62,11 +62,11 @@ Routing is explicitly out of scope. A geocoder can produce coordinates; routing 
 | Public documentation | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Partial |
 | Authentication | Token; secret for cleaning | API key | API key | API key | API key | API key | Public instance: User-Agent/Referer; self-host operator-defined | Depends on channel |
 | Self-service | Yes | Yes/test/commercial license | Yes/test/commercial license | Demo key/subscription | Demo key/subscription | Demo key/subscription | Public limited; self-host | Public portal; integration details unclear |
-| Public pricing | Yes | Yes | Yes | Yes | Yes | Yes | Not commercial API price | Unknown for API/download channels |
+| Public pricing | Yes | Yes | Yes | Yes | Yes | Yes | Not commercial API price | No monetary price stated for open-data page; API/SMEV unknown |
 | Free tier / trial | 10,000 subscription requests/day | 100/day test period; commercial tariffs | 1,000/day free terms; 100/day test period | Demo key / 1,000 Search requests | Demo key / 1,000 Search requests | Demo key / 1,000 Search requests | Public limited policy; self-host costs | Not applicable as commercial API |
 | Quotas | Daily plan limits | Daily package limits | Daily package limits | Monthly units plus per-minute | Monthly units plus per-minute | Monthly units plus per-minute | Public 1 rps; self-host operator-defined | Unknown |
 | Rate limits | 30 rps suggestions; 20 rps cleaning | RPS unknown publicly | RPS unknown publicly | 600 Search units/minute | 600 Search units/minute | 600 Search units/minute | Public max 1 rps | Unknown |
-| Batch | Cleaning one address/request; async batch unknown | Unknown/contract-sensitive | Unknown/contract-sensitive | Unknown | Unknown/on-demand | Unknown | Public bulk discouraged; self-host possible | File/API batch route mentioned; details unknown |
+| Batch | Cleaning one address/request; async batch unknown | Unknown/contract-sensitive | Unknown/contract-sensitive | Unknown | Unknown/on-demand | Unknown | Public bulk discouraged; self-host possible | Open-data ZIP route verified; API batch service mentioned but method details unknown |
 | Public hosted API | Yes | Yes | Yes | Yes | Yes | Yes | Limited public instance only | Public portal plus official channels |
 | Self-hosted option | No | No | No | Provider-reported On-Premise | Provider platform/on-premise needs deal | Provider platform/on-premise needs deal | Yes | User-operated registry pipeline |
 | Storage | Contract-sensitive | Extended license marketed with storage | Extended license marketed with storage | Contract-sensitive | Contract-sensitive | Contract-sensitive | ODbL/legal review; cache repeated public results | Legal review |
@@ -78,7 +78,7 @@ Routing is explicitly out of scope. A geocoder can produce coordinates; routing 
 | Privacy | Contract review | Yandex terms review | Yandex terms review | Contract review | Contract review | Contract review | Public policy says not to submit confidential/personal data | Legal review |
 | Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | High for self-hosting | High for registry route |
 | Live test status | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed |
-| Key unknowns | SLA, async batch, data rights | RPS, SLA, exact rights | RPS, SLA, exact rights | SLA, OpenAPI, rights | SLA, on-demand fields, rights | SLA, OpenAPI, rights | Sizing, ODbL, benchmark | Specs, auth, schemas, support |
+| Key unknowns | SLA, async batch, data rights | RPS, SLA, exact rights | RPS, SLA, exact rights | SLA, OpenAPI, rights | SLA, on-demand fields, rights | SLA, OpenAPI, rights | Sizing, ODbL, benchmark | API specs, auth, schemas, support, ZIP package contents |
 
 ## Recommendations by Scenario
 
@@ -100,7 +100,7 @@ Use 2GIS Places API when the task is organization, building or place search. Do 
 
 ### Official Registry Base
 
-Use FIAS/GAR as the primary official Russian registry route. Treat official API services as mentioned but underspecified until method catalog, auth, schema and support details are captured.
+Use FIAS/GAR as the primary official Russian registry route. The open-data route is now verified as XML ZIP with a structure ZIP and weekly updates on the FNS open-data page. Treat official API services as mentioned but underspecified until method catalog, auth, schema and support details are captured.
 
 ### Public Open-Data Geocoding
 

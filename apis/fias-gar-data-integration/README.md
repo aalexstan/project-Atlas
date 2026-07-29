@@ -44,10 +44,11 @@ This profile is named "data integration" because reviewed official pages confirm
 | Channel | Status | Notes |
 |---|---|---|
 | Public address search | Verified | FIAS public portal exposes address search. |
-| Open data / file downloads | Verified as developer-section entry and official integration route | FNS archived material describes weekly downloads published twice per week; current package formats need recheck. |
+| Open data / file downloads | Verified as official open-data route | FNS open-data catalog lists dataset `7707329152-fias`, XML format, current ZIP data URL, structure ZIP, weekly updates and previous releases. |
 | SMEV | Verified as developer-section entry and official integration route | FNS archived material describes daily publication through SMEV; eligibility and process are unknown in this profile. |
 | API services | Verified as developer-section entry and official integration route | FNS archived material describes online API batch provision by request; public method catalog, base URL, auth and schemas were not visible in reviewed static pages. |
 | Search / Frontend web pages | Verified as user-facing portal | Do not treat discovered web endpoints as supported integration APIs without explicit FNS documentation. |
+| KLADR legacy downloads | Sunset path verified | FNS states KLADR publication becomes quarterly from 2026-07-01, semiannual from 2027-01-01 and stops from 2028-01-01. |
 
 ## Implementation Implications
 
@@ -69,9 +70,12 @@ That cost must be included in TCO. A registry feed can be cheaper per request an
 |---|---|
 | Public/open registry positioning | verified |
 | API service price | unknown |
-| File download price | unknown |
+| Open-data file format | XML ZIP listed in official open-data catalog |
+| Open-data update cadence | weekly in official open-data catalog |
+| File download price | no monetary price stated on reviewed open-data page |
 | SMEV eligibility | unknown |
-| File/API schemas | unknown |
+| Structure reference | structure ZIP listed in official open-data catalog; archive contents not inspected |
+| API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
 

@@ -20,6 +20,7 @@
 | Nominatim Search и Reverse APIs документированы для geocoding. | https://nominatim.org/release-docs/latest/api/Search/ | 2026-07-29 | verified | Software/API capability; self-hosting требует ops. |
 | OpenStreetMap data требует attribution и лицензирована ODbL. | https://www.openstreetmap.org/copyright | 2026-07-29 | verified | Legal/data-rights blocker. |
 | Страницы ФНС/ФИАС определяют ГАР как официальный адресный реестр РФ, а ФИАС - как систему ФНС. | https://www.nalog.gov.ru/rn77/service/fias/ | 2026-07-29 | verified | Реестровый route. |
+| Open-data catalog ФНС указывает GAR/FIAS как dataset `7707329152-fias` с XML data, structure ZIP, weekly updates и previous releases. | https://www.nalog.gov.ru/opendata/7707329152-fias/ | 2026-07-29 | verified | Open-data route details. |
 | Developer section ФИАС содержит file downloads, SMEV и API services, но детальная API specification не видна в просмотренных static pages. | https://fias-file.nalog.ru/Frontend | 2026-07-29 | observed | Unknowns остаются явными. |
 | Архивный материал ФНС описывает weekly file downloads, daily SMEV publication и online API batch provision by request как integration routes. | https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/ | 2026-07-29 | verified | Подтверждает channel split, но не полные method details. |
 

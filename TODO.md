@@ -14,7 +14,7 @@
 - Для 2GIS Places API подтвердить on-demand method/field matrix, SLA, storage/caching/display/SaaS rights, batch/enrichment restrictions и benchmark по целевым категориям.
 - Для 2GIS Geocoder API подтвердить OpenAPI/Swagger, SLA, storage/caching/display/SaaS rights, on-demand field pricing и провести precision benchmark.
 - Для Nominatim Geocoder Software провести legal review ODbL/attribution/derived databases, оценить self-hosting sizing/update operations и не использовать public instance для production/autocomplete/bulk.
-- Для FIAS/GAR Data Integration уточнить публичные file formats, update cadence, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
+- Для FIAS/GAR Data Integration уточнить содержимое текущих ZIP archives, full/delta package model, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
 - Перепроверить FTS EGRUL/EGRIP integration после перехода форматов, запланированного на 2026-08-01.
 - Не использовать `ratings/` как действующий Atlas Score. Любая новая оценка должна следовать `docs/METHODOLOGY.md` и иметь публичные критерии.
 - Поддерживать `API_INDEX*`, `COMPARISON_INDEX*` и `NEEDS_INDEX*` через `python3 scripts/generate_indexes.py`; CI должен проходить `python3 scripts/generate_indexes.py --check`.

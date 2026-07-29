@@ -76,7 +76,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need route и procurement checklist.
 - Yandex Geosuggest, 2GIS Suggest и 2GIS Places отделены от geocoder profiles, чтобы не смешивать autocomplete, place search и geocoding.
 - Nominatim описан как open-source geocoder software/self-hosting route; публичный `nominatim.openstreetmap.org` не считается бесплатным production API.
-- ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; file downloads, SMEV и API services отмечены как официально упомянутые каналы, но method catalog/auth/schemas остаются blockers.
+- ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, structure ZIP, weekly updates и previous releases verified по open-data catalog ФНС, а API/SMEV method catalog/auth/schemas остаются blockers.
 - Создан первый need-based маршрут `needs/company-verification/`.
 - Создан индекс документации `docs/README.md` / `docs/README.ru.md`.
 - Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.
@@ -91,4 +91,4 @@ Atlas должен помогать проверять, сравнивать и 
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
 - Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
-- Для address/geocoding направления нужны credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM и уточнение публичных деталей FIAS/GAR API services.
+- Для address/geocoding направления нужны credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM, inspection текущих FIAS/GAR ZIP archives и уточнение публичных деталей FIAS/GAR API services.

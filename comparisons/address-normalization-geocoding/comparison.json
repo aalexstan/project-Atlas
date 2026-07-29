@@ -118,10 +118,10 @@
         "custom_etl",
         "registry_provenance"
       ],
-      "public_pricing": "unknown_for_api_or_downloads",
+      "public_pricing": "open_data_page_has_no_monetary_price_stated_api_and_smev_unknown",
       "free_tier": "not_applicable",
-      "published_limit": "unknown",
-      "key_risk": "not a turnkey suggestions or geocoding API; requires ETL, search and matching logic"
+      "published_limit": "open_data_weekly_updates_verified_api_smev_limits_unknown",
+      "key_risk": "not a turnkey suggestions or geocoding API; open-data ZIP route verified but API-service method details unknown"
     }
   ],
   "recommendations": {
@@ -200,12 +200,14 @@
     "https://nominatim.org/release-docs/latest/admin/Update/",
     "https://www.openstreetmap.org/copyright",
     "https://www.nalog.gov.ru/rn77/service/fias/",
+    "https://www.nalog.gov.ru/opendata/7707329152-fias/",
     "https://fias-file.nalog.ru/",
     "https://fias-file.nalog.ru/FiasInfo",
     "https://fias-file.nalog.ru/Frontend",
     "https://fias-file.nalog.ru/Search",
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/",
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/",
-    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/"
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ]
 }

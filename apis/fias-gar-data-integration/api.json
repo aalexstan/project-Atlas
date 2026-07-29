@@ -21,12 +21,12 @@
     "model": "official_registry_access_and_possible_service_channels",
     "public_registry": "FNS describes GAR as open and publicly available",
     "api_price": "unknown_publicly_in_this_research",
-    "download_price": "unknown_publicly_in_this_research",
+    "download_price": "no_monetary_price_stated_on_reviewed_open_data_page",
     "implementation_cost": "must_include_etl_storage_indexing_updates_and_support"
   },
   "authentication": {
     "public_site_search": "web_service",
-    "file_downloads": "official_developer_section_and_fns_materials_confirm_channel_details_need_recheck",
+    "file_downloads": "official_open_data_page_lists_xml_zip_data_and_structure_urls_no_auth_indicated",
     "api_services": "official_developer_section_and_fns_materials_confirm_channel_method_details_unknown",
     "smev": "official_developer_section_and_fns_materials_confirm_channel_eligibility_unknown",
     "frontend_search_endpoints": "not_treated_as_supported_public_api_without_explicit_fns_documentation"
@@ -37,7 +37,7 @@
   },
   "rate_limits": {
     "public_api": "unknown_publicly_in_this_research",
-    "file_downloads": "unknown_publicly_in_this_research",
+    "file_downloads": "official_open_data_page_states_weekly_updates_and_lists_previous_releases; no request_rate_limit_found",
     "smev": "unknown_publicly_in_this_research",
     "historical_context": "FNS archived material reported weekly portal downloads twice per week, daily SMEV publication and online API batch provision by request"
   },
@@ -53,12 +53,17 @@
     "reverse_geocoding": "not_confirmed",
     "organization_search": "not_applicable",
     "routing": "not_applicable",
-    "batch": "data_feed_or_bulk_integration_route_requires_recheck"
+    "batch": "open_data_zip_route_verified; api_batch_service_mentioned_but_method_details_unknown"
   },
   "coverage": {
     "geography": "russia",
     "registry": "GAR",
     "operator": "FNS",
+    "open_data_dataset_id": "7707329152-fias",
+    "open_data_format": "xml",
+    "open_data_update_cadence": "weekly",
+    "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
+    "kladR_status": "legacy_publication_quarterly_from_2026_07_01_semiannual_from_2027_01_01_ends_2028_01_01",
     "address_objects": [
       "buildings",
       "structures",
@@ -75,17 +80,19 @@
   },
   "sources": [
     "https://www.nalog.gov.ru/rn77/service/fias/",
+    "https://www.nalog.gov.ru/opendata/7707329152-fias/",
     "https://fias-file.nalog.ru/",
     "https://fias-file.nalog.ru/FiasInfo",
     "https://fias-file.nalog.ru/Frontend",
     "https://fias-file.nalog.ru/Search",
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/",
     "https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/",
-    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/"
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ],
   "open_questions": [
-    "Current official file formats and download package structure",
-    "Exact update cadence for full and delta data packages",
+    "Current open-data ZIP archive contents and package structure",
+    "Whether current ZIP publications are full, delta or mixed packages",
     "Public API service method catalog, base URL, authentication and schemas",
     "Eligibility and process for API services and SMEV access",
     "Costs, if any, for API services or bulk downloads",

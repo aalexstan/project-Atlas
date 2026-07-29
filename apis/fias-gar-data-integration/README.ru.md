@@ -44,10 +44,11 @@
 | Канал | Статус | Примечание |
 |---|---|---|
 | Публичный поиск адреса | Verified | Портал ФИАС предоставляет поиск адреса. |
-| Открытые данные / файловые выгрузки | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает еженедельные выгрузки с публикацией дважды в неделю; текущие package formats требуют перепроверки. |
+| Открытые данные / файловые выгрузки | Verified как официальный open-data route | Open-data catalog ФНС указывает dataset `7707329152-fias`, XML format, текущий ZIP data URL, structure ZIP, weekly updates и previous releases. |
 | СМЭВ | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает ежедневную публикацию через СМЭВ; eligibility и процесс неизвестны в этой карточке. |
 | API-сервисы | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает online API batch provision by request; public method catalog, base URL, auth и schemas не были видны в просмотренных static pages. |
 | Search / Frontend web pages | Verified как пользовательский портал | Не считать найденные web endpoints поддерживаемыми integration APIs без явной документации ФНС. |
+| Legacy downloads КЛАДР | Sunset path verified | ФНС сообщает, что публикация КЛАДР становится квартальной с 2026-07-01, полугодовой с 2027-01-01 и прекращается с 2028-01-01. |
 
 ## Последствия для внедрения
 
@@ -69,9 +70,12 @@
 |---|---|
 | Public/open registry positioning | verified |
 | Цена API-сервисов | unknown |
-| Цена файловых выгрузок | unknown |
+| Open-data file format | XML ZIP указан в official open-data catalog |
+| Open-data update cadence | weekly в official open-data catalog |
+| Цена файловых выгрузок | monetary price не указана на просмотренной open-data page |
 | Eligibility СМЭВ | unknown |
-| File/API schemas | unknown |
+| Structure reference | structure ZIP указан в official open-data catalog; содержимое архива не inspected |
+| API schemas | unknown |
 | Commercial SaaS / redistribution rights | needs legal review |
 | SLA | unknown |
 
