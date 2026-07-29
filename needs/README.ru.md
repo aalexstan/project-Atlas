@@ -12,6 +12,7 @@ Needs - это маршруты Atlas вокруг практических за
 |---|---|---|
 | Нормализация адресов, адресные реестры и геокодирование | reviewed | [Открыть маршрут](address-normalization-geocoding/README.ru.md) |
 | Проверка контрагента | reviewed | [Открыть маршрут](company-verification/README.ru.md) |
+| Поиск организаций и мест | reviewed | [Открыть маршрут](organization-place-search/README.ru.md) |
 
 ## Связанная навигация
 

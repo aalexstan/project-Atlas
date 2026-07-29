@@ -42,6 +42,7 @@ Atlas помогает:
 
 - [Проверка контрагента](needs/company-verification/README.ru.md)
 - [Нормализация адресов, адресные реестры и геокодирование](needs/address-normalization-geocoding/README.ru.md)
+- [Поиск организаций и мест](needs/organization-place-search/README.ru.md)
 
 Затем используйте связанные [индекс API](API_INDEX.ru.md), [индекс сравнений](COMPARISON_INDEX.ru.md) и procurement kits.
 

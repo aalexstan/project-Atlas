@@ -24,7 +24,7 @@ Initial comparisons: company and counterparty data, addresses and geocoding, pro
 
 **Success:** each comparison provides scenario-specific recommendations, evidence, and a review date. Need-based routes should connect common user questions to the relevant profiles, comparisons, and procurement kits.
 
-**Current progress:** company/counterparty and address/geocoding comparisons are published. Address/geocoding also has a need route and procurement checklist covering autocomplete, geocoding, place search, official registry integration and self-hosted OSM geocoding. Legacy procurement/tender dataset notes are linked as future comparison input, but no active procurement API comparison exists yet.
+**Current progress:** company/counterparty and address/geocoding comparisons are published. Address/geocoding also has need routes and a procurement checklist covering autocomplete, geocoding, place search, official registry integration and self-hosted OSM geocoding. Organization/place search now has a dedicated route that points to 2GIS Places API and Yandex Maps Organization Search API. Legacy procurement/tender dataset notes are linked as future comparison input, but no active procurement API comparison exists yet.
 
 ## Phase 4 — Distribution and Feedback
 

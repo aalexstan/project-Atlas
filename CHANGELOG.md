@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-07-29 — Organization and place search need route
+
+### Что добавлено
+
+- Добавлен активный двуязычный маршрут `needs/organization-place-search/`.
+- Маршрут связывает 2GIS Places API и Yandex Maps Organization Search API с задачей поиска организаций, мест, зданий и локальных объектов.
+- Root README, Needs README и generated Needs Index теперь ведут к новому маршруту.
+
+### Методологические решения
+
+- Place search явно отделён от address autocomplete, geocoding, routing и company verification.
+- Bulk/offline enrichment, SLA, storage, display, SaaS и redistribution оставлены как procurement/legal blockers.
+
 ## 2026-07-29 — Yandex Organization Search API profile
 
 ### Что добавлено

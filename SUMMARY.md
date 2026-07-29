@@ -23,7 +23,7 @@ Atlas должен помогать проверять, сравнивать и 
 |---|---:|---|
 | API profiles | 14 | DaData, DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
 | Comparisons | 2 | Company and counterparty data APIs in Russia; address normalization and geocoding APIs |
-| Need routes | 2 | Company Verification; Address normalization, address registries and geocoding |
+| Need routes | 3 | Company Verification; Address normalization, address registries and geocoding; Organization and place search |
 | Procurement kits | 2 | Counterparty API selection kit; address/geocoding API selection kit |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
@@ -81,6 +81,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need route и procurement checklist.
 - Yandex Geosuggest, 2GIS Suggest и 2GIS Places отделены от geocoder profiles, чтобы не смешивать autocomplete, place search и geocoding.
 - Yandex Maps Organization Search API добавлен как отдельный organization/place search profile и не смешивается с Geosuggest, Geocoder или routing.
+- Создан отдельный need route `needs/organization-place-search/`, который связывает Yandex Organization Search и 2GIS Places с практическими сценариями place search.
 - Nominatim описан как open-source geocoder software/self-hosting route; публичный `nominatim.openstreetmap.org` не считается бесплатным production API.
 - Для Nominatim добавлен self-hosting operations checklist: import sizing, full-planet/extract выбор, update mode, production deployment, monitoring/security и benchmark gates.
 - ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, structure ZIP, weekly updates и previous releases verified по open-data catalog ФНС, а API/SMEV method catalog/auth/schemas остаются blockers.

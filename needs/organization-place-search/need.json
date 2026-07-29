@@ -1,0 +1,74 @@
+{
+  "id": "organization-place-search",
+  "name": "Organization and place search",
+  "name_ru": "Поиск организаций и мест",
+  "status": "reviewed",
+  "last_verified": "2026-07-29",
+  "primary_question": "Which API should we choose for organization, place, building or local-business search?",
+  "related_apis": [
+    "2gis-places-api",
+    "yandex-maps-organization-search-api",
+    "2gis-suggest-api",
+    "yandex-maps-geosuggest-api",
+    "yandex-maps-geocoder-api"
+  ],
+  "related_comparisons": [
+    "address-normalization-geocoding"
+  ],
+  "related_procurement": [
+    "procurement/address-geocoding-api-selection/README.md"
+  ],
+  "decision_paths": [
+    {
+      "scenario": "2gis_centered_place_search",
+      "initial_shortlist": [
+        "2gis-places-api"
+      ],
+      "notes": "Use when 2GIS directory context, buildings and places are central; verify fields, rights, SLA and benchmark quality.",
+      "next_document": "apis/2gis-places-api/README.md"
+    },
+    {
+      "scenario": "yandex_maps_centered_place_search",
+      "initial_shortlist": [
+        "yandex-maps-organization-search-api"
+      ],
+      "notes": "Use when the product is Yandex Maps-centered and needs organization/place search; verify storage/display rights, license wording, SLA and benchmark quality.",
+      "next_document": "apis/yandex-maps-organization-search-api/README.md"
+    },
+    {
+      "scenario": "autocomplete_before_place_search",
+      "initial_shortlist": [
+        "2gis-suggest-api",
+        "yandex-maps-geosuggest-api"
+      ],
+      "notes": "Suggestions are a separate product class from full place search.",
+      "next_document": "comparisons/address-normalization-geocoding/README.md"
+    },
+    {
+      "scenario": "legal_entity_or_counterparty_verification",
+      "initial_shortlist": [
+        "company-verification"
+      ],
+      "notes": "Use the company verification route when INN/OGRN identity, registry provenance, risk or monitoring is required.",
+      "next_document": "needs/company-verification/README.md"
+    }
+  ],
+  "open_questions": [
+    "Which returned fields are required and which may be stored?",
+    "Can results be shown to customers, cached, redistributed or embedded in SaaS?",
+    "What SLA and support terms apply?",
+    "Is batch or offline enrichment allowed?",
+    "Which benchmark sample covers target cities, categories, duplicate names and moved or closed organizations?"
+  ],
+  "sources": [
+    "apis/2gis-places-api/api.json",
+    "apis/yandex-maps-organization-search-api/api.json",
+    "apis/2gis-suggest-api/api.json",
+    "apis/yandex-maps-geosuggest-api/api.json",
+    "apis/yandex-maps-geocoder-api/api.json",
+    "comparisons/address-normalization-geocoding/comparison.json",
+    "needs/address-normalization-geocoding/need.json",
+    "needs/company-verification/need.json",
+    "procurement/address-geocoding-api-selection/README.md"
+  ]
+}

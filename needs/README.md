@@ -12,6 +12,7 @@ Needs are task-oriented routes through Atlas. They connect a practical question 
 |---|---|---|
 | Address Normalization, Address Registries and Geocoding | reviewed | [Open route](address-normalization-geocoding/README.md) |
 | Company Verification | reviewed | [Open route](company-verification/README.md) |
+| Organization and Place Search | reviewed | [Open route](organization-place-search/README.md) |
 
 ## Related Navigation
 
