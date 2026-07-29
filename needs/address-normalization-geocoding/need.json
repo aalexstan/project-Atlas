@@ -14,6 +14,7 @@
     "2gis-places-api",
     "2gis-geocoder-api",
     "geoapify-geocoding-api",
+    "opencage-geocoding-api",
     "nominatim-geocoder-software",
     "fias-gar-data-integration"
   ],
@@ -50,6 +51,7 @@
         "2gis-geocoder-api",
         "dadata-address-api",
         "geoapify-geocoding-api",
+        "opencage-geocoding-api",
         "nominatim-geocoder-software"
       ],
       "notes": "Choose after testing precision, display restrictions, storage rights, attribution, ODbL obligations and cost.",
@@ -68,9 +70,10 @@
       "scenario": "open_data_geocoding_ownership",
       "initial_shortlist": [
         "geoapify-geocoding-api",
+        "opencage-geocoding-api",
         "nominatim-geocoder-software"
       ],
-      "notes": "Use Geoapify for hosted open-data geocoding or self-hosted Nominatim for operational ownership; public Nominatim is strictly limited.",
+      "notes": "Use Geoapify or OpenCage for hosted open-data geocoding, or self-hosted Nominatim for operational ownership; public Nominatim is strictly limited.",
       "next_document": "comparisons/address-normalization-geocoding/README.md"
     },
     {
@@ -101,6 +104,7 @@
     "apis/2gis-places-api/api.json",
     "apis/2gis-geocoder-api/api.json",
     "apis/geoapify-geocoding-api/api.json",
+    "apis/opencage-geocoding-api/api.json",
     "apis/nominatim-geocoder-software/api.json",
     "apis/fias-gar-data-integration/api.json",
     "comparisons/address-normalization-geocoding/comparison.json",
@@ -111,6 +115,7 @@
     "research/address-geocoding/nominatim-decision.md",
     "research/address-geocoding/2026-07-29-nominatim-self-hosting-ops.md",
     "research/address-geocoding/2026-07-29-fias-gar-interfaces.md",
-    "research/geoapify-geocoding-api/decision.md"
+    "research/geoapify-geocoding-api/decision.md",
+    "research/opencage-geocoding-api/decision.md"
   ]
 }

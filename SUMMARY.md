@@ -21,7 +21,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 15 | DaData, DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
+| API profiles | 16 | DaData, DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, OpenCage Geocoding API, Nominatim Geocoder Software, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
 | Comparisons | 2 | Company and counterparty data APIs in Russia; address normalization and geocoding APIs |
 | Need routes | 3 | Company Verification; Address normalization, address registries and geocoding; Organization and place search |
 | Procurement kits | 2 | Counterparty API selection kit; address/geocoding API selection kit |
@@ -45,6 +45,7 @@ Atlas должен помогать проверять, сравнивать и 
 | Geoapify Geocoding API | reviewed | 2026-07-29 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
 | Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed |
+| OpenCage Geocoding API | reviewed | 2026-07-29 | not performed |
 | Seldon.Basis API | reviewed | 2026-07-23 | not performed |
 | Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed |
 | Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
@@ -80,16 +81,17 @@ Atlas должен помогать проверять, сравнивать и 
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
 - ГЛОБАС.API восстановлен из legacy backlog как активный API-first profile на основе официальных страниц Credinform; REST claim из API Portal сохранен только как legacy provenance.
-- Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need routes и procurement checklist.
+- Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, OpenCage Geocoding API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need routes и procurement checklist.
 - Yandex Geosuggest, 2GIS Suggest и 2GIS Places отделены от geocoder profiles, чтобы не смешивать autocomplete, place search и geocoding.
 - Yandex Maps Organization Search API добавлен как отдельный organization/place search profile и не смешивается с Geosuggest, Geocoder или routing.
 - Создан отдельный need route `needs/organization-place-search/`, который связывает Yandex Organization Search и 2GIS Places с практическими сценариями place search.
 - Nominatim описан как open-source geocoder software/self-hosting route; публичный `nominatim.openstreetmap.org` не считается бесплатным production API.
 - Geoapify Geocoding API добавлен как hosted commercial open-data geocoding route; ODbL/attribution, DPA, SaaS/redistribution rights и benchmark остаются blockers.
+- OpenCage Geocoding API добавлен как второй hosted open-data geocoding route с public pricing и storage-friendly public terms; Geosearch/autocomplete, ODbL/attribution, SLA, DPA, SaaS/redistribution rights и benchmark остаются blockers.
 - Для Nominatim добавлен self-hosting operations checklist: import sizing, full-planet/extract выбор, update mode, production deployment, monitoring/security и benchmark gates.
 - ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, current package metadata `data-28072026-structure-20191024.zip`, inspected `structure-12032021.zip` with 22 XSD files, weekly updates и previous releases verified по open-data catalog ФНС, а 57 GB data ZIP contents, full/delta semantics и API/SMEV method catalog/auth остаются blockers.
 - Legacy dataset note `datasets/russian_address_registry.md` связана с активной карточкой `apis/fias-gar-data-integration/`; `kladr-api.ru` сохранен только как historical source-risk/provenance note.
-- Для DaData Address APIs, Yandex Maps Geosuggest/Geocoder/Organization Search, 2GIS Suggest/Places/Geocoder и Geoapify Geocoding API подготовлены provider-request checklists, чтобы запросить endpoint-specific rights, SLA, limits, OpenAPI/Swagger, batch/offline terms and benchmark-support evidence.
+- Для DaData Address APIs, Yandex Maps Geosuggest/Geocoder/Organization Search, 2GIS Suggest/Places/Geocoder, Geoapify Geocoding API и OpenCage Geocoding API подготовлены provider-request checklists, чтобы запросить endpoint-specific rights, SLA, limits, OpenAPI/Swagger, batch/offline terms and benchmark-support evidence.
 - Создан первый need-based маршрут `needs/company-verification/`.
 - Создан индекс документации `docs/README.md` / `docs/README.ru.md`.
 - Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.
@@ -106,4 +108,4 @@ Atlas должен помогать проверять, сравнивать и 
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
 - Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
 - Legacy dataset note `datasets/moscow_city_open_data.md` связана с Moscow Open Data API decision memo; декомпозиция на maintained dataset notes отложена до доступной official documentation/catalog evidence.
-- Для address/geocoding направления нужны письменные ответы на подготовленные provider-request checklists, credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM, Nominatim sizing benchmark на target extracts/hardware, inspection current 57 GB FIAS/GAR data ZIP и уточнение публичных деталей FIAS/GAR API services.
+- Для address/geocoding направления нужны письменные ответы на подготовленные provider-request checklists, credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM/hosted open-data geocoders, Nominatim sizing benchmark на target extracts/hardware, inspection current 57 GB FIAS/GAR data ZIP и уточнение публичных деталей FIAS/GAR API services.

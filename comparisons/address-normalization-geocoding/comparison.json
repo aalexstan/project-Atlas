@@ -125,6 +125,21 @@
       "key_risk": "ODbL/attribution/legal review and benchmark still required; not official registry validation"
     },
     {
+      "id": "opencage-geocoding-api",
+      "product_class": "hosted_open_data_geocoding",
+      "best_for": [
+        "hosted_international_geocoding",
+        "direct_geocoding",
+        "reverse_geocoding",
+        "permanent_storage_friendly_public_wording",
+        "open_data_geocoding_without_self_hosting"
+      ],
+      "public_pricing": true,
+      "free_tier": "2500 requests/day testing-only free trial; 1 rps",
+      "published_limit": "paid examples show 15-40 rps and 10000-300000 requests/day depending on plan",
+      "key_risk": "ODbL/data-license/legal review, SLA/DPA and benchmark still required; not autocomplete, cleaning or registry validation"
+    },
+    {
       "id": "nominatim-geocoder-software",
       "product_class": "open_source_geocoder_software",
       "best_for": [
@@ -168,6 +183,7 @@
       "2gis-geocoder-api",
       "dadata-address-api",
       "geoapify-geocoding-api",
+      "opencage-geocoding-api",
       "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "reverse_geocoding": [
@@ -175,6 +191,7 @@
       "2gis-geocoder-api",
       "dadata-address-api",
       "geoapify-geocoding-api",
+      "opencage-geocoding-api",
       "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "organization_place_search": [
@@ -186,6 +203,7 @@
     ],
     "open_data_geocoding": [
       "geoapify-geocoding-api_hosted_commercial_route",
+      "opencage-geocoding-api_hosted_commercial_route",
       "nominatim-geocoder-software_self_hosting",
       "commercial_nominatim_provider_requires_separate_profile"
     ],
@@ -193,6 +211,7 @@
       "dadata-address-api_for_cleaning",
       "fias-gar-data-integration_for_owned_registry",
       "geoapify-geocoding-api_for_hosted_batch_geocoding",
+      "opencage-geocoding-api_for_parallel_or_spreadsheet_geocoding",
       "nominatim-geocoder-software_for_self_hosting",
       "commercial_geocoders_only_after_storage_batch_rights_confirmed"
     ]
@@ -207,7 +226,8 @@
     "odbl_review_for_nominatim_or_osm_derived_data",
     "fias_gar_method_catalog_auth_schema_and_access_process",
     "odbl_attribution_and_derived_database_review_for_geoapify",
-    "geoapify_benchmark_and_dpa_review"
+    "geoapify_benchmark_and_dpa_review",
+    "opencage_odbl_sla_dpa_benchmark_and_redistribution_review"
   ],
   "sources": [
     "https://dadata.ru/api/suggest/address/",
@@ -257,6 +277,11 @@
     "https://apidocs.geoapify.com/docs/batch/",
     "https://www.geoapify.com/pricing/",
     "https://www.geoapify.com/pricing-details/",
-    "https://www.geoapify.com/terms-and-conditions/"
+    "https://www.geoapify.com/terms-and-conditions/",
+    "https://opencagedata.com/api",
+    "https://opencagedata.com/pricing",
+    "https://opencagedata.com/terms",
+    "https://opencagedata.com/credits",
+    "https://opencagedata.com/privacy"
   ]
 }

@@ -15,6 +15,7 @@
 | [GLOBAS.API](apis/globas-api/README.ru.md) | reviewed | 2026-07-28 |
 | [Kontur.Focus API](apis/kontur-focus/README.ru.md) | reviewed | 2026-07-23 |
 | [Nominatim Geocoder Software](apis/nominatim-geocoder-software/README.ru.md) | reviewed | 2026-07-29 |
+| [OpenCage Geocoding API](apis/opencage-geocoding-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Seldon.Basis API](apis/seldon-basis/README.ru.md) | reviewed | 2026-07-23 |
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.ru.md) | reviewed | 2026-07-29 |

@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-07-29 — OpenCage Geocoding API profile
+
+### Что добавлено
+
+- Добавлен активный двуязычный API profile `apis/opencage-geocoding-api/`.
+- Добавлены research log, decision memo и provider-request checklist:
+  - `research/opencage-geocoding-api/2026-07-29.md`
+  - `research/opencage-geocoding-api/decision.md`
+  - `research/opencage-geocoding-api/decision.ru.md`
+  - `research/opencage-geocoding-api/provider-request.md`
+  - `research/opencage-geocoding-api/provider-request.ru.md`
+- Address/geocoding comparison, need route и procurement kit теперь включают OpenCage как hosted open-data geocoding route.
+
+### Методологические решения
+
+- OpenCage отделён от address normalization, autocomplete, public Nominatim, self-hosted Nominatim и FIAS/GAR registry validation.
+- Public pricing зафиксирован как displayed currency/plan examples без конвертации.
+- Geosearch/autosuggest, ODbL/attribution, DPA/privacy, SaaS/redistribution rights, enterprise SLA и benchmark оставлены как blockers.
+- Live testing не проводился.
+
 ## 2026-07-29 — EIS technical information route recheck
 
 ### Что добавлено
