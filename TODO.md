@@ -7,12 +7,12 @@
 - Для Kontur.Focus API отправить подготовленный `research/kontur-focus/provider-request*.md` и получить API-specific quote, production limits, SLA, OpenAPI/Swagger или полную спецификацию, storage rights, redistribution rights и contract appendices.
 - Для Seldon.Basis API отправить подготовленный `research/seldon-basis/provider-request*.md` и получить Swagger, authentication model, method pricing, batch billing, production limits, SLA, storage rights и redistribution rights.
 - Для DaData подтвердить endpoint-specific права хранения, caching, customer-facing display, redistribution/resale и провести quality benchmark на легальной тестовой выборке.
-- Для DaData Address APIs подтвердить права хранения/caching/customer-facing display/SaaS, OpenAPI endpoint scope, async/batch options и benchmark качества адресов.
-- Для Yandex Maps Geosuggest API подтвердить production RPS, SLA, storage/display/SaaS rights, batch/offline restrictions и benchmark autocomplete quality.
-- Для Yandex Maps Geocoder API подтвердить production RPS, SLA, storage/display rights по выбранной лицензии, batch/offline geocoding rights и провести house-level precision benchmark.
-- Для 2GIS Suggest API подтвердить OpenAPI/Swagger, SLA, storage/caching/display/SaaS rights, batch restrictions и quality benchmark для address/object suggestions.
-- Для 2GIS Places API подтвердить on-demand method/field matrix, SLA, storage/caching/display/SaaS rights, batch/enrichment restrictions и benchmark по целевым категориям.
-- Для 2GIS Geocoder API подтвердить OpenAPI/Swagger, SLA, storage/caching/display/SaaS rights, on-demand field pricing и провести precision benchmark.
+- Для DaData Address APIs отправить подготовленный `research/address-geocoding/provider-request-dadata-address*.md` и получить endpoint-specific права хранения/caching/customer-facing display/SaaS, OpenAPI endpoint scope, async/batch options, SLA и данные для benchmark качества адресов.
+- Для Yandex Maps Geosuggest API отправить подготовленный `research/address-geocoding/provider-request-yandex-maps*.md` и получить production RPS, SLA, storage/display/SaaS rights, batch/offline restrictions и данные для benchmark autocomplete quality.
+- Для Yandex Maps Geocoder API отправить подготовленный `research/address-geocoding/provider-request-yandex-maps*.md` и получить production RPS, SLA, storage/display rights по выбранной лицензии, batch/offline geocoding rights и данные для house-level precision benchmark.
+- Для 2GIS Suggest API отправить подготовленный `research/address-geocoding/provider-request-2gis-search*.md` и получить OpenAPI/Swagger, SLA, storage/caching/display/SaaS rights, batch restrictions и данные для quality benchmark address/object suggestions.
+- Для 2GIS Places API отправить подготовленный `research/address-geocoding/provider-request-2gis-search*.md` и получить on-demand method/field matrix, SLA, storage/caching/display/SaaS rights, batch/enrichment restrictions и данные для benchmark по целевым категориям.
+- Для 2GIS Geocoder API отправить подготовленный `research/address-geocoding/provider-request-2gis-search*.md` и получить OpenAPI/Swagger, SLA, storage/caching/display/SaaS rights, on-demand field pricing и данные для precision benchmark.
 - Для Nominatim Geocoder Software провести legal review ODbL/attribution/derived databases, benchmark exact self-hosting sizing/update operations на target extracts/hardware и не использовать public instance для production/autocomplete/bulk.
 - Для FIAS/GAR Data Integration уточнить содержимое текущих ZIP archives, full/delta package model, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
 - Перепроверить FTS EGRUL/EGRIP integration после перехода форматов, запланированного на 2026-08-01.

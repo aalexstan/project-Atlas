@@ -18,6 +18,16 @@
 | [`SCORING.ru.md`](SCORING.ru.md) | Scenario-weighted scorecard; не глобальный Atlas Score. |
 | [`NOMINATIM_SELF_HOSTING.ru.md`](NOMINATIM_SELF_HOSTING.ru.md) | Operations checklist для self-hosted Nominatim/OSM geocoding. |
 
+## Provider-specific requests
+
+Используйте эти checklists после общего RFP, когда поставщик попал в shortlist. Это вопросы, а не ответы поставщика.
+
+| Поставщик / scope | Checklist |
+|---|---|
+| DaData address suggestions, cleaning and geocoding | [`provider-request-dadata-address.ru.md`](../../research/address-geocoding/provider-request-dadata-address.ru.md) |
+| Yandex Maps Geosuggest and Geocoder | [`provider-request-yandex-maps.ru.md`](../../research/address-geocoding/provider-request-yandex-maps.ru.md) |
+| 2GIS Suggest, Places and Geocoder | [`provider-request-2gis-search.ru.md`](../../research/address-geocoding/provider-request-2gis-search.ru.md) |
+
 ## Связанные материалы Atlas
 
 - Need route: [`Нормализация адресов, адресные реестры и геокодирование`](../../needs/address-normalization-geocoding/README.ru.md)

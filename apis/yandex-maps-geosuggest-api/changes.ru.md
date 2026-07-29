@@ -4,6 +4,7 @@
 
 | Дата | Изменение | Evidence |
 |---|---|---|
+| 2026-07-29 | Добавлен provider-request checklist по границам Geosuggest/Geocoder, правам, limits, SLA и подготовке benchmark. | [`../../research/address-geocoding/provider-request-yandex-maps.ru.md`](../../research/address-geocoding/provider-request-yandex-maps.ru.md) |
 | 2026-07-29 | Создан reviewed API-first профиль Yandex Maps Geosuggest API. | [`evidence.ru.md`](evidence.ru.md) |
 
 ## Заметки для мониторинга

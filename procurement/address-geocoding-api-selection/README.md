@@ -18,6 +18,16 @@ Use this kit before buying or piloting an address/geocoding provider. It helps s
 | [`SCORING.md`](SCORING.md) | Scenario-weighted scorecard template; not a global Atlas Score. |
 | [`NOMINATIM_SELF_HOSTING.md`](NOMINATIM_SELF_HOSTING.md) | Self-hosting operations checklist for Nominatim/OSM geocoding. |
 
+## Provider-Specific Requests
+
+Use these checklists after the general RFP when a provider reaches the shortlist. They are questions, not provider answers.
+
+| Provider / scope | Checklist |
+|---|---|
+| DaData address suggestions, cleaning and geocoding | [`provider-request-dadata-address.md`](../../research/address-geocoding/provider-request-dadata-address.md) |
+| Yandex Maps Geosuggest and Geocoder | [`provider-request-yandex-maps.md`](../../research/address-geocoding/provider-request-yandex-maps.md) |
+| 2GIS Suggest, Places and Geocoder | [`provider-request-2gis-search.md`](../../research/address-geocoding/provider-request-2gis-search.md) |
+
 ## Related Atlas Materials
 
 - Need route: [`Address Normalization, Address Registries and Geocoding`](../../needs/address-normalization-geocoding/README.md)

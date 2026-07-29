@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-07-29 — Address provider request checklists
+
+### Что добавлено
+
+- Добавлены provider-request checklists:
+  - `research/address-geocoding/provider-request-dadata-address.md`
+  - `research/address-geocoding/provider-request-dadata-address.ru.md`
+  - `research/address-geocoding/provider-request-yandex-maps.md`
+  - `research/address-geocoding/provider-request-yandex-maps.ru.md`
+  - `research/address-geocoding/provider-request-2gis-search.md`
+  - `research/address-geocoding/provider-request-2gis-search.ru.md`
+- `procurement/address-geocoding-api-selection/` теперь ссылается на provider-specific request checklists.
+- Change history адресных профилей фиксирует появление этих вопросников без изменения verified facts.
+
+### Методологические решения
+
+- Вопросники являются procurement/research artifacts, а не ответами поставщиков.
+- Документы не меняют даты проверки API, не подтверждают SLA/rights/limits и не заявляют live testing.
+- Основные blockers остаются: письменные ответы поставщиков, legal review, credentialed benchmark и договорное подтверждение storage/caching/display/SaaS/redistribution rights.
+
 ## 2026-07-29 — Address and geocoding API-first direction
 
 ### Что добавлено

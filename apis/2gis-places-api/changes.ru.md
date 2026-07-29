@@ -4,6 +4,7 @@
 
 | Дата | Изменение | Evidence |
 |---|---|---|
+| 2026-07-29 | Добавлен provider-request checklist по границам Suggest/Places/Geocoder, on-demand fields, правам, SLA и подготовке benchmark. | [`../../research/address-geocoding/provider-request-2gis-search.ru.md`](../../research/address-geocoding/provider-request-2gis-search.ru.md) |
 | 2026-07-29 | Создан reviewed API-first профиль 2GIS Places API. | [`evidence.ru.md`](evidence.ru.md) |
 
 ## Заметки для мониторинга

@@ -79,6 +79,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Nominatim описан как open-source geocoder software/self-hosting route; публичный `nominatim.openstreetmap.org` не считается бесплатным production API.
 - Для Nominatim добавлен self-hosting operations checklist: import sizing, full-planet/extract выбор, update mode, production deployment, monitoring/security и benchmark gates.
 - ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder; open-data XML ZIP route, structure ZIP, weekly updates и previous releases verified по open-data catalog ФНС, а API/SMEV method catalog/auth/schemas остаются blockers.
+- Для DaData Address APIs, Yandex Maps Geosuggest/Geocoder и 2GIS Suggest/Places/Geocoder подготовлены provider-request checklists, чтобы запросить endpoint-specific rights, SLA, limits, OpenAPI/Swagger, batch/offline terms and benchmark-support evidence.
 - Создан первый need-based маршрут `needs/company-verification/`.
 - Создан индекс документации `docs/README.md` / `docs/README.ru.md`.
 - Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.
@@ -93,4 +94,4 @@ Atlas должен помогать проверять, сравнивать и 
 - Для FTS нужно перепроверить поведение после перехода форматов 2026-08-01.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
 - Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
-- Для address/geocoding направления нужны credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM, Nominatim sizing benchmark на target extracts/hardware, inspection текущих FIAS/GAR ZIP archives и уточнение публичных деталей FIAS/GAR API services.
+- Для address/geocoding направления нужны письменные ответы на подготовленные provider-request checklists, credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM, Nominatim sizing benchmark на target extracts/hardware, inspection текущих FIAS/GAR ZIP archives и уточнение публичных деталей FIAS/GAR API services.
