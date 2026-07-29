@@ -2,6 +2,8 @@
 
 [English version](README.md)
 
+[![Validate Atlas](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml/badge.svg)](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml)
+
 > **Независимая аналитика API для обоснованных технических и бизнес-решений.**
 
 Project Atlas — независимая база знаний, которая помогает находить, проверять, сравнивать и выбирать API на основе подтверждаемых фактов.
@@ -33,6 +35,10 @@ Atlas помогает:
 4. принять обоснованное техническое или коммерческое решение.
 
 Каталоги, включая API Portal, могут использоваться как источники обнаружения. Они не считаются окончательным источником истины. Существенные утверждения следует проверять по официальной документации, тарифам, спецификациям, объявлениям поставщика и другим первичным источникам.
+
+## Начните с задачи
+
+Если известна задача пользователя, но ещё не выбран API, начните с [индекса задач](NEEDS_INDEX.ru.md). Первый маршрут - [Проверка контрагента](needs/company-verification/README.ru.md): он связывает вопрос «какой API или источник выбрать для проверки контрагента?» с [индексом API](API_INDEX.ru.md), [индексом сравнений](COMPARISON_INDEX.ru.md) и [procurement kit](procurement/counterparty-api-selection/README.ru.md).
 
 ## Основная модель продукта
 
@@ -103,6 +109,7 @@ Atlas помогает:
 
 Документы проекта:
 
+- [Индекс документации](docs/README.ru.md)
 - [Видение](docs/VISION.ru.md)
 - [Принципы](docs/PRINCIPLES.ru.md)
 - [Методология](docs/METHODOLOGY.ru.md)

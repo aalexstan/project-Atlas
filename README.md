@@ -2,6 +2,8 @@
 
 [Русская версия](README.ru.md)
 
+[![Validate Atlas](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml/badge.svg)](https://github.com/aalexstan/project-Atlas/actions/workflows/validate-atlas.yml)
+
 > **Independent API intelligence for better technical and business decisions.**
 
 Project Atlas is an independent, evidence-based knowledge base for discovering, verifying, comparing, and selecting APIs.
@@ -33,6 +35,10 @@ Atlas helps users:
 4. make a defensible technical or commercial decision.
 
 Catalogs such as API Portal may be used as discovery sources. They are not treated as the final source of truth. Important claims should be checked against official documentation, pricing pages, specifications, provider announcements, and other primary sources.
+
+## Start With A Need
+
+If you know the user problem but not the API, start with the [Needs Index](NEEDS_INDEX.md). The first route is [Company Verification](needs/company-verification/README.md): it connects the question "which counterparty-checking API or source should we choose?" to the [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and [counterparty procurement kit](procurement/counterparty-api-selection/README.md).
 
 ## Core Product Model
 
@@ -103,6 +109,7 @@ Maturity is not an API quality score. It measures the completeness of Atlas rese
 
 See:
 
+- [Documentation Index](docs/README.md)
 - [Vision](docs/VISION.md)
 - [Principles](docs/PRINCIPLES.md)
 - [Methodology](docs/METHODOLOGY.md)

@@ -1,0 +1,30 @@
+name: Validate Atlas
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Atlas repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+          check-latest: true
+
+      - name: Check generated indexes
+        run: python3 scripts/generate_indexes.py --check
+
+      - name: Run Atlas validator
+        run: python3 scripts/validate_atlas.py

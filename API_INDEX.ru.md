@@ -3,7 +3,7 @@
 [English version](API_INDEX.md)
 
 | API | Уровень | Последняя проверка |
-|---|---|---|
+| --- | --- | --- |
 | [2GIS Geocoder API](apis/2gis-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [DaData Address APIs](apis/dadata-address-api/README.ru.md) | reviewed | 2026-07-29 |
 | [DaData API](apis/dadata/README.ru.md) | reviewed | 2026-07-23 |

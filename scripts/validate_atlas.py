@@ -4,15 +4,22 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+import generate_indexes  # noqa: E402
+
 ERRORS: list[str] = []
 WARNINGS: list[str] = []
-IGNORED_PARTS = {".git", ".venv", "node_modules", "_codex_inbox"}
+IGNORED_PARTS = {".git", ".venv", "node_modules", "_codex_inbox", "__pycache__"}
 
 
 def error(message: str) -> None:
@@ -33,84 +40,87 @@ def validate_json() -> None:
             error(f"Invalid JSON: {path.relative_to(ROOT)}: {exc}")
 
 
-def language_pair_for(en_path: Path) -> Path:
-    return en_path.with_name(f"{en_path.stem}.ru.md")
-
-
-def iter_active_markdown_pairs() -> list[tuple[Path, Path]]:
+def active_bilingual_pairs() -> list[tuple[Path, Path]]:
     pairs: list[tuple[Path, Path]] = []
 
-    for stem in ("README", "API_INDEX", "COMPARISON_INDEX", "NEEDS_INDEX"):
-        en = ROOT / f"{stem}.md"
-        ru = ROOT / f"{stem}.ru.md"
-        if en.exists() or ru.exists():
+    def add_pair(en: Path, ru: Path) -> None:
+        if en.exists() != ru.exists():
+            missing = ru if en.exists() else en
+            error(f"Missing bilingual pair: {missing.relative_to(ROOT)}")
+            return
+        if en.exists() and ru.exists():
             pairs.append((en, ru))
 
-    for base_name in ("docs", "apis", "comparisons", "procurement", "needs"):
+    for stem in ("README", "API_INDEX", "COMPARISON_INDEX", "NEEDS_INDEX"):
+        add_pair(ROOT / f"{stem}.md", ROOT / f"{stem}.ru.md")
+
+    docs = ROOT / "docs"
+    if docs.exists():
+        for en in sorted(path for path in docs.glob("*.md") if not path.name.endswith(".ru.md")):
+            add_pair(en, en.with_name(f"{en.stem}.ru.md"))
+
+    for base_name in ("apis", "comparisons"):
         base = ROOT / base_name
         if not base.exists():
             continue
-        for en in sorted(base.rglob("*.md")):
-            if en.name.endswith(".ru.md") or any(part in IGNORED_PARTS or part == "legacy" for part in en.parts):
-                continue
-            ru = language_pair_for(en)
-            if en.exists() or ru.exists():
-                pairs.append((en, ru))
+        for directory in sorted(path for path in base.iterdir() if path.is_dir()):
+            for stem in ("README", "evidence", "changes"):
+                add_pair(directory / f"{stem}.md", directory / f"{stem}.ru.md")
 
+    procurement = ROOT / "procurement"
+    if procurement.exists():
+        for en in sorted(path for path in procurement.rglob("*.md") if not path.name.endswith(".ru.md")):
+            add_pair(en, en.with_name(f"{en.stem}.ru.md"))
+
+    needs = ROOT / "needs"
+    if needs.exists():
+        add_pair(needs / "README.md", needs / "README.ru.md")
+        for directory in sorted(path for path in needs.iterdir() if path.is_dir()):
+            for stem in ("README", "changes"):
+                add_pair(directory / f"{stem}.md", directory / f"{stem}.ru.md")
+
+    legacy = ROOT / "legacy"
+    if legacy.exists():
+        add_pair(legacy / "README.md", legacy / "README.ru.md")
+
+    templates = ROOT / "templates"
     for stem in ("API_CARD_TEMPLATE", "COMPARISON_TEMPLATE"):
-        en = ROOT / "templates" / f"{stem}.md"
-        ru = ROOT / "templates" / f"{stem}.ru.md"
-        if en.exists() or ru.exists():
-            pairs.append((en, ru))
+        add_pair(templates / f"{stem}.md", templates / f"{stem}.ru.md")
 
     return pairs
 
 
-def find_language_link(path: Path, expected_label: str) -> tuple[int, str] | None:
-    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-    first_ten = lines[:10]
-    pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
-    for index, line in enumerate(first_ten, start=1):
-        match = pattern.search(line)
-        if not match:
-            continue
-        if expected_label not in match.group(1):
-            continue
-        return index, match.group(2).strip().split(maxsplit=1)[0].strip("<>")
-    return None
+def relative_link(from_path: Path, to_path: Path) -> str:
+    return Path(os.path.relpath(to_path, from_path.parent)).as_posix()
 
 
-def validate_language_link(en: Path, ru: Path, source: Path, expected_label: str, expected_target: Path) -> None:
-    result = find_language_link(source, expected_label)
-    if result is None:
-        error(f"Missing language link in first 10 lines: {source.relative_to(ROOT)}")
+def validate_language_link(source: Path, target: Path, label: str) -> None:
+    rel = relative_link(source, target)
+    expected = f"[{label}]({rel})"
+    lines = source.read_text(encoding="utf-8", errors="replace").splitlines()
+    path_label = source.relative_to(ROOT)
+
+    if not lines or not lines[0].startswith("# "):
+        error(f"Missing top-level heading in {path_label}")
         return
 
-    line_number, raw_target = result
-    lines = source.read_text(encoding="utf-8", errors="replace").splitlines()
-    if line_number != 3:
-        error(f"Language link must be immediately after heading in {source.relative_to(ROOT)}")
-    if len(lines) < 4 or lines[1].strip() or lines[3].strip():
-        error(f"Language link must have blank lines around it in {source.relative_to(ROOT)}")
+    if expected not in lines[:10]:
+        error(f"Missing language link in first 10 lines: {path_label} -> {expected}")
+        return
 
-    target_without_anchor = unquote(raw_target.split("#", 1)[0])
-    resolved = (source.parent / target_without_anchor).resolve()
-    if resolved != expected_target.resolve():
-        error(
-            "Language link points to wrong target: "
-            f"{source.relative_to(ROOT)} -> {raw_target}, expected {expected_target.relative_to(ROOT)}"
-        )
+    if len(lines) < 4 or lines[1].strip() or lines[2].strip() != expected or lines[3].strip():
+        error(f"Language link must immediately follow heading with blank lines: {path_label}")
+        return
+
+    resolved = (source.parent / rel).resolve()
+    if resolved != target.resolve():
+        error(f"Language link points to wrong file: {path_label} -> {rel}")
 
 
 def validate_language_pairs() -> None:
-    for en, ru in iter_active_markdown_pairs():
-        if en.exists() != ru.exists():
-            error(f"Missing bilingual document pair: {en.relative_to(ROOT)} / {ru.relative_to(ROOT)}")
-            continue
-        if not en.exists() or not ru.exists():
-            continue
-        validate_language_link(en, ru, en, "Русская версия", ru)
-        validate_language_link(en, ru, ru, "English version", en)
+    for en, ru in active_bilingual_pairs():
+        validate_language_link(en, ru, "Русская версия")
+        validate_language_link(ru, en, "English version")
 
 
 def iter_markdown_links(text: str):
@@ -165,6 +175,14 @@ def validate_local_paths_and_secrets() -> None:
                 error(f"Possible secret found in {path.relative_to(ROOT)}")
 
 
+def load_json_file(path: Path) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
 def validate_active_api_metadata() -> None:
     base = ROOT / "apis"
     if not base.exists():
@@ -176,9 +194,8 @@ def validate_active_api_metadata() -> None:
         if not json_path.exists():
             warning(f"No api.json: {directory.relative_to(ROOT)}")
             continue
-        try:
-            data = json.loads(json_path.read_text(encoding="utf-8"))
-        except Exception:
+        data = load_json_file(json_path)
+        if not data:
             continue
 
         for field in required_fields:
@@ -199,35 +216,30 @@ def validate_active_api_metadata() -> None:
             error(f"Expected non-empty sources list in {json_path.relative_to(ROOT)}")
 
 
-def load_json_file(path: Path) -> dict:
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-    return data if isinstance(data, dict) else {}
-
-
 def validate_comparison_metadata() -> None:
     base = ROOT / "comparisons"
     if not base.exists():
         return
 
+    required_fields = ("id", "title", "status", "verified_on", "candidates", "sources")
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "comparison.json"
         if not json_path.exists():
             warning(f"No comparison.json: {directory.relative_to(ROOT)}")
             continue
-        try:
-            data = json.loads(json_path.read_text(encoding="utf-8"))
-        except Exception:
+        data = load_json_file(json_path)
+        if not data:
             continue
-        if not data.get("id"):
-            error(f"Missing id in {json_path.relative_to(ROOT)}")
-        if not data.get("verified_on"):
-            warning(f"Missing verification date in {json_path.relative_to(ROOT)}")
+        for field in required_fields:
+            if field not in data:
+                error(f"Missing {field} in {json_path.relative_to(ROOT)}")
+        if "candidates" in data and not isinstance(data["candidates"], list):
+            error(f"Expected candidates list in {json_path.relative_to(ROOT)}")
+        if "sources" in data and (not isinstance(data["sources"], list) or not data["sources"]):
+            error(f"Expected non-empty sources list in {json_path.relative_to(ROOT)}")
 
 
-def validate_need_metadata() -> None:
+def validate_needs_metadata() -> None:
     base = ROOT / "needs"
     if not base.exists():
         return
@@ -238,11 +250,14 @@ def validate_need_metadata() -> None:
         "name_ru",
         "status",
         "last_verified",
+        "primary_question",
         "related_apis",
+        "related_comparisons",
+        "related_procurement",
         "decision_paths",
+        "open_questions",
+        "sources",
     )
-    list_fields = ("related_apis", "decision_paths")
-
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "need.json"
         if not json_path.exists():
@@ -254,22 +269,23 @@ def validate_need_metadata() -> None:
         for field in required_fields:
             if field not in data:
                 error(f"Missing {field} in {json_path.relative_to(ROOT)}")
-        for field in ("id", "name", "name_ru", "status", "last_verified"):
+        for field in ("id", "name", "name_ru", "status", "last_verified", "primary_question"):
             if field in data and not isinstance(data[field], str):
                 error(f"Expected string {field} in {json_path.relative_to(ROOT)}")
             elif field in data and not data[field].strip():
                 error(f"Empty {field} in {json_path.relative_to(ROOT)}")
-        for field in list_fields:
-            value = data.get(field)
-            if field in data and (not isinstance(value, list) or not value):
-                error(f"Expected non-empty list {field} in {json_path.relative_to(ROOT)}")
+        for field in ("related_apis", "related_comparisons", "related_procurement", "decision_paths", "open_questions", "sources"):
+            if field in data and not isinstance(data[field], list):
+                error(f"Expected list {field} in {json_path.relative_to(ROOT)}")
+            elif field in data and not data[field]:
+                error(f"Empty {field} in {json_path.relative_to(ROOT)}")
 
 
-def collect_ids(base_name: str, json_name: str) -> dict[str, Path]:
-    ids: dict[str, Path] = {}
+def json_id_map(base_name: str, json_name: str) -> dict[str, Path]:
+    result: dict[str, Path] = {}
     base = ROOT / base_name
     if not base.exists():
-        return ids
+        return result
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / json_name
         if not json_path.exists():
@@ -277,72 +293,72 @@ def collect_ids(base_name: str, json_name: str) -> dict[str, Path]:
         data = load_json_file(json_path)
         item_id = data.get("id")
         if isinstance(item_id, str) and item_id:
-            ids[item_id] = json_path
-    return ids
+            result[item_id] = directory
+    return result
 
 
-def path_or_id_exists(value: str, known_ids: dict[str, Path]) -> bool:
-    if value in known_ids:
+def path_exists(value: str) -> bool:
+    parsed = urlparse(value)
+    if parsed.scheme in {"http", "https", "mailto"}:
         return True
-    candidate = ROOT / value
-    return candidate.exists()
+    return (ROOT / value).exists()
 
 
-def validate_internal_references() -> None:
-    api_ids = collect_ids("apis", "api.json")
-    comparison_ids = collect_ids("comparisons", "comparison.json")
-    procurement_base = ROOT / "procurement"
+def validate_id_or_path(value: object, known_ids: dict[str, Path], label: str, json_path: Path) -> None:
+    if not isinstance(value, str) or not value.strip():
+        error(f"Invalid {label} reference in {json_path.relative_to(ROOT)}: {value!r}")
+        return
+    if value in known_ids or path_exists(value):
+        return
+    error(f"Broken {label} reference in {json_path.relative_to(ROOT)}: {value}")
 
-    for directory in sorted(path for path in (ROOT / "needs").iterdir() if path.is_dir()) if (ROOT / "needs").exists() else []:
+
+def validate_need_references() -> None:
+    api_ids = json_id_map("apis", "api.json")
+    comparison_ids = json_id_map("comparisons", "comparison.json")
+    base = ROOT / "needs"
+    if not base.exists():
+        return
+
+    for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "need.json"
         if not json_path.exists():
             continue
         data = load_json_file(json_path)
-        for value in data.get("related_apis", []):
-            if not isinstance(value, str) or not path_or_id_exists(value, api_ids):
-                error(f"Broken related_apis reference in {json_path.relative_to(ROOT)}: {value}")
-        for value in data.get("related_comparisons", []):
-            if not isinstance(value, str) or not path_or_id_exists(value, comparison_ids):
-                error(f"Broken related_comparisons reference in {json_path.relative_to(ROOT)}: {value}")
-        for value in data.get("related_procurement", []):
-            if not isinstance(value, str) or not (ROOT / value).exists():
-                error(f"Broken related_procurement reference in {json_path.relative_to(ROOT)}: {value}")
-        for value in data.get("sources", []):
-            if isinstance(value, str) and not urlparse(value).scheme and not (ROOT / value).exists():
-                error(f"Broken need source reference in {json_path.relative_to(ROOT)}: {value}")
+        if not data:
+            continue
 
-    if procurement_base.exists():
-        for path in procurement_base.rglob("*.md"):
-            if path.name.endswith(".ru.md"):
+        for value in data.get("related_apis", []):
+            validate_id_or_path(value, api_ids, "related_apis", json_path)
+        for value in data.get("related_comparisons", []):
+            validate_id_or_path(value, comparison_ids, "related_comparisons", json_path)
+        for value in data.get("related_procurement", []):
+            validate_id_or_path(value, {}, "related_procurement", json_path)
+        for source in data.get("sources", []):
+            validate_id_or_path(source, {}, "sources", json_path)
+
+        for decision_path in data.get("decision_paths", []):
+            if not isinstance(decision_path, dict):
+                error(f"Invalid decision_paths item in {json_path.relative_to(ROOT)}")
                 continue
-            ru = language_pair_for(path)
-            if path.exists() != ru.exists():
-                error(f"Missing procurement bilingual pair: {path.relative_to(ROOT)} / {ru.relative_to(ROOT)}")
+            next_document = decision_path.get("next_document")
+            if next_document is not None:
+                validate_id_or_path(next_document, {}, "decision_paths.next_document", json_path)
 
 
 def validate_index_freshness() -> None:
-    index_expectations = [
-        ("API_INDEX.md", "apis", "api.json", "README.md"),
-        ("API_INDEX.ru.md", "apis", "api.json", "README.ru.md"),
-        ("COMPARISON_INDEX.md", "comparisons", "comparison.json", "README.md"),
-        ("COMPARISON_INDEX.ru.md", "comparisons", "comparison.json", "README.ru.md"),
-        ("NEEDS_INDEX.md", "needs", "need.json", "README.md"),
-        ("NEEDS_INDEX.ru.md", "needs", "need.json", "README.ru.md"),
-    ]
-    for index_name, base_name, json_name, readme_name in index_expectations:
-        index_path = ROOT / index_name
-        base = ROOT / base_name
-        if not index_path.exists() or not base.exists():
+    try:
+        expected = generate_indexes.generate_all()
+    except generate_indexes.IndexGenerationError as exc:
+        error(str(exc))
+        return
+
+    for path, content in expected.items():
+        if not path.exists():
+            error(f"Missing generated index: {path.relative_to(ROOT)}")
             continue
-        text = index_path.read_text(encoding="utf-8", errors="replace")
-        for directory in sorted(path for path in base.iterdir() if path.is_dir()):
-            json_path = directory / json_name
-            readme_path = directory / readme_name
-            if not json_path.exists() or not readme_path.exists():
-                continue
-            rel = readme_path.relative_to(ROOT).as_posix()
-            if rel not in text:
-                error(f"Index {index_name} missing active entry: {rel}")
+        if path.read_text(encoding="utf-8") != content:
+            error(f"Generated index is stale: {path.relative_to(ROOT)}")
 
 
 def main() -> int:
@@ -352,8 +368,8 @@ def main() -> int:
     validate_local_paths_and_secrets()
     validate_active_api_metadata()
     validate_comparison_metadata()
-    validate_need_metadata()
-    validate_internal_references()
+    validate_needs_metadata()
+    validate_need_references()
     validate_index_freshness()
 
     for item in WARNINGS:

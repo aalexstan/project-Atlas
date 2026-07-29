@@ -3,7 +3,7 @@
 [Русская версия](API_INDEX.ru.md)
 
 | API | Maturity | Last verified |
-|---|---|---|
+| --- | --- | --- |
 | [2GIS Geocoder API](apis/2gis-geocoder-api/README.md) | reviewed | 2026-07-29 |
 | [DaData Address APIs](apis/dadata-address-api/README.md) | reviewed | 2026-07-29 |
 | [DaData API](apis/dadata/README.md) | reviewed | 2026-07-23 |

@@ -2,5 +2,7 @@
 
 [Русская версия](COMPARISON_INDEX.ru.md)
 
-- [address-normalization-geocoding](comparisons/address-normalization-geocoding/README.md)
-- [company-counterparty-data-russia](comparisons/company-counterparty-data-russia/README.md)
+| Comparison | Status | Last verified |
+| --- | --- | --- |
+| [Address Normalization, Address Registries and Geocoding APIs](comparisons/address-normalization-geocoding/README.md) | reviewed | 2026-07-29 |
+| [Company and Counterparty Data APIs in Russia](comparisons/company-counterparty-data-russia/README.md) | reviewed | 2026-07-23 |

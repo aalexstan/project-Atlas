@@ -70,6 +70,29 @@
 - ГЛОБАС.API не объявлен победителем и не заменяет основной enterprise shortlist Контур.Фокус API / Seldon.Basis API без пилота, технической документации и коммерческого предложения.
 - Live testing не проводился.
 
+## 2026-07-24 — Need-based navigation and generated indexes
+
+### Что добавлено
+
+- Создан первый need-based маршрут: `needs/company-verification/`.
+- Созданы `NEEDS_INDEX.md` и `NEEDS_INDEX.ru.md`.
+- Созданы индексы документации: `docs/README.md` и `docs/README.ru.md`.
+- Созданы индексы legacy-материалов: `legacy/README.md` и `legacy/README.ru.md`.
+- Добавлен deterministic generator `scripts/generate_indexes.py`.
+
+### Что усилено
+
+- Активные двуязычные Markdown-пары получили взаимную навигацию в первых строках.
+- `scripts/validate_atlas.py` проверяет bilingual navigation, needs metadata, internal references и freshness сгенерированных индексов.
+- GitHub Actions теперь запускает `python3 scripts/generate_indexes.py --check` перед `python3 scripts/validate_atlas.py`.
+
+### Методологические ограничения
+
+- Новое внешнее исследование поставщиков не проводилось.
+- Live testing не выполнялся.
+- Цены, лимиты и фактические выводы API-карточек не менялись.
+- Legacy-материалы не перемещались и не удалялись.
+
 ## 2026-07-24 — API-first handoff integration
 
 ### Что интегрировано

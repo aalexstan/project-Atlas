@@ -22,7 +22,7 @@ Atlas должен помогать проверять, сравнивать и 
 |---|---:|---|
 | API profiles | 9 | DaData, DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
 | Comparisons | 2 | Company and counterparty data APIs in Russia; address normalization and geocoding APIs |
-| Need routes | 1 | Address normalization, address registries and geocoding |
+| Need routes | 2 | Company Verification; Address normalization, address registries and geocoding |
 | Procurement kits | 2 | Counterparty API selection kit; address/geocoding API selection kit |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
@@ -71,6 +71,11 @@ Atlas должен помогать проверять, сравнивать и 
 - ГЛОБАС.API восстановлен из legacy backlog как активный API-first profile на основе официальных страниц Credinform; REST claim из API Portal сохранен только как legacy provenance.
 - Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API и FIAS/GAR Data Integration, сценарное comparison, need route и procurement checklist.
 - ФИАС/ГАР описан как официальный registry/data-integration route, а не как обычный REST geocoder.
+- Создан первый need-based маршрут `needs/company-verification/`.
+- Создан индекс документации `docs/README.md` / `docs/README.ru.md`.
+- Создан индекс legacy-материалов `legacy/README.md` / `legacy/README.ru.md`.
+- Индексы API, comparisons и needs теперь воспроизводятся через `scripts/generate_indexes.py`.
+- CI проверяет актуальность индексов перед запуском основного validator.
 
 ## Нерешенные вопросы
 

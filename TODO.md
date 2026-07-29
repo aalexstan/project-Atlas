@@ -13,7 +13,8 @@
 - Для FIAS/GAR Data Integration уточнить публичные file formats, update cadence, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
 - Перепроверить FTS EGRUL/EGRIP integration после перехода форматов, запланированного на 2026-08-01.
 - Не использовать `ratings/` как действующий Atlas Score. Любая новая оценка должна следовать `docs/METHODOLOGY.md` и иметь публичные критерии.
-- Поддерживать `API_INDEX.md`, `API_INDEX.ru.md`, `COMPARISON_INDEX.md`, `COMPARISON_INDEX.ru.md`, `NEEDS_INDEX.md` и `NEEDS_INDEX.ru.md` при каждом добавлении активной карточки, сравнения или need route.
+- Поддерживать `API_INDEX*`, `COMPARISON_INDEX*` и `NEEDS_INDEX*` через `python3 scripts/generate_indexes.py`; CI должен проходить `python3 scripts/generate_indexes.py --check`.
+- Поддерживать взаимные языковые ссылки в активных двуязычных Markdown-парах.
 
 ## Средний приоритет
 
@@ -31,9 +32,9 @@
 ## Низкий приоритет
 
 - После ручной проверки перенести исторические-only материалы в `legacy/`, если это улучшит навигацию и не потеряет provenance.
-- Добавить индекс legacy-материалов с объяснением, какие файлы относятся к Pass #1, Pass #2 и API-first migration.
+- Поддерживать индекс legacy-материалов и обновлять его при появлении новых исторических слоёв.
 - Обновить старые provider/dataset/access templates только как legacy formats; новые активные шаблоны уже находятся в `templates/API_CARD_TEMPLATE*.md` и `templates/COMPARISON_TEMPLATE*.md`.
-- Добавить automated generation для API/comparison indexes, если количество активных профилей вырастет.
+- Расширить needs routes после появления новых сравнений и подтверждённых API profiles.
 - Создать policy для review cadence и владельцев карточек.
 
 ## Legacy Backlog
