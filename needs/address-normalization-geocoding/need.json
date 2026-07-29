@@ -4,11 +4,15 @@
   "name_ru": "Нормализация адресов, адресные реестры и геокодирование",
   "status": "reviewed",
   "last_verified": "2026-07-29",
-  "primary_question": "Which API or official source should we choose for address suggestions, normalization, geocoding, address validation and building an address database?",
+  "primary_question": "Which API or official source should we choose for address suggestions, normalization, geocoding, address validation, place search and building an address database?",
   "related_apis": [
     "dadata-address-api",
+    "yandex-maps-geosuggest-api",
     "yandex-maps-geocoder-api",
+    "2gis-suggest-api",
+    "2gis-places-api",
     "2gis-geocoder-api",
+    "nominatim-geocoder-software",
     "fias-gar-data-integration"
   ],
   "related_comparisons": [
@@ -21,32 +25,55 @@
     {
       "scenario": "address_suggestions",
       "initial_shortlist": [
-        "dadata-address-api"
+        "dadata-address-api",
+        "yandex-maps-geosuggest-api",
+        "2gis-suggest-api"
       ],
-      "notes": "Evaluate Yandex Geosuggest and 2GIS Suggest separately when map ecosystem coupling matters."
+      "notes": "Choose by form workflow, map ecosystem, data rights and benchmark quality.",
+      "next_document": "comparisons/address-normalization-geocoding/README.md"
     },
     {
       "scenario": "address_cleaning_russia",
       "initial_shortlist": [
         "dadata-address-api"
       ],
-      "notes": "Use the cleaning API, not Suggestions, for unattended processing."
+      "notes": "Use the cleaning API, not Suggestions, for unattended processing.",
+      "next_document": "apis/dadata-address-api/README.md"
     },
     {
       "scenario": "direct_reverse_geocoding",
       "initial_shortlist": [
         "yandex-maps-geocoder-api",
         "2gis-geocoder-api",
-        "dadata-address-api"
+        "dadata-address-api",
+        "nominatim-geocoder-software"
       ],
-      "notes": "Choose after testing precision, display restrictions, storage rights and cost."
+      "notes": "Choose after testing precision, display restrictions, storage rights, ODbL obligations and cost.",
+      "next_document": "procurement/address-geocoding-api-selection/TEST_PROTOCOL.md"
+    },
+    {
+      "scenario": "organization_place_search",
+      "initial_shortlist": [
+        "2gis-places-api"
+      ],
+      "notes": "Do not infer place search from geocoder profiles; Yandex organization search needs separate research.",
+      "next_document": "apis/2gis-places-api/README.md"
+    },
+    {
+      "scenario": "open_data_geocoding_ownership",
+      "initial_shortlist": [
+        "nominatim-geocoder-software"
+      ],
+      "notes": "Use self-hosting or a commercial provider for production; public Nominatim is strictly limited.",
+      "next_document": "apis/nominatim-geocoder-software/README.md"
     },
     {
       "scenario": "own_registry",
       "initial_shortlist": [
         "fias-gar-data-integration"
       ],
-      "notes": "Treat as official registry/data integration requiring ETL and search logic."
+      "notes": "Treat as official registry/data integration requiring ETL, search and legal review.",
+      "next_document": "apis/fias-gar-data-integration/README.md"
     }
   ],
   "open_questions": [
@@ -55,14 +82,24 @@
     "Is the task autocomplete, normalization, geocoding, official registry validation, organization search or routing?",
     "What batch volume, latency and SLA are required?",
     "Which provider permits the intended caching and storage model?",
-    "Can the team build and operate an official GAR-based data platform?"
+    "Can the team build and operate an official GAR-based data platform?",
+    "Can the team operate self-hosted Nominatim and comply with ODbL?",
+    "What benchmark sample should be used for house-level precision and false positives?"
   ],
   "sources": [
     "apis/dadata-address-api/api.json",
+    "apis/yandex-maps-geosuggest-api/api.json",
     "apis/yandex-maps-geocoder-api/api.json",
+    "apis/2gis-suggest-api/api.json",
+    "apis/2gis-places-api/api.json",
     "apis/2gis-geocoder-api/api.json",
+    "apis/nominatim-geocoder-software/api.json",
     "apis/fias-gar-data-integration/api.json",
     "comparisons/address-normalization-geocoding/comparison.json",
-    "research/address-geocoding/candidate-decisions.md"
+    "research/address-geocoding/candidate-decisions.md",
+    "research/address-geocoding/yandex-geosuggest-decision.md",
+    "research/address-geocoding/2gis-suggest-places-decision.md",
+    "research/address-geocoding/nominatim-decision.md",
+    "research/address-geocoding/2026-07-29-fias-gar-interfaces.md"
   ]
 }

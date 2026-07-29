@@ -6,15 +6,15 @@
 
 ## Scenario weights
 
-| Criterion | Address entry | Cleaning | Geocoding | Own registry | Notes |
-|---|---:|---:|---:|---:|---|
-| Functional fit | 25 | 20 | 20 | 15 | Methods and product boundaries. |
-| Data quality | 20 | 25 | 30 | 25 | Match level, false positives, coordinate precision. |
-| Official provenance | 5 | 15 | 5 | 30 | GAR/registry fields and traceability. |
-| Legal/data rights | 20 | 15 | 20 | 15 | Storage, caching, display, SaaS, redistribution. |
-| Cost/TCO | 15 | 15 | 10 | 10 | Per-record, subscription и engineering cost. |
-| Operations | 10 | 5 | 10 | 5 | SLA, support, rate limits, monitoring. |
-| Developer experience | 5 | 5 | 5 | 0 | Docs, SDKs, sandbox, errors. |
+| Criterion | Address entry | Cleaning | Geocoding | Places | Own registry | Self-hosted OSM | Notes |
+|---|---:|---:|---:|---:|---:|---:|---|
+| Functional fit | 25 | 20 | 20 | 25 | 15 | 15 | Methods and product boundaries. |
+| Data quality | 20 | 25 | 30 | 25 | 25 | 25 | Match level, false positives, coordinate precision. |
+| Official provenance | 5 | 15 | 5 | 5 | 30 | 5 | GAR/registry fields and traceability. |
+| Legal/data rights | 20 | 15 | 20 | 20 | 15 | 20 | Storage, caching, display, SaaS, redistribution, ODbL. |
+| Cost/TCO | 15 | 15 | 10 | 10 | 10 | 15 | Per-record, subscription, engineering и hosting cost. |
+| Operations | 10 | 5 | 10 | 10 | 5 | 15 | SLA, support, rate limits, monitoring, updates. |
+| Developer experience | 5 | 5 | 5 | 5 | 0 | 5 | Docs, SDKs, sandbox, errors. |
 
 Веса - starting points, не universal methodology.
 
@@ -50,3 +50,5 @@
 - Не смешивайте цену web-product с API price.
 - Не оценивайте live performance без credentials и сохранённого evidence.
 - Не сравнивайте registry data integration с commercial APIs без engineering TCO.
+- Не сравнивайте public Nominatim с hosted commercial APIs без применения public usage policy.
+- Не оценивайте OSM-derived data без фиксации attribution и license obligations.

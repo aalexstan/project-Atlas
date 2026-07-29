@@ -8,6 +8,7 @@
 
 - synthetic addresses, созданные для тестирования;
 - public government или open-data examples, которые законно использовать;
+- OpenStreetMap examples только при фиксации attribution и license obligations;
 - provider-approved sample rows;
 - internal customer data только после legal approval, DPA coverage и documented deletion rules.
 
@@ -39,6 +40,7 @@
 | `scenario` | Suggestions, cleaning, direct geocoding, reverse geocoding, batch. |
 | `expected_level` | House, street, locality или unknown. |
 | `allowed_to_publish` | Boolean with evidence. |
+| `license_obligations` | Attribution, ODbL, provider contract или other reuse constraints. |
 
 ## Retention
 

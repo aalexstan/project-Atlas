@@ -9,11 +9,14 @@
 - Какие продукты, модули и API methods входят в предложение?
 - Какие capability покрыты: suggestions, cleaning, validation, direct geocoding, reverse geocoding, place search, routing, registry data, batch processing?
 - Какие capability требуют отдельных продуктов: Geosuggest, Places, Suggest, Organization Search или routing APIs?
+- Если предложение включает OpenStreetMap/Nominatim, это public-instance, self-hosted или commercial-provider route?
+- Если предложение включает FIAS/GAR, это file download, SMEV channel, documented API service или user-facing portal workflow?
 - Какие geographies и languages поддерживаются?
 - Какая granularность адреса поддерживается: регион, город, улица, дом, строение, корпус, подъезд, квартира, помещение?
 - Какие официальные источники адресов используются и какова update cadence?
 - Как устроена coordinate precision model и как возвращается match level?
 - Какие поля доступны на уровне дома и какие требуют extra paid access?
+- Какие organization/place fields входят в базовый пакет, а какие доступны on demand?
 
 ## Технический доступ
 
@@ -62,7 +65,7 @@
 - Можно ли показывать результаты end customers?
 - Можно ли отображать результаты на third-party maps?
 - Требуется ли attribution?
-- Можно ли redistribure, resell или export результаты?
+- Можно ли redistribute, resell или export результаты?
 - Разрешён ли SaaS embedding?
 - Могут ли affiliates использовать те же API/data results?
 - Можно ли использовать данные для scoring, model training, deduplication или internal analytics?
@@ -70,6 +73,8 @@
 - Доступен ли DPA?
 - Какие deletion и audit requirements?
 - Есть ли ограничения на combining results с другими address registries или map providers?
+- Если используются OSM data, какие attribution, ODbL, share-alike, cache и derived-database obligations применяются?
+- Если используются public hosted services, можно ли отправлять personal или confidential addresses в запросах?
 
 ## Pilot и evaluation
 
@@ -85,3 +90,4 @@
 - Входит ли organization/place search в standard API? Если нет, какой отдельный продукт нужен?
 - Входит ли routing или distance matrix в geocoder? Если нет, какой отдельный продукт нужен?
 - Для official registry integration: где граница между file downloads, API services и government exchange channels?
+- Для Nominatim: где граница между public `nominatim.openstreetmap.org`, self-hosting и commercial provider service?

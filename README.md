@@ -38,7 +38,12 @@ Catalogs such as API Portal may be used as discovery sources. They are not treat
 
 ## Start With A Need
 
-If you know the user problem but not the API, start with the [Needs Index](NEEDS_INDEX.md). The first route is [Company Verification](needs/company-verification/README.md): it connects the question "which counterparty-checking API or source should we choose?" to the [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and [counterparty procurement kit](procurement/counterparty-api-selection/README.md).
+If you know the user problem but not the API, start with the [Needs Index](NEEDS_INDEX.md).
+
+- [Company Verification](needs/company-verification/README.md)
+- [Address normalization, address registries and geocoding](needs/address-normalization-geocoding/README.md)
+
+Then use the related [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and procurement kits.
 
 ## Core Product Model
 
@@ -76,15 +81,6 @@ Task-oriented comparisons such as company verification APIs, geocoding APIs, pay
 ### Research and Change Tracking
 
 Research notes preserve how conclusions were reached. Change records track material changes in pricing, documentation, versions, limits, and product availability.
-
-## Start with a Need
-
-Not sure which API to inspect first? Start from a user task:
-
-- [Needs Index](NEEDS_INDEX.md)
-- [Address normalization, address registries and geocoding](needs/address-normalization-geocoding/README.md)
-
-Then use the related [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and procurement kits.
 
 ## Maturity Levels
 

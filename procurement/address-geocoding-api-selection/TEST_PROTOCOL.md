@@ -23,6 +23,8 @@ Include:
 - addresses with typos;
 - addresses without house number;
 - coordinates for reverse geocoding.
+- POI and organization names for products that explicitly support place search;
+- OpenStreetMap-derived public examples only when their license permits benchmark use.
 
 ## Test Tasks
 
@@ -34,6 +36,8 @@ Include:
 | Reverse geocoding | Coordinates | Returned address, object level, distance or confidence if available. |
 | Organization/place search | Organization names or POI queries | Only for products that explicitly support places. |
 | Batch | File/list of addresses | Throughput, error handling, legal batch permission. |
+| Public hosted policy check | End-user-triggered and automated patterns | Whether the scenario is permitted by public usage policy. |
+| Self-hosting ops check | Import/update plan and target volume | Hardware, storage, update cadence, monitoring and rollback plan. |
 
 ## Metrics
 
@@ -54,6 +58,8 @@ Record:
 - cost per 1,000 accepted records;
 - cost per 1,000 successful geocodes;
 - storage/caching rights confirmed for results.
+- attribution and license obligations;
+- operational effort for self-hosted or registry-data routes.
 
 ## Procedure
 
@@ -66,6 +72,8 @@ Record:
 7. Separate API errors from no-match results.
 8. Record all unknowns and provider clarifications.
 9. Do not publish raw provider responses if licensing prohibits it.
+10. For public Nominatim, do not run autocomplete, bulk or stress tests against the OSMF instance.
+11. For FIAS/GAR, do not treat website search endpoints as supported integration APIs unless documented by FNS.
 
 ## Reporting
 

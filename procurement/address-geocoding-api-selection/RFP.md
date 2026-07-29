@@ -9,11 +9,14 @@ Use these questions for provider evaluation. Do not send credentials, customer d
 - Which products, modules and API methods are included in the offer?
 - Which capabilities are covered: suggestions, cleaning, validation, direct geocoding, reverse geocoding, place search, routing, registry data, batch processing?
 - Which capabilities require separate products such as Geosuggest, Places, Suggest, Organization Search or routing APIs?
+- If the offer includes OpenStreetMap/Nominatim, is it a public-instance, self-hosted or commercial-provider route?
+- If the offer includes FIAS/GAR, is it a file download, SMEV channel, documented API service or user-facing portal workflow?
 - Which geographies and languages are supported?
 - What address granularity is supported: region, city, street, house, building, corpus, entrance, apartment, room?
 - What are the official address data sources and update cadence?
 - What is the coordinate precision model and how is match level reported?
 - What fields can be returned at house level and which require extra paid access?
+- Which organization/place fields are part of the base package and which are on demand?
 
 ## Technical Access
 
@@ -70,6 +73,8 @@ Use these questions for provider evaluation. Do not send credentials, customer d
 - Is a DPA available?
 - What are deletion and audit requirements?
 - Are there restrictions on combining results with other address registries or map providers?
+- If OSM data is used, what attribution, ODbL, share-alike, cache and derived-database obligations apply?
+- If public hosted services are used, are personal or confidential addresses allowed in requests?
 
 ## Pilot and Evaluation
 
@@ -85,3 +90,4 @@ Use these questions for provider evaluation. Do not send credentials, customer d
 - Does the standard API include organization/place search? If not, which separate product does?
 - Does the geocoder include routing or distance matrix? If not, which separate product does?
 - For official registry integration, what is the boundary between file downloads, API services and government exchange channels?
+- For Nominatim, what is the boundary between public `nominatim.openstreetmap.org`, self-hosting and commercial provider service?

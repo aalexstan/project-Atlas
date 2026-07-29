@@ -32,7 +32,7 @@ Yandex Geocoder covers:
 
 It does not cover in this profile:
 
-- address autocomplete, which belongs to Yandex Geosuggest;
+- address autocomplete, which belongs to [`Yandex Maps Geosuggest API`](../yandex-maps-geosuggest-api/README.md);
 - organization/place search, which belongs to separate Yandex search products;
 - routing, route optimization or distance matrix.
 
@@ -90,6 +90,7 @@ It does not cover in this profile:
 | Alternative | Better when | Main trade-off |
 |---|---|---|
 | [`DaData Address APIs`](../dadata-address-api/README.md) | Russian address suggestions and backend standardization are required | Russia-focused depth; direct geocoding is per-record. |
+| [`Yandex Maps Geosuggest API`](../yandex-maps-geosuggest-api/README.md) | User input needs Yandex address/geographic/object suggestions before geocoding | It is autocomplete, not direct/reverse geocoding. |
 | [`2GIS Geocoder API`](../2gis-geocoder-api/README.md) | Product is built around 2GIS map/catalog data | Places and Suggest are separate products; caching restrictions need review. |
 | [`FIAS/GAR Data Integration`](../fias-gar-data-integration/README.md) | The goal is a proprietary official Russian address base | Requires ETL and search/index infrastructure. |
 

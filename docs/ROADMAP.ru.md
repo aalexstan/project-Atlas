@@ -16,7 +16,7 @@
 
 **Успех:** карточки заметно полезнее для выбора, чем описания поставщиков.
 
-**Текущий прогресс:** первые reviewed profiles уже есть для DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API и FIAS/GAR Data Integration. До Gold нужны live tests, подтверждение SLA и проверка прав данных.
+**Текущий прогресс:** reviewed address/geocoding profiles уже есть для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software и FIAS/GAR Data Integration. До Gold нужны live tests, подтверждение SLA, проверка прав данных и quality benchmarks.
 
 ## Этап 3 — Центр сравнений
 
@@ -24,7 +24,7 @@
 
 **Успех:** каждое сравнение содержит рекомендации по сценариям, доказательства и дату пересмотра. Need-based маршруты должны связывать частые вопросы пользователей с релевантными карточками, сравнениями и procurement kits.
 
-**Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need route и procurement checklist.
+**Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need route и procurement checklist для autocomplete, geocoding, place search, official registry integration и self-hosted OSM geocoding.
 
 ## Этап 4 — Распространение и обратная связь
 

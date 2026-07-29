@@ -8,6 +8,7 @@ Use only:
 
 - synthetic addresses created for testing;
 - public government or open-data examples that are lawful to reuse;
+- OpenStreetMap examples only when attribution and license obligations are recorded;
 - provider-approved sample rows;
 - internal customer data only after legal approval, DPA coverage and documented deletion rules.
 
@@ -39,6 +40,7 @@ Do not include:
 | `scenario` | Suggestions, cleaning, direct geocoding, reverse geocoding, batch. |
 | `expected_level` | House, street, locality, or unknown. |
 | `allowed_to_publish` | Boolean with evidence. |
+| `license_obligations` | Attribution, ODbL, provider contract or other reuse constraints. |
 
 ## Retention
 

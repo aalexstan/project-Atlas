@@ -8,7 +8,8 @@
   "verified_on": "2026-07-29",
   "region": [
     "RU",
-    "selected_international"
+    "selected_international",
+    "openstreetmap"
   ],
   "live_testing": false,
   "candidates": [
@@ -27,6 +28,20 @@
       "key_risk": "Suggestions cannot be used for automatic processing; direct geocoding and cleaning are pay-per-record"
     },
     {
+      "id": "yandex-maps-geosuggest-api",
+      "product_class": "suggestions_autocomplete",
+      "best_for": [
+        "address_autocomplete",
+        "geographic_object_suggestions",
+        "organization_name_suggestions",
+        "yandex_maps_input_ux"
+      ],
+      "public_pricing": true,
+      "free_tier": "100 requests per day for up to 7 days under tariff test period",
+      "published_limit": "daily package limit public; max 10 results/request; rps unknown",
+      "key_risk": "autocomplete product only; storage, display, SaaS and redistribution rights require license review"
+    },
+    {
       "id": "yandex-maps-geocoder-api",
       "product_class": "map_geocoding",
       "best_for": [
@@ -40,6 +55,34 @@
       "key_risk": "free-use display/storage restrictions and map coupling"
     },
     {
+      "id": "2gis-suggest-api",
+      "product_class": "suggestions_autocomplete",
+      "best_for": [
+        "2gis_search_autocomplete",
+        "address_suggestions",
+        "street_suggestions",
+        "object_suggestions_before_places_lookup"
+      ],
+      "public_pricing": true,
+      "free_tier": "demo key for one month with 1000 total Search-service requests",
+      "published_limit": "600 Search units per minute",
+      "key_risk": "suggestions only; caching/storage rights need contract review"
+    },
+    {
+      "id": "2gis-places-api",
+      "product_class": "places_catalog_search",
+      "best_for": [
+        "organization_search",
+        "building_search",
+        "place_search",
+        "2gis_directory_context"
+      ],
+      "public_pricing": true,
+      "free_tier": "demo key for one month with 1000 total Search-service requests",
+      "published_limit": "600 Search units per minute",
+      "key_risk": "not address validation; some methods and fields are on demand"
+    },
+    {
       "id": "2gis-geocoder-api",
       "product_class": "map_catalog_geocoding",
       "best_for": [
@@ -51,6 +94,20 @@
       "free_tier": "demo key for one month with 1000 total Search-service requests",
       "published_limit": "600 Search units per minute",
       "key_risk": "Places and Suggest are separate; caching/storage rights need contract review"
+    },
+    {
+      "id": "nominatim-geocoder-software",
+      "product_class": "open_source_geocoder_software",
+      "best_for": [
+        "self_hosted_geocoding",
+        "openstreetmap_data_route",
+        "operational_ownership",
+        "direct_reverse_geocoding_with_osm_data"
+      ],
+      "public_pricing": "not_commercial_api_price",
+      "free_tier": "public instance has no monetary fee in policy but strict usage limits",
+      "published_limit": "public instance absolute max 1 rps; autocomplete forbidden; self-host operator-defined",
+      "key_risk": "public instance is not a free production API; self-hosting creates ODbL and operations obligations"
     },
     {
       "id": "fias-gar-data-integration",
@@ -70,8 +127,8 @@
   "recommendations": {
     "address_input_suggestions": [
       "dadata-address-api",
-      "evaluate_yandex_geosuggest_separately",
-      "evaluate_2gis_suggest_api_separately"
+      "yandex-maps-geosuggest-api_when_yandex_maps_context_matters",
+      "2gis-suggest-api_when_2gis_catalog_context_matters"
     ],
     "address_cleaning_russia": [
       "dadata-address-api",
@@ -80,23 +137,30 @@
     "direct_geocoding": [
       "yandex-maps-geocoder-api",
       "2gis-geocoder-api",
-      "dadata-address-api"
+      "dadata-address-api",
+      "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "reverse_geocoding": [
       "yandex-maps-geocoder-api",
       "2gis-geocoder-api",
-      "dadata-address-api"
+      "dadata-address-api",
+      "nominatim-geocoder-software_for_self_hosted_osm_route"
     ],
     "organization_place_search": [
-      "evaluate_2gis_places_api_separately",
-      "evaluate_yandex_organization_search_separately"
+      "2gis-places-api",
+      "yandex_organization_search_requires_separate_research"
     ],
     "official_registry_base": [
       "fias-gar-data-integration"
     ],
+    "open_data_geocoding": [
+      "nominatim-geocoder-software_self_hosting",
+      "commercial_nominatim_provider_requires_separate_profile"
+    ],
     "bulk_processing": [
       "dadata-address-api_for_cleaning",
       "fias-gar-data-integration_for_owned_registry",
+      "nominatim-geocoder-software_for_self_hosting",
       "commercial_geocoders_only_after_storage_batch_rights_confirmed"
     ]
   },
@@ -106,7 +170,9 @@
     "contract_review_for_storage_caching_display_and_redistribution",
     "comparable_quotes_for_high_volume_and_sla",
     "batch_and_async_capability_confirmation",
-    "international_coverage_benchmark"
+    "international_coverage_benchmark",
+    "odbl_review_for_nominatim_or_osm_derived_data",
+    "fias_gar_method_catalog_auth_schema_and_access_process"
   ],
   "sources": [
     "https://dadata.ru/api/suggest/address/",
@@ -114,16 +180,32 @@
     "https://dadata.ru/api/geocode/",
     "https://dadata.ru/api/geolocate/",
     "https://dadata.ru/pricing/",
+    "https://yandex.com/maps-api/docs/suggest-api/request.html",
+    "https://yandex.com/maps-api/docs/suggest-api/response.html",
+    "https://yandex.ru/dev/tariffs/doc/ru/geosuggest/prices/",
     "https://yandex.com/maps-api/docs/geocoder-api/index.html",
     "https://yandex.com/maps-api/docs/geocoder-api/request.html",
     "https://yandex.ru/legal/maps_api/ru/",
     "https://yandex.ru/dev/tariffs/doc/ru/geocoder/prices/",
     "https://docs.2gis.com/en/api/search/overview",
+    "https://docs.2gis.com/en/api/search/suggest/overview",
+    "https://docs.2gis.com/en/api/search/places/overview",
     "https://docs.2gis.com/en/api/search/geocoder/overview",
     "https://docs.2gis.com/en/platform-manager/subscription/pricing",
     "https://law.2gis.ru/offer-license-agreement-webapi",
+    "https://operations.osmfoundation.org/policies/nominatim/",
+    "https://nominatim.org/release-docs/latest/api/Search/",
+    "https://nominatim.org/release-docs/latest/api/Reverse/",
+    "https://nominatim.org/release-docs/latest/admin/Import/",
+    "https://nominatim.org/release-docs/latest/admin/Update/",
+    "https://www.openstreetmap.org/copyright",
     "https://www.nalog.gov.ru/rn77/service/fias/",
     "https://fias-file.nalog.ru/",
-    "https://fias-file.nalog.ru/FiasInfo"
+    "https://fias-file.nalog.ru/FiasInfo",
+    "https://fias-file.nalog.ru/Frontend",
+    "https://fias-file.nalog.ru/Search",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/"
   ]
 }

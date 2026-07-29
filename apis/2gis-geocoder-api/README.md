@@ -32,8 +32,8 @@ This profile covers:
 
 Related but separate:
 
-- 2GIS Places API searches organizations, buildings and places;
-- 2GIS Suggest API provides input suggestions;
+- [`2GIS Places API`](../2gis-places-api/README.md) searches organizations, buildings and places;
+- [`2GIS Suggest API`](../2gis-suggest-api/README.md) provides input suggestions;
 - navigation APIs handle routing, matrices and isochrones.
 
 ## Best-Fit Scenarios
@@ -88,6 +88,8 @@ Some fields, including selected FIAS/FNS/OKATO/OKTMO and building details, are d
 | Alternative | Better when | Main trade-off |
 |---|---|---|
 | [`DaData Address APIs`](../dadata-address-api/README.md) | Russian address suggestions and cleaning are central | Direct geocoding is pay-per-record and Russia-focused. |
+| [`2GIS Suggest API`](../2gis-suggest-api/README.md) | Need 2GIS-powered autocomplete before geocoding or place lookup | Suggestions are not geocoding. |
+| [`2GIS Places API`](../2gis-places-api/README.md) | Need organizations, buildings and places | Place search is not address validation. |
 | [`Yandex Maps Geocoder API`](../yandex-maps-geocoder-api/README.md) | Product is based on Yandex Maps display and licensing | Free use is tightly bound to Yandex Maps display. |
 | [`FIAS/GAR Data Integration`](../fias-gar-data-integration/README.md) | Own official Russian address base is required | Requires ETL/search infrastructure and is not a turnkey geocoder. |
 

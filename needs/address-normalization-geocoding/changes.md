@@ -5,3 +5,4 @@
 | Date | Change | Impact |
 |---|---|---|
 | 2026-07-29 | Initial need-based journey created for address suggestions, cleaning, geocoding, registry integration and procurement decisions. | Adds a user-task entry point for the new Atlas address direction. |
+| 2026-07-29 | Added routes for Yandex Geosuggest, 2GIS Suggest, 2GIS Places, Nominatim self-hosting and clarified FIAS/GAR API-service blockers. | Makes the route cover autocomplete, place search, hosted geocoding, open-data self-hosting and official registry choices. |

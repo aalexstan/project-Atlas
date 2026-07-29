@@ -21,7 +21,7 @@ Use this kit before buying or piloting an address/geocoding provider. It helps s
 
 - Need route: [`Address Normalization, Address Registries and Geocoding`](../../needs/address-normalization-geocoding/README.md)
 - Comparison: [`Address Normalization, Address Registries and Geocoding APIs`](../../comparisons/address-normalization-geocoding/README.md)
-- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
+- Profiles: [`DaData Address APIs`](../../apis/dadata-address-api/README.md), [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md), [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md), [`2GIS Places API`](../../apis/2gis-places-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md), [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md), [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md)
 
 ## Use Sequence
 

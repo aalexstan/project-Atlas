@@ -32,8 +32,8 @@
 
 Связанные, но отдельные продукты:
 
-- 2GIS Places API ищет организации, здания и места;
-- 2GIS Suggest API даёт подсказки ввода;
+- [`2GIS Places API`](../2gis-places-api/README.ru.md) ищет организации, здания и места;
+- [`2GIS Suggest API`](../2gis-suggest-api/README.ru.md) даёт подсказки ввода;
 - навигационные API отвечают за маршруты, матрицы и изохроны.
 
 ## Сценарии
@@ -88,6 +88,8 @@
 | Альтернатива | Когда лучше | Главный trade-off |
 |---|---|---|
 | [`DaData Address APIs`](../dadata-address-api/README.ru.md) | Центральны российские подсказки и стандартизация адресов | Прямое геокодирование оплачивается per-record и ориентировано на РФ. |
+| [`2GIS Suggest API`](../2gis-suggest-api/README.ru.md) | Нужен autocomplete 2GIS перед geocoding или place lookup | Suggestions не являются geocoding. |
+| [`2GIS Places API`](../2gis-places-api/README.ru.md) | Нужны организации, здания и места | Place search не является address validation. |
 | [`Yandex Maps Geocoder API`](../yandex-maps-geocoder-api/README.ru.md) | Продукт основан на показе и лицензировании Яндекс Карт | Бесплатное использование жёстко привязано к показу на Яндекс Картах. |
 | [`FIAS/GAR Data Integration`](../fias-gar-data-integration/README.ru.md) | Нужна собственная официальная адресная база РФ | Требует ETL/search инфраструктуры и не является turnkey geocoder. |
 

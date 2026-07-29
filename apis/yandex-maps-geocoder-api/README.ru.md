@@ -32,7 +32,7 @@ Yandex Geocoder покрывает:
 
 В эту карточку не входят:
 
-- адресные подсказки: это Yandex Geosuggest;
+- адресные подсказки: это [`Yandex Maps Geosuggest API`](../yandex-maps-geosuggest-api/README.ru.md);
 - поиск организаций и мест: это отдельные поисковые продукты Яндекса;
 - маршрутизация, оптимизация маршрутов и distance matrix.
 
@@ -90,6 +90,7 @@ Yandex Geocoder покрывает:
 | Альтернатива | Когда лучше | Главный trade-off |
 |---|---|---|
 | [`DaData Address APIs`](../dadata-address-api/README.ru.md) | Нужны российские подсказки адреса и серверная стандартизация | Фокус на России; прямое геокодирование оплачивается per-record. |
+| [`Yandex Maps Geosuggest API`](../yandex-maps-geosuggest-api/README.ru.md) | Пользовательскому вводу нужны подсказки адресов/геообъектов Яндекса до геокодирования | Это autocomplete, не direct/reverse geocoding. |
 | [`2GIS Geocoder API`](../2gis-geocoder-api/README.ru.md) | Продукт строится вокруг карты/каталога 2GIS | Places и Suggest - отдельные продукты; кэширование нужно проверять. |
 | [`FIAS/GAR Data Integration`](../fias-gar-data-integration/README.ru.md) | Цель - собственная официальная адресная база РФ | Нужны ETL и инфраструктура поиска/индекса. |
 

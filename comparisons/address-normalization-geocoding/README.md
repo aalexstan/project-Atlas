@@ -2,103 +2,109 @@
 
 [Русская версия](README.ru.md)
 
-> Scenario-based comparison for choosing address suggestions, address cleaning, geocoding, place search and official registry integration.
+> Scenario-based comparison for choosing address suggestions, address cleaning, geocoding, place search, open-data geocoding and official registry integration.
 
 ## Research Status
 
 | Field | Value |
 |---|---|
 | Last verified | 2026-07-29 |
-| Market / region | Russia plus selected international geocoding context |
+| Market / region | Russia plus selected international/open-data geocoding context |
 | Live testing | Not performed |
-| Candidates reviewed | DaData Address APIs, Yandex Maps Geocoder API, 2GIS Geocoder API, FIAS/GAR Data Integration |
+| Candidates reviewed | DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Nominatim Geocoder Software, FIAS/GAR Data Integration |
 
 ## Decision Summary
 
 | Scenario | Initial shortlist | Why |
 |---|---|---|
-| Address suggestions in Russian forms | DaData Address APIs; evaluate Yandex Geosuggest and 2GIS Suggest separately if map ecosystem matters | DaData address suggestions are directly documented; Yandex/2GIS suggestions are separate products not profiled in this pass. |
-| Russian address cleaning and normalization | DaData Address APIs | Official docs confirm cleaning, quality fields, coordinates and registry identifiers; Suggestions should not be used for automatic processing. |
-| Direct geocoding | Yandex Maps Geocoder API; 2GIS Geocoder API; DaData Address APIs | All three have documented address-to-coordinate flows, but pricing and storage rights differ. |
-| Reverse geocoding | Yandex Maps Geocoder API; 2GIS Geocoder API; DaData Address APIs | All three document coordinate-to-address or nearby-address flows. |
-| Organization/place search | Evaluate 2GIS Places API and Yandex Organization Search separately | Places search is not the same as geocoding or registry validation. |
-| Own Russian address base | FIAS/GAR Data Integration | Official registry provenance, but requires ETL, indexing and search logic. |
-| Bulk address processing | DaData cleaning; FIAS/GAR for owned registry; commercial geocoders only after rights review | Batch/storage rights and per-record costs can dominate TCO. |
+| Russian address suggestions in forms | [`DaData Address APIs`](../../apis/dadata-address-api/README.md); [`Yandex Maps Geosuggest API`](../../apis/yandex-maps-geosuggest-api/README.md); [`2GIS Suggest API`](../../apis/2gis-suggest-api/README.md) | DaData is strongest for Russian address-form workflows; Yandex and 2GIS are useful when the UI is tied to their map/search ecosystems. |
+| Russian address cleaning and normalization | [`DaData Address APIs`](../../apis/dadata-address-api/README.md); [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md) for owned registry | DaData has a documented cleaning API; GAR is the official source but requires matching/search logic. |
+| Direct geocoding | [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md); [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md); DaData; [`Nominatim Geocoder Software`](../../apis/nominatim-geocoder-software/README.md) for self-hosting | Hosted commercial geocoders differ by license and ecosystem; Nominatim is an operational self-host route. |
+| Reverse geocoding | Yandex Geocoder; 2GIS Geocoder; DaData; self-hosted Nominatim | All have documented coordinate-to-address capabilities except FIAS/GAR. |
+| Organization/place search | [`2GIS Places API`](../../apis/2gis-places-api/README.md); Yandex organization products need separate research | Places search is a different product class from geocoding and registry validation. |
+| Own Russian address base | FIAS/GAR Data Integration | Official registry provenance, but it requires ETL, indexing, updates and legal review. |
+| Open-data geocoding ownership | Nominatim self-hosting | Avoids hosted API dependence but creates OSM/ODbL and operations responsibilities. |
+| Bulk address processing | DaData cleaning; FIAS/GAR for owned registry; self-hosted Nominatim for OSM geocoding; commercial geocoders only after rights review | Batch, storage, caching and redistribution rights can dominate TCO. |
 
-There is no universal winner. The best choice depends on whether the task is input UX, data quality, geocoding, registry provenance or commercial data rights.
+There is no universal winner. The best choice depends on whether the task is input UX, data quality, geocoding, registry provenance, open-data ownership or commercial data rights.
 
 ## Scope
 
-This comparison covers:
+This comparison covers address suggestions while typing, normalization and standardization, address existence/quality checks, direct geocoding, reverse geocoding, place search as a separate scenario, official registry integration, mass processing, storage, caching, display, SaaS and redistribution constraints.
 
-- address suggestions while a user types;
-- address normalization and standardization;
-- checking address existence and quality;
-- direct geocoding: address -> coordinates;
-- reverse geocoding: coordinates -> address;
-- organization/place search as a related but separate scenario;
-- routing as explicitly out of scope;
-- building an address base from an official registry;
-- bulk processing;
-- storage, caching, display, SaaS and redistribution constraints.
+Routing is explicitly out of scope. A geocoder can produce coordinates; routing products decide paths, distances, ETAs and matrices.
 
 ## Key Distinctions
 
 - Geocoding is not address normalization. A coordinate match does not guarantee canonical fields or legal address validity.
-- Company autocomplete is not address autocomplete. A provider can be strong at one without proving the other.
+- Company autocomplete is not address autocomplete.
+- Suggestions/autocomplete are not bulk cleaning workflows.
 - Places search is not registry-quality address validation.
-- An official registry is not automatically a low-latency API product.
+- An official registry is not automatically a low-latency autocomplete API.
+- Public hosted geocoding is not the same as self-hosted geocoder software.
 - Coordinate precision depends on house/street/locality-level data and must be benchmarked.
-- Data license and storage rights can change the best choice even when technical quality is good.
+- License, storage, caching, display and redistribution rights can change the best choice even when technical quality is strong.
 
-## Comparison Matrix
+## Capability Matrix
 
-| Criterion | DaData Address APIs | Yandex Maps Geocoder API | 2GIS Geocoder API | FIAS/GAR Data Integration |
-|---|---|---|---|---|
-| Product class | Suggestions, cleaning, geocoding | Map geocoder | Map/catalog geocoder | Official registry integration |
-| Address suggestions | Yes | Separate Geosuggest product | Separate Suggest API | Requires own search |
-| Normalization | Yes, Russia-only cleaning | Not primary capability | Not primary capability | Requires own logic |
-| Validation | Cleaning quality fields | Geocoder precision only | Geocoder match only | Official registry provenance |
-| Direct geocoding | Yes, via cleaning endpoint | Yes | Yes | Not confirmed |
-| Reverse geocoding | Yes | Yes | Yes | Not confirmed |
-| Organization/place search | Use DaData company APIs, separate scope | Separate product | Separate Places API | Not applicable |
-| Russia coverage | Strong documented focus | Provider map coverage | Provider map/catalog coverage | Official Russian registry |
-| International coverage | Suggestions city-level provider claim; cleaning/geocoding Russia-only | Provider map coverage; scenario check needed | Provider catalog coverage; scenario check needed | Russia only |
-| Official registry provenance | FIAS/GAR/KLADR fields where available | No registry guarantee | Some registry fields may be on-demand | Primary registry source |
-| Public documentation | Yes | Yes | Yes | Partial for developer access |
-| Authentication | Token; secret for cleaning | API key | API key | Depends on channel; unknown for API services |
-| Self-service | Yes | Yes for keys/free/test; commercial license may require purchase | Demo key/subscription via Platform Manager | Public portal; integration channel details unclear |
-| Public pricing | Yes | Yes | Yes | Unknown for API/download service channels |
-| Free tier / trial | 10,000 subscription requests/day | 1,000 requests/day free terms; 100/day test period | Demo key one month / 1,000 Search requests | Not applicable as commercial API |
-| Quotas | Daily plan limits | Daily package limits | Package units | Unknown |
-| Rate limits | 30 rps suggestions; 20 rps cleaning | RPS unknown publicly | 600 Search units/minute | Unknown |
-| Batch | Cleaning one address/request; no async batch confirmed | Unknown/contract-sensitive | Unknown | Data-feed route requires ETL |
-| Storage | Contract-sensitive; provider reports no API cleaning storage | Restricted; Extended license associated with storage | Contract-sensitive; caching not provided in WebAPI offer | Legal review for use model |
-| Caching | Needs contract review | General temporary caching restrictions | Caching not provided in WebAPI offer | Depends on legal interpretation/use |
-| Customer-facing display | Usually form/API output; confirm contract | Free terms require Yandex map display | Confirm contract and attribution | Depends on use model |
-| Redistribution | Unknown | Unknown/contract-sensitive | Unknown/contract-sensitive | Needs legal review |
-| SaaS use | Needs contract review | Needs contract review | Needs contract review | Needs legal review |
-| SLA | Unknown publicly | Unknown publicly | Unknown publicly | Unknown |
-| Live test status | Not performed | Not performed | Not performed | Not performed |
-| Key unknowns | SLA, async batch, data rights | RPS, SLA, storage/display rights | SLA, OpenAPI, storage/caching rights | API specs, auth, formats, cadence, legal use |
+| Criterion | DaData Address | Yandex Geosuggest | Yandex Geocoder | 2GIS Suggest | 2GIS Places | 2GIS Geocoder | Nominatim | FIAS/GAR |
+|---|---|---|---|---|---|---|---|---|
+| Product class | Suggestions, cleaning, geocoding | Suggestions/autocomplete | Map geocoder | Suggestions/autocomplete | Places/catalog search | Map/catalog geocoder | Open-source geocoder software | Official registry integration |
+| Address suggestions | Yes | Yes | No | Yes | Use Suggest | No | Public autocomplete forbidden; self-host custom | Requires own search or API-service details |
+| Normalization | Yes, Russia-only cleaning | No | Not primary | No | No | Not primary | No | Requires own logic |
+| Validation | Cleaning quality fields | Suggestion-level only | Geocoder precision only | Suggestion-level only | Directory match only | Geocoder match only | OSM match only | Official registry provenance |
+| Direct geocoding | Yes via cleaning | No; can pass `uri` to Geocoder | Yes | No | No | Yes | Yes | Not confirmed |
+| Reverse geocoding | Yes | No | Yes | No | No | Yes | Yes | Not confirmed |
+| Organization/place search | Separate DaData company scope | Suggestions only | Separate product | Suggestions only | Yes | Separate Places API | Limited OSM POI search | Not applicable |
+| Russia coverage | Strong documented focus | Provider map/data coverage | Provider map coverage | Provider catalog coverage | Provider catalog coverage | Provider map/catalog coverage | OSM coverage varies | Official Russian registry |
+| International coverage | Suggestions city-level provider claim; cleaning/geocoding Russia-only | Provider map coverage | Provider map coverage | Provider catalog coverage | Provider catalog coverage | Provider catalog coverage | OSM coverage varies by region | Russia only |
+| Official registry provenance | FIAS/GAR/KLADR fields where available | No registry guarantee | No registry guarantee | Some FIAS-related fields may be on-demand elsewhere | Some FIAS fields on demand | Some registry fields may be on demand | OSM, not official registry | Primary registry source |
+| Public documentation | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Partial |
+| Authentication | Token; secret for cleaning | API key | API key | API key | API key | API key | Public instance: User-Agent/Referer; self-host operator-defined | Depends on channel |
+| Self-service | Yes | Yes/test/commercial license | Yes/test/commercial license | Demo key/subscription | Demo key/subscription | Demo key/subscription | Public limited; self-host | Public portal; integration details unclear |
+| Public pricing | Yes | Yes | Yes | Yes | Yes | Yes | Not commercial API price | Unknown for API/download channels |
+| Free tier / trial | 10,000 subscription requests/day | 100/day test period; commercial tariffs | 1,000/day free terms; 100/day test period | Demo key / 1,000 Search requests | Demo key / 1,000 Search requests | Demo key / 1,000 Search requests | Public limited policy; self-host costs | Not applicable as commercial API |
+| Quotas | Daily plan limits | Daily package limits | Daily package limits | Monthly units plus per-minute | Monthly units plus per-minute | Monthly units plus per-minute | Public 1 rps; self-host operator-defined | Unknown |
+| Rate limits | 30 rps suggestions; 20 rps cleaning | RPS unknown publicly | RPS unknown publicly | 600 Search units/minute | 600 Search units/minute | 600 Search units/minute | Public max 1 rps | Unknown |
+| Batch | Cleaning one address/request; async batch unknown | Unknown/contract-sensitive | Unknown/contract-sensitive | Unknown | Unknown/on-demand | Unknown | Public bulk discouraged; self-host possible | File/API batch route mentioned; details unknown |
+| Public hosted API | Yes | Yes | Yes | Yes | Yes | Yes | Limited public instance only | Public portal plus official channels |
+| Self-hosted option | No | No | No | Provider-reported On-Premise | Provider platform/on-premise needs deal | Provider platform/on-premise needs deal | Yes | User-operated registry pipeline |
+| Storage | Contract-sensitive | Extended license marketed with storage | Extended license marketed with storage | Contract-sensitive | Contract-sensitive | Contract-sensitive | ODbL/legal review; cache repeated public results | Legal review |
+| Caching | Needs contract review | Needs contract review | Temporary caching restrictions unless agreed | WebAPI offer says caching not provided | WebAPI offer says caching not provided | WebAPI offer says caching not provided | Public policy requires caching repeated results; ODbL applies | Depends on use model |
+| Customer-facing display | Confirm contract | Needs Yandex terms review | Yandex map/display restrictions matter | Contract/attribution review | Contract/attribution review | Contract/attribution review | Attribution required | Depends on use model |
+| Redistribution | Unknown | Unknown/contract-sensitive | Unknown/contract-sensitive | Unknown/contract-sensitive | Unknown/contract-sensitive | Unknown/contract-sensitive | ODbL/legal review | Legal review |
+| SaaS use | Needs contract review | Needs contract review | Needs contract review | Needs contract review | Needs contract review | Needs contract review | ODbL/privacy/ops review | Legal review |
+| SLA | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | No public OSMF SLA found | Unknown |
+| Privacy | Contract review | Yandex terms review | Yandex terms review | Contract review | Contract review | Contract review | Public policy says not to submit confidential/personal data | Legal review |
+| Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | High for self-hosting | High for registry route |
+| Live test status | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed |
+| Key unknowns | SLA, async batch, data rights | RPS, SLA, exact rights | RPS, SLA, exact rights | SLA, OpenAPI, rights | SLA, on-demand fields, rights | SLA, OpenAPI, rights | Sizing, ODbL, benchmark | Specs, auth, schemas, support |
 
 ## Recommendations by Scenario
 
 ### Address Entry UX
 
-Start with [`DaData Address APIs`](../../apis/dadata-address-api/README.md) for Russian address forms. If the UI must be coupled to a specific map ecosystem, evaluate Yandex Geosuggest or 2GIS Suggest as separate products.
+Start with DaData for Russian address forms. Add Yandex Geosuggest when the UI is already Yandex Maps-centered. Add 2GIS Suggest when suggestions should feed 2GIS catalog/search results.
 
 ### Cleaning Existing Addresses
 
-Use DaData cleaning for a commercial API route. Use [`FIAS/GAR Data Integration`](../../apis/fias-gar-data-integration/README.md) when the organization wants to own the official registry pipeline and can build matching/search logic.
+Use DaData cleaning for a commercial API route. Use FIAS/GAR when the organization wants to own the official registry pipeline and can build matching/search logic.
 
 ### Geocoding
 
-Shortlist [`Yandex Maps Geocoder API`](../../apis/yandex-maps-geocoder-api/README.md), [`2GIS Geocoder API`](../../apis/2gis-geocoder-api/README.md) and DaData. Pick after checking map-display coupling, storage/caching rights, batch rights, latency and match quality.
+Shortlist Yandex Maps Geocoder, 2GIS Geocoder and DaData. Add self-hosted Nominatim when open data, international OSM coverage or operational ownership is a requirement. Decide after checking precision, rights, cost and SLA.
+
+### Organizations and Places
+
+Use 2GIS Places API when the task is organization, building or place search. Do not infer registry-quality address validation from place search.
 
 ### Official Registry Base
 
-Use FIAS/GAR as the primary official Russian registry route. Do not treat it as a ready replacement for address suggestions or geocoding without building an integration platform around it.
+Use FIAS/GAR as the primary official Russian registry route. Treat official API services as mentioned but underspecified until method catalog, auth, schema and support details are captured.
+
+### Public Open-Data Geocoding
+
+Do not present public `nominatim.openstreetmap.org` as a free production API. Use it only within its usage policy. For production, evaluate self-hosted Nominatim or a commercial provider.
 
 ### 115-FZ, Sanctions and Compliance
 
@@ -112,7 +118,8 @@ This comparison does not validate compliance coverage. Address APIs and geocoder
 | Which provider has best house-level coordinate precision for the user's sample? | Geocoding selection | Credentialed benchmark on agreed sample. |
 | Can large batch geocoding be performed asynchronously and legally? | Bulk processing | Ask provider and test pilot credentials. |
 | What SLA and support tiers apply in production? | Enterprise procurement | Request commercial offer and SLA. |
-| What is the exact FIAS/GAR API or download integration path? | Official registry strategy | Review developer access docs or contact FNS channel. |
+| What is the exact FIAS/GAR API method catalog and access process? | Official registry strategy | Review developer docs or request FNS channel details. |
+| What are ODbL obligations for the intended cache, database or SaaS product? | Nominatim/self-hosting | Legal review with concrete data-flow diagram. |
 
 ## Method and Sources
 

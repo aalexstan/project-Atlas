@@ -10,6 +10,7 @@ Needs are task-oriented routes through Atlas. They connect a practical question 
 
 | Need | Status | Start |
 |---|---|---|
+| Address Normalization, Address Registries and Geocoding | reviewed | [Open route](address-normalization-geocoding/README.md) |
 | Company Verification | reviewed | [Open route](company-verification/README.md) |
 
 ## Related Navigation
@@ -17,4 +18,5 @@ Needs are task-oriented routes through Atlas. They connect a practical question 
 - [Needs Index](../NEEDS_INDEX.md)
 - [API Index](../API_INDEX.md)
 - [Comparison Index](../COMPARISON_INDEX.md)
+- [Address and Geocoding API procurement kit](../procurement/address-geocoding-api-selection/README.md)
 - [Counterparty API procurement kit](../procurement/counterparty-api-selection/README.md)

@@ -7,8 +7,12 @@
 - Добавлены research logs и candidate decisions в `research/address-geocoding/`.
 - Добавлены активные двуязычные API profiles:
   - `apis/dadata-address-api/`
+  - `apis/yandex-maps-geosuggest-api/`
   - `apis/yandex-maps-geocoder-api/`
+  - `apis/2gis-suggest-api/`
+  - `apis/2gis-places-api/`
   - `apis/2gis-geocoder-api/`
+  - `apis/nominatim-geocoder-software/`
   - `apis/fias-gar-data-integration/`
 - Добавлено сценарное сравнение `comparisons/address-normalization-geocoding/`.
 - Добавлен need route `needs/address-normalization-geocoding/`.
@@ -19,9 +23,10 @@
 ### Методологические решения
 
 - DaData Address APIs отделены от общей карточки DaData, чтобы не смешивать company autocomplete с address autocomplete/cleaning/geocoding.
-- Yandex Maps Geocoder описан только как direct/reverse geocoder; Geosuggest, Organization Search и routing оставлены отдельными продуктами.
-- 2GIS Geocoder описан отдельно от 2GIS Places API и Suggest API.
-- ФИАС/ГАР оформлен как официальный registry/data-integration route, а не как обычный REST geocoder.
+- Yandex Maps Geocoder описан только как direct/reverse geocoder; Yandex Geosuggest выделен как отдельный autocomplete API; Organization Search и routing оставлены отдельными будущими продуктами.
+- 2GIS Geocoder, 2GIS Suggest и 2GIS Places описаны как отдельные продукты с разными сценариями, тарифами и рисками.
+- Nominatim оформлен как open-source geocoder software/self-hosting route; публичный OSMF service не представлен как free production API.
+- ФИАС/ГАР оформлен как официальный registry/data-integration route, а не как обычный REST geocoder; official file downloads, SMEV и API services отмечены без повышения unknown method details.
 - Не объявлен универсальный победитель: рекомендации зависят от сценария, прав хранения, display restrictions, batch needs and TCO.
 - Live testing и benchmark качества не проводились.
 

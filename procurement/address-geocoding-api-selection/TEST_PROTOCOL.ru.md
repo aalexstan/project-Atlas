@@ -23,6 +23,8 @@
 - адреса с опечатками;
 - адреса без дома;
 - координаты для reverse geocoding.
+- POI и названия организаций для продуктов, которые явно поддерживают place search;
+- OpenStreetMap-derived public examples только если лицензия разрешает benchmark use.
 
 ## Тестовые задачи
 
@@ -34,6 +36,8 @@
 | Reverse geocoding | Coordinates | Returned address, object level, distance/confidence if available. |
 | Organization/place search | Organization names or POI queries | Только для продуктов, где places явно поддержаны. |
 | Batch | File/list of addresses | Throughput, error handling, legal batch permission. |
+| Public hosted policy check | End-user-triggered и automated patterns | Разрешён ли сценарий public usage policy. |
+| Self-hosting ops check | Import/update plan и target volume | Hardware, storage, update cadence, monitoring и rollback plan. |
 
 ## Metrics
 
@@ -54,6 +58,8 @@
 - cost per 1,000 accepted records;
 - cost per 1,000 successful geocodes;
 - storage/caching rights confirmed for results.
+- attribution и license obligations;
+- operational effort для self-hosted или registry-data routes.
 
 ## Procedure
 
@@ -66,6 +72,8 @@
 7. Отделяйте API errors от no-match results.
 8. Записывайте все unknowns и provider clarifications.
 9. Не публикуйте raw provider responses, если license запрещает.
+10. Для public Nominatim не запускайте autocomplete, bulk или stress tests против OSMF instance.
+11. Для FIAS/GAR не считайте website search endpoints поддерживаемыми integration APIs без документации ФНС.
 
 ## Reporting
 
