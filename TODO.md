@@ -29,7 +29,7 @@
 - Для Moscow Open Data API повторить проверку `data.mos.ru`, когда официальная документация доступна; текущий blocker и decision memo сохранены в `research/moscow-open-data-api/`.
 - Рассмотреть дополнительные коммерческие Nominatim/OSM-провайдеры только отдельными профилями по их официальным terms, SLA и тарифам; Geoapify уже оформлен как первый hosted open-data geocoding profile.
 - Не декомпозировать `datasets/moscow_city_open_data.md` на maintained dataset notes, пока official `data.mos.ru` catalog/API documentation, export formats и reuse terms не станут доступны для проверки.
-- Для будущего procurement/tender API comparison найти текущую официальную developer/service документацию ЕИС / `zakupki.gov.ru`, затем собрать official primary-source evidence по Seldon.Tenders/Seldon.Win и альтернативным поставщикам; baseline сохранён в `research/procurement-tender/`, legacy `datasets/procurement_tender_contracts.md` связан как supporting evidence.
+- Для будущего procurement/tender API comparison получить actual documents/schemas из official `zakupki.gov.ru` technical-information subsection `Требования к информационному взаимодействию ЕИС с другими информационными системами`, затем собрать official primary-source evidence по Seldon.Tenders/Seldon.Win и альтернативным поставщикам; baseline и technical-info recheck сохранены в `research/procurement-tender/`.
 - Продолжить разбор API Portal только как discovery source: каждую существенную карточку проверять по primary sources.
 
 ## Низкий приоритет

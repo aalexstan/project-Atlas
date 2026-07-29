@@ -10,13 +10,14 @@
 
 ## Обоснование
 
-Официальные страницы Казначейства России подтверждают публичную роль и идентичность ЕИС / `zakupki.gov.ru`. Официальные страницы ведомственных open-data datasets подтверждают существование procurement-related CSV datasets. Существующее исследование Atlas также сохраняет Seldon.Tenders как legacy-only, потому что не хватает official API specification, auth, pricing, limits, SLA и data-rights evidence.
+Официальные страницы Казначейства России подтверждают публичную роль и идентичность ЕИС / `zakupki.gov.ru`. Официальные страницы ведомственных open-data datasets подтверждают существование procurement-related CSV datasets. Публичный сайт ЕИС также содержит раздел technical information и подраздел information interaction, но Atlas не получил actual current document files, schemas, endpoint catalog или access rules. Существующее исследование Atlas также сохраняет Seldon.Tenders как legacy-only, потому что не хватает official API specification, auth, pricing, limits, SLA и data-rights evidence.
 
 Этого достаточно, чтобы сохранить и организовать направление, но недостаточно для текущей активной API-карточки Atlas или сценарного comparison.
 
 ## Границы
 
 - ЕИС / `zakupki.gov.ru` является официальным procurement information source, но здесь ещё не описывается как активный Atlas API profile.
+- Навигация technical-information ЕИС подтверждена как маршрут исследования, но сама по себе не является достаточным API specification evidence.
 - Ведомственные CSV open-data datasets являются supporting evidence, а не national procurement API.
 - Seldon.Tenders остаётся legacy/provenance до появления более сильных official evidence.
 - Web portals, file feeds, government services и commercial API products нужно сравнивать как разные product classes.
@@ -37,4 +38,4 @@
 
 ## Следующий исследовательский шаг
 
-Найти текущую официальную developer/service документацию ЕИС, затем сравнивать её с Seldon.Tenders/Seldon.Win только если Seldon предоставит API-level evidence. До этого `datasets/procurement_tender_contracts.md` остаётся legacy supporting research.
+Получить actual official EIS technical-information documents, schemas и supported distribution-channel details, затем сравнивать их с Seldon.Tenders/Seldon.Win только если Seldon предоставит API-level evidence. До этого `datasets/procurement_tender_contracts.md` остаётся legacy supporting research.

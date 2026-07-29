@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-29 — EIS technical information route recheck
+
+### Что добавлено
+
+- Добавлен research log `research/procurement-tender/2026-07-29-eis-technical-info-recheck.md`.
+- Procurement/tender baseline и decision memo теперь фиксируют official EIS `Техническая информация` route и subsection `Требования к информационному взаимодействию ЕИС с другими информационными системами`.
+
+### Методологические решения
+
+- Active procurement/tender API profile или comparison не создаётся: actual technical document files, schemas, endpoint catalog, auth, service limits и data-use rights не captured.
+- FTP hostname, document search и download IDs были проверены только как static public retrieval attempts; это не live testing и не production ingest.
+
 ## 2026-07-29 — FIAS/GAR structure archive inspection
 
 ### Что добавлено

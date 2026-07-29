@@ -143,6 +143,7 @@ API Portal указывает получение данных в real time. То
 - `research/seldon-tenders/decision.md`
 - `research/seldon-tenders/decision.ru.md`
 - `research/procurement-tender/2026-07-29-official-source-baseline.md`
+- `research/procurement-tender/2026-07-29-eis-technical-info-recheck.md`
 - `research/procurement-tender/decision.md`
 - `research/procurement-tender/decision.ru.md`
 - `apis/seldon-basis/README.md`

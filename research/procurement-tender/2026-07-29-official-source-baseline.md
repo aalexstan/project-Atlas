@@ -21,6 +21,7 @@ It does not perform live API testing, credentialed access, form submission or le
 | Russian Treasury regional GIS page | https://mo.roskazna.gov.ru/gis/ | Cross-check of EIS public-purpose wording |
 | FNS open-data page: large purchases | https://www.nalog.gov.ru/opendata/7707329152-purchase/ | Example of an official agency procurement open-data dataset |
 | Russian open-data portal dataset | https://data.gov.ru/datasets/94858d8b-c2e1-4ce2-8edb-e4e0bcaa628c | Example of a government procurement dataset entry |
+| EIS public technical information section | https://zakupki.gov.ru/epz/main/public/document/view.html?sectionId=1252 | Official technical-information hub and interaction-document subsection discovery |
 | Seldon.Tenders decision memo | ../seldon-tenders/decision.md | Existing Atlas decision on legacy-only status |
 | Legacy procurement dataset note | ../../datasets/procurement_tender_contracts.md | Historical dataset-centric provenance |
 
@@ -33,10 +34,12 @@ It does not perform live API testing, credentialed access, form submission or le
 | FNS publishes an official open-data CSV dataset for large purchases over 1 billion rubles. | verified | FNS open-data page |
 | The Russian open-data portal contains procurement-related dataset entries, but they are agency datasets, not automatically EIS API documentation. | observed | data.gov.ru dataset page |
 | Existing Atlas research keeps Seldon.Tenders legacy-only until official API specification/auth/pricing/rights evidence is available. | verified_internal | Seldon.Tenders decision memo |
+| The official EIS public site exposes a `Техническая информация` section with a subsection named `Требования к информационному взаимодействию ЕИС с другими информационными системами`. | observed | EIS public technical information page; detailed document files were not captured in this pass |
 
 ## Observations
 
 - Official public procurement data exists, but the reviewed sources do not yet provide a complete active API profile.
+- The official EIS site has a technical-information hub and an explicit information-interaction subsection, but static retrieval did not capture the actual schemas, service catalog or document files in this pass.
 - EIS, agency open-data CSV datasets and commercial aggregators solve different scenarios.
 - A procurement/tender comparison should not mix official bulk/open-data feeds, web search portals and commercial APIs without a common field matrix and rights model.
 - The old `api-seldon.ru` path remains provenance only and must not be used as a current source.
@@ -44,6 +47,7 @@ It does not perform live API testing, credentialed access, form submission or le
 ## Unknowns and Blockers
 
 - Current official EIS service endpoint catalog.
+- Actual current document files behind the EIS technical-information subsection.
 - Authentication, if any, for machine-to-machine EIS services.
 - Request and response schemas.
 - XML/JSON formats and versioning.
