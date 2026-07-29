@@ -8,6 +8,8 @@ It covers archive-level metadata, file names, CRC values as listed in the centra
 
 It does not decompress production XML files, count XML rows, validate CRC values against full payload bytes, prove full/delta semantics, verify API-service methods, or perform credentialed live testing.
 
+Follow-up: [`2026-07-29-fias-gar-root-dictionaries.md`](2026-07-29-fias-gar-root-dictionaries.md) later decompressed and parsed the small root-level dictionary XML files. Regional XML payload, national row counts and full/delta semantics remain unverified.
+
 ## Official Sources Reviewed
 
 | Source | URL | Use |

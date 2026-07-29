@@ -14,3 +14,4 @@
 | 2026-07-29 | Added current FIAS/GAR official package metadata while keeping archive contents and full/delta semantics unknown. | Makes the official registry file route more concrete without overstating verification. |
 | 2026-07-29 | Added FIAS/GAR structure archive inspection evidence and data ZIP header size. | Clarifies schema evidence while preserving the blocker on the 57 GB data archive and package semantics. |
 | 2026-07-29 | Added current FIAS/GAR data ZIP central directory evidence. | Confirms file index, archive scale and version marker while keeping XML payload, row counts and full/delta semantics as blockers. |
+| 2026-07-29 | Added FIAS/GAR root dictionary XML payload evidence. | Narrows reference-data uncertainty while keeping regional payload and national row-count blockers explicit. |

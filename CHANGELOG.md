@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR root dictionary XML inspection
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-root-dictionaries.md`.
+- FIAS/GAR profile, evidence, address/geocoding comparison и need route теперь фиксируют partial XML payload inspection для 10 root-level dictionary files.
+- Зафиксированы row counts для `AS_APARTMENT_TYPES`, `AS_ADDR_OBJ_TYPES`, `AS_ROOM_TYPES`, `AS_OPERATION_TYPES`, `AS_PARAM_TYPES`, `AS_HOUSE_TYPES`, `AS_ADDHOUSE_TYPES`, `AS_OBJECT_LEVELS`, `AS_NORMATIVE_DOCS_TYPES` и `AS_NORMATIVE_DOCS_KINDS`.
+
+### Методологические решения
+
+- Regional XML payload не скачивался и не decompressed.
+- National row counts, full CRC validation, full/delta package semantics, API/SMEV method details, auth, quotas, costs и legal-use rights остаются blockers.
+- Credentialed API request, SMEV access, portal endpoint test и production data ingest не проводились.
+
 ## 2026-07-29 — FIAS/GAR data ZIP central directory inspection
 
 ### Что добавлено

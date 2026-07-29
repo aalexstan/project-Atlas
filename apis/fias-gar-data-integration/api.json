@@ -91,6 +91,20 @@
       "central_directory_compressed_size_sum_bytes": 57170460881,
       "central_directory_uncompressed_size_sum_bytes": 424935482896,
       "central_directory_crc32_values_observed": true,
+      "root_dictionary_payload_inspected": true,
+      "root_dictionary_xml_files_inspected": 10,
+      "root_dictionary_row_counts": {
+        "AS_APARTMENT_TYPES": 13,
+        "AS_ADDR_OBJ_TYPES": 427,
+        "AS_ROOM_TYPES": 3,
+        "AS_OPERATION_TYPES": 34,
+        "AS_PARAM_TYPES": 22,
+        "AS_HOUSE_TYPES": 14,
+        "AS_ADDHOUSE_TYPES": 4,
+        "AS_OBJECT_LEVELS": 17,
+        "AS_NORMATIVE_DOCS_TYPES": 25,
+        "AS_NORMATIVE_DOCS_KINDS": 5
+      },
       "package_model": "unknown_full_delta_or_mixed"
     },
     "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
@@ -153,7 +167,7 @@
     "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ],
   "open_questions": [
-    "XML payload contents, row counts and CRC validation against the full current data ZIP archive",
+    "Regional XML payload contents, national row counts and CRC validation against the full current data ZIP archive",
     "Whether current ZIP publications are full, delta or mixed packages",
     "Public API service method catalog, base URL, authentication and schemas",
     "Eligibility and process for API services and SMEV access",
