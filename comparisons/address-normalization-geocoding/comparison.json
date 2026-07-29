@@ -1,0 +1,129 @@
+{
+  "id": "address-normalization-geocoding",
+  "title": {
+    "en": "Address Normalization, Address Registries and Geocoding APIs",
+    "ru": "API нормализации адресов, адресных реестров и геокодирования"
+  },
+  "status": "reviewed",
+  "verified_on": "2026-07-29",
+  "region": [
+    "RU",
+    "selected_international"
+  ],
+  "live_testing": false,
+  "candidates": [
+    {
+      "id": "dadata-address-api",
+      "product_class": "address_suggestions_cleaning_geocoding",
+      "best_for": [
+        "address_suggestions",
+        "russian_address_cleaning",
+        "russian_direct_geocoding",
+        "russian_reverse_geocoding"
+      ],
+      "public_pricing": true,
+      "free_tier": "10000 subscription-service requests per day",
+      "published_limit": "30 rps per IP for Suggestions; 20 rps per IP for Cleaning",
+      "key_risk": "Suggestions cannot be used for automatic processing; direct geocoding and cleaning are pay-per-record"
+    },
+    {
+      "id": "yandex-maps-geocoder-api",
+      "product_class": "map_geocoding",
+      "best_for": [
+        "direct_geocoding",
+        "reverse_geocoding",
+        "yandex_maps_display"
+      ],
+      "public_pricing": true,
+      "free_tier": "1000 requests per day under free-use terms",
+      "published_limit": "daily package limit public; rps unknown",
+      "key_risk": "free-use display/storage restrictions and map coupling"
+    },
+    {
+      "id": "2gis-geocoder-api",
+      "product_class": "map_catalog_geocoding",
+      "best_for": [
+        "direct_geocoding",
+        "reverse_geocoding",
+        "2gis_map_catalog_workflows"
+      ],
+      "public_pricing": true,
+      "free_tier": "demo key for one month with 1000 total Search-service requests",
+      "published_limit": "600 Search units per minute",
+      "key_risk": "Places and Suggest are separate; caching/storage rights need contract review"
+    },
+    {
+      "id": "fias-gar-data-integration",
+      "product_class": "official_registry_data_integration",
+      "best_for": [
+        "official_address_registry",
+        "internal_address_database",
+        "custom_etl",
+        "registry_provenance"
+      ],
+      "public_pricing": "unknown_for_api_or_downloads",
+      "free_tier": "not_applicable",
+      "published_limit": "unknown",
+      "key_risk": "not a turnkey suggestions or geocoding API; requires ETL, search and matching logic"
+    }
+  ],
+  "recommendations": {
+    "address_input_suggestions": [
+      "dadata-address-api",
+      "evaluate_yandex_geosuggest_separately",
+      "evaluate_2gis_suggest_api_separately"
+    ],
+    "address_cleaning_russia": [
+      "dadata-address-api",
+      "fias-gar-data-integration_for_internal_registry_build"
+    ],
+    "direct_geocoding": [
+      "yandex-maps-geocoder-api",
+      "2gis-geocoder-api",
+      "dadata-address-api"
+    ],
+    "reverse_geocoding": [
+      "yandex-maps-geocoder-api",
+      "2gis-geocoder-api",
+      "dadata-address-api"
+    ],
+    "organization_place_search": [
+      "evaluate_2gis_places_api_separately",
+      "evaluate_yandex_organization_search_separately"
+    ],
+    "official_registry_base": [
+      "fias-gar-data-integration"
+    ],
+    "bulk_processing": [
+      "dadata-address-api_for_cleaning",
+      "fias-gar-data-integration_for_owned_registry",
+      "commercial_geocoders_only_after_storage_batch_rights_confirmed"
+    ]
+  },
+  "gold_blockers": [
+    "credentialed_live_tests",
+    "common_address_quality_benchmark",
+    "contract_review_for_storage_caching_display_and_redistribution",
+    "comparable_quotes_for_high_volume_and_sla",
+    "batch_and_async_capability_confirmation",
+    "international_coverage_benchmark"
+  ],
+  "sources": [
+    "https://dadata.ru/api/suggest/address/",
+    "https://dadata.ru/api/clean/address/",
+    "https://dadata.ru/api/geocode/",
+    "https://dadata.ru/api/geolocate/",
+    "https://dadata.ru/pricing/",
+    "https://yandex.com/maps-api/docs/geocoder-api/index.html",
+    "https://yandex.com/maps-api/docs/geocoder-api/request.html",
+    "https://yandex.ru/legal/maps_api/ru/",
+    "https://yandex.ru/dev/tariffs/doc/ru/geocoder/prices/",
+    "https://docs.2gis.com/en/api/search/overview",
+    "https://docs.2gis.com/en/api/search/geocoder/overview",
+    "https://docs.2gis.com/en/platform-manager/subscription/pricing",
+    "https://law.2gis.ru/offer-license-agreement-webapi",
+    "https://www.nalog.gov.ru/rn77/service/fias/",
+    "https://fias-file.nalog.ru/",
+    "https://fias-file.nalog.ru/FiasInfo"
+  ]
+}
