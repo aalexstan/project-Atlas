@@ -35,7 +35,6 @@
 
 - После ручной проверки перенести исторические-only материалы в `legacy/`, если это улучшит навигацию и не потеряет provenance.
 - Поддерживать индекс legacy-материалов и обновлять его при появлении новых исторических слоёв.
-- Обновить старые provider/dataset/access templates только как legacy formats; новые активные шаблоны уже находятся в `templates/API_CARD_TEMPLATE*.md` и `templates/COMPARISON_TEMPLATE*.md`.
 - Расширить needs routes после появления новых сравнений и подтверждённых API profiles.
 
 ## Legacy Backlog

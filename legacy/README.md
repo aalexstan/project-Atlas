@@ -24,7 +24,12 @@ These materials may contain useful facts, source notes, risks, and historical co
 - [Access method research](../access_methods/)
 - [Relationship graph](../relationships/)
 - [Legacy ratings](../ratings/)
-- [Legacy templates](../templates/source-card-template.md)
+- Legacy templates:
+  - [Source card template](../templates/source-card-template.md)
+  - [Company card template](../templates/company-card-template.md)
+  - [Dataset card template](../templates/dataset-card-template.md)
+  - [Provider card template](../templates/provider-card-template.md)
+  - [Access method template](../templates/access-method-template.md)
 - [Research logs](../research/)
 - [Reports](../reports/)
 

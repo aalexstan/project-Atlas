@@ -24,7 +24,12 @@ Legacy означает сохранённое происхождение мат
 - [Исследования способов доступа](../access_methods/)
 - [Граф связей](../relationships/)
 - [Legacy-рейтинги](../ratings/)
-- [Legacy-шаблоны](../templates/source-card-template.md)
+- Legacy-шаблоны:
+  - [Шаблон source card](../templates/source-card-template.md)
+  - [Шаблон company card](../templates/company-card-template.md)
+  - [Шаблон dataset card](../templates/dataset-card-template.md)
+  - [Шаблон provider card](../templates/provider-card-template.md)
+  - [Шаблон access method](../templates/access-method-template.md)
 - [Журналы исследований](../research/)
 - [Отчёты](../reports/)
 

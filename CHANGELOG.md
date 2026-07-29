@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-29 — Legacy template index cleanup
+
+### Что изменено
+
+- `legacy/README.md` и `legacy/README.ru.md` теперь перечисляют все legacy templates: source, company, dataset, provider и access method.
+- `TODO.md` больше не содержит выполненную задачу по legacy template labeling.
+
+### Методологические решения
+
+- Активные API-first templates `API_CARD_TEMPLATE*` и `COMPARISON_TEMPLATE*` не изменялись.
+- Старые templates остаются legacy formats для чтения и provenance, а не для новых активных карточек.
+
 ## 2026-07-29 — Review cadence policy
 
 ### Что добавлено

@@ -60,7 +60,7 @@ Atlas должен помогать проверять, сравнивать и 
 - `companies/` - исторические карточки компаний Pass #1.
 - `research/` и `reports/` - журналы и отчеты старых проходов.
 - `ratings/` - Legacy / Pre-methodology; не является действующим Atlas Score.
-- старые dataset/provider/access/source templates - legacy formats.
+- старые source/company/dataset/provider/access templates - legacy formats; legacy index now lists each preserved template separately.
 
 Исходный dataset-centric корневой README сохранен как `legacy/README.dataset-centric-2026-06-23.md`.
 
