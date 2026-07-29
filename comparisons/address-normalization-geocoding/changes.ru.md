@@ -13,3 +13,4 @@
 | 2026-07-29 | Added OpenCage Geocoding API as a second hosted open-data geocoding route. | Расширяет hosted open-data shortlist, сохраняя Geosearch/autosuggest, ODbL/legal review, SLA, DPA и benchmark blockers. |
 | 2026-07-29 | Added current FIAS/GAR official package metadata while keeping archive contents and full/delta semantics unknown. | Makes the official registry file route more concrete without overstating verification. |
 | 2026-07-29 | Added FIAS/GAR structure archive inspection evidence and data ZIP header size. | Уточняет schema evidence, сохраняя blocker по 57 GB data archive и package semantics. |
+| 2026-07-29 | Added current FIAS/GAR data ZIP central directory evidence. | Подтверждает file index, archive scale и version marker, сохраняя XML payload, row counts и full/delta semantics как blockers. |

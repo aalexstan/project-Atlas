@@ -55,7 +55,7 @@ Public `nominatim.openstreetmap.org` is limited by usage policy, forbids autocom
 
 ### FIAS/GAR Official Interfaces
 
-FIAS/GAR is the official Russian registry route. The FNS open-data catalog verifies XML ZIP downloads, a structure ZIP, weekly updates and previous release links; Atlas has inspected the structure ZIP and recorded 22 XSD schema files. Official materials also mention SMEV and API services, but the current public method catalog, base URL, auth, quotas and SLA remain blockers, and the 57 GB data archive was not downloaded.
+FIAS/GAR is the official Russian registry route. The FNS open-data catalog verifies XML ZIP downloads, a structure ZIP, weekly updates and previous release links; Atlas has inspected the structure ZIP and the current data ZIP central directory. Official materials also mention SMEV and API services, but the current public method catalog, base URL, auth, quotas and SLA remain blockers, and XML payload, row counts and full/delta semantics are not verified.
 
 ### Routing
 
@@ -75,7 +75,7 @@ Ask this before choosing a provider. A technically strong geocoder can be a poor
 - No common address-quality benchmark was run.
 - SLA and support terms are mostly unknown publicly.
 - Contractual storage, caching, SaaS and redistribution rights require legal review.
-- FIAS/GAR open-data XML ZIP route and structure XSD archive are verified, but current data archive contents were not inspected and API-service details remain incomplete in reviewed public pages.
+- FIAS/GAR open-data XML ZIP route, structure XSD archive and current data ZIP central directory are verified, but XML payload, row counts, full/delta semantics and API-service details remain incomplete in reviewed public pages.
 - ODbL implications for Nominatim/OSM derived databases require legal review.
 - Nominatim self-hosting still needs a benchmark on target extracts and hardware.
 

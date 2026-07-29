@@ -100,7 +100,7 @@ Use 2GIS Places API or Yandex Maps Organization Search API when the task is orga
 
 ### Official Registry Base
 
-Use FIAS/GAR as the primary official Russian registry route. The open-data route is now verified as XML ZIP with a structure ZIP and weekly updates on the FNS open-data page. Treat official API services as mentioned but underspecified until method catalog, auth, schema and support details are captured.
+Use FIAS/GAR as the primary official Russian registry route. The open-data route is now verified as XML ZIP with a structure ZIP, weekly updates and an inspected current ZIP central directory on the FNS open-data archive. Treat official API services as mentioned but underspecified until method catalog, auth, schema and support details are captured.
 
 ### Public Open-Data Geocoding
 

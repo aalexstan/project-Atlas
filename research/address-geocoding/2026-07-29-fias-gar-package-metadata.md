@@ -8,6 +8,8 @@ This log refines the public metadata for the current official GAR/FIAS open-data
 
 It addresses the TODO item about FIAS/GAR package details as far as official public metadata allows. It does not prove inner archive contents, full/delta semantics, API service methods, SMEV eligibility, quotas, costs or legal rights.
 
+Follow-up: [`2026-07-29-fias-gar-data-zip-central-directory.md`](2026-07-29-fias-gar-data-zip-central-directory.md) later inspected the current data ZIP central directory and `version.txt` via HTTP Range. XML payload, row counts and full/delta semantics remain unverified.
+
 ## Official Sources Reviewed
 
 | Source | URL | Use |

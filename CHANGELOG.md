@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR data ZIP central directory inspection
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-data-zip-central-directory.md`.
+- FIAS/GAR profile, evidence, address/geocoding comparison и need route теперь фиксируют current data ZIP central directory inspection через HTTP Range:
+  - ZIP64 archive;
+  - 1,739 entries;
+  - 1,738 XML files;
+  - 96 regional directories;
+  - root `version.txt` со значениями `2026.07.28` и `v.278`;
+  - central-directory compressed/uncompressed size sums.
+
+### Методологические решения
+
+- 57 GB XML payload не скачивался и не decompressed.
+- CRC32 values только observed in central directory; они не validated against full payload.
+- Row counts, full/delta package semantics, API/SMEV method details, auth, quotas, costs и legal-use rights остаются blockers.
+- Credentialed API request, SMEV access, portal endpoint test и production data ingest не проводились.
+
 ## 2026-07-29 — OpenCage Geocoding API profile
 
 ### Что добавлено

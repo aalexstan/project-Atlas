@@ -33,7 +33,7 @@
   },
   "sandbox": {
     "status": "unknown",
-    "notes": "No credentialed API integration, SMEV access or production data archive download was performed. Atlas inspected the public structure ZIP and checked HTTP headers for the public data ZIP."
+    "notes": "No credentialed API integration, SMEV access or production data archive download was performed. Atlas inspected the public structure ZIP, checked HTTP headers for the public data ZIP and inspected the ZIP central directory via byte ranges."
   },
   "rate_limits": {
     "public_api": "unknown_publicly_in_this_research",
@@ -77,7 +77,20 @@
       "data_archive_content_type": "application/zip",
       "data_archive_content_length_bytes": 57170912095,
       "data_archive_last_modified_header": "Mon, 27 Jul 2026 17:57:53 GMT",
-      "data_archive_contents_inspected": false,
+      "data_archive_file_index_inspected": true,
+      "data_archive_xml_payload_inspected": false,
+      "zip64": true,
+      "central_directory_entries": 1739,
+      "central_directory_size_bytes": 246074,
+      "central_directory_offset": 57170665923,
+      "xml_entries": 1738,
+      "root_level_entries": 11,
+      "regional_directories": 96,
+      "compression_method": "deflate",
+      "version_txt": "2026.07.28\nv.278",
+      "central_directory_compressed_size_sum_bytes": 57170460881,
+      "central_directory_uncompressed_size_sum_bytes": 424935482896,
+      "central_directory_crc32_values_observed": true,
       "package_model": "unknown_full_delta_or_mixed"
     },
     "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
@@ -140,7 +153,7 @@
     "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ],
   "open_questions": [
-    "Inner contents, checksums and production file list of the current 57 GB data ZIP archive",
+    "XML payload contents, row counts and CRC validation against the full current data ZIP archive",
     "Whether current ZIP publications are full, delta or mixed packages",
     "Public API service method catalog, base URL, authentication and schemas",
     "Eligibility and process for API services and SMEV access",

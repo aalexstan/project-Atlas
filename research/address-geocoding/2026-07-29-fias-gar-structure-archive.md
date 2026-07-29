@@ -6,6 +6,8 @@ This log inspects the official FIAS/GAR structure archive referenced by the FNS 
 
 It does not download the current 57 GB data archive, prove full/delta package semantics, inspect production data rows, verify API-service methods, or perform credentialed live testing.
 
+Follow-up: [`2026-07-29-fias-gar-data-zip-central-directory.md`](2026-07-29-fias-gar-data-zip-central-directory.md) later inspected the current data ZIP central directory and `version.txt` via HTTP Range. XML payload, row counts and full/delta semantics remain unverified.
+
 ## Official Sources Reviewed
 
 | Source | URL | Use |
