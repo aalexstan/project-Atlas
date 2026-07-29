@@ -17,3 +17,4 @@
 | 2026-07-29 | Added current FIAS/GAR data ZIP central directory evidence. | Confirms file index, archive scale and version marker while keeping XML payload, row counts and full/delta semantics as blockers. |
 | 2026-07-29 | Added FIAS/GAR root dictionary XML payload evidence. | Narrows reference-data uncertainty while keeping regional payload and national row-count blockers explicit. |
 | 2026-07-29 | Added FIAS/GAR sample regional directory `99/` XML evidence. | Demonstrates regional payload parsing on a small sample without generalizing to national row counts. |
+| 2026-07-29 | Added FIAS/GAR sample regional directory `87/` XML evidence with CRC/size validation for the sampled entries. | Adds a second regional payload sample while keeping national row counts and full/delta semantics unproved. |

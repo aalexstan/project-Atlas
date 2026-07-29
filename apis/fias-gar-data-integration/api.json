@@ -129,6 +129,40 @@
         "AS_CARPLACES_PARAMS": 0,
         "AS_NORMATIVE_DOCS": 794
       },
+      "sample_regions_inspected": [
+        "99",
+        "87"
+      ],
+      "sample_regions_total_rows": {
+        "99": 161757,
+        "87": 379440
+      },
+      "sample_region_crc_size_validated": [
+        "87"
+      ],
+      "sample_region_87_xml_files_inspected": 18,
+      "sample_region_87_compressed_bytes": 10708170,
+      "sample_region_87_uncompressed_bytes": 76300664,
+      "sample_region_87_row_counts": {
+        "AS_ADDR_OBJ": 1636,
+        "AS_ADDR_OBJ_DIVISION": 12,
+        "AS_ADDR_OBJ_PARAMS": 15247,
+        "AS_ADM_HIERARCHY": 32287,
+        "AS_APARTMENTS": 23707,
+        "AS_APARTMENTS_PARAMS": 41639,
+        "AS_CARPLACES": 0,
+        "AS_CARPLACES_PARAMS": 0,
+        "AS_CHANGE_HISTORY": 91459,
+        "AS_HOUSES": 9166,
+        "AS_HOUSES_PARAMS": 82287,
+        "AS_MUN_HIERARCHY": 36656,
+        "AS_NORMATIVE_DOCS": 4715,
+        "AS_REESTR_OBJECTS": 31598,
+        "AS_ROOMS": 2439,
+        "AS_ROOMS_PARAMS": 2535,
+        "AS_STEADS": 337,
+        "AS_STEADS_PARAMS": 3720
+      },
       "package_model": "unknown_full_delta_or_mixed"
     },
     "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
@@ -191,7 +225,7 @@
     "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
   ],
   "open_questions": [
-    "Other regional XML payload contents, national row counts and CRC validation against the full current data ZIP archive",
+    "Remaining regional XML payload contents, national row counts and CRC validation beyond sampled regions",
     "Whether current ZIP publications are full, delta or mixed packages",
     "Public API service method catalog, base URL, authentication and schemas",
     "Eligibility and process for API services and SMEV access",

@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR sample region 87 XML inspection
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-region-87-sample.md`.
+- FIAS/GAR profile, evidence, address/geocoding comparison и need route теперь фиксируют second sample regional payload inspection:
+  - 18 XML files in directory `87/`;
+  - 379,440 child records parsed;
+  - CRC32 and uncompressed size validation matched central-directory metadata for all 18 sampled entries;
+  - row counts by file group for address objects, houses, land plots, apartments, rooms, hierarchies, params, change history and normative docs.
+
+### Методологические решения
+
+- Region `87/` используется только как second sample evidence.
+- Remaining regional payloads, national row counts, full-archive CRC validation, full/delta package semantics, API/SMEV method details, auth, quotas, costs и legal-use rights остаются blockers.
+- Credentialed API request, SMEV access, portal endpoint test и production data ingest не проводились.
+
 ## 2026-07-29 — LocationIQ Geocoding API profile
 
 ### Что добавлено

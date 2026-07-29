@@ -76,7 +76,7 @@ That cost must be included in TCO. A registry feed can be cheaper per request an
 | Current data archive headers | official data ZIP responds as `application/zip` with `Content-Length: 57170912095`; XML payload was not downloaded |
 | Current data archive file index | ZIP64 central directory inspected via HTTP Range; 1,739 entries, 1,738 XML files, 96 regional directories, root `version.txt` = `2026.07.28` / `v.278` |
 | Root dictionary XML payload | 10 small root-level dictionary XML files inspected; row counts captured for address object types, room/house/apartment types, operation types, parameter types, object levels and normative document types/kinds |
-| Sample regional XML payload | regional directory `99/` inspected as a small sample; 18 XML files and 161,757 rows parsed |
+| Sample regional XML payload | regional directories `99/` and `87/` inspected as samples; `99/` has 18 XML files and 161,757 rows parsed; `87/` has 18 XML files, 379,440 rows parsed and CRC/size validation ok for all sampled entries |
 | File download price | no monetary price stated on reviewed open-data page |
 | SMEV eligibility | unknown |
 | Structure reference | structure ZIP inspected; it contains 22 XSD files covering address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects and change history |
@@ -95,7 +95,7 @@ That cost must be included in TCO. A registry feed can be cheaper per request an
 
 ## Scenario-Based Recommendation
 
-Choose FIAS/GAR when official Russian address provenance and long-term data ownership matter enough to justify engineering work. The current open-data page gives useful package metadata; Atlas has inspected the structure ZIP, the current data ZIP central directory, small root dictionary XML files and one small regional sample. Other regional XML payloads, national row counts and full/delta semantics remain unproved. Choose a commercial API when the main need is fast address entry, geocoding, support and predictable integration effort.
+Choose FIAS/GAR when official Russian address provenance and long-term data ownership matter enough to justify engineering work. The current open-data page gives useful package metadata; Atlas has inspected the structure ZIP, the current data ZIP central directory, small root dictionary XML files and sample regional directories `99/` and `87/`. Remaining regional XML payloads, national row counts and full/delta semantics remain unproved. Choose a commercial API when the main need is fast address entry, geocoding, support and predictable integration effort.
 
 ## Evidence
 
