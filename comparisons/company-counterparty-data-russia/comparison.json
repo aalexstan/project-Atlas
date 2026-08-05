@@ -6,8 +6,12 @@
   },
   "status": "reviewed",
   "verified_on": "2026-07-23",
+  "partial_rechecks": {
+    "globas_api": "2026-07-28",
+    "fts_format_cutover_public_pages": "2026-08-05"
+  },
   "next_review": {
-    "fts_formats": "2026-08-03",
+    "fts_formats": "credentialed_access_required",
     "full": "2026-10-21"
   },
   "region": [
@@ -84,6 +88,8 @@
       "annual_price_rub_per_registry": 150000,
       "annual_price_rub_both_registries_inferred": 300000,
       "interface": "xml_archives_and_daily_deltas",
+      "format_cutover_public_pages_rechecked": "2026-08-05",
+      "credentialed_ftp_behavior_verified": false,
       "verdict": "best_primary_source_not_turnkey_due_diligence"
     }
   ],

@@ -4,7 +4,7 @@
   "provider": "Federal Tax Service of Russia",
   "status": "active",
   "maturity": "reviewed",
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-08-05",
   "live_tested": false,
   "type": "bulk_registry_feed",
   "transport": "FTP",
@@ -19,7 +19,10 @@
     "old_and_new_parallel_until": "2026-07-31",
     "new_only_from": "2026-08-01",
     "egrul": "4.08",
-    "egrip": "4.07"
+    "egrip": "4.07",
+    "public_page_rechecked_after_cutover": "2026-08-05",
+    "public_page_post_cutover_position": "only_egrul_4_08_and_egrip_4_07_from_2026_08_01",
+    "credentialed_ftp_behavior_verified": false
   },
   "authentication": [
     "access_attributes",
@@ -36,7 +39,7 @@
     "redistribution rights",
     "infrastructure TCO",
     "access lead time",
-    "post-cutover behavior",
+    "credentialed post-cutover FTP directory and file behavior",
     "missing-file recovery"
   ]
 }

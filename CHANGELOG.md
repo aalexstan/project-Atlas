@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-08-05 — FTS EGRUL/EGRIP format cutover public-page recheck
+
+### Что добавлено
+
+- Добавлен research log `research/company-counterparty-data-russia/2026-08-05-fts-format-cutover-recheck.md`.
+- `apis/fns-egrul-egrip-integration/` обновлён до `last_verified: 2026-08-05`.
+- Company/counterparty comparison теперь фиксирует, что официальные публичные страницы ФНС после запланированного 2026-08-01 cutover всё ещё указывают delivery только в форматах ЕГРЮЛ 4.08 и ЕГРИП 4.07.
+
+### Методологические решения
+
+- Это public-page recheck, а не live/credentialed FTP test.
+- Actual post-cutover FTP directories, current production XML payloads, checksums, schema validation behavior, recovery process и data-use rights остаются blockers.
+- Рекомендация по ФНС не меняется: это primary registry feed для собственной data platform, а не turnkey counterparty API.
+
 ## 2026-07-29 — FIAS/GAR sparse sample region 82 XML inspection
 
 ### Что добавлено

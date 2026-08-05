@@ -19,7 +19,7 @@
 - Для LocationIQ Geocoding API отправить подготовленный `research/locationiq-geocoding-api/provider-request*.md` и получить ODbL/attribution interpretation, storage/caching/SaaS/redistribution rights, DPA/privacy terms, exact plan scope, enterprise SLA terms, batch/CSV processing terms и benchmark-support evidence.
 - Для Nominatim Geocoder Software провести legal review ODbL/attribution/derived databases, benchmark exact self-hosting sizing/update operations на target extracts/hardware и не использовать public instance для production/autocomplete/bulk.
 - Для FIAS/GAR Data Integration после inspection official `structure-12032021.zip`, current data ZIP central directory, root dictionary XML payload и sample regions `99/`/`87/`/`82/` проверить remaining regional XML payload contents, national row counts, CRC validation beyond sampled regions, full/delta package model, API services method catalog, auth, quotas, costs, SMEV eligibility и legal-use rights.
-- Перепроверить FTS EGRUL/EGRIP integration после перехода форматов, запланированного на 2026-08-01.
+- Для FTS EGRUL/EGRIP integration после public post-cutover recheck 2026-08-05 получить законный FTP access или official support evidence и проверить actual post-cutover directory/file behavior, schemas, checksums, recovery process и права redistribution/SaaS.
 - Не использовать `ratings/` как действующий Atlas Score. Любая новая оценка должна следовать `docs/METHODOLOGY.md` и иметь публичные критерии.
 - Поддерживать `API_INDEX*`, `COMPARISON_INDEX*` и `NEEDS_INDEX*` через `python3 scripts/generate_indexes.py`; CI должен проходить `python3 scripts/generate_indexes.py --check`.
 - Поддерживать взаимные языковые ссылки в активных двуязычных Markdown-парах.

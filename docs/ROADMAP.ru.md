@@ -26,6 +26,8 @@
 
 **Текущий прогресс:** опубликованы сравнения по компаниям/контрагентам и адресам/геокодированию. Для адресного направления также есть need routes и procurement checklist для autocomplete, geocoding, place search, official registry integration и self-hosted OSM geocoding. Organization/place search теперь имеет отдельный маршрут к 2GIS Places API и Yandex Maps Organization Search API. Для procurement/tender создан research baseline, выполнен recheck EIS technical-information route и связана legacy dataset note, но активного procurement API comparison пока нет.
 
+Company/counterparty comparison теперь включает post-cutover public-page recheck перехода форматов ФНС ЕГРЮЛ/ЕГРИП. Credentialed FTP verification всё ещё нужна до утверждений о production file behavior.
+
 ## Этап 4 — Распространение и обратная связь
 
 Публиковать материалы в доступной для поиска форме, собирать запросы, отслеживать интерес, общаться с пользователями и предложить ограниченную платную услугу по подбору API.

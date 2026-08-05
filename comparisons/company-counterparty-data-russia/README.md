@@ -9,11 +9,11 @@
 | Field | Value |
 |---|---|
 | Maturity | **Reviewed** — public-source comparison |
-| Last verified | 2026-07-23; GLOBAS.API official-source addendum 2026-07-28 |
+| Last verified | 2026-07-23; GLOBAS.API official-source addendum 2026-07-28; FTS format cutover public-page recheck 2026-08-05 |
 | Region | Russia; CIS coverage is considered separately for Seldon |
 | Live testing | Not performed; commercial Kontur and Seldon credentials were unavailable |
 | Pricing | Included only when public pricing clearly applies to the API product |
-| Next review | 2026-08-03 for FTS format migration; 2026-10-21 for the full comparison |
+| Next review | FTS credentialed FTP behavior when lawful access is available; 2026-10-21 for the full comparison |
 
 ## Decision Summary
 
@@ -230,7 +230,7 @@ Until 1 August 2026, the FTS is in a transition period:
 - EGRUL: old format 4.07 and new format 4.08;
 - EGRIP: old format 4.06 and new format 4.07.
 
-From 1 August 2026, only the new formats are scheduled to remain. Integrations should be revalidated immediately after the transition.
+Atlas rechecked the official public FTS pages on 2026-08-05, after the scheduled cutover date. The pages still state that from 1 August 2026 delivery is only in EGRUL 4.08 and EGRIP 4.07 formats. This verifies the public post-cutover position, not credentialed FTP directory contents or production XML payloads.
 
 The FTS also warns that daily-file generation can be interrupted because of data volume; missing changes are expected to appear in later files.
 

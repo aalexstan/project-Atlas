@@ -9,7 +9,7 @@
 | Field | Value |
 |---|---|
 | Maturity | Reviewed |
-| Last verified | 2026-07-23 |
+| Last verified | 2026-08-05 |
 | Provider | Federal Tax Service of Russia |
 | Status | Active |
 | Type | Bulk data feed, not a conventional REST API |
@@ -31,12 +31,15 @@ The FTS supplies FTP archives containing XML, with full data from registry incep
 
 EGRUL 4.08 and EGRIP 4.07 took effect on February 1, 2026. Old and new formats are supplied in parallel until July 31. From **August 1, 2026**, only the new formats are planned.
 
+Atlas rechecked the official public FTS pages on **2026-08-05**, after the scheduled cutover date. The public pages still state that from August 1, 2026 delivery is only in EGRUL 4.08 and EGRIP 4.07 formats. Credentialed FTP directories and production XML payloads were not tested.
+
 ## Technical Model
 
 | Field | Value |
 |---|---|
 | Delivery | FTP archives |
 | Format | XML |
+| Current target formats | EGRUL 4.08; EGRIP 4.07 |
 | Example encoding | `windows-1251` |
 | Full snapshot | Registry inception to January 1 |
 | Incremental | Daily changes |
@@ -84,7 +87,7 @@ Primary official source, bulk delivery, registry history, daily changes, and ful
 
 ## Weaknesses
 
-Not REST/JSON, high engineering burden, separate registry fees, no ready risk analytics, possible delayed files, and mandatory 2026 schema migration.
+Not REST/JSON, high engineering burden, separate registry fees, no ready risk analytics, possible delayed files, and mandatory support for the post-cutover EGRUL 4.08 / EGRIP 4.07 schemas.
 
 ## Legal Questions
 
