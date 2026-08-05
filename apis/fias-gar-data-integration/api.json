@@ -131,14 +131,17 @@
       },
       "sample_regions_inspected": [
         "99",
-        "87"
+        "87",
+        "82"
       ],
       "sample_regions_total_rows": {
         "99": 161757,
-        "87": 379440
+        "87": 379440,
+        "82": 14
       },
       "sample_region_crc_size_validated": [
-        "87"
+        "87",
+        "82"
       ],
       "sample_region_87_xml_files_inspected": 18,
       "sample_region_87_compressed_bytes": 10708170,
@@ -162,6 +165,30 @@
         "AS_ROOMS_PARAMS": 2535,
         "AS_STEADS": 337,
         "AS_STEADS_PARAMS": 3720
+      },
+      "sample_region_82_xml_files_inspected": 18,
+      "sample_region_82_compressed_bytes": 1966,
+      "sample_region_82_uncompressed_bytes": 4120,
+      "sample_region_82_total_rows": 14,
+      "sample_region_82_row_counts": {
+        "AS_ADDR_OBJ": 1,
+        "AS_ADDR_OBJ_DIVISION": 0,
+        "AS_ADDR_OBJ_PARAMS": 6,
+        "AS_ADM_HIERARCHY": 5,
+        "AS_APARTMENTS": 0,
+        "AS_APARTMENTS_PARAMS": 0,
+        "AS_CARPLACES": 0,
+        "AS_CARPLACES_PARAMS": 0,
+        "AS_CHANGE_HISTORY": 1,
+        "AS_HOUSES": 0,
+        "AS_HOUSES_PARAMS": 0,
+        "AS_MUN_HIERARCHY": 0,
+        "AS_NORMATIVE_DOCS": 0,
+        "AS_REESTR_OBJECTS": 1,
+        "AS_ROOMS": 0,
+        "AS_ROOMS_PARAMS": 0,
+        "AS_STEADS": 0,
+        "AS_STEADS_PARAMS": 0
       },
       "package_model": "unknown_full_delta_or_mixed"
     },

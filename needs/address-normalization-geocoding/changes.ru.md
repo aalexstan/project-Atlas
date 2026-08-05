@@ -11,3 +11,4 @@
 | 2026-07-29 | Yandex Maps Organization Search API добавлен в маршрут поиска организаций/мест. | Даёт пользователям Yandex ecosystem option рядом с 2GIS Places без смешивания geocoding и place search. |
 | 2026-07-29 | LocationIQ Geocoding API добавлен в hosted geocoding/autocomplete и open-data route options. | Расширяет hosted provider shortlist, сохраняя storage/caching, batch, SLA, ODbL/legal и benchmark blockers. |
 | 2026-07-29 | FIAS/GAR route обновлён second regional sample `87/` и CRC/size validation для sampled entries. | Улучшает registry-feed evidence, сохраняя national row counts, remaining regions и full/delta semantics как blockers. |
+| 2026-07-29 | FIAS/GAR route обновлён sparse regional sample `82/` и CRC/size validation для sampled entries. | Добавляет edge case с empty XML groups для ETL planning, сохраняя national row counts, remaining regions и full/delta semantics как blockers. |

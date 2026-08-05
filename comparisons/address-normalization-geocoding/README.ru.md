@@ -100,7 +100,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder, Geoapify, OpenCage, LocationIQ �
 
 ### Официальный реестр
 
-Используйте FIAS/GAR как основной официальный российский registry route. Open-data route теперь verified как XML ZIP со structure ZIP, weekly updates, inspected current ZIP central directory, parsed root dictionaries и sample regional directories `99/`/`87/` в open-data archive ФНС. API-сервисы официально упомянуты, но остаются underspecified до фиксации method catalog, auth, schema и support details.
+Используйте FIAS/GAR как основной официальный российский registry route. Open-data route теперь verified как XML ZIP со structure ZIP, weekly updates, inspected current ZIP central directory, parsed root dictionaries и sample regional directories `99/`, `87/` and sparse `82/` в open-data archive ФНС. API-сервисы официально упомянуты, но остаются underspecified до фиксации method catalog, auth, schema и support details.
 
 ### Public Open-Data Geocoding
 

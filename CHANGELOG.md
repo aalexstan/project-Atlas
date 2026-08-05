@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-07-29 — FIAS/GAR sparse sample region 82 XML inspection
+
+### Что добавлено
+
+- Добавлен research log `research/address-geocoding/2026-07-29-fias-gar-region-82-sample.md`.
+- FIAS/GAR profile, evidence, address/geocoding comparison и need route теперь фиксируют sparse regional payload inspection:
+  - 18 XML files in directory `82/`;
+  - 14 child records parsed;
+  - CRC32 and uncompressed size validation matched central-directory metadata for all 18 sampled entries;
+  - many file groups are valid but empty, which matters for ETL handling.
+
+### Методологические решения
+
+- Region `82/` используется только как sparse/empty-edge sample evidence.
+- Remaining regional payloads, national row counts, full-archive CRC validation, full/delta package semantics, API/SMEV method details, auth, quotas, costs и legal-use rights остаются blockers.
+- Credentialed API request, SMEV access, portal endpoint test и production data ingest не проводились.
+
 ## 2026-07-29 — FIAS/GAR sample region 87 XML inspection
 
 ### Что добавлено

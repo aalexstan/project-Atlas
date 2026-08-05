@@ -55,7 +55,7 @@ Shortlist: Yandex Maps Geocoder, 2GIS Geocoder, Geoapify, OpenCage, LocationIQ �
 
 ### Официальные интерфейсы FIAS/GAR
 
-FIAS/GAR — официальный российский registry route. Open-data catalog ФНС подтверждает XML ZIP downloads, structure ZIP, weekly updates и previous release links; Atlas inspected structure ZIP, current data ZIP central directory, root-level dictionary XML files и sample regional directories `99/` and `87/`. Официальные материалы также упоминают SMEV и API services, но current public method catalog, base URL, auth, quotas и SLA остаются blockers, а remaining regions, national row counts и full/delta semantics не verified.
+FIAS/GAR — официальный российский registry route. Open-data catalog ФНС подтверждает XML ZIP downloads, structure ZIP, weekly updates и previous release links; Atlas inspected structure ZIP, current data ZIP central directory, root-level dictionary XML files и sample regional directories `99/`, `87/` and sparse `82/`. Официальные материалы также упоминают SMEV и API services, но current public method catalog, base URL, auth, quotas и SLA остаются blockers, а remaining regions, national row counts и full/delta semantics не verified.
 
 ### Маршрутизация
 
@@ -75,7 +75,7 @@ DaData наиболее глубока для российских адресн�
 - Общий benchmark качества адресов не выполнялся.
 - SLA и support terms в основном неизвестны публично.
 - Contractual storage, caching, SaaS и redistribution rights требуют legal review.
-- Open-data XML ZIP route, structure XSD archive, current data ZIP central directory, root dictionary XML payload и sample regional directories `99/` and `87/` payload FIAS/GAR verified, но remaining regions, national row counts, full/delta semantics и детали API-сервисов остаются неполными в просмотренных публичных страницах.
+- Open-data XML ZIP route, structure XSD archive, current data ZIP central directory, root dictionary XML payload и sample regional directories `99/`, `87/` and sparse `82/` payload FIAS/GAR verified, но remaining regions, national row counts, full/delta semantics и детали API-сервисов остаются неполными в просмотренных публичных страницах.
 - ODbL implications для Nominatim/OSM derived databases требуют legal review.
 - Nominatim self-hosting всё ещё требует benchmark на target extracts and hardware.
 

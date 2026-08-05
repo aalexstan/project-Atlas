@@ -18,3 +18,4 @@
 | 2026-07-29 | Added FIAS/GAR root dictionary XML payload evidence. | Уточняет reference-data uncertainty, сохраняя regional payload и national row-count blockers. |
 | 2026-07-29 | Added FIAS/GAR sample regional directory `99/` XML evidence. | Демонстрирует regional payload parsing на small sample без обобщения до national row counts. |
 | 2026-07-29 | Added FIAS/GAR sample regional directory `87/` XML evidence with CRC/size validation for the sampled entries. | Добавляет второй regional payload sample, сохраняя national row counts и full/delta semantics как unproved. |
+| 2026-07-29 | Added FIAS/GAR sparse regional directory `82/` XML evidence. | Показывает, что valid regional files can be mostly empty и ETL должен обрабатывать empty groups. |
