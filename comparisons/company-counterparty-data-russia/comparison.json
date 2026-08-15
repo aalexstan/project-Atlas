@@ -8,10 +8,11 @@
   "verified_on": "2026-07-23",
   "partial_rechecks": {
     "globas_api": "2026-07-28",
-    "fts_format_cutover_public_pages": "2026-08-05"
+    "fts_format_cutover_public_pages": "2026-08-05",
+    "fts_format_conflict_official_sources": "2026-08-15"
   },
   "next_review": {
-    "fts_formats": "credentialed_access_required",
+    "fts_formats": "credentialed_access_or_official_clarification_required",
     "full": "2026-10-21"
   },
   "region": [
@@ -88,7 +89,8 @@
       "annual_price_rub_per_registry": 150000,
       "annual_price_rub_both_registries_inferred": 300000,
       "interface": "xml_archives_and_daily_deltas",
-      "format_cutover_public_pages_rechecked": "2026-08-05",
+      "format_cutover_public_pages_rechecked": "2026-08-15",
+      "official_source_conflict": true,
       "credentialed_ftp_behavior_verified": false,
       "verdict": "best_primary_source_not_turnkey_due_diligence"
     }
@@ -134,9 +136,10 @@
     "https://seldongroup.ru/functions",
     "https://globas.credinform.ru/ru-RU/servisy/globas-api",
     "https://globas.credinform.ru/ru-RU/servisy",
-    "https://globas.credinform.ru/ru-RU/osisteme/istochniki",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/"
-  ]
+        "https://globas.credinform.ru/ru-RU/osisteme/istochniki",
+        "https://www.nalog.gov.ru/rn77/service/egrip2/",
+        "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
+        "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/",
+        "https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/"
+    ]
 }

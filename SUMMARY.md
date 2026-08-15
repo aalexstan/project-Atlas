@@ -1,6 +1,6 @@
 # Summary
 
-Дата обновления: 2026-08-05
+Дата обновления: 2026-08-15
 Статус: API-first foundation integrated; legacy dataset research retained
 
 ## Активное направление Atlas
@@ -40,7 +40,7 @@ Atlas должен помогать проверять, сравнивать и 
 | DaData Address APIs | reviewed | 2026-07-29 | not performed |
 | DaData API | reviewed | 2026-07-23 | not performed |
 | FIAS/GAR Data Integration | reviewed | 2026-07-29 | not performed |
-| FTS EGRUL/EGRIP Data Integration | reviewed | 2026-08-05 | not performed |
+| FTS EGRUL/EGRIP Data Integration | reviewed | 2026-08-15 | not performed |
 | GLOBAS.API | reviewed | 2026-07-28 | not performed |
 | Geoapify Geocoding API | reviewed | 2026-07-29 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
@@ -81,7 +81,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Цены веб-версий не используются как цены API.
 - Старые числовые рейтинги не пересчитывались и не повышались до действующей методики.
 - Excel workbook procurement kit добавлен как binary artifact и не редактировался.
-- FTS EGRUL/EGRIP integration rechecked after the scheduled 2026-08-01 format cutover: official public FTS pages still state that delivery from 2026-08-01 is only in EGRUL 4.08 and EGRIP 4.07 formats; credentialed FTP behavior and production XML payloads remain untested.
+- FTS EGRUL/EGRIP integration rechecked again on 2026-08-15: current official FTS pages and Order No. `ЕД-7-14/613@` now have an explicit official-source conflict about post-cutover format delivery. Atlas no longer treats the post-2026-08-01 state as cleanly confirmed without credentialed FTP evidence.
 - ГЛОБАС.API восстановлен из legacy backlog как активный API-first profile на основе официальных страниц Credinform; REST claim из API Portal сохранен только как legacy provenance.
 - Направление адресов и геокодирования оформлено как API-first блок: отдельные profiles для DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, OpenCage Geocoding API, LocationIQ Geocoding API, Nominatim Geocoder Software и FIAS/GAR Data Integration, сценарное comparison, need routes и procurement checklist.
 - Yandex Geosuggest, 2GIS Suggest и 2GIS Places отделены от geocoder profiles, чтобы не смешивать autocomplete, place search и geocoding.
@@ -107,7 +107,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Нужны credentialed live tests для API profiles.
 - Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.
 - Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
-- Для FTS нужны законный FTP access или official support evidence для проверки actual post-cutover directory/file behavior, schemas, checksums, delayed-file recovery и data-use rights.
+- Для FTS нужны законный FTP access или official support clarification для проверки actual post-cutover directory/file behavior, schemas, checksums, delayed-file recovery, data-use rights и причины конфликта официальных источников.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
 - Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
 - Legacy dataset note `datasets/moscow_city_open_data.md` связана с Moscow Open Data API decision memo; декомпозиция на maintained dataset notes отложена до доступной official documentation/catalog evidence.

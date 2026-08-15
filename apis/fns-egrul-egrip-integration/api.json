@@ -4,7 +4,7 @@
   "provider": "Federal Tax Service of Russia",
   "status": "active",
   "maturity": "reviewed",
-  "last_verified": "2026-08-05",
+  "last_verified": "2026-08-15",
   "live_tested": false,
   "type": "bulk_registry_feed",
   "transport": "FTP",
@@ -20,8 +20,11 @@
     "new_only_from": "2026-08-01",
     "egrul": "4.08",
     "egrip": "4.07",
-    "public_page_rechecked_after_cutover": "2026-08-05",
-    "public_page_post_cutover_position": "only_egrul_4_08_and_egrip_4_07_from_2026_08_01",
+    "public_page_rechecked_after_cutover": "2026-08-15",
+    "public_page_parallel_delivery_statement_checked": "2026-08-15",
+    "public_page_new_only_statement_checked": "2026-08-15",
+    "official_order_new_only_from": "2026-08-01",
+    "official_source_conflict": true,
     "credentialed_ftp_behavior_verified": false
   },
   "authentication": [
@@ -33,13 +36,15 @@
     "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
     "https://www.nalog.gov.ru/rn77/service/egrip2/",
     "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/fillingbill/"
+        "https://www.nalog.gov.ru/rn77/service/egrip2/fillingbill/",
+        "https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/"
   ],
   "open_questions": [
     "redistribution rights",
     "infrastructure TCO",
     "access lead time",
-    "credentialed post-cutover FTP directory and file behavior",
+    "which official statement matches current credentialed FTP delivery behavior",
+    "whether stale public pages or recipient-specific transition rules explain the conflict",
     "missing-file recovery"
   ]
 }

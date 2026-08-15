@@ -26,7 +26,7 @@ Initial comparisons: company and counterparty data, addresses and geocoding, pro
 
 **Current progress:** company/counterparty and address/geocoding comparisons are published. Address/geocoding also has need routes and a procurement checklist covering autocomplete, geocoding, place search, official registry integration and self-hosted OSM geocoding. Organization/place search now has a dedicated route that points to 2GIS Places API and Yandex Maps Organization Search API. Procurement/tender now has a research baseline, EIS technical-information route recheck and linked legacy dataset note, but no active procurement API comparison exists yet.
 
-The company/counterparty comparison now includes a post-cutover public-page recheck for the FTS EGRUL/EGRIP format transition. Credentialed FTP verification remains required before claiming production file behavior.
+The company/counterparty comparison now includes an official-source conflict recheck for the FTS EGRUL/EGRIP format transition. Credentialed FTP verification or updated official clarification remains required before claiming production file behavior.
 
 ## Phase 4 — Distribution and Feedback
 

@@ -2,7 +2,7 @@
 
 [Русская версия](evidence.ru.md)
 
-Verified: **2026-07-23**. GLOBAS.API addendum checked: **2026-07-28**. FTS format cutover public-page recheck: **2026-08-05**.
+Verified: **2026-07-23**. GLOBAS.API addendum checked: **2026-07-28**. FTS official-source conflict recheck: **2026-08-15**.
 
 | ID | Claim | Official source | Status | Note |
 |---|---|---|---|---|
@@ -43,6 +43,9 @@ Verified: **2026-07-23**. GLOBAS.API addendum checked: **2026-07-28**. FTS forma
 | FTS-006 | Both registries imply RUB 300,000/year | [Access process](https://www.nalog.gov.ru/rn77/service/egrip2/access_order/) | inferred | 150,000 × 2; engineering excluded |
 | FTS-007 | Old and new formats coexist until 2026-08-01 | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | EGRUL 4.07/4.08; EGRIP 4.06/4.07 |
 | FTS-008 | Only new formats are scheduled after 2026-08-01 | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Recheck after transition |
-| FTS-008A | Public FTS pages rechecked after the scheduled cutover still state that from 2026-08-01 delivery is only in EGRUL 4.08 and EGRIP 4.07 formats | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified_public_page_after_cutover | Checked 2026-08-05; credentialed FTP behavior was not tested |
+| FTS-008A | Current public FTS pages still say files are uploaded in both old and new formats | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/), [Interaction model](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Checked 2026-08-15 |
+| FTS-008B | The same public pages also say that from 2026-08-01 delivery is only in EGRUL 4.08 and EGRIP 4.07 formats | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/), [Interaction model](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Checked 2026-08-15 |
+| FTS-008C | Order No. ED-7-14/613@ requires exclusive new-format delivery from 2026-08-01 | [Order No. ED-7-14/613@](https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/) | verified | Point 6 |
+| FTS-008D | Public official sources conflict and credentialed FTP behavior remains unverified | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/), [Order No. ED-7-14/613@](https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/) | observed | Do not overclaim actual current delivery behavior |
 | FTS-009 | Daily-file generation can be interrupted | [Integration service](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Missing data is expected in later files |
 | FTS-010 | A free electronic extract for one entity is signed by the FTS | [EGRUL/EGRIP information](https://www.nalog.gov.ru/rn77/related_activities/registries/egrul_egrip/) | verified | Separate web service, not bulk API |

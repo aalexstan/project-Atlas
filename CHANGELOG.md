@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-08-15 — FTS EGRUL/EGRIP official-source conflict recheck
+
+### Что добавлено
+
+- Добавлен research log `research/company-counterparty-data-russia/2026-08-15-fts-format-conflict-recheck.md`.
+- FTS profile и company/counterparty comparison обновлены до `last_verified: 2026-08-15` для FTS-specific recheck.
+- База теперь фиксирует, что текущие официальные страницы ФНС и приказ `ЕД-7-14/613@` дают конфликтующие сигналы о post-cutover delivery formats.
+
+### Методологические решения
+
+- Удалена избыточная уверенность в формулировке о том, что после 2026-08-01 current delivery cleanly confirmed as new-only.
+- Atlas отделяет:
+  - normative requirement from Order No. `ЕД-7-14/613@`;
+  - current public-page wording;
+  - unverified actual FTP delivery behavior.
+- Credentialed FTP proof или официальное разъяснение ФНС остаются обязательными для окончательного вывода о фактическом post-cutover behavior.
+
 ## 2026-08-05 — FTS EGRUL/EGRIP format cutover public-page recheck
 
 ### Что добавлено
