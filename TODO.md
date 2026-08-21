@@ -28,9 +28,9 @@
 
 - Для ГЛОБАС.API запросить у Credinform API specification, endpoint catalog, authentication, field matrix, sandbox/API credentials, method pricing, batch billing, production limits, SLA и data-use rights.
 - Для Seldon.Tenders сохранить legacy-only статус до появления официальной specification, endpoint/auth evidence, API pricing, limits, SLA и data-use rights; решение зафиксировано в `research/seldon-tenders/decision.md`.
-- Для Moscow Open Data API повторить проверку `data.mos.ru`, когда официальная документация доступна; текущий blocker и decision memo сохранены в `research/moscow-open-data-api/`.
+- Для Moscow Open Data API повторить проверку `data.mos.ru`, когда official sources раскроют rate limits, quotas, SLA, точную operational/support model и детали получения production API key; текущий blocker и decision memo сохранены в `research/moscow-open-data-api/`.
 - Рассмотреть дополнительные коммерческие Nominatim/OSM-провайдеры только отдельными профилями по их официальным terms, SLA и тарифам; Geoapify, OpenCage и LocationIQ уже оформлены как hosted open-data/geocoding profiles.
-- Не декомпозировать `datasets/moscow_city_open_data.md` на maintained dataset notes, пока official `data.mos.ru` catalog/API documentation, export formats и reuse terms не станут доступны для проверки.
+- Не декомпозировать `datasets/moscow_city_open_data.md` на maintained dataset notes, пока official `data.mos.ru` catalog coverage, export semantics, operational terms и product boundaries не будут проверены достаточно глубоко для maintained API-first route.
 - Для будущего procurement/tender API comparison получить actual documents/schemas из official `zakupki.gov.ru` technical-information subsection `Требования к информационному взаимодействию ЕИС с другими информационными системами`, затем собрать official primary-source evidence по Seldon.Tenders/Seldon.Win и альтернативным поставщикам; baseline и technical-info recheck сохранены в `research/procurement-tender/`.
 - Продолжить разбор API Portal только как discovery source: каждую существенную карточку проверять по primary sources.
 

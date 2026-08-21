@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-08-21 — Moscow Open Data blocker status alignment
+
+### Что добавлено
+
+- `SUMMARY.md` и `TODO.md` синхронизированы с уже существующим research log `research/moscow-open-data-api/2026-08-12.md` и decision memo.
+
+### Методологические решения
+
+- Atlas больше не описывает Moscow Open Data API как blocker из-за недоступной документации: official developer documentation уже зафиксирована как доступная по состоянию на 2026-08-12.
+- Active API-first profile по-прежнему не создаётся, потому что production API key acquisition, rate limits, quotas, SLA и operational/support model остаются не подтверждены official sources.
+- Это documentation-alignment change без нового live testing, credentials или новых внешних коммерческих выводов.
+
 ## 2026-08-15 — FTS EGRUL/EGRIP official-source conflict recheck
 
 ### Что добавлено

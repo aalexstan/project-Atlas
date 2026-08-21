@@ -1,6 +1,6 @@
 # Summary
 
-Дата обновления: 2026-08-15
+Дата обновления: 2026-08-21
 Статус: API-first foundation integrated; legacy dataset research retained
 
 ## Активное направление Atlas
@@ -109,6 +109,6 @@ Atlas должен помогать проверять, сравнивать и 
 - Для DaData нужны benchmark качества, latency и legal confirmation по конкретным сценариям хранения.
 - Для FTS нужны законный FTP access или official support clarification для проверки actual post-cutover directory/file behavior, schemas, checksums, delayed-file recovery, data-use rights и причины конфликта официальных источников.
 - Для ГЛОБАС.API нужны specification, endpoint catalog, authentication, schemas, limits, SLA, API-specific pricing и data-use rights от Credinform.
-- Для Moscow Open Data API создан decision memo: active profile не создается, пока официальная документация `data.mos.ru` недоступна и endpoint/auth/formats/status не подтверждены.
-- Legacy dataset note `datasets/moscow_city_open_data.md` связана с Moscow Open Data API decision memo; декомпозиция на maintained dataset notes отложена до доступной official documentation/catalog evidence.
+- Для Moscow Open Data API создан decision memo: official developer documentation `data.mos.ru` уже доступна и подтверждает endpoints, GeoJSON response shape и CC BY 4.0 reuse terms, но active profile пока не создается из-за незакрытых blockers по production API key acquisition, rate limits, quotas, SLA и operational/support model.
+- Legacy dataset note `datasets/moscow_city_open_data.md` связана с Moscow Open Data API decision memo; декомпозиция на maintained dataset notes отложена до более глубокого official evidence по catalog coverage, export semantics и operational terms.
 - Для address/geocoding направления нужны письменные ответы на подготовленные provider-request checklists, credentialed benchmark, договорная проверка storage/caching/display/SaaS/redistribution rights, SLA, batch/asynchronous terms, ODbL/legal review для Nominatim/OSM/hosted open-data geocoders, other-regions/national row-count/full-delta inspection current 57 GB FIAS/GAR data ZIP и уточнение публичных деталей FIAS/GAR API services.
