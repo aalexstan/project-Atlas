@@ -9,11 +9,14 @@
 
 Эта dataset-centric карточка сохранена как **Legacy / supporting research**. Активная API-first карточка Moscow Open Data API пока не создана.
 
-Текущий вывод Atlas: `data.mos.ru` остается вероятным официальным маршрутом для городских открытых данных Москвы, но в повторном проходе официальная developer documentation не была доступна в среде проверки. Endpoint, authentication, formats, limits, current status и reuse/license terms не подтверждены, поэтому Atlas не создает active API profile и не декомпозирует эту крупную карточку на отдельные maintained dataset notes.
+Текущий вывод Atlas: `data.mos.ru` подтвержден как официальный маршрут для городских открытых данных Москвы, а official developer documentation была повторно открыта и проверена в follow-up от 2026-08-12. Atlas по-прежнему не создает active API profile и не декомпозирует эту крупную карточку на отдельные maintained dataset notes, потому что production API key acquisition, rate limits, quotas, SLA, operational/support model и более глубокие product boundaries остаются недостаточно подтверждены.
+
+Нижележащие разделы этой карточки сохраняются как исторический snapshot Pass #2 от 2026-06-23. Для текущего API-first статуса опирайтесь на `research/moscow-open-data-api/2026-08-12.md` и decision memo.
 
 Связанные decision материалы:
 
 - `research/moscow-open-data-api/2026-07-29.md`
+- `research/moscow-open-data-api/2026-08-12.md`
 - `research/moscow-open-data-api/decision.md`
 - `research/moscow-open-data-api/decision.ru.md`
 
@@ -132,3 +135,4 @@ API Portal ниже сохранен только как discovery/provenance so
 
 - https://apiportal.ru/catalog/api-portala-otkrytykh-dannykh-goroda-moskvy/
 - https://data.mos.ru/developers/documentation
+- https://data.mos.ru/terms

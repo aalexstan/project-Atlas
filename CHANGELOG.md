@@ -5,6 +5,7 @@
 ### Что добавлено
 
 - `SUMMARY.md` и `TODO.md` синхронизированы с уже существующим research log `research/moscow-open-data-api/2026-08-12.md` и decision memo.
+- Legacy Moscow Open Data pointers (`datasets/index.md`, `datasets/moscow_city_open_data.md`, `access_methods/moscow_city_open_data_access.md`, `relationships/dataset_provider_access_graph.md`, `catalog/api-open-data-moscow.md`) синхронизированы с тем же follow-up статусом.
 
 ### Методологические решения
 

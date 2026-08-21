@@ -3,6 +3,12 @@
 Дата исследования: 2026-06-23
 Dataset: `datasets/moscow_city_open_data.md`
 
+## API-first migration note
+
+Эта access-method карточка сохранена как legacy snapshot от 2026-06-23.
+
+Follow-up research от 2026-08-12 подтвердил, что official developer documentation `data.mos.ru` доступна и описывает API key route, endpoints и GeoJSON-oriented response model. При этом Atlas пока не повышает Moscow Open Data API до активного profile: production API key acquisition, limits, quotas, SLA и operational/support model остаются blockers.
+
 ## Подтвержденные способы доступа
 
 | Способ | Статус | Поставщик | Детали |
