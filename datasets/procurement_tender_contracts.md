@@ -3,6 +3,19 @@
 Дата исследования: 2026-06-23
 Статус: мигрировано из Pass #1
 
+## API-first migration note
+
+Дата связки: 2026-07-29
+
+Эта dataset-centric карточка сохранена как **Legacy / supporting research** для будущего comparison по procurement/tender/contract APIs. Активная API-first карточка Seldon.Tenders пока не создана.
+
+Текущий вывод Atlas: официальные страницы Seldon подтверждают `API.Seldon.Tenders` как procurement-data integration route / extended functionality Seldon 1.7, но публичных доказательств endpoint catalog, authentication, schemas, limits, SLA, API pricing и data-use rights недостаточно для активного API profile. Решение сохранено в:
+
+- `research/seldon-tenders/decision.md`
+- `research/seldon-tenders/decision.ru.md`
+
+Старые утверждения API Portal и домен `api-seldon.ru` ниже сохранены как provenance/source-risk note. Их нельзя использовать как текущий официальный источник без повторной проверки на официальных материалах `seldongroup.ru` или письменного ответа поставщика.
+
 ## Название
 
 Закупки, тендеры и контракты.
@@ -93,7 +106,10 @@ API Portal указывает получение данных в real time. То
 - REST API: подтверждено по API Portal.
 - Получение массивом по критериям: подтверждено в карточке API Portal.
 - Получение индивидуально по номеру извещения/контракта: подтверждено в карточке API Portal.
-- Первичные официальные источники: указаны как класс источников, но конкретный список не найден.
+- Первичные официальные источники: указаны как класс источников, но конкретный список не найден в этой legacy-карточке.
+- Active decision memo: `research/seldon-tenders/decision.md` сохраняет Seldon.Tenders как legacy-only до появления official specification/auth/pricing/rights evidence.
+- Future active route: procurement/tender API comparison should be created only after reviewing official primary sources for candidate products and government registries.
+- Current baseline: `research/procurement-tender/2026-07-29-official-source-baseline.md` and `research/procurement-tender/decision.md` keep this direction in research backlog until EIS service docs, Seldon API evidence and data-rights details are available.
 - CSV, XML, FTP, Webhook, GraphQL: не найдено.
 
 ## Неизвестные места
@@ -110,6 +126,9 @@ API Portal указывает получение данных в real time. То
 - Риск устаревшей ссылки документации `api-seldon.ru`.
 - Лицензионный риск на повторное использование данных первичных площадок.
 - Риск зависимости от одного коммерческого агрегатора.
+- Риск создания active API profile только по API Portal summary без endpoint/auth/schema evidence.
+- Риск смешивания web-product Seldon.Tenders/Seldon.Win и `API.Seldon.Tenders` integration route.
+- Риск сравнения procurement/tender products без одинакового source list, field matrix, retention rights и commercial quote.
 
 ## Связанные старые карточки
 
@@ -117,6 +136,18 @@ API Portal указывает получение данных в real time. То
 - `companies/seldon.md`
 - `research/documentation-link-risk.md`
 - `ratings/initial_ratings.md`
+
+## Связанные активные и исследовательские материалы
+
+- `research/seldon-tenders/2026-07-29.md`
+- `research/seldon-tenders/decision.md`
+- `research/seldon-tenders/decision.ru.md`
+- `research/procurement-tender/2026-07-29-official-source-baseline.md`
+- `research/procurement-tender/2026-07-29-eis-technical-info-recheck.md`
+- `research/procurement-tender/decision.md`
+- `research/procurement-tender/decision.ru.md`
+- `apis/seldon-basis/README.md`
+- `comparisons/company-counterparty-data-russia/README.md`
 
 ## Источники
 

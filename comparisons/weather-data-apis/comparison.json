@@ -1,0 +1,16 @@
+{
+  "id": "weather-data-apis",
+  "title": {"en": "Weather Data APIs", "ru": "API погодных и метеоданных"},
+  "status": "reviewed",
+  "verified_on": "2026-08-22",
+  "region": ["Global", "RU candidate coverage requires benchmark"],
+  "live_testing": false,
+  "candidates": [
+    {"id": "open-meteo-api", "product_class": "open_data_weather_api", "best_for": ["non_commercial_prototypes", "historical_model_data"], "public_pricing": "free_non_commercial_and_paid_customer_api", "verdict": "best_open_evaluation_route"},
+    {"id": "weatherapi-com-api", "product_class": "commercial_weather_api", "best_for": ["current_forecast_history", "air_quality", "location_search"], "public_pricing": true, "verdict": "broad_self_service_scope"},
+    {"id": "openweather-api", "product_class": "commercial_weather_platform", "best_for": ["global_weather", "timeline_products", "environmental_data"], "public_pricing": "product_specific", "verdict": "broad_product_family_requires_scope_control"}
+  ],
+  "recommendations": {"non_commercial_prototype": "open-meteo-api", "broad_public_plan": "weatherapi-com-api", "global_product_family": "openweather-api", "lowest_cost": "unknown_without_same_workload_quote", "production_selection": ["open-meteo-api", "weatherapi-com-api", "openweather-api"]},
+  "gold_blockers": ["common_accuracy_benchmark", "regional_coverage", "forecast_vs_observation_semantics", "storage_and_redistribution_rights", "SLA_and_support"],
+  "sources": ["https://open-meteo.com/en/pricing", "https://www.weatherapi.com/pricing.aspx", "https://openweathermap.org/price"]
+}

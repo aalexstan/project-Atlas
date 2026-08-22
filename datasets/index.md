@@ -12,10 +12,10 @@
 | Dataset | Файл | Известные поставщики | Известные API / каналы |
 |---|---|---|---|
 | Метаданные каталога API | `api_catalog_metadata.md` | API Portal / RNDSOFT | веб-каталог API Portal; API самого каталога не найден |
-| Реестр компаний и контрагентов | `company_registry.md` | Credinform, Seldon | ГЛОБАС.API, API Seldon.Basis |
-| Закупки, тендеры и контракты | `procurement_tender_contracts.md` | Seldon | API Seldon.Tenders |
-| Открытые городские данные Москвы | `moscow_city_open_data.md` | Правительство Москвы | API Портала открытых данных города Москвы, веб-портал |
-| Адресный реестр России | `russian_address_registry.md` | ФИАС / источник требует проверки | API ФИАС через `kladr-api.ru`, официальный статус не подтвержден |
+| Реестр компаний и контрагентов | `company_registry.md` | Legacy: Credinform, Seldon; active comparison also covers DaData, Kontur.Focus, FTS and GLOBAS.API | Active route: `comparisons/company-counterparty-data-russia/`; old API Portal claims preserved as provenance |
+| Закупки, тендеры и контракты | `procurement_tender_contracts.md` | Legacy: Seldon; primary-source candidates require future research | Seldon.Tenders kept legacy-only by `research/seldon-tenders/decision.md`; future procurement API comparison not created yet |
+| Открытые городские данные Москвы | `moscow_city_open_data.md` | Правительство Москвы; official docs accessible, but operational/API-rights blockers remain | Moscow Open Data API kept legacy-only by `research/moscow-open-data-api/decision.md`; no active profile until API key flow, limits, SLA and operational terms are clarified |
+| Адресный реестр России | `russian_address_registry.md` | ФНС России / ФИАС/ГАР; legacy `kladr-api.ru` source-risk note сохранен | Active route: `apis/fias-gar-data-integration/`; legacy API Portal/`kladr-api.ru` claim не считается официальным источником |
 
 ## Что изменилось после Pass #2
 

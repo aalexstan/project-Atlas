@@ -1,0 +1,16 @@
+# Индекс задач
+
+[English version](NEEDS_INDEX.md)
+
+| Задача | Статус | Последняя проверка |
+| --- | --- | --- |
+| [Выбрать источник данных о недвижимости или кадастре](needs/real-estate-cadastral-data/README.ru.md) | reviewed | 2026-08-23 |
+| [Данные о закупках и тендерах](needs/procurement-tender/README.ru.md) | reviewed | 2026-08-22 |
+| [Заказы доставки и отслеживание отправлений](needs/delivery-order-tracking/README.ru.md) | reviewed | 2026-08-22 |
+| [Маршрутизация и логистический расчёт](needs/routing-logistics/README.ru.md) | reviewed | 2026-08-22 |
+| [Нормализация адресов, адресные реестры и геокодирование](needs/address-normalization-geocoding/README.ru.md) | reviewed | 2026-07-29 |
+| [Погодные и метеорологические данные](needs/weather-data/README.ru.md) | reviewed | 2026-08-22 |
+| [Поиск организаций и мест](needs/organization-place-search/README.ru.md) | reviewed | 2026-07-29 |
+| [Приём онлайн-платежей](needs/payment-acceptance/README.ru.md) | reviewed | 2026-08-22 |
+| [Проверка контрагента](needs/company-verification/README.ru.md) | reviewed | 2026-07-23 |
+| [Сообщения и уведомления](needs/messaging-notifications/README.ru.md) | reviewed | 2026-08-22 |

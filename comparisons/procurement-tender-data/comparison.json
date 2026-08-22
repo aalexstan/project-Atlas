@@ -1,0 +1,29 @@
+{
+  "id": "procurement-tender-data",
+  "title": {"en": "Procurement and Tender Data Routes", "ru": "Источники данных о закупках и тендерах"},
+  "status": "reviewed",
+  "verified_on": "2026-08-22",
+  "live_testing": false,
+  "candidates": [
+    {"id": "eis-procurement-data-integration", "product_class": "official_government_data_integration", "best_for": ["official provenance", "government procurement information", "own ingestion research"], "public_pricing": "public_access_role; integration_cost_unknown", "key_risk": "current endpoint, schema, authentication and rights model unresolved"},
+    {"id": "seldon-tenders-api", "product_class": "commercial_aggregated_procurement_api", "best_for": ["filtered tender discovery", "CRM integration", "provider-aggregated procurement workflow"], "public_pricing": "unknown_quote_required", "key_risk": "API mechanics, source coverage, price, SLA and data rights unresolved"}
+  ],
+  "matrix": [
+    {"criterion": "official_primary_provenance", "eis-procurement-data-integration": "yes", "seldon-tenders-api": "aggregated_provider_route"},
+    {"criterion": "notices_protocols_contracts_documents", "eis-procurement-data-integration": "official_scope; method_level_unknown", "seldon-tenders-api": "provider_reported"},
+    {"criterion": "filtered_search", "eis-procurement-data-integration": "public_site_or_service_scope_unknown", "seldon-tenders-api": "provider_reported_filters"},
+    {"criterion": "crm_integration", "eis-procurement-data-integration": "integration_route_requires_confirmation", "seldon-tenders-api": "provider_reported"},
+    {"criterion": "endpoint_and_schema", "eis-procurement-data-integration": "unknown", "seldon-tenders-api": "unknown"},
+    {"criterion": "authentication_and_limits", "eis-procurement-data-integration": "unknown", "seldon-tenders-api": "unknown"},
+    {"criterion": "public_api_price", "eis-procurement-data-integration": "unknown", "seldon-tenders-api": "unknown"},
+    {"criterion": "storage_redistribution_saas", "eis-procurement-data-integration": "legal_review_required", "seldon-tenders-api": "contract_review_required"},
+    {"criterion": "live_test", "eis-procurement-data-integration": "not_performed", "seldon-tenders-api": "not_performed"}
+  ],
+  "recommendations": {
+    "primary_source_and_own_provenance": ["eis-procurement-data-integration"],
+    "filtered_crm_workflow": ["seldon-tenders-api"],
+    "commercial_selection": ["request both technical and commercial evidence; do not declare a winner"]
+  },
+  "sources": ["research/procurement-tender/2026-08-22-eis-seldon-recheck.md", "apis/eis-procurement-data-integration/api.json", "apis/seldon-tenders-api/api.json"],
+  "open_questions": ["Is the goal primary-source ownership or convenience of an aggregated workflow?", "What objects, fields, history and update cadence are required?", "Can data be stored, redistributed or embedded in SaaS?", "What are the actual API access and commercial terms?"]
+}

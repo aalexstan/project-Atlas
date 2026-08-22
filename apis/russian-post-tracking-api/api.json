@@ -1,0 +1,20 @@
+{
+  "id": "russian-post-tracking-api",
+  "name": "Russian Post Tracking API",
+  "provider": {"name": "Russian Post", "website": "https://tracking.pochta.ru/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["tracking registered postal items", "operation-history retrieval", "contracted batch tracking"],
+  "pricing": {"status": "public_access_limit_confirmed; contract_price_unknown", "single_access": "100 requests/day for registered users", "batch": "contract_required"},
+  "authentication": {"type": "login_password_soap_header", "issued_by": "tracking service account settings"},
+  "sandbox": {"status": "registered_access_available; no Atlas test", "notes": "No credentials were used by Atlas."},
+  "rate_limits": {"single_access_daily": 100, "batch_tracking_numbers_per_request": 3000, "production_throughput": "unknown"},
+  "openapi": {"status": "not_applicable", "protocol": "SOAP 1.2", "wsdl": "https://tracking.russianpost.ru/rtm34?wsdl"},
+  "product_class": "official_postal_tracking_api",
+  "capabilities": {"single_item_history": "documented", "cash_on_delivery_events": "documented", "batch_tracking": "contract_required", "shipment_creation": "separate_product", "carrier_aggregation": "not_provided"},
+  "data_rights": {"storage": "unknown", "redistribution": "unknown", "saas": "unknown"},
+  "sources": ["https://tracking.pochta.ru/support/faq/service_about", "https://tracking.pochta.ru/specification", "https://otpravka.pochta.ru/help/", "research/delivery-tracking/2026-08-22-russian-post.md"],
+  "open_questions": ["What contract prices, SLA and production throughput apply?", "What retention, storage, customer-display and redistribution rights apply?", "What retry and error semantics are expected for production batch access?"]
+}

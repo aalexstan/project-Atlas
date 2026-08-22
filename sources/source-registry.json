@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "defaults": {
+    "timeout_seconds": 15,
+    "max_bytes": 262144,
+    "workers": 8,
+    "user_agent": "Project-Atlas-Source-Monitor/1.0 (+https://github.com/aalexstan/project-Atlas)"
+  },
+  "overrides": [
+    {
+      "url": "https://b2bapi.avtocod.ru/docs/about/overview",
+      "label": "Avtocod API overview",
+      "required_markers": ["API Автокод"]
+    },
+    {
+      "url": "https://avtocod.ru/for-business-tariffs",
+      "label": "Avtocod B2B tariffs",
+      "required_markers": ["Тариф"]
+    },
+    {
+      "url": "https://dadata.ru/api/suggest/address/",
+      "label": "DaData address suggestions",
+      "required_markers": ["адрес"]
+    },
+    {
+      "url": "https://dadata.ru/pricing/",
+      "label": "DaData pricing",
+      "required_markers": ["тариф"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/api/search/geocoder/overview",
+      "label": "2GIS Geocoder overview",
+      "required_markers": ["Geocoder API", "reverse geocoding"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/api/search/suggest/overview",
+      "label": "2GIS Suggest overview",
+      "required_markers": ["Suggest API", "suggestions"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/api/search/places/overview",
+      "label": "2GIS Places overview",
+      "required_markers": ["Places API"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/platform-manager/subscription/keys",
+      "label": "2GIS access keys",
+      "required_markers": ["Creating access keys"]
+    },
+    {
+      "url": "https://opencagedata.com/gdpr",
+      "label": "OpenCage data protection",
+      "required_markers": ["Data Protection", "GDPR"]
+    },
+    {
+      "url": "https://yandex.ru/maps-api/docs/router-api/index.html",
+      "label": "Yandex route details documentation",
+      "required_markers": ["Получение деталей маршрута"]
+    },
+    {
+      "url": "https://yandex.ru/maps-api/docs/distancematrix-api/index.html",
+      "label": "Yandex distance matrix documentation",
+      "required_markers": ["Матрицы расстояний"]
+    }
+  ]
+}

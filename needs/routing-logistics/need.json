@@ -1,0 +1,19 @@
+{
+  "id": "routing-logistics",
+  "name": "Routing and logistics calculation",
+  "name_ru": "Маршрутизация и логистический расчёт",
+  "status": "reviewed",
+  "last_verified": "2026-08-22",
+  "primary_question": "Which API or engine should we choose for routes, distance matrices, ETA and logistics planning?",
+  "related_apis": ["yandex-maps-routing-api", "2gis-routing-api", "osrm-routing-engine"],
+  "related_comparisons": ["routing-logistics-apis"],
+  "related_procurement": ["procurement/routing-api-selection/README.md"],
+  "decision_paths": [
+    {"scenario": "simple_route", "initial_shortlist": ["yandex-maps-routing-api", "2gis-routing-api", "osrm-routing-engine"], "next_document": "comparisons/routing-logistics-apis/README.md"},
+    {"scenario": "distance_matrix", "initial_shortlist": ["yandex-maps-routing-api", "2gis-routing-api", "osrm-routing-engine"], "next_document": "procurement/routing-api-selection/TEST_PROTOCOL.md"},
+    {"scenario": "closed_contour", "initial_shortlist": ["2gis-routing-api", "osrm-routing-engine"], "next_document": "apis/2gis-routing-api/README.md"},
+    {"scenario": "delivery_optimization", "initial_shortlist": ["yandex-maps-routing-api", "2gis-routing-api"], "notes": "Request separate logistics/route-planner scope; do not infer optimization from basic routing.", "next_document": "procurement/routing-api-selection/RFP.md"}
+  ],
+  "open_questions": ["Do we need route calculation, matrix, ETA or vehicle-routing optimization?", "Which countries, transport modes and truck restrictions are required?", "Will results be shown to customers, cached or redistributed?", "What latency, matrix size and SLA are required?", "Can the team operate OSM import and update pipelines?"],
+  "sources": ["comparisons/routing-logistics-apis/comparison.json", "research/routing-logistics/2026-08-22-yandex.md", "research/routing-logistics/2026-08-22-2gis.md", "research/routing-logistics/2026-08-22-osrm.md"]
+}

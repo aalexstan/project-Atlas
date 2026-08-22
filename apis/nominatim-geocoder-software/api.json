@@ -1,0 +1,121 @@
+{
+  "id": "nominatim-geocoder-software",
+  "name": "Nominatim Geocoder Software",
+  "provider": {
+    "name": "Nominatim project / OpenStreetMap ecosystem",
+    "website": "https://nominatim.org/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "self-hosted geocoding on OpenStreetMap data",
+    "open-data geocoding infrastructure",
+    "direct geocoding with operational ownership",
+    "reverse geocoding with operational ownership"
+  ],
+  "pricing": {
+    "status": "not_commercial_api_price",
+    "model": "open_source_self_hosting_or_limited_public_service",
+    "public_instance_fee": "no monetary fee stated in reviewed policy",
+    "self_hosted_cost": "infrastructure_operations_storage_updates_monitoring_and_legal_review",
+    "third_party_providers": "out_of_scope_for_this_profile"
+  },
+  "authentication": {
+    "public_instance": "no_api_key_but_valid_referer_or_user_agent_required",
+    "self_hosted": "operator_defined"
+  },
+  "sandbox": {
+    "public_instance": "limited public service under OSMF usage policy",
+    "self_hosted": "operator_defined",
+    "notes": "No Atlas live test, import or benchmark was performed."
+  },
+  "rate_limits": {
+    "public_instance": "absolute maximum 1 request per second",
+    "public_bulk": "larger bulk discouraged; regular or long-running scripts restricted",
+    "self_hosted": "operator_defined_after_benchmark"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://nominatim.org/release-docs/latest/api/Search/"
+  },
+  "capabilities": {
+    "address_suggestions": "public_instance_autocomplete_forbidden",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "osm_data_not_official_registry_validation",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "limited_osm_poi_search_not_commercial_directory",
+    "routing": "not_applicable",
+    "batch": "not_allowed_on_public_instance_for_large_or_regular_workloads_self_host_needed"
+  },
+  "coverage": {
+    "geography": "openstreetmap_data_coverage_varies_by_region",
+    "data_source": "OpenStreetMap",
+    "deployment_scope": "full_planet_or_extracts",
+    "import_styles": [
+      "admin",
+      "street",
+      "address",
+      "full",
+      "extratags"
+    ]
+  },
+  "operations": {
+    "software_prerequisites": [
+      "PostgreSQL",
+      "PostGIS",
+      "osm2pgsql",
+      "Python",
+      "pyosmium_for_updates"
+    ],
+    "full_planet_hardware": {
+      "ram": "128GB_or_more_strongly_recommended; less_than_64GB_not_suitable_for_oom_reports",
+      "disk": "at_least_1TB_fast_disk_nvme_recommended",
+      "import_time": "around_2_5_days_on_well_configured_machine; 4_5_days_more_realistic_on_traditional_ssd"
+    },
+    "large_imports": {
+      "flatnode": "recommended_for_large_datasets",
+      "flatnode_free_space": "at_least_75GB"
+    },
+    "updates": {
+      "replication": "online_replication_supported",
+      "continuous_mode": "no_longer_recommended",
+      "recommended_regular_mode": "systemd_managed_one_time_updates"
+    },
+    "production_frontend": {
+      "test_server": "not_for_production",
+      "documented_route": "Python ASGI frontend with gunicorn/systemd/nginx"
+    }
+  },
+  "data_rights": {
+    "license": "ODbL",
+    "attribution": "required",
+    "share_alike": "legal_review_required_for_derived_databases",
+    "caching": "public_policy_requires_caching_repeated_results_but_odbl_obligations_apply",
+    "personal_data": "public_policy_says_not_to_submit personal or confidential material",
+    "redistribution": "requires_odbl_and_use_case_review",
+    "saas_embedding": "needs_legal_and_operational_review"
+  },
+  "sources": [
+    "https://operations.osmfoundation.org/policies/nominatim/",
+    "https://nominatim.org/release-docs/latest/api/Search/",
+    "https://nominatim.org/release-docs/latest/api/Reverse/",
+    "https://nominatim.org/release-docs/latest/admin/Installation/",
+    "https://nominatim.org/release-docs/latest/admin/Import/",
+    "https://nominatim.org/release-docs/latest/admin/Update/",
+    "https://nominatim.org/release-docs/latest/admin/Deployment-Python/",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "open_questions": [
+    "Hardware sizing for the exact target geography, import style and throughput",
+    "Operational update cadence and monitoring model",
+    "Backup, replication, failover and disaster recovery design",
+    "Authentication, rate limiting and abuse protection for any exposed self-hosted endpoint",
+    "Address-quality benchmark for target markets",
+    "ODbL obligations for the exact derived dataset and SaaS use case",
+    "Whether a commercial provider is preferable to self-hosting",
+    "Public SLA is not offered by OSMF in reviewed sources"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "weather-data",
+  "name": "Weather and Meteorological Data",
+  "name_ru": "Погодные и метеорологические данные",
+  "status": "reviewed",
+  "last_verified": "2026-08-22",
+  "primary_question": "Which weather API should we use for current conditions, forecasts, historical data, or weather-aware products?",
+  "related_apis": ["open-meteo-api", "weatherapi-com-api", "openweather-api"],
+  "related_comparisons": ["weather-data-apis"],
+  "related_procurement": ["procurement/weather-api-selection/"],
+  "decision_paths": [
+    {"scenario": "non_commercial_prototype", "shortlist": ["open-meteo-api"], "next_document": "apis/open-meteo-api/README.md", "main_risk": "Free endpoint is non-commercial and has no uptime guarantee"},
+    {"scenario": "broad_current_forecast_history", "shortlist": ["weatherapi-com-api"], "next_document": "apis/weatherapi-com-api/README.md", "main_risk": "Historical data is forecast archive, not observations"},
+    {"scenario": "global_product_family", "shortlist": ["openweather-api"], "next_document": "apis/openweather-api/README.md", "main_risk": "Product and licence scope must be selected precisely"}
+  ],
+  "open_questions": ["forecast accuracy", "station versus model data", "regional coverage", "freshness", "storage", "derived-data rights", "SLA and support"],
+  "sources": ["apis/open-meteo-api/README.md", "apis/weatherapi-com-api/README.md", "apis/openweather-api/README.md", "comparisons/weather-data-apis/README.md", "procurement/weather-api-selection/README.md"]
+}

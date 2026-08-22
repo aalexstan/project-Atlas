@@ -1,0 +1,22 @@
+{
+  "id": "cloudpayments-api",
+  "name": "CloudPayments API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "CloudPayments", "website": "https://cloudpayments.ru/"},
+  "status": "active",
+  "best_for": ["online acquiring", "two-stage payments", "recurring subscriptions", "payment notifications"],
+  "pricing": {"model": "contract_commission", "public_commission": "unknown_for_api", "subscription_fee": "unknown"},
+  "authentication": ["HTTP Basic Auth with Public ID and API Secret"],
+  "sandbox": "test_method_documented; credentials_required",
+  "rate_limits": "test_terminal_concurrency_documented; production_unknown",
+  "openapi": "not_found_in_reviewed_sources",
+  "sources": [
+    "https://developers.cloudpayments.ru/",
+    "https://cloudpayments.ru/info/documents",
+    "https://cloudpayments.ru/help/payments",
+    "https://cloudpayments.ru/help/payments/bills"
+  ],
+  "open_questions": ["API commission", "production quotas", "SLA", "storage and SaaS rights", "versioning and deprecation"]
+}

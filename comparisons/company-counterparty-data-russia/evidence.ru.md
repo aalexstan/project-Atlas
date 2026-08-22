@@ -2,7 +2,7 @@
 
 [English version](evidence.md)
 
-Проверено: **2026-07-23**.
+Проверено: **2026-07-23**. Addendum по ГЛОБАС.API проверен: **2026-07-28**. Recheck конфликта официальных источников ФНС: **2026-08-15**.
 
 | ID | Утверждение | Источник | Статус | Комментарий |
 |---|---|---|---|---|
@@ -29,6 +29,12 @@
 | SEL-006 | Seldon предоставляет данные компаний России и СНГ | [Seldon.Basis](https://seldongroup.ru/system/basis), [API](https://seldongroup.ru/system/basis/api) | verified | Перечень стран зависит от продукта и тарифа |
 | SEL-007 | Точная публичная цена API не найдена | [Официальная API-страница](https://seldongroup.ru/system/basis/api) | unknown | Веб-тарифы нельзя подменять API-тарифами |
 | SEL-008 | На дату проверки сайт показывал предупреждение о DDoS и возможной нестабильности | [Страница API](https://basis.myseldon.com/ru/home/api) | observed | Временное сообщение; требует повторной проверки |
+| GLO-001 | У Credinform/ГЛОБАС есть официальная продуктовая страница ГЛОБАС.API | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | verified | Активная официальная идентичность продукта |
+| GLO-002 | Продукт позиционируется для интеграции данных ГЛОБАС в корпоративные системы | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | provider_reported | Enterprise integration use case |
+| GLO-003 | Официальная страница описывает массовую проверку, мониторинг портфеля, обогащение внутренней базы, обновление полей, верификацию данных, архивы и обновление больших баз | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | provider_reported | Полезно для CRM/ERP/ЭДО и портфельных сценариев |
+| GLO-004 | Public API specification, endpoint catalog, authentication, schemas, production limits, SLA и API price не найдены в проверенных официальных страницах | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api), [сервисы](https://globas.credinform.ru/ru-RU/servisy), [requirements](https://globas.credinform.ru/ru-RU/requirements) | observed | Procurement blocker |
+| GLO-005 | Трехдневный тест системы ГЛОБАС не подтвержден как API trial | [ГЛОБАС.API](https://globas.credinform.ru/ru-RU/servisy/globas-api) | observed | Нужно подтверждение API credentials или sandbox |
+| GLO-006 | «Санкционный комплаенс» считается отдельной product/module boundary, пока не доказано иное | [Санкционный комплаенс](https://globas.credinform.ru/ru-RU/servisy/sanctions) | observed | Не считать частью стандартного API автоматически |
 | FTS-001 | ФНС предоставляет открытые данные ЕГРЮЛ/ЕГРИП для интеграции в информационные системы | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Отдельный режим доступа |
 | FTS-002 | Интеграция осуществляется через архивы с XML-файлами и ежедневными изменениями | [Модель взаимодействия](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Не обычный REST API |
 | FTS-003 | В архиве может быть до 100 XML-файлов, в файле — до 1 000 записей | [Модель взаимодействия](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Параметры официального формата выгрузок |
@@ -37,5 +43,9 @@
 | FTS-006 | Доступ к двум реестрам на год арифметически составляет 300 000 ₽ | [Порядок доступа](https://www.nalog.gov.ru/rn77/service/egrip2/access_order/) | inferred | 150 000 × 2; не включает разработку |
 | FTS-007 | До 01.08.2026 одновременно доступны старые и новые форматы | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | ЕГРЮЛ 4.07/4.08, ЕГРИП 4.06/4.07 |
 | FTS-008 | С 01.08.2026 планируется выдача только новых форматов | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Требует проверки после перехода |
+| FTS-008A | Текущие публичные страницы ФНС всё ещё пишут, что файлы выгружаются и в старых, и в новых форматах | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/), [Модель взаимодействия](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Проверено 2026-08-15 |
+| FTS-008B | Те же публичные страницы также пишут, что с 01.08.2026 выдача идёт только в форматах ЕГРЮЛ 4.08 и ЕГРИП 4.07 | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/), [Модель взаимодействия](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/) | verified | Проверено 2026-08-15 |
+| FTS-008C | Приказ `ЕД-7-14/613@` требует исключительно новые форматы с 01.08.2026 | [Приказ `ЕД-7-14/613@`](https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/) | verified | Пункт 6 |
+| FTS-008D | Официальные источники противоречат друг другу, а credentialed FTP behavior не проверялся | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/), [Приказ `ЕД-7-14/613@`](https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/) | observed | Нельзя завышать уверенность в фактической текущей выгрузке |
 | FTS-009 | Возможны перебои в формировании ежедневных файлов | [Сервис интеграции](https://www.nalog.gov.ru/rn77/service/egrip2/) | verified | Пропущенные сведения включаются позднее |
 | FTS-010 | Бесплатная электронная выписка по конкретному лицу подписывается КЭП ФНС | [ЕГРЮЛ и ЕГРИП](https://www.nalog.gov.ru/rn77/related_activities/registries/egrul_egrip/) | verified | Это отдельный веб-сервис, не bulk API |

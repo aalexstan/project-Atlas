@@ -1,0 +1,263 @@
+{
+  "id": "fias-gar-data-integration",
+  "name": "FIAS/GAR Data Integration",
+  "provider": {
+    "name": "Federal Tax Service of Russia",
+    "website": "https://www.nalog.gov.ru/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "building an internal Russian address registry",
+    "official address provenance",
+    "custom address search and validation infrastructure",
+    "ETL-based address data platform",
+    "government or regulated workflows that need GAR provenance"
+  ],
+  "pricing": {
+    "status": "partially_unknown",
+    "model": "official_registry_access_and_possible_service_channels",
+    "public_registry": "FNS describes GAR as open and publicly available",
+    "api_price": "unknown_publicly_in_this_research",
+    "download_price": "no_monetary_price_stated_on_reviewed_open_data_page",
+    "implementation_cost": "must_include_etl_storage_indexing_updates_and_support"
+  },
+  "authentication": {
+    "public_site_search": "web_service",
+    "file_downloads": "official_open_data_page_lists_xml_zip_data_and_structure_urls_no_auth_indicated",
+    "api_services": "official_developer_section_and_fns_materials_confirm_channel_method_details_unknown",
+    "smev": "official_developer_section_and_fns_materials_confirm_channel_eligibility_unknown",
+    "frontend_search_endpoints": "not_treated_as_supported_public_api_without_explicit_fns_documentation"
+  },
+  "sandbox": {
+    "status": "unknown",
+    "notes": "No credentialed API integration, SMEV access or production data archive download was performed. Atlas inspected the public structure ZIP, checked HTTP headers for the public data ZIP and inspected the ZIP central directory via byte ranges."
+  },
+  "rate_limits": {
+    "public_api": "unknown_publicly_in_this_research",
+    "file_downloads": "official_open_data_page_states_weekly_updates_and_lists_previous_releases; no request_rate_limit_found",
+    "smev": "unknown_publicly_in_this_research",
+    "historical_context": "FNS archived material reported weekly portal downloads twice per week, daily SMEV publication and online API batch provision by request"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "Public developer section exists but detailed API specification was not visible in reviewed static pages."
+  },
+  "capabilities": {
+    "address_suggestions": "official_api_services_mentioned_but_public_method_details_unknown; otherwise requires_own_search",
+    "address_cleaning": "not_turnkey_requires_own_normalization_logic",
+    "address_validation": "official_registry_provenance_possible",
+    "direct_geocoding": "not_confirmed",
+    "reverse_geocoding": "not_confirmed",
+    "organization_search": "not_applicable",
+    "routing": "not_applicable",
+    "batch": "open_data_zip_route_verified; api_batch_service_mentioned_but_method_details_unknown"
+  },
+  "coverage": {
+    "geography": "russia",
+    "registry": "GAR",
+    "operator": "FNS",
+    "open_data_dataset_id": "7707329152-fias",
+    "open_data_format": "xml",
+    "open_data_update_cadence": "weekly",
+    "current_open_data_package": {
+      "data_url": "https://fias.nalog.ru/opendata/7707329152-fias/data-28072026-structure-20191024.zip",
+      "last_modified": "2026-07-28",
+      "actuality_date_reported_by_page": "2026-08-02",
+      "methodological_recommendations_version": "4.0",
+      "previous_releases_visible": [
+        "2026-07-24",
+        "2026-07-21",
+        "2026-07-17",
+        "2026-07-14"
+      ],
+      "data_archive_headers_checked": true,
+      "data_archive_content_type": "application/zip",
+      "data_archive_content_length_bytes": 57170912095,
+      "data_archive_last_modified_header": "Mon, 27 Jul 2026 17:57:53 GMT",
+      "data_archive_file_index_inspected": true,
+      "data_archive_xml_payload_inspected": false,
+      "zip64": true,
+      "central_directory_entries": 1739,
+      "central_directory_size_bytes": 246074,
+      "central_directory_offset": 57170665923,
+      "xml_entries": 1738,
+      "root_level_entries": 11,
+      "regional_directories": 96,
+      "compression_method": "deflate",
+      "version_txt": "2026.07.28\nv.278",
+      "central_directory_compressed_size_sum_bytes": 57170460881,
+      "central_directory_uncompressed_size_sum_bytes": 424935482896,
+      "central_directory_crc32_values_observed": true,
+      "root_dictionary_payload_inspected": true,
+      "root_dictionary_xml_files_inspected": 10,
+      "root_dictionary_row_counts": {
+        "AS_APARTMENT_TYPES": 13,
+        "AS_ADDR_OBJ_TYPES": 427,
+        "AS_ROOM_TYPES": 3,
+        "AS_OPERATION_TYPES": 34,
+        "AS_PARAM_TYPES": 22,
+        "AS_HOUSE_TYPES": 14,
+        "AS_ADDHOUSE_TYPES": 4,
+        "AS_OBJECT_LEVELS": 17,
+        "AS_NORMATIVE_DOCS_TYPES": 25,
+        "AS_NORMATIVE_DOCS_KINDS": 5
+      },
+      "sample_region_payload_inspected": true,
+      "sample_region_code": "99",
+      "sample_region_xml_files_inspected": 18,
+      "sample_region_total_rows": 161757,
+      "sample_region_row_counts": {
+        "AS_REESTR_OBJECTS": 21729,
+        "AS_ADDR_OBJ": 220,
+        "AS_HOUSES": 746,
+        "AS_STEADS": 66,
+        "AS_APARTMENTS": 20828,
+        "AS_ROOMS": 0,
+        "AS_CARPLACES": 0,
+        "AS_ADM_HIERARCHY": 21736,
+        "AS_MUN_HIERARCHY": 21729,
+        "AS_CHANGE_HISTORY": 24406,
+        "AS_ADDR_OBJ_DIVISION": 0,
+        "AS_ADDR_OBJ_PARAMS": 828,
+        "AS_STEADS_PARAMS": 503,
+        "AS_HOUSES_PARAMS": 6516,
+        "AS_APARTMENTS_PARAMS": 41656,
+        "AS_ROOMS_PARAMS": 0,
+        "AS_CARPLACES_PARAMS": 0,
+        "AS_NORMATIVE_DOCS": 794
+      },
+      "sample_regions_inspected": [
+        "99",
+        "87",
+        "82"
+      ],
+      "sample_regions_total_rows": {
+        "99": 161757,
+        "87": 379440,
+        "82": 14
+      },
+      "sample_region_crc_size_validated": [
+        "87",
+        "82"
+      ],
+      "sample_region_87_xml_files_inspected": 18,
+      "sample_region_87_compressed_bytes": 10708170,
+      "sample_region_87_uncompressed_bytes": 76300664,
+      "sample_region_87_row_counts": {
+        "AS_ADDR_OBJ": 1636,
+        "AS_ADDR_OBJ_DIVISION": 12,
+        "AS_ADDR_OBJ_PARAMS": 15247,
+        "AS_ADM_HIERARCHY": 32287,
+        "AS_APARTMENTS": 23707,
+        "AS_APARTMENTS_PARAMS": 41639,
+        "AS_CARPLACES": 0,
+        "AS_CARPLACES_PARAMS": 0,
+        "AS_CHANGE_HISTORY": 91459,
+        "AS_HOUSES": 9166,
+        "AS_HOUSES_PARAMS": 82287,
+        "AS_MUN_HIERARCHY": 36656,
+        "AS_NORMATIVE_DOCS": 4715,
+        "AS_REESTR_OBJECTS": 31598,
+        "AS_ROOMS": 2439,
+        "AS_ROOMS_PARAMS": 2535,
+        "AS_STEADS": 337,
+        "AS_STEADS_PARAMS": 3720
+      },
+      "sample_region_82_xml_files_inspected": 18,
+      "sample_region_82_compressed_bytes": 1966,
+      "sample_region_82_uncompressed_bytes": 4120,
+      "sample_region_82_total_rows": 14,
+      "sample_region_82_row_counts": {
+        "AS_ADDR_OBJ": 1,
+        "AS_ADDR_OBJ_DIVISION": 0,
+        "AS_ADDR_OBJ_PARAMS": 6,
+        "AS_ADM_HIERARCHY": 5,
+        "AS_APARTMENTS": 0,
+        "AS_APARTMENTS_PARAMS": 0,
+        "AS_CARPLACES": 0,
+        "AS_CARPLACES_PARAMS": 0,
+        "AS_CHANGE_HISTORY": 1,
+        "AS_HOUSES": 0,
+        "AS_HOUSES_PARAMS": 0,
+        "AS_MUN_HIERARCHY": 0,
+        "AS_NORMATIVE_DOCS": 0,
+        "AS_REESTR_OBJECTS": 1,
+        "AS_ROOMS": 0,
+        "AS_ROOMS_PARAMS": 0,
+        "AS_STEADS": 0,
+        "AS_STEADS_PARAMS": 0
+      },
+      "package_model": "unknown_full_delta_or_mixed"
+    },
+    "open_data_structure_reference": "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
+    "open_data_structure_archive": {
+      "inspected": true,
+      "file_count": 22,
+      "archive_size_bytes": 25522,
+      "schema_files": [
+        "AS_ADDR_OBJ_2_251_01_04_01_01.xsd",
+        "AS_ADDR_OBJ_DIVISION_2_251_19_04_01_01.xsd",
+        "AS_ADDR_OBJ_TYPES_2_251_03_04_01_01.xsd",
+        "AS_ADM_HIERARCHY_2_251_04_04_01_01.xsd",
+        "AS_APARTMENTS_2_251_05_04_01_01.xsd",
+        "AS_APARTMENT_TYPES_2_251_07_04_01_01.xsd",
+        "AS_CARPLACES_2_251_06_04_01_01.xsd",
+        "AS_CHANGE_HISTORY_251_21_04_01_01.xsd",
+        "AS_HOUSES_2_251_08_04_01_01.xsd",
+        "AS_HOUSE_TYPES_2_251_13_04_01_01.xsd",
+        "AS_MUN_HIERARCHY_2_251_10_04_01_01.xsd",
+        "AS_NORMATIVE_DOCS_2_251_11_04_01_01.xsd",
+        "AS_NORMATIVE_DOCS_KINDS_2_251_09_04_01_01.xsd",
+        "AS_NORMATIVE_DOCS_TYPES_2_251_16_04_01_01.xsd",
+        "AS_OBJECT_LEVELS_2_251_12_04_01_01.xsd",
+        "AS_OPERATION_TYPES_2_251_14_04_01_01.xsd",
+        "AS_PARAM_2_251_02_04_01_01.xsd",
+        "AS_PARAM_TYPES_2_251_20_04_01_01.xsd",
+        "AS_REESTR_OBJECTS_2_251_22_04_01_01.xsd",
+        "AS_ROOMS_2_251_15_04_01_01.xsd",
+        "AS_ROOM_TYPES_2_251_17_04_01_01.xsd",
+        "AS_STEADS_2_251_18_04_01_01.xsd"
+      ]
+    },
+    "kladR_status": "legacy_publication_quarterly_from_2026_07_01_semiannual_from_2027_01_01_ends_2028_01_01",
+    "address_objects": [
+      "buildings",
+      "structures",
+      "land_plots",
+      "premises",
+      "parking_spaces"
+    ]
+  },
+  "data_rights": {
+    "public_registry": "verified_public_and_open_positioning",
+    "commercial_use": "needs_legal_review",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_legal_review"
+  },
+  "sources": [
+    "https://www.nalog.gov.ru/rn77/service/fias/",
+    "https://www.nalog.gov.ru/opendata/7707329152-fias/",
+    "https://data.nalog.ru/opendata/7707329152-fias/structure-12032021.zip",
+    "https://fias.nalog.ru/opendata/7707329152-fias/data-28072026-structure-20191024.zip",
+    "https://fias-file.nalog.ru/",
+    "https://fias-file.nalog.ru/FiasInfo",
+    "https://fias-file.nalog.ru/Frontend",
+    "https://fias-file.nalog.ru/Search",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13611328/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13824755/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/13874101/",
+    "https://www.nalog.gov.ru/rn77/news/activities_fts/16629379/"
+  ],
+  "open_questions": [
+    "Remaining regional XML payload contents, national row counts and CRC validation beyond sampled regions",
+    "Whether current ZIP publications are full, delta or mixed packages",
+    "Public API service method catalog, base URL, authentication and schemas",
+    "Eligibility and process for API services and SMEV access",
+    "Costs, if any, for API services or bulk downloads",
+    "Commercial SaaS, redistribution and customer-facing use rights",
+    "Operational support, SLA and breaking-change policy"
+  ]
+}

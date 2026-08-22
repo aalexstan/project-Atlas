@@ -1,0 +1,20 @@
+{
+  "id": "osrm-routing-engine",
+  "name": "OSRM Routing Engine",
+  "provider": {"name": "OSRM project", "website": "https://project-osrm.org/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["self-hosted routing", "route and table services", "teams owning OSM data operations"],
+  "pricing": {"status": "open_source_software_not_hosted_api_price", "api_price": "not_applicable"},
+  "authentication": {"type": "self_hosted_service_configuration", "public_demo": "not a production commitment"},
+  "sandbox": {"status": "not_applicable", "notes": "No Atlas live test and no public demo dependency."},
+  "rate_limits": {"status": "operator_defined_for_self_hosting", "public_demo": "not a production SLA"},
+  "openapi": {"status": "HTTP API documentation", "documentation": "https://project-osrm.org/docs/"},
+  "capabilities": {"route": "documented", "table_matrix": "documented", "trip": "documented", "match": "documented", "nearest": "documented", "tile": "documented", "geocoding": "not provided as registry geocoder"},
+  "deployment": {"model": "self_hosted", "data_pipeline": "OSM PBF to .osrm dataset and routed service"},
+  "data_rights": {"osm_license": "review_required", "attribution": "review_required", "storage": "operator_controlled", "redistribution": "depends_on_data_and_license"},
+  "sources": ["https://project-osrm.org/docs/", "https://project-osrm.org/docs/v26.4.0/http", "https://project-osrm.org/docs/v26.4.0/nodejs/api", "https://project-osrm.org/docs/v26.4.0/routed"],
+  "open_questions": ["Which OSM extract and update cadence are required?", "What hardware and operational SLO are acceptable?", "Which profile and vehicle restrictions are needed?", "How will OSM attribution and applicable data licence obligations be handled?"]
+}

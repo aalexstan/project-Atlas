@@ -1,0 +1,89 @@
+{
+  "id": "globas-api",
+  "name": "GLOBAS.API",
+  "provider": {
+    "name": "Credinform",
+    "website": "https://globas.credinform.ru/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-28",
+  "live_tested": false,
+  "summary": {
+    "category": [
+      "company-data",
+      "counterparty-data",
+      "enterprise-data-integration"
+    ],
+    "primary_markets": [
+      "RU"
+    ],
+    "best_for": [
+      "enterprise CRM/ERP/EDI enrichment",
+      "mass counterparty checks",
+      "internal database enrichment",
+      "portfolio monitoring"
+    ],
+    "avoid_when": [
+      "public self-service API documentation is required",
+      "method-level API pricing is required before vendor contact",
+      "published production limits are required before procurement"
+    ]
+  },
+  "technical": {
+    "integration_model": "provider_reported_corporate_system_integration",
+    "protocol": "unknown",
+    "base_url": null,
+    "endpoint_catalog": null,
+    "authentication": null,
+    "formats": "unknown",
+    "schemas": "unknown",
+    "openapi": null,
+    "rate_limits": null,
+    "sla": null,
+    "sandbox": "unknown"
+  },
+  "pricing": {
+    "public_api_price": null,
+    "model": "quote_required",
+    "method_level_pricing": "unknown",
+    "batch_billing": "unknown",
+    "minimum_commitment": "unknown",
+    "overage": "unknown",
+    "warning": "do not substitute web-system pricing or trial text for API pricing"
+  },
+  "trial": {
+    "globas_system_three_day_test": "provider_reported",
+    "api_trial_confirmed": false,
+    "note": "A three-day GLOBAS system test is not treated as an API trial until Credinform confirms API credentials or sandbox access."
+  },
+  "product_boundaries": {
+    "sanctions_compliance": "separate_product_or_module_requires_confirmation",
+    "portfolio_monitoring": "requires_scope_confirmation",
+    "foreign_company_reports": "requires_scope_confirmation"
+  },
+  "legacy_provenance": {
+    "legacy_card": "catalog/globas-api.md",
+    "api_portal_rest_claim": "legacy_reported_not_verified"
+  },
+  "sources": [
+    "https://globas.credinform.ru/ru-RU/servisy/globas-api",
+    "https://globas.credinform.ru/ru-RU/servisy",
+    "https://globas.credinform.ru/ru-RU/osisteme/istochniki",
+    "https://globas.credinform.ru/ru-RU/disclaimer",
+    "https://globas.credinform.ru/ru-RU/requirements",
+    "https://globas.credinform.ru/ru-RU/servisy/sanctions"
+  ],
+  "open_questions": [
+    "API methods and field matrix",
+    "protocol, base URL, authentication and schemas",
+    "OpenAPI/Swagger availability",
+    "sandbox and API credentials for testing",
+    "batch operations and asynchronous delivery",
+    "method-level pricing and batch billing",
+    "production limits and quotas",
+    "SLA and support terms",
+    "storage, caching, redistribution, affiliate use and SaaS embedding rights",
+    "boundary between standard API, Sanctions Compliance, Portfolio and foreign reports"
+  ]
+}

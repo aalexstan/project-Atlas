@@ -3,6 +3,12 @@
 Дата исследования: 2026-06-23
 Статус: первичная карточка
 
+## API-first migration note
+
+Эта карточка сохранена как historical Pass #1 artifact.
+
+На 2026-08-12 Atlas повторно подтвердил, что official developer documentation `data.mos.ru/developers/documentation` доступна. Однако активный API-first профиль по-прежнему не создаётся, пока official sources не закрывают blockers по production API key acquisition, limits, quotas, SLA и operational/support model. Для текущего статуса опирайтесь на `research/moscow-open-data-api/2026-08-12.md` и decision memo.
+
 ## Общая информация
 
 - Название: API Портала открытых данных города Москвы

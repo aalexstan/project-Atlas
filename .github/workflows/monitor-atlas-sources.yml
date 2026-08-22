@@ -1,0 +1,86 @@
+name: Monitor Atlas sources
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor:
+    name: Check sources and review cadence
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+          check-latest: true
+
+      - name: Run monitor tests
+        run: python3 -m unittest discover -s tests -p "test_*.py"
+
+      - name: Validate monitor configuration
+        run: python3 scripts/check_sources.py --validate-config
+
+      - name: Check sources and review dates
+        id: monitor
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/check_sources.py --report source-status.md
+          source_exit=$?
+          python3 scripts/check_review_due.py --report review-due.md
+          review_exit=$?
+          set -e
+
+          cat source-status.md >> "$GITHUB_STEP_SUMMARY"
+          printf "\n" >> "$GITHUB_STEP_SUMMARY"
+          cat review-due.md >> "$GITHUB_STEP_SUMMARY"
+
+          if [[ "$source_exit" -eq 1 || "$review_exit" -eq 1 ]]; then
+            echo "Monitor configuration or data is invalid." >&2
+            exit 1
+          fi
+
+          if [[ "$source_exit" -eq 2 || "$review_exit" -eq 2 ]]; then
+            echo "attention=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "attention=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Synchronize review issue
+        if: always() && steps.monitor.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ATTENTION: ${{ steps.monitor.outputs.attention }}
+        shell: bash
+        run: |
+          title="[Atlas monitor] Source or review attention required"
+          body_file="monitor-issue.md"
+          {
+            echo "The scheduled Atlas monitor found sources or materials requiring review."
+            echo
+            cat source-status.md
+            echo
+            cat review-due.md
+            echo
+            echo "This issue is advisory. Do not update facts or verification dates without reviewing official evidence."
+          } > "$body_file"
+
+          issue_number=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number // empty')
+          if [[ "$ATTENTION" == "true" && -n "$issue_number" ]]; then
+            gh issue edit "$issue_number" --body-file "$body_file"
+          elif [[ "$ATTENTION" == "true" ]]; then
+            gh issue create --title "$title" --body-file "$body_file" --label "maintenance" 2>/dev/null || \
+              gh issue create --title "$title" --body-file "$body_file"
+          elif [[ -n "$issue_number" ]]; then
+            gh issue close "$issue_number" --comment "The scheduled Atlas monitor no longer reports an item requiring attention."
+          fi

@@ -1,0 +1,19 @@
+{
+  "id": "yandex-maps-routing-api",
+  "name": "Yandex Maps Routing API",
+  "provider": {"name": "Yandex", "website": "https://yandex.ru/maps-api/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["route details", "distance matrices", "Yandex Maps-centered applications"],
+  "pricing": {"status": "public_tariff_scope_requires_product_and_contract_review", "api_price": "unknown"},
+  "authentication": {"type": "api_key", "details": "Developer account and product-specific key; exact route product scope requires confirmation"},
+  "sandbox": {"status": "unknown", "notes": "No Atlas credentialed live test was performed."},
+  "rate_limits": {"status": "unknown_publicly_for_target_route_methods"},
+  "openapi": {"status": "unknown", "documentation": "https://yandex.ru/maps-api/docs"},
+  "capabilities": {"route_details": "documented", "distance_matrix": "documented", "traffic": "unknown", "vehicle_routing_optimization": "separate_yandex_routing_product", "geocoding": "separate_product"},
+  "data_rights": {"storage": "contract_review_required", "caching": "contract_review_required", "display": "map/product coupling requires review", "redistribution": "unknown"},
+  "sources": ["https://yandex.ru/maps-api/docs", "https://yandex.ru/maps-api/docs/router-api/index.html", "https://yandex.ru/maps-api/docs/distancematrix-api/index.html", "https://yandex.ru/routing/doc/ru/"],
+  "open_questions": ["Which Yandex product and tariff cover the target use?", "Are traffic, vehicle restrictions and production RPS available?", "What storage, caching, display, SaaS and redistribution rights apply?", "Is a multi-stop optimizer required instead of route details/matrix?"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "payment-acceptance",
+  "name": "Online Payment Acceptance",
+  "name_ru": "Приём онлайн-платежей",
+  "status": "reviewed",
+  "last_verified": "2026-08-22",
+  "primary_question": "Which payment API should we choose for accepting online payments in Russia?",
+  "related_apis": ["yookassa-api", "cloudpayments-api", "tbank-internet-acquiring-api"],
+  "related_comparisons": ["payment-acceptance-russia"],
+  "related_procurement": ["procurement/payment-api-selection/"],
+  "decision_paths": [
+    {"scenario": "documented_payment_lifecycle", "shortlist": ["yookassa-api"], "next_document": "apis/yookassa-api/README.md", "main_risk": "Merchant-specific commission and limits"},
+    {"scenario": "two_stage_or_subscription_payments", "shortlist": ["cloudpayments-api"], "next_document": "apis/cloudpayments-api/README.md", "main_risk": "Contract, production limits and SLA require confirmation"},
+    {"scenario": "tbank_settlement_and_business_account", "shortlist": ["tbank-internet-acquiring-api"], "next_document": "apis/tbank-internet-acquiring-api/README.md", "main_risk": "Exact acquiring API contract is onboarding-dependent"},
+    {"scenario": "provider_selection_before_contract", "shortlist": ["yookassa-api", "cloudpayments-api", "tbank-internet-acquiring-api"], "next_document": "comparisons/payment-acceptance-russia/README.md", "main_risk": "No comparable quote, SLA or live benchmark yet"}
+  ],
+  "open_questions": ["merchant eligibility", "exact commission and settlement", "production quotas", "SLA", "receipts and 54-FZ responsibilities", "storage and SaaS rights", "fraud and dispute handling"],
+  "sources": ["apis/yookassa-api/README.md", "apis/cloudpayments-api/README.md", "apis/tbank-internet-acquiring-api/README.md", "comparisons/payment-acceptance-russia/README.md", "procurement/payment-api-selection/README.md"]
+}

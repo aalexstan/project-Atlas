@@ -83,6 +83,8 @@ Suggested targets:
 
 Every profile must display its last verified date.
 
+Operational ownership, stale-risk states and review triggers are defined in [Review Cadence](REVIEW_CADENCE.md).
+
 ## Definition of Done
 
 A profile reaches **Verified** when it includes confirmed identity, purpose, authentication, public pricing status, limits or explicit unknown states, commercial-use notes, at least two realistic alternatives, sources, and a verification date.

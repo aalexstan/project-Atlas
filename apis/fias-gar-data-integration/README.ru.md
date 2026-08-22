@@ -1,0 +1,106 @@
+# Интеграция с ФИАС/ГАР
+
+[English version](README.md)
+
+> Официальный российский адресный реестр для построения собственной адресной базы и инфраструктуры проверки.
+
+## Статус исследования
+
+| Поле | Значение |
+|---|---|
+| Уровень | Reviewed |
+| Последняя проверка | 2026-07-29 |
+| Поставщик | ФНС России |
+| Статус продукта | Active |
+| Live integration test | Не проводился |
+
+## Краткий вывод
+
+**Лучше всего подходит для:** команд, которым нужна официальная российская адресная provenance и которые готовы строить собственный ETL, хранение, индекс, поиск и логику проверки.
+
+**Не подходит, когда:** нужен готовый low-latency API подсказок, качество геокодирования из коробки, коммерческий SLA или простая per-request интеграция.
+
+**Итог:** ФИАС/ГАР - официальный реестровый путь, а не коммерческий адресный API. Он может быть правильной основой для собственной адресной базы, но не заменяет DaData, Яндекс или 2GIS без разработки.
+
+## Что это
+
+ГАР - Государственный адресный реестр, государственный информационный ресурс со сведениями об адресах РФ. ФИАС - федеральная информационная система ФНС, которая обеспечивает формирование, ведение и использование ГАР.
+
+Карточка названа "data integration", потому что официальные страницы подтверждают идентичность реестра и developer access modes, но в просмотренной публичной документации нет полной REST-style спецификации. Материалы ФНС упоминают файловые выгрузки, СМЭВ и API-сервисы; Atlas не считает видимые endpoints сайта поддерживаемыми публичными API, пока ФНС прямо не описывает их как такие.
+
+## Сценарии
+
+| Сценарий | Fit | Почему |
+|---|---|---|
+| Собственная адресная база РФ | Strong | ГАР - официальный адресный реестр. |
+| Official provenance и регулируемые процессы | Strong | Источники ФНС подтверждают правовую роль ГАР/ФИАС. |
+| Проверка адреса по официальным объектам | Medium | Реестровая база сильна, но matching и quality logic нужно строить. |
+| Подсказки адреса в форме | Weak сам по себе | Нужен собственный поисковый индекс и UX слой. |
+| Прямое/обратное геокодирование | Unknown | Публичная официальная capability не подтверждена в этом исследовании. |
+| Маршрутизация | Not applicable | ГАР не является routing product. |
+
+## Модель доступа
+
+| Канал | Статус | Примечание |
+|---|---|---|
+| Публичный поиск адреса | Verified | Портал ФИАС предоставляет поиск адреса. |
+| Открытые данные / файловые выгрузки | Verified как официальный open-data route | Open-data catalog ФНС указывает dataset `7707329152-fias`, XML format, текущий ZIP data URL, structure ZIP, weekly updates и previous releases. |
+| СМЭВ | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает ежедневную публикацию через СМЭВ; eligibility и процесс неизвестны в этой карточке. |
+| API-сервисы | Verified как пункт developer section и официальный integration route | Архивный материал ФНС описывает online API batch provision by request; public method catalog, base URL, auth и schemas не были видны в просмотренных static pages. |
+| Search / Frontend web pages | Verified как пользовательский портал | Не считать найденные web endpoints поддерживаемыми integration APIs без явной документации ФНС. |
+| Legacy downloads КЛАДР | Sunset path verified | ФНС сообщает, что публикация КЛАДР становится квартальной с 2026-07-01, полугодовой с 2027-01-01 и прекращается с 2028-01-01. |
+
+## Последствия для внедрения
+
+Использование ГАР как источника обычно означает, что нужно построить:
+
+- загрузку и обновления;
+- схему хранения;
+- поисковый индекс;
+- парсинг и нормализацию адресов;
+- модель уверенности matching;
+- обработку изменений;
+- мониторинг и поддержку.
+
+Эта стоимость должна входить в TCO. Реестровый feed может быть дешевле per request и одновременно дороже в эксплуатации, чем коммерческий API.
+
+## Цены и права
+
+| Пункт | Статус |
+|---|---|
+| Public/open registry positioning | verified |
+| Цена API-сервисов | unknown |
+| Open-data file format | XML ZIP указан в official open-data catalog |
+| Open-data update cadence | weekly в official open-data catalog |
+| Current open-data package metadata | official page lists `data-28072026-structure-20191024.zip`, last modification `2026-07-28`, actuality date `2026-08-02`, previous releases for `2026-07-24`, `2026-07-21`, `2026-07-17`, `2026-07-14` |
+| Current data archive headers | official data ZIP отвечает как `application/zip` с `Content-Length: 57170912095`; XML payload не скачивался |
+| Current data archive file index | ZIP64 central directory inspected через HTTP Range; 1,739 entries, 1,738 XML files, 96 regional directories, root `version.txt` = `2026.07.28` / `v.278` |
+| Root dictionary XML payload | 10 small root-level dictionary XML files inspected; row counts captured для address object types, room/house/apartment types, operation types, parameter types, object levels и normative document types/kinds |
+| Sample regional XML payload | regional directories `99/`, `87/` и `82/` inspected как samples; `99/` has 18 XML files и 161,757 rows; `87/` has 18 XML files, 379,440 rows и CRC/size validation ok; `82/` is a sparse sample with 18 XML files, 14 rows и CRC/size validation ok |
+| Цена файловых выгрузок | monetary price не указана на просмотренной open-data page |
+| Eligibility СМЭВ | unknown |
+| Structure reference | structure ZIP inspected; внутри 22 XSD files для address objects, houses, rooms, apartments, car places, land plots, hierarchies, normative documents, parameters, register objects и change history |
+| Current package model | unknown; structure XSDs, metadata и central directory alone не доказывают full, delta или mixed semantics |
+| API schemas | unknown |
+| Commercial SaaS / redistribution rights | needs legal review |
+| SLA | unknown |
+
+## Альтернативы
+
+| Альтернатива | Когда лучше | Главный trade-off |
+|---|---|---|
+| [`DaData Address APIs`](../dadata-address-api/README.ru.md) | Нужны готовые российские подсказки, стандартизация и геокодирование | Коммерческие цены и договорные ограничения. |
+| [`Yandex Maps Geocoder API`](../yandex-maps-geocoder-api/README.ru.md) | Нужно геокодирование для показа на Яндекс Картах | Не реестровая проверка; есть display/storage restrictions. |
+| [`2GIS Geocoder API`](../2gis-geocoder-api/README.ru.md) | Нужно геокодирование в сценариях карты/каталога 2GIS | Не полная реестровая база; важны storage/caching terms. |
+
+## Рекомендация по сценарию
+
+Выбирайте ФИАС/ГАР, когда официальная российская адресная provenance и долгосрочное владение данными важнее скорости внедрения. Current open-data page даёт полезную package metadata; Atlas inspected structure ZIP, current data ZIP central directory, small root dictionary XML files и sample regional directories `99/`, `87/` and `82/`. Remaining regional XML payloads, national row counts и full/delta semantics остаются недоказанными. Выбирайте коммерческий API, когда главная задача - быстрый ввод адреса, геокодирование, поддержка и предсказуемая интеграция.
+
+## Доказательства
+
+См. [`evidence.ru.md`](evidence.ru.md).
+
+## История изменений
+
+См. [`changes.ru.md`](changes.ru.md).

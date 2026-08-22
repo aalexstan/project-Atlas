@@ -3,6 +3,16 @@
 Дата исследования: 2026-06-23
 Статус: мигрировано из Pass #1; требует повторной валидации
 
+## API-first migration note
+
+Дата связки: 2026-07-29
+
+Эта dataset-centric карточка сохранена как **Legacy / supporting research**. Активная API-first карточка для официального маршрута адресного реестра:
+
+- `apis/fias-gar-data-integration/README.md`
+
+Текущий вывод Atlas: официально подтвержденный маршрут ФИАС/ГАР следует рассматривать как registry/data-integration route ФНС, а не как готовый low-latency REST API для подсказок, нормализации или геокодирования. История `kladr-api.ru` и API Portal ниже сохранена как provenance/source-risk note, но не используется как официальный источник ФИАС/ГАР.
+
 ## Название
 
 Адресный реестр России.
@@ -82,8 +92,10 @@
 
 - REST API: подтверждено по API Portal.
 - Облачный доступ: подтверждено по API Portal.
-- Официальный государственный источник ФИАС: требует отдельного исследования.
-- CSV, XML, FTP, OpenData, Webhook, GraphQL: не подтверждено в текущей базе.
+- Официальный государственный источник ФИАС/ГАР: повторно исследован в активной карточке `apis/fias-gar-data-integration/`.
+- Official open-data/file route: подтвержден в активной карточке как XML ZIP route ФНС с weekly updates по official open-data catalog; archive contents не инспектировались.
+- SMEV и API services: подтверждены как official integration route entries, но method catalog, auth, schemas, quotas, cost и SLA остаются неизвестными.
+- CSV, FTP, Webhook, GraphQL: не подтверждено в текущей базе.
 
 ## Неизвестные места
 
@@ -100,12 +112,23 @@
 - Высокий риск неправильного владельца или устаревшей документации.
 - Лицензионный риск.
 - Риск зависимости от невалидированного домена `kladr-api.ru`.
+- Риск смешивания legacy KLADR/unofficial wrapper claims с официальной GAR/FIAS integration model.
+- Риск ошибочного сравнения official registry feed с turnkey commercial address suggestions/geocoding API без учета ETL, storage, indexing, matching и support costs.
 
 ## Связанные старые карточки
 
 - `catalog/api-fias.md`
 - `companies/fias.md`
 - `research/documentation-link-risk.md`
+
+## Связанные активные материалы
+
+- `apis/fias-gar-data-integration/README.md`
+- `apis/fias-gar-data-integration/evidence.md`
+- `comparisons/address-normalization-geocoding/README.md`
+- `needs/address-normalization-geocoding/README.md`
+- `research/address-geocoding/2026-07-29-fias-gar.md`
+- `research/address-geocoding/2026-07-29-fias-gar-open-data.md`
 
 ## Источники
 

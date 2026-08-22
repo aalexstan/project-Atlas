@@ -1,0 +1,89 @@
+{
+  "id": "2gis-places-api",
+  "name": "2GIS Places API",
+  "provider": {
+    "name": "2GIS",
+    "website": "https://dev.2gis.com/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "organization search",
+    "building and place search",
+    "2GIS directory-powered map search",
+    "retrieving place records after suggestion selection"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "monthly_units_package",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "places_packages": {
+      "10000_units": "6700 RUB",
+      "30000_units": "15000 RUB",
+      "50000_units": "20000 RUB",
+      "100000_units": "30000 RUB",
+      "1000000_units": "100000 RUB",
+      "5000000_units": "250000 RUB"
+    },
+    "annual_discount": "provider_reports_10_percent_discount_for_annual_subscription",
+    "on_demand_fields": "some methods and fields require extra paid access"
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "key",
+    "issued_by": "2GIS Platform Manager"
+  },
+  "sandbox": {
+    "demo_key": "available for one month",
+    "demo_search_limit": "1000 total Search-service requests",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "search_units_per_minute": 600,
+    "billing_unit": "successful request",
+    "successful_request_status": "meta.code 200 in response"
+  },
+  "openapi": {
+    "status": "unknown",
+    "documentation": "https://docs.2gis.com/en/api/search/places/overview"
+  },
+  "capabilities": {
+    "organization_search": "verified",
+    "place_search": "verified",
+    "building_search": "verified",
+    "address_suggestions": "related_2gis_suggest_api",
+    "address_cleaning": "not_documented_as_primary_capability",
+    "address_validation": "directory_search_not_registry_validation",
+    "direct_geocoding": "separate_2gis_geocoder_api",
+    "reverse_geocoding": "separate_2gis_geocoder_api",
+    "routing": "separate_navigation_products_not_in_scope",
+    "batch": "unknown"
+  },
+  "coverage": {
+    "geography": "provider_catalog_coverage_requires_scenario_check",
+    "directory_updates": "provider_reports_monthly_directory_updates"
+  },
+  "data_rights": {
+    "storage": "contract_sensitive",
+    "caching": "official_webapi_offer_says_caching_is_not_provided",
+    "display": "needs_contract_review",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review"
+  },
+  "sources": [
+    "https://docs.2gis.com/en/api/search/places/overview",
+    "https://docs.2gis.com/en/platform-manager/subscription/pricing",
+    "https://law.2gis.ru/offer-license-agreement-webapi"
+  ],
+  "open_questions": [
+    "Public SLA and production support tiers",
+    "OpenAPI/Swagger availability",
+    "Exact on-demand methods and fields required for the user scenario",
+    "Batch or asynchronous place search/enrichment support",
+    "Exact storage, caching, attribution, display, SaaS and redistribution rights",
+    "Independent benchmark for target cities and business categories"
+  ]
+}

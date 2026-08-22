@@ -1,0 +1,17 @@
+{
+  "id": "smsru-api",
+  "name": "SMS.RU API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "SMS.RU", "website": "https://sms.ru/"},
+  "status": "active",
+  "best_for": ["Russian SMS notifications", "OTP and voice verification", "delivery status webhooks"],
+  "pricing": {"model": "per_message_or_provider_tariff", "public_price_matrix": "not_profiled"},
+  "authentication": "api_id_or_provider_token_pattern",
+  "sandbox": "unknown_publicly",
+  "rate_limits": "daily_limit_endpoint_documented; exact production limits require confirmation",
+  "openapi": "not_found_in_reviewed_sources",
+  "sources": ["https://sms.ru/docs/api", "https://sms.ru/docs/api/api_group_sms/send", "https://sms.ru/docs/api/api_group_webhook"],
+  "open_questions": ["operator prices", "throughput", "sender approval", "delivery SLA", "retention and OTP terms"]
+}

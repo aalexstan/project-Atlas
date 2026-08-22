@@ -64,3 +64,9 @@ The process should produce scenario-based conclusions:
 - [Scorecard methodology](docs/SCORING.md)
 - [TCO methodology](docs/TCO.md)
 - [Evaluation-sample policy](docs/SAMPLE_POLICY.md)
+
+## Provider-Specific Requests
+
+- [Kontur.Focus API provider request](../../research/kontur-focus/provider-request.md)
+- [Seldon.Basis API provider request](../../research/seldon-basis/provider-request.md)
+- [GLOBAS.API provider request](../../research/globas-api/provider-request.md)

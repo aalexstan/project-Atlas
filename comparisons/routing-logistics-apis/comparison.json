@@ -1,0 +1,33 @@
+{
+  "id": "routing-logistics-apis",
+  "title": {"en": "Routing and Logistics APIs", "ru": "API маршрутизации и логистики"},
+  "status": "reviewed",
+  "verified_on": "2026-08-22",
+  "live_testing": false,
+  "candidates": [
+    {"id": "yandex-maps-routing-api", "product_class": "hosted_route_details_and_matrix", "best_for": ["Yandex Maps-centered route details", "distance matrices"], "public_pricing": "unknown_for_target_scope", "key_risk": "product/tariff boundary and display/storage rights"},
+    {"id": "2gis-routing-api", "product_class": "hosted_or_on_premise_routing", "best_for": ["routes", "multiple origin-destination pairs", "2GIS cloud or on-premise"], "public_pricing": "requires_tariff_review", "key_risk": "quota, SLA and data-rights scope"},
+    {"id": "osrm-routing-engine", "product_class": "open_source_routing_engine", "best_for": ["self-hosting", "route and table services", "operator control"], "public_pricing": "not_commercial_api_price", "key_risk": "OSM data pipeline and operational ownership"}
+  ],
+  "matrix": [
+    {"criterion": "point_to_point_route", "yandex-maps-routing-api": "documented", "2gis-routing-api": "documented", "osrm-routing-engine": "documented"},
+    {"criterion": "distance_matrix", "yandex-maps-routing-api": "documented", "2gis-routing-api": "multiple_pairs_documented", "osrm-routing-engine": "table_service_documented"},
+    {"criterion": "multi_stop_optimization", "yandex-maps-routing-api": "separate_yandex_routing_product", "2gis-routing-api": "route_planner_separate_product", "osrm-routing-engine": "trip_ordering_not_full_delivery_optimizer"},
+    {"criterion": "traffic_and_eta", "yandex-maps-routing-api": "unknown", "2gis-routing-api": "unknown_for_target_contract", "osrm-routing-engine": "depends_on_dataset_and_profile"},
+    {"criterion": "truck_restrictions", "yandex-maps-routing-api": "unknown", "2gis-routing-api": "needs_confirmation", "osrm-routing-engine": "profile_and_data_dependent"},
+    {"criterion": "cloud_hosted", "yandex-maps-routing-api": "yes", "2gis-routing-api": "yes", "osrm-routing-engine": "no_upstream_commitment"},
+    {"criterion": "self_hosted", "yandex-maps-routing-api": "unknown", "2gis-routing-api": "on_premise_option_documented", "osrm-routing-engine": "yes"},
+    {"criterion": "bulk_and_batch", "yandex-maps-routing-api": "unknown", "2gis-routing-api": "method_and_quota_review_required", "osrm-routing-engine": "operator_defined"},
+    {"criterion": "storage_caching_display", "yandex-maps-routing-api": "contract_review_required", "2gis-routing-api": "contract_review_required", "osrm-routing-engine": "operator_controlled_but_OSM_licence_review"},
+    {"criterion": "sla_support", "yandex-maps-routing-api": "unknown", "2gis-routing-api": "unknown", "osrm-routing-engine": "operator_owned"},
+    {"criterion": "live_test", "yandex-maps-routing-api": "not_performed", "2gis-routing-api": "not_performed", "osrm-routing-engine": "not_performed"}
+  ],
+  "recommendations": {
+    "simple_route_or_matrix": ["yandex-maps-routing-api", "2gis-routing-api"],
+    "2gis_on_premise_requirement": ["2gis-routing-api"],
+    "self_hosted_control": ["osrm-routing-engine"],
+    "delivery_route_optimization": ["request_separate_yandex_or_2gis_logistics_product_scope; do_not_infer_from_basic_routing"]
+  },
+  "sources": ["research/routing-logistics/2026-08-22-yandex.md", "research/routing-logistics/2026-08-22-2gis.md", "research/routing-logistics/2026-08-22-osrm.md"],
+  "open_questions": ["What exact traffic, vehicle and matrix semantics are required?", "Will routes be shown on a provider map or stored and redistributed?", "Is route planning or only route calculation needed?", "What benchmark sample and production SLO should be used?"]
+}

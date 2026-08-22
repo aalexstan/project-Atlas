@@ -1,0 +1,20 @@
+{
+  "id": "yandex-rasp-api",
+  "name": "Yandex Rasp API",
+  "provider": {"name": "Yandex", "website": "https://yandex.ru/dev/rasp/doc/ru/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["free public intercity timetable features", "station schedules", "route search between stations"],
+  "pricing": {"status": "free_public_use_subject_to_terms", "api_price": "not_applicable_under_reviewed_terms"},
+  "authentication": {"type": "api_key", "parameter": "apikey_or_authorization_header", "activation": "developer dashboard and email activation"},
+  "sandbox": {"status": "not_documented_in_reviewed_sources", "notes": "No Atlas API key or live call was used."},
+  "rate_limits": {"status": "unknown_publicly_in_reviewed_sources"},
+  "openapi": {"status": "unknown", "documentation": "https://yandex.ru/dev/rasp/doc/ru/"},
+  "product_class": "intercity_transit_timetable_api",
+  "capabilities": {"station_list": "documented", "station_schedule": "documented", "point_to_point_schedule": "documented", "route_stations": "documented", "city_routing": "separate_yandex_maps_problem", "real_time_city_transit": "not_confirmed"},
+  "data_rights": {"public_free_use": "only_free_public_sites_or_mobile_apps_under_reviewed_terms", "attribution": "required", "storage": "temporary_caching_only_under_reviewed_terms", "paid_saas": "not_allowed_without_written_agreement", "redistribution": "not_confirmed"},
+  "sources": ["https://yandex.ru/dev/rasp/doc/ru/", "https://yandex.ru/dev/rasp/doc/ru/concepts/access", "https://yandex.ru/dev/rasp/doc/ru/reference/stations-list", "https://yandex.ru/dev/rasp/doc/ru/reference/schedule-point-point", "https://yandex.ru/legal/timetable_api/ru/", "research/transit-schedules/2026-08-22-yandex-rasp.md"],
+  "open_questions": ["What quotas, rate limits, support and SLA apply?", "Can a commercial licence be obtained for paid or closed SaaS?", "What freshness and coverage benchmark applies to target routes?"]
+}

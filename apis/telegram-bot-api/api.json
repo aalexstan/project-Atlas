@@ -1,0 +1,17 @@
+{
+  "id": "telegram-bot-api",
+  "name": "Telegram Bot API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "Telegram", "website": "https://telegram.org/"},
+  "status": "active",
+  "best_for": ["bots", "interactive notifications", "Telegram Mini Apps", "chat-based product interfaces"],
+  "pricing": {"model": "platform_rules", "public_api_fee": "not_established_as_a_general_message_fee"},
+  "authentication": "bot_token",
+  "sandbox": "unknown_publicly; bot registration required",
+  "rate_limits": "scenario_dependent_and_not_fully_profiled",
+  "openapi": "not_found_in_reviewed_sources",
+  "sources": ["https://core.telegram.org/bots/api", "https://core.telegram.org/bots", "https://core.telegram.org/api/bots/webapps"],
+  "open_questions": ["production limits", "paid broadcast conditions", "retention", "commercial display and SaaS terms"]
+}

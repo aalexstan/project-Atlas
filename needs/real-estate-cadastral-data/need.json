@@ -1,0 +1,35 @@
+{
+  "id": "real-estate-cadastral-data",
+  "name": "Select a real-estate or cadastral data source",
+  "name_ru": "Выбрать источник данных о недвижимости или кадастре",
+  "status": "reviewed",
+  "last_verified": "2026-08-23",
+  "primary_question": "Which official service or API should I use for EGRN evidence, cadastral lookup, spatial context or an internal address database?",
+  "related_apis": [
+    "rosreestr-egrn-access",
+    "dadata-address-api",
+    "fias-gar-data-integration"
+  ],
+  "related_comparisons": [
+    "real-estate-cadastral-data"
+  ],
+  "related_procurement": [
+    "procurement/real-estate-cadastral-data-selection/README.md"
+  ],
+  "decision_paths": [
+    {"scenario": "legally_significant_evidence", "shortlist": ["rosreestr-egrn-access"], "next_document": "apis/rosreestr-egrn-access/README.md"},
+    {"scenario": "map_and_spatial_context", "shortlist": ["NSPD"], "next_document": "research/real-estate-cadastral/decision.md"},
+    {"scenario": "address_normalization_and_cadastral_number", "shortlist": ["dadata-address-api"], "next_document": "apis/dadata-address-api/README.md"},
+    {"scenario": "own_address_registry", "shortlist": ["fias-gar-data-integration"], "next_document": "apis/fias-gar-data-integration/README.md"}
+  ],
+  "open_questions": [
+    "Must the result be a legally significant extract?",
+    "Is the object identifier already known?",
+    "Are map geometry or property-right facts required?",
+    "What volume, latency, storage and customer-display rights are required?"
+  ],
+  "sources": [
+    "comparisons/real-estate-cadastral-data/comparison.json",
+    "research/real-estate-cadastral/decision.md"
+  ]
+}

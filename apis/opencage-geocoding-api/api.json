@@ -1,0 +1,112 @@
+{
+  "id": "opencage-geocoding-api",
+  "name": "OpenCage Geocoding API",
+  "provider": {
+    "name": "OpenCage GmbH",
+    "website": "https://opencagedata.com/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "hosted international forward geocoding",
+    "hosted international reverse geocoding",
+    "open-data geocoding with permanent storage-friendly public terms",
+    "commercial alternative to public Nominatim or self-hosted Nominatim"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "subscriptions_and_one_time_plans",
+    "currency_displayed_in_review": "PLN_zl",
+    "verified_on": "2026-07-29",
+    "free_trial": "2500 requests/day; 1 request/second; testing only; no credit card required; files up to 100 rows",
+    "monthly_examples": {
+      "x_small": "zl 205/month; 10000 requests/day; 15 requests/second",
+      "small": "zl 510/month; 30000 requests/day; 20 requests/second",
+      "medium": "zl 2050/month; 125000 requests/day; 25 requests/second",
+      "large": "zl 4100/month; 300000 requests/day; 40 requests/second",
+      "enterprise": "from zl 8200/month; custom limits, terms and SLAs"
+    },
+    "taxes": "reviewed pricing page states all prices are inclusive of applicable VAT",
+    "overage": "subscription limits are soft; repeated overages may require moving to a higher tier"
+  },
+  "authentication": {
+    "type": "api_key",
+    "parameter": "key",
+    "notes": "API key is passed as a query parameter; no HTTP auth header required according to official docs."
+  },
+  "sandbox": {
+    "free_trial": "2500 geocoding API requests/day for testing; no credit card required",
+    "test_keys": "official docs publish special API keys for status-code testing",
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "free_trial_daily": 2500,
+    "free_trial_rps": 1,
+    "paid_rps_examples": {
+      "x_small": 15,
+      "small": 20,
+      "medium": 25,
+      "large": 40
+    },
+    "paid_daily_examples": {
+      "x_small": 10000,
+      "small": 30000,
+      "medium": 125000,
+      "large": 300000
+    },
+    "hard_limits": "free trial and one-time plan customers",
+    "soft_limits": "subscription customers"
+  },
+  "openapi": {
+    "status": "available_in_reviewed_docs",
+    "documentation": "https://opencagedata.com/api"
+  },
+  "capabilities": {
+    "address_suggestions": "separate_geosearch_service_not_primary_scope",
+    "address_cleaning": "not_documented_as_cleaning_or_normalization_api",
+    "address_validation": "confidence_and_components_not_registry_validation",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "not_primary_scope",
+    "routing": "not_applicable",
+    "batch": "api_does_not_accept_multiple_locations_per_request; spreadsheet_upload_and_parallel_requests_are_provider_routes"
+  },
+  "coverage": {
+    "geography": "worldwide_provider_reported_requires_benchmark",
+    "coordinate_system": "WGS84_EPSG_4326",
+    "data_model": "open_data_sources_with_attribution_and_license_obligations",
+    "datasources": [
+      "OpenStreetMap",
+      "GeoNames",
+      "OpenAddresses",
+      "Natural Earth",
+      "other_sources_listed_by_provider"
+    ]
+  },
+  "data_rights": {
+    "storage": "provider_terms_allow_permanent_storage_of_api_results",
+    "caching": "provider_terms_allow_caching_or_storing_results_as_long_as_useful",
+    "attribution": "data licenses and OpenStreetMap ODbL obligations must be respected",
+    "redistribution": "needs_legal_review",
+    "saas_embedding": "needs_contract_and_legal_review",
+    "model_training": "unknown"
+  },
+  "sources": [
+    "https://opencagedata.com/api",
+    "https://opencagedata.com/pricing",
+    "https://opencagedata.com/terms",
+    "https://opencagedata.com/credits",
+    "https://opencagedata.com/gdpr"
+  ],
+  "open_questions": [
+    "Legal treatment of ODbL, attribution and derived databases for the intended product",
+    "Whether redistribution, resale, white-label SaaS embedding or API proxying is allowed under the target contract",
+    "Exact enterprise SLA/support terms beyond public custom-SLA positioning",
+    "Benchmark quality for target countries, languages, house-level precision and latency",
+    "Whether OpenCage Geosearch should be evaluated as a separate autocomplete product",
+    "DPA/security requirements for submitted addresses, coordinates and optional no_record usage",
+    "Operational fit of one-location-per-request API model for large batch workloads"
+  ]
+}

@@ -6,8 +6,13 @@
   },
   "status": "reviewed",
   "verified_on": "2026-07-23",
+  "partial_rechecks": {
+    "globas_api": "2026-07-28",
+    "fts_format_cutover_public_pages": "2026-08-05",
+    "fts_format_conflict_official_sources": "2026-08-15"
+  },
   "next_review": {
-    "fts_formats": "2026-08-03",
+    "fts_formats": "credentialed_access_or_official_clarification_required",
     "full": "2026-10-21"
   },
   "region": [
@@ -59,7 +64,21 @@
       "verdict": "strong_for_broad_analytics_and_cis"
     },
     {
-      "id": "fts-egrul-egrip-integration",
+      "id": "globas-api",
+      "product_class": "enterprise_data_integration",
+      "best_for": [
+        "crm_erp_edi_enrichment",
+        "mass_counterparty_checks",
+        "internal_database_enrichment",
+        "portfolio_monitoring"
+      ],
+      "public_pricing": false,
+      "demo": "globas_system_test_reported_api_trial_not_confirmed",
+      "published_limit": "unknown_publicly_in_this_research",
+      "verdict": "additional_enterprise_candidate_requires_documentation_pilot_and_quote"
+    },
+    {
+      "id": "fns-egrul-egrip-integration",
       "product_class": "primary_registry_bulk_data",
       "best_for": [
         "internal_registry_database",
@@ -70,6 +89,9 @@
       "annual_price_rub_per_registry": 150000,
       "annual_price_rub_both_registries_inferred": 300000,
       "interface": "xml_archives_and_daily_deltas",
+      "format_cutover_public_pages_rechecked": "2026-08-15",
+      "official_source_conflict": true,
+      "credentialed_ftp_behavior_verified": false,
       "verdict": "best_primary_source_not_turnkey_due_diligence"
     }
   ],
@@ -80,16 +102,29 @@
       "kontur-focus-api",
       "seldon-basis-api"
     ],
+    "enterprise_data_enrichment_rfp": [
+      "kontur-focus-api",
+      "seldon-basis-api",
+      "globas-api"
+    ],
     "cis_and_relationship_analytics": "seldon-basis-api",
-    "internal_registry_platform": "fts-egrul-egrip-integration",
+    "additional_enterprise_candidate": "globas-api",
+    "internal_registry_platform": "fns-egrul-egrip-integration",
     "aml_115fz": "evaluate_kontur_compliance_api_separately"
   },
+  "partial_updates": [
+    {
+      "date": "2026-07-28",
+      "scope": "Added GLOBAS.API from official Credinform sources without re-verifying the full comparison."
+    }
+  ],
   "gold_blockers": [
     "live_credentials",
     "common_benchmark",
     "contract_and_data_rights_review",
     "comparable_vendor_quotes",
-    "latency_and_availability_measurements"
+    "latency_and_availability_measurements",
+    "globas_api_specification_and_quote"
   ],
   "sources": [
     "https://dadata.ru/api/find-party/",
@@ -99,8 +134,12 @@
     "https://focus.kontur.ru/site/demo/requisites",
     "https://seldongroup.ru/system/basis/api",
     "https://seldongroup.ru/functions",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
-    "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/"
-  ]
+    "https://globas.credinform.ru/ru-RU/servisy/globas-api",
+    "https://globas.credinform.ru/ru-RU/servisy",
+        "https://globas.credinform.ru/ru-RU/osisteme/istochniki",
+        "https://www.nalog.gov.ru/rn77/service/egrip2/",
+        "https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/",
+        "https://www.nalog.gov.ru/rn77/service/egrip2/access_order/",
+        "https://www.nalog.gov.ru/rn77/about_fts/docs/16493030/"
+    ]
 }

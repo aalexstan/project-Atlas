@@ -1,0 +1,20 @@
+{
+  "id": "seldon-tenders-api",
+  "name": "API.Seldon.Tenders",
+  "provider": {"name": "Seldon", "website": "https://seldongroup.ru/system/1.7/api"},
+  "status": "active",
+  "maturity": "discovered",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["procurement data integration into CRM", "filtered tender discovery", "notices, protocols, contracts and documents subject to contract scope"],
+  "pricing": {"status": "quote_required_or_not_confirmed_in_public_api_material", "api_price": "unknown"},
+  "authentication": {"status": "unknown_publicly", "notes": "Official page confirms API product but not credentials or protocol."},
+  "sandbox": {"status": "unknown", "notes": "No Atlas credentialed or service test was performed."},
+  "rate_limits": {"status": "unknown"},
+  "openapi": {"status": "unknown", "documentation": "https://seldongroup.ru/system/1.7/api"},
+  "product_class": "commercial_aggregated_procurement_api",
+  "capabilities": {"notices": "provider_reported_official_page", "protocols": "provider_reported_official_page", "contracts": "provider_reported_official_page", "documents": "provider_reported_official_page", "filter_delivery": "provider_reported_order_based_model", "notice_number_lookup": "provider_reported_official_page", "rest_graphql_webhook": "unknown"},
+  "data_rights": {"storage": "unknown", "caching": "unknown", "redistribution": "unknown", "saas": "unknown", "sources": "aggregated_open_sources_claimed_by_provider; full source list unknown"},
+  "sources": ["https://seldongroup.ru/system/1.7/api", "https://seldongroup.ru/system/api", "research/procurement-tender/2026-08-22-eis-seldon-recheck.md"],
+  "open_questions": ["What endpoint catalog, protocol and response schemas are available?", "How are filters ordered, delivered and monitored?", "What are API-specific price, limits, SLA and support terms?", "What storage, caching, SaaS, redistribution and resale rights apply?", "What sources, freshness and document coverage are included?"]
+}

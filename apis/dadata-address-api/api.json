@@ -1,0 +1,100 @@
+{
+  "id": "dadata-address-api",
+  "name": "DaData Address APIs",
+  "provider": {
+    "name": "DaData / LLC Data Q",
+    "website": "https://dadata.ru/"
+  },
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-07-29",
+  "live_tested": false,
+  "best_for": [
+    "Russian address autocomplete in forms and CRM",
+    "backend address standardization for existing Russian records",
+    "direct geocoding for Russian addresses",
+    "reverse geocoding for Russian coordinates",
+    "FIAS/GAR and KLADR identifiers in address workflows"
+  ],
+  "pricing": {
+    "status": "public",
+    "model": "subscription_plus_pay_per_record",
+    "currency": "RUB",
+    "verified_on": "2026-07-29",
+    "free_tier": "10000 subscription-service requests per day after registration",
+    "subscription_notes": "Address suggestions and reverse geocoding are subscription services; daily request limit is shared across subscription services.",
+    "pay_per_record": {
+      "address_cleaning": "0.20 RUB per address",
+      "direct_geocoding": "0.20 RUB per address",
+      "cadastral_lookup": "0.20 RUB per address"
+    },
+    "warning": "Do not estimate direct geocoding or cleaning from subscription price alone."
+  },
+  "authentication": {
+    "suggestions": "Authorization: Token <API_KEY>",
+    "cleaning_and_direct_geocoding": "Authorization: Token <API_KEY> plus X-Secret: <SECRET_KEY>"
+  },
+  "sandbox": {
+    "public_playground": true,
+    "free_tier_after_registration": true,
+    "notes": "No Atlas credentialed live test was performed."
+  },
+  "rate_limits": {
+    "suggestions": {
+      "requests_per_second_per_ip": 30,
+      "new_connections_per_minute_per_ip": 60,
+      "query_max_characters": 300
+    },
+    "cleaning": {
+      "requests_per_second_per_ip": 20,
+      "new_connections_per_minute_per_ip": 60,
+      "records_per_request": 1,
+      "browser_javascript": "not_supported"
+    },
+    "subscription_daily_limit": "depends on plan"
+  },
+  "openapi": {
+    "status": "provider_published_for_api_family",
+    "needs_endpoint_scope_recheck": true
+  },
+  "capabilities": {
+    "address_suggestions": "verified",
+    "address_cleaning": "verified",
+    "address_validation": "quality_codes_available_for_cleaning",
+    "direct_geocoding": "verified",
+    "reverse_geocoding": "verified",
+    "organization_search": "not_in_scope_use_dadata_company_profile",
+    "routing": "not_applicable",
+    "batch": "limited_one_address_per_cleaning_request_publicly_documented"
+  },
+  "coverage": {
+    "suggestions": "provider_reports_all_countries_city_level_russia_to_apartment_belarus_kazakhstan_uzbekistan_to_house",
+    "cleaning": "russia_only",
+    "direct_geocoding": "russia_only",
+    "reverse_geocoding": "russia_only"
+  },
+  "data_rights": {
+    "suggestions_batch_processing": "not_allowed_for_automatic_address_processing_by_public_docs",
+    "api_processed_cleaning_storage": "provider_reports_not_stored",
+    "redistribution": "unknown",
+    "saas_embedding": "needs_contract_review"
+  },
+  "sources": [
+    "https://dadata.ru/api/suggest/address/",
+    "https://dadata.ru/api/clean/address/",
+    "https://dadata.ru/api/geocode/",
+    "https://dadata.ru/api/geolocate/",
+    "https://dadata.ru/api/",
+    "https://dadata.ru/pricing/",
+    "https://dadata.ru/clean/",
+    "https://dadata.ru/blog/instructions/integration-guide/",
+    "https://support.dadata.ru/knowledge-bases/4/articles/3232-kak-vyibrat-mezhdu-standartizatsiej-i-podskazkami"
+  ],
+  "open_questions": [
+    "Public SLA and support tiers for address APIs",
+    "Contractual storage, caching, redistribution and SaaS rights",
+    "Documented asynchronous batch API availability beyond one-record cleaning calls",
+    "Endpoint-level OpenAPI coverage and versioning policy",
+    "Independent benchmark for address match quality and coordinate precision"
+  ]
+}

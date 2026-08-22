@@ -1,5 +1,7 @@
 # Evidence — Kontur.Focus API
 
+[Русская версия](evidence.ru.md)
+
 | Claim | Source | Checked | Status |
 |---|---|---|---|
 | Provider offers automatic counterparty checks through API | https://focus.kontur.ru/site/api | 2026-07-23 | verified |

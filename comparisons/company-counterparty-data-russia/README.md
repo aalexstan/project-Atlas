@@ -2,18 +2,18 @@
 
 [Русская версия](README.ru.md)
 
-> Independent comparison of DaData, Kontur.Focus API, Seldon.Basis API, and the official Russian Federal Tax Service EGRUL/EGRIP integration service.
+> Independent comparison of DaData, Kontur.Focus API, Seldon.Basis API, GLOBAS.API, and the official Russian Federal Tax Service EGRUL/EGRIP integration service.
 
 ## Research Status
 
 | Field | Value |
 |---|---|
 | Maturity | **Reviewed** — public-source comparison |
-| Last verified | 2026-07-23 |
+| Last verified | 2026-07-23; GLOBAS.API official-source addendum 2026-07-28; FTS official-source conflict recheck 2026-08-15 |
 | Region | Russia; CIS coverage is considered separately for Seldon |
 | Live testing | Not performed; commercial Kontur and Seldon credentials were unavailable |
 | Pricing | Included only when public pricing clearly applies to the API product |
-| Next review | 2026-08-03 for FTS format migration; 2026-10-21 for the full comparison |
+| Next review | FTS credentialed FTP behavior or official clarification when lawful access is available; 2026-10-21 for the full comparison |
 
 ## Decision Summary
 
@@ -24,6 +24,7 @@ There is no universal winner because the products belong to different solution c
 | Company details autocomplete, B2B forms, CRM, fast launch | **DaData** | Accessible documentation, public pricing, a free tier, INN/OGRN lookup, and up to 30 requests per second per IP |
 | Automated enterprise due diligence and risk monitoring | **Kontur.Focus API** | Broad source coverage, bulk checks, monitoring, risk markers, and established enterprise integrations |
 | Deep analytics, relationships, procurement data, and CIS companies | **Seldon.Basis API** | Broad registry and activity coverage, configurable methods, and Russia/CIS data |
+| Additional enterprise integration candidate for CRM/ERP/EDI, mass checks, enrichment, and portfolio monitoring | **GLOBAS.API** | Official Credinform page positions it for corporate-system integration, but specification, auth, schemas, limits, SLA and API price require provider confirmation |
 | Building an internal EGRUL/EGRIP database and controlling ETL | **FTS integration** | Primary government source, full XML dumps, and daily deltas |
 | A free legally signed extract for one company | **FTS electronic extract service** | Free electronic extract signed by the FTS; it is not a bulk API |
 | AML / 115-FZ and sanctions screening | **Kontur.Compliance API**, evaluated separately | This is a separate product and capability set |
@@ -42,23 +43,23 @@ Therefore, the FTS bulk integration is not a direct replacement for Kontur.Focus
 
 ## Compact Matrix
 
-| Criterion | DaData | Kontur.Focus API | Seldon.Basis API | FTS EGRUL/EGRIP |
-|---|---|---|---|---|
-| Product class | Data enrichment / company details | Enterprise due diligence | Due diligence / analytics | Primary registry / bulk data |
-| INN/OGRN lookup | Yes | Yes | Yes | Web search; integration uses files |
-| Company record autocomplete | Core strength | Yes | Yes | Requires custom processing |
-| Founders and managers | Maximum plan | Yes | Yes | Within publicly available registry data |
-| Financial indicators | Maximum plan; partial coverage | Yes | Yes | Not a complete financial analytics aggregator |
-| Courts, enforcement, bankruptcy | Not established as a complete profile for the company lookup method | Yes | Yes | No; requires other sources |
-| Public procurement data | Not a core use case | Yes | Yes | No |
-| Relationships / affiliations | Separate method, maximum plan | Yes | Yes | Requires a custom relationship model |
-| Monitoring | Not the primary public profile workflow | Yes | Yes | Daily deltas; processing is customer-managed |
-| Russia | Yes | Yes | Yes | Yes |
-| CIS | Separate Belarus and Kazakhstan methods | Not established in this research | Major strength | No |
-| Public documentation | Detailed and directly accessible | Developer portal exists; parts require JavaScript | Public functional material; detailed onboarding follows a request | Detailed file model and formats |
-| Public API pricing | Yes | Price list exists, final cost depends on configuration | No exact public API price | Yes, per registry access |
-| Free start | 10,000 requests/day | Demo by request | Trial by request | Free individual electronic extracts |
-| Published limits | Daily plan plus 30 requests/s per IP | Must be confirmed for the purchased plan | Up to 10,000 requests/day per method for the individual plan | Not request/response; full files and daily deltas |
+| Criterion | DaData | Kontur.Focus API | Seldon.Basis API | GLOBAS.API | FTS EGRUL/EGRIP |
+|---|---|---|---|---|---|
+| Product class | Data enrichment / company details | Enterprise due diligence | Due diligence / analytics | Enterprise data integration | Primary registry / bulk data |
+| INN/OGRN lookup | Yes | Yes | Yes | Candidate; field matrix required | Web search; integration uses files |
+| Company record autocomplete | Core strength | Yes | Yes | Candidate; method details required | Requires custom processing |
+| Founders and managers | Maximum plan | Yes | Yes | Unknown until field matrix | Within publicly available registry data |
+| Financial indicators | Maximum plan; partial coverage | Yes | Yes | Unknown until field matrix | Not a complete financial analytics aggregator |
+| Courts, enforcement, bankruptcy | Not established as a complete profile for the company lookup method | Yes | Yes | Unknown until field matrix | No; requires other sources |
+| Public procurement data | Not a core use case | Yes | Yes | Unknown until field matrix | No |
+| Relationships / affiliations | Separate method, maximum plan | Yes | Yes | Unknown until field matrix | Requires a custom relationship model |
+| Monitoring | Not the primary public profile workflow | Yes | Yes | Provider-reported portfolio monitoring scenario | Daily deltas; processing is customer-managed |
+| Russia | Yes | Yes | Yes | Candidate; coverage must be confirmed | Yes |
+| CIS | Separate Belarus and Kazakhstan methods | Not established in this research | Major strength | Unknown from reviewed API page | No |
+| Public documentation | Detailed and directly accessible | Developer portal exists; parts require JavaScript | Public functional material; detailed onboarding follows a request | Product page only; no public specification found | Detailed file model and formats |
+| Public API pricing | Yes | Price list exists, final cost depends on configuration | No exact public API price | No public API price found | Yes, per registry access |
+| Free start | 10,000 requests/day | Demo by request | Trial by request | Three-day GLOBAS system test; API trial not confirmed | Free individual electronic extracts |
+| Published limits | Daily plan plus 30 requests/s per IP | Must be confirmed for the purchased plan | Up to 10,000 requests/day per method for the individual plan | Not found in reviewed official pages | Not request/response; full files and daily deltas |
 
 “Not established” means no reliable statement was found in the reviewed official public material. It does not prove that the capability is absent.
 
@@ -170,7 +171,34 @@ For the individual API plan, the vendor publishes a reference limit of **10,000 
 
 **A strong candidate for broad analytics, relationship discovery, and CIS coverage.** It is especially relevant when the buyer needs a configurable set of methods rather than a single company profile.
 
-## 4. Official FTS EGRUL/EGRIP Integration
+## 4. GLOBAS.API
+
+### Best Fit
+
+- organizations evaluating GLOBAS as an enterprise data source;
+- CRM, ERP, EDI, risk-system, and internal analytics enrichment;
+- mass counterparty checks;
+- enrichment of an existing internal company database;
+- portfolio monitoring and change tracking.
+
+### Verified / Provider-Reported Strengths
+
+Official Credinform/GLOBAS material confirms an active GLOBAS.API product page and positions the product for integrating GLOBAS data into corporate systems. The official page describes keeping counterparty information current in the user's database, monitoring portfolio changes, mass counterparty checks, building an automatically updated client base, enriching an internal base with GLOBAS company data, updating selected fields, data verification, archives, and automatic updates for large counterparty databases.
+
+Those are useful enterprise scenarios, but the current Atlas evidence is mostly product positioning rather than developer documentation.
+
+### Limitations
+
+- Public API specification, endpoint catalog, authentication, schemas, formats, production limits, SLA, and API price were not found in reviewed official pages.
+- The three-day GLOBAS system test must not be treated as an API trial until Credinform confirms API credentials or sandbox access.
+- Sanctions Compliance appears as a separate product/module boundary and must not be assumed to be part of the standard API.
+- The legacy API Portal REST claim remains provenance only and is not a verified technical fact.
+
+### Verdict
+
+**A credible additional enterprise candidate, not a replacement for the current Kontur.Focus / Seldon.Basis shortlist.** Include GLOBAS.API in an RFI/RFP when the organization wants Credinform coverage or already uses GLOBAS, but require specification, sandbox/pilot, method-level pricing, batch billing, SLA, and written data rights before ranking it against the other enterprise candidates.
+
+## 5. Official FTS EGRUL/EGRIP Integration
 
 ### What It Is
 
@@ -202,7 +230,13 @@ Until 1 August 2026, the FTS is in a transition period:
 - EGRUL: old format 4.07 and new format 4.08;
 - EGRIP: old format 4.06 and new format 4.07.
 
-From 1 August 2026, only the new formats are scheduled to remain. Integrations should be revalidated immediately after the transition.
+Atlas rechecked the official FTS sources on 2026-08-15. The current public material now has an official-source conflict:
+
+- the service pages still say files are currently uploaded in both old and new formats;
+- the same pages also say that from 1 August 2026 delivery is only in EGRUL 4.08 and EGRIP 4.07;
+- Order No. `ЕД-7-14/613@` requires exclusive new-format delivery from 2026-08-01.
+
+Without credentialed FTP access or an updated official clarification, Atlas cannot prove which statement reflects actual current delivery behavior.
 
 The FTS also warns that daily-file generation can be interrupted because of data volume; missing changes are expected to appear in later files.
 
@@ -230,13 +264,19 @@ Need company name, KPP, OGRN, address, and OKVED by INN.
 
 Need company cards, current identifiers, and occasional relationship analysis.
 
-**Start with DaData.** Pilot **Seldon.Basis** when deeper relationships, procurement, or risk signals are required.
+**Start with DaData.** Pilot **Seldon.Basis** when deeper relationships, procurement, or risk signals are required. Include **GLOBAS.API** in the RFI when the CRM project needs enterprise enrichment from Credinform/GLOBAS and the buyer can wait for vendor documentation and a quote.
 
 ### Procurement and Corporate Security
 
 Need bulk checks, stop factors, litigation, bankruptcy, enforcement, and monitoring.
 
-**Shortlist Kontur.Focus API and Seldon.Basis API.** Decide after an equal-sample pilot and commercial quotes.
+**Shortlist Kontur.Focus API and Seldon.Basis API.** Treat **GLOBAS.API** as an additional enterprise candidate when mass checks, internal-base enrichment, or portfolio monitoring are central requirements. Decide after an equal-sample pilot, technical documentation, and commercial quotes.
+
+### Enterprise Data Enrichment RFP
+
+Need CRM/ERP/EDI enrichment, bulk verification, portfolio monitoring, and legal rights to store or show data.
+
+**Request proposals from Kontur.Focus, Seldon.Basis, and GLOBAS.API.** Do not rank GLOBAS.API above or below the others until Credinform provides the API method matrix, field coverage, pricing, limits, SLA, sandbox and data-use terms.
 
 ### Bank or Regulated Organization
 
@@ -252,7 +292,7 @@ Need a complete registry copy, history, and custom models.
 
 ## Recommended Pilot
 
-Give Kontur and Seldon the same test set:
+Give Kontur, Seldon, and any GLOBAS.API pilot the same test set:
 
 1. 100 active companies of different sizes;
 2. 30 liquidating or recently liquidated companies;
@@ -273,12 +313,14 @@ Measure:
 - monitoring behavior;
 - actual monthly and annual cost;
 - support when data conflicts with a primary source.
+- for GLOBAS.API specifically: confirm that test access includes API credentials rather than only web-system access.
 
 ## What This Comparison Does Not Yet Prove
 
 - measured latency and availability;
 - scoring-model accuracy;
 - complete Kontur and Seldon cost;
+- complete GLOBAS.API technical and commercial terms;
 - legal rights for long-term storage or resale of every field;
 - superiority on a real customer dataset.
 
@@ -297,6 +339,9 @@ Primary official pages:
 - [Kontur API company-details demo](https://focus.kontur.ru/site/demo/requisites)
 - [Seldon.Basis API](https://seldongroup.ru/system/basis/api)
 - [Seldon API functionality](https://seldongroup.ru/functions)
+- [GLOBAS.API](https://globas.credinform.ru/ru-RU/servisy/globas-api)
+- [GLOBAS services](https://globas.credinform.ru/ru-RU/servisy)
+- [GLOBAS sources](https://globas.credinform.ru/ru-RU/osisteme/istochniki)
 - [FTS EGRUL/EGRIP integration service](https://www.nalog.gov.ru/rn77/service/egrip2/)
 - [FTS interaction model and formats](https://www.nalog.gov.ru/rn77/service/egrip2/egrip_vzayim/)
 - [FTS access process and fees](https://www.nalog.gov.ru/rn77/service/egrip2/access_order/)
