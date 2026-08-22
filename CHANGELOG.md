@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-23 — Vehicle history API
+
+- Added a reviewed Avtocod Vehicle History API profile with public JSON schema and token-based report workflow evidence.
+- Kept price, limits, SLA, source quality and data rights open; no paid report or live test was run.
+
 ## 2026-08-22 — CDEK carrier integration route
 
 - Added a reviewed CDEK Logistics API profile and linked it to the delivery comparison and need route.

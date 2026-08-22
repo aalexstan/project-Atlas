@@ -21,7 +21,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 35 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery and timetable profiles |
+| API profiles | 36 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable and vehicle-history profiles |
 | Comparisons | 8 | Company/counterparty; address/geocoding; payment; messaging; weather; routing/logistics; procurement/tender; delivery/tracking |
 | Need routes | 9 | Company Verification; address/geocoding; organization/place search; payment; messaging; weather; routing/logistics; procurement/tender; delivery/tracking |
 | Procurement kits | 8 | Counterparty; address/geocoding; payment; messaging; weather; routing; procurement; delivery API selection kits |
