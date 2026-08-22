@@ -4,22 +4,25 @@
 
 ## Решение
 
-Оставить направление procurement/tender как **research baseline / comparison backlog**.
+После повторной проверки 2026-08-22 создать **reviewed, но не fully verified** профили двух разных маршрутов:
 
-Не создавать активный API profile или comparison на текущей доказательной базе.
+- официальная интеграция закупочной информации ЕИС;
+- коммерческий агрегированный API Seldon.Tenders.
+
+Ни один маршрут не считать универсальным победителем или credential-tested production API.
 
 ## Обоснование
 
-Официальные страницы Казначейства России подтверждают публичную роль и идентичность ЕИС / `zakupki.gov.ru`. Официальные страницы ведомственных open-data datasets подтверждают существование procurement-related CSV datasets. Публичный сайт ЕИС также содержит раздел technical information и подраздел information interaction, но Atlas не получил actual current document files, schemas, endpoint catalog или access rules. Существующее исследование Atlas также сохраняет Seldon.Tenders как legacy-only, потому что не хватает official API specification, auth, pricing, limits, SLA и data-rights evidence.
+Официальные страницы Казначейства России подтверждают публичную роль и идентичность ЕИС / `zakupki.gov.ru` и показывают маршруты форматов взаимодействия. Актуальная официальная страница Seldon прямо описывает `API.Seldon.Tenders` как программный сервис закупочных данных и перечисляет извещения, протоколы, контракты и документы. Atlas всё ещё не получил полные актуальные схемы, endpoint catalogs, правила доступа, limits, SLA и API-specific commercial terms.
 
 Этого достаточно, чтобы сохранить и организовать направление, но недостаточно для текущей активной API-карточки Atlas или сценарного comparison.
 
 ## Границы
 
-- ЕИС / `zakupki.gov.ru` является официальным procurement information source, но здесь ещё не описывается как активный Atlas API profile.
-- Навигация technical-information ЕИС подтверждена как маршрут исследования, но сама по себе не является достаточным API specification evidence.
+- ЕИС / `zakupki.gov.ru` является официальным procurement information source и reviewed data-integration route, но не автоматически turnkey REST API.
+- Навигация technical-information ЕИС подтверждает integration route, но сама по себе не доказывает полный public API specification.
 - Ведомственные CSV open-data datasets являются supporting evidence, а не national procurement API.
-- Seldon.Tenders остаётся legacy/provenance до появления более сильных official evidence.
+- Старые материалы Seldon остаются provenance; новый профиль опирается на актуальные `seldongroup.ru`, а `api-seldon.ru` оставлен как source-risk note.
 - Web portals, file feeds, government services и commercial API products нужно сравнивать как разные product classes.
 
 ## Условия возвращения к активному профилю

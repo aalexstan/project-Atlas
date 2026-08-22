@@ -4,22 +4,25 @@
 
 ## Decision
 
-Keep the procurement/tender direction as **research baseline / comparison backlog** for now.
+The 2026-08-22 official-source recheck supports **reviewed, not fully verified** profiles for two distinct routes:
 
-Do not create an active API profile or comparison from the current evidence.
+- official EIS procurement data integration;
+- commercial aggregated Seldon.Tenders API.
+
+Do not treat either route as a universal winner or as a credential-tested production API.
 
 ## Rationale
 
-Official Russian Treasury pages confirm the public role and identity of EIS / `zakupki.gov.ru`. Official agency open-data pages confirm that procurement-related CSV datasets exist. The EIS public site also exposes a technical-information section and an information-interaction subsection, but Atlas has not captured the actual current document files, schemas, endpoint catalog or access rules. Existing Atlas research also preserves Seldon.Tenders as legacy-only because official API specification, auth, pricing, limits, SLA and data-rights evidence are missing.
+Official Russian Treasury pages confirm the public role and identity of EIS / `zakupki.gov.ru` and expose interaction-format routes. The official Seldon page now explicitly describes `API.Seldon.Tenders` as a programmatic procurement-data integration service and lists notices, protocols, contracts and documents. Atlas still has not captured complete current schemas, endpoint catalogs, access rules, limits, SLA or API-specific commercial terms.
 
 This is enough to preserve and organize the direction, but not enough for a current Atlas API profile or scenario comparison.
 
 ## Boundaries
 
-- EIS / `zakupki.gov.ru` is an official procurement information source, not yet documented here as an active Atlas API profile.
-- EIS technical-information navigation is confirmed as a route to investigate, not as sufficient API specification evidence by itself.
+- EIS / `zakupki.gov.ru` is an official procurement information source and is profiled as a data-integration route, not assumed to be a turnkey REST API.
+- EIS technical-information navigation confirms an integration route, but does not by itself prove a complete public API specification.
 - Agency CSV open-data datasets are supporting evidence, not a national procurement API.
-- Seldon.Tenders remains legacy/provenance until stronger official evidence is available.
+- Legacy Seldon research remains provenance; the new profile relies on current official `seldongroup.ru` evidence and keeps old `api-seldon.ru` as a source-risk note.
 - Web portals, file feeds, government services and commercial API products must be compared as different product classes.
 
 ## Reopen Conditions
