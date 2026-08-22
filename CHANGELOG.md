@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-23 - Wildberries Seller API profile
+
+- Added a verified core profile for the official Wildberries seller integration API.
+- Recorded REST/HTTP, Swagger/OpenAPI, token, sandbox and method-limit evidence.
+- Kept API price, SLA, production quotas and data-use rights explicitly unknown; no live testing was performed.
+
 ## 2026-08-23 - Bank of Russia exchange-rates profile
 
 - Added a bounded API-first profile for the Bank of Russia's official daily exchange-rate XML web service.

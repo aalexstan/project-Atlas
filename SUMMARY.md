@@ -23,7 +23,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 38 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history, cadastral and central-bank data profiles |
+| API profiles | 39 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history, marketplace, cadastral and central-bank data profiles |
 | Comparisons | 9 | Includes company, address, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
 | Need routes | 10 | Includes company, address, place search, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
 | Procurement kits | 9 | Counterparty, address, payment, messaging, weather, routing, procurement, delivery and cadastral selection kits |
@@ -67,6 +67,7 @@ Atlas должен помогать проверять, сравнивать и 
 | T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
 | Telegram Bot API | reviewed | 2026-08-22 | not performed |
 | WeatherAPI.com API | reviewed | 2026-08-22 | not performed |
+| Wildberries Seller API | verified | 2026-08-23 | not performed |
 | Yandex Delivery API | reviewed | 2026-08-22 | not performed |
 | Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
 | Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed |

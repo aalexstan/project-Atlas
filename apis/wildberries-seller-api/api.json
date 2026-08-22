@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "wildberries-seller-api",
+  "name": "Wildberries Seller API",
+  "provider": {"name": "Wildberries", "website": "https://www.wildberries.ru/"},
+  "status": "active",
+  "maturity": "verified",
+  "last_verified": "2026-08-23",
+  "live_tested": false,
+  "product_class": "marketplace_seller_integration_api",
+  "best_for": ["seller_erp_wms_oms_crm_integration", "catalog_and_price_operations", "seller_analytics_and_reports", "supplies_returns_and_documents_workflows"],
+  "pricing": {"status": "api_specific_price_not_confirmed", "api_price": "unknown"},
+  "authentication": {"status": "documented", "primary_method": "seller_api_token", "oauth_2_0": "mentioned_in_connection_guidance; exact scope model requires method review"},
+  "sandbox": {"status": "documented_for_supported_scopes", "notes": "The official test environment uses test-scope tokens and generated data; Atlas did not access it."},
+  "rate_limits": {"status": "partially_documented", "examples": {"ping": "3 requests per 30 seconds per host/method", "seller_info": "1 request per minute with a burst of 10"}, "other_methods": "method-specific limits apply"},
+  "openapi": {"status": "documented", "format": "Swagger/OpenAPI", "documentation": "https://dev.wildberries.ru/en/docs/openapi/api-information"},
+  "capabilities": {"seller_catalog": "documented", "prices_and_discounts": "documented", "analytics_and_statistics": "documented", "promotion": "documented", "supplies_and_returns": "documented", "finance_and_documents": "documented", "buyer_chat_and_feedbacks": "documented", "consumer_marketplace_api": "not_this_profile"},
+  "data_rights": {"storage": "unknown", "redistribution": "unknown", "customer_display": "not_core_to_this_profile", "saas": "unknown"},
+  "sources": ["https://dev.wildberries.ru/en/docs/openapi/api-information", "https://dev.wildberries.ru/docs/openapi/api-information", "https://dev.wildberries.ru/knowledge-base/articles/019d49a0-f9f7-79a4-b5ee-df5dabe9cff4", "https://dev.wildberries.ru/en/openapi-other/sandbox-environment", "research/wildberries-seller-api/2026-08-23.md"],
+  "open_questions": ["What API-specific pricing or account charges apply to each service category?", "What production quotas and method-level limits apply beyond the documented examples?", "What SLA, support response times, versioning and deprecation commitments are available?", "What storage, SaaS embedding and redistribution rights apply to seller data and API responses?", "Which service categories and fields are included for the intended seller account and token scopes?"]
+}

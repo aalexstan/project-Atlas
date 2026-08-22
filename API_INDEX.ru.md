@@ -35,6 +35,7 @@
 | [T-Bank Internet Acquiring API](apis/tbank-internet-acquiring-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Telegram Bot API](apis/telegram-bot-api/README.ru.md) | reviewed | 2026-08-22 |
 | [WeatherAPI.com API](apis/weatherapi-com-api/README.ru.md) | reviewed | 2026-08-22 |
+| [Wildberries Seller API](apis/wildberries-seller-api/README.ru.md) | verified | 2026-08-23 |
 | [Yandex Delivery API](apis/yandex-delivery-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.ru.md) | reviewed | 2026-07-29 |
