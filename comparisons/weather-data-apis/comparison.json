@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "weather-data-apis",
   "title": {"en": "Weather Data APIs", "ru": "API погодных и метеоданных"},
   "status": "reviewed",

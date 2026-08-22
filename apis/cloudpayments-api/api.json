@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "cloudpayments-api",
   "name": "CloudPayments API",
   "maturity": "reviewed",

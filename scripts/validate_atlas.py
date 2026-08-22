@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import datetime as dt
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
@@ -87,6 +88,10 @@ def active_bilingual_pairs() -> list[tuple[Path, Path]]:
     templates = ROOT / "templates"
     for stem in ("API_CARD_TEMPLATE", "COMPARISON_TEMPLATE"):
         add_pair(templates / f"{stem}.md", templates / f"{stem}.ru.md")
+
+    schemas = ROOT / "schemas"
+    if schemas.exists():
+        add_pair(schemas / "README.md", schemas / "README.ru.md")
 
     return pairs
 
@@ -196,7 +201,7 @@ def validate_active_api_metadata() -> None:
     if not base.exists():
         return
 
-    required_fields = ("id", "name", "maturity", "last_verified", "live_tested", "sources")
+    required_fields = ("schema_version", "id", "name", "maturity", "last_verified", "live_tested", "sources")
     maturity_levels = {"discovered", "verified", "reviewed", "compared", "gold"}
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "api.json"
@@ -217,6 +222,14 @@ def validate_active_api_metadata() -> None:
             elif field in data and not data[field].strip():
                 error(f"Empty {field} in {json_path.relative_to(ROOT)}")
 
+        if data.get("schema_version") != 1:
+            error(f"Expected schema_version 1 in {json_path.relative_to(ROOT)}")
+        if isinstance(data.get("last_verified"), str):
+            try:
+                dt.date.fromisoformat(data["last_verified"])
+            except ValueError:
+                error(f"Invalid last_verified date in {json_path.relative_to(ROOT)}")
+
         if "live_tested" in data and not isinstance(data["live_tested"], bool):
             error(f"Expected boolean live_tested in {json_path.relative_to(ROOT)}")
 
@@ -234,7 +247,7 @@ def validate_comparison_metadata() -> None:
     if not base.exists():
         return
 
-    required_fields = ("id", "title", "status", "verified_on", "candidates", "sources")
+    required_fields = ("schema_version", "id", "title", "status", "verified_on", "candidates", "sources")
     api_ids = json_id_map("apis", "api.json")
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "comparison.json"
@@ -247,6 +260,8 @@ def validate_comparison_metadata() -> None:
         for field in required_fields:
             if field not in data:
                 error(f"Missing {field} in {json_path.relative_to(ROOT)}")
+        if data.get("schema_version") != 1:
+            error(f"Expected schema_version 1 in {json_path.relative_to(ROOT)}")
         if "candidates" in data and not isinstance(data["candidates"], list):
             error(f"Expected candidates list in {json_path.relative_to(ROOT)}")
         if "sources" in data and (not isinstance(data["sources"], list) or not data["sources"]):
@@ -275,6 +290,7 @@ def validate_needs_metadata() -> None:
         return
 
     required_fields = (
+        "schema_version",
         "id",
         "name",
         "name_ru",
@@ -299,6 +315,8 @@ def validate_needs_metadata() -> None:
         for field in required_fields:
             if field not in data:
                 error(f"Missing {field} in {json_path.relative_to(ROOT)}")
+        if data.get("schema_version") != 1:
+            error(f"Expected schema_version 1 in {json_path.relative_to(ROOT)}")
         for field in ("id", "name", "name_ru", "status", "last_verified", "primary_question"):
             if field in data and not isinstance(data[field], str):
                 error(f"Expected string {field} in {json_path.relative_to(ROOT)}")

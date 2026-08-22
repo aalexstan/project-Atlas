@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "routing-logistics",
   "name": "Routing and logistics calculation",
   "name_ru": "Маршрутизация и логистический расчёт",

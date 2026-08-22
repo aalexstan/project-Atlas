@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "rosreestr-egrn-access",
   "name": "Rosreestr EGRN Access Service",
   "provider": {

@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "smsc-api",
   "name": "SMSC API",
   "maturity": "reviewed",

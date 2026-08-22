@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "procurement-tender-data",
   "title": {"en": "Procurement and Tender Data Routes", "ru": "Источники данных о закупках и тендерах"},
   "status": "reviewed",

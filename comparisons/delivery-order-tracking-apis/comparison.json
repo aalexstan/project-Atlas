@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "delivery-order-tracking-apis",
   "title": {"en": "Delivery Order and Shipment Tracking APIs", "ru": "API заказов доставки и отслеживания отправлений"},
   "status": "reviewed",

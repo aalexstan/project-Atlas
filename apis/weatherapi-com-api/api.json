@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "weatherapi-com-api",
   "name": "WeatherAPI.com API",
   "maturity": "reviewed",

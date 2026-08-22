@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "fias-gar-data-integration",
   "name": "FIAS/GAR Data Integration",
   "provider": {

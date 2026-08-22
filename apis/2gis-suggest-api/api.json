@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "2gis-suggest-api",
   "name": "2GIS Suggest API",
   "provider": {

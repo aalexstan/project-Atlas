@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "real-estate-cadastral-data",
   "title": {
     "en": "Real-estate and Cadastral Data Routes",

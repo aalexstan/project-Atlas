@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "yandex-maps-geosuggest-api",
   "name": "Yandex Maps Geosuggest API",
   "provider": {

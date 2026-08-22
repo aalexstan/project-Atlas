@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-23 - Formalize active data contracts
+
+- Added `schema_version: 1` to active API, comparison and need JSON records.
+- Added bilingual schema documentation and JSON Schema contracts.
+- Extended validation to enforce schema versions, ISO review dates, valid maturity values and resolvable comparison candidates.
+
 ## 2026-08-23 - Audit consistency fixes
 
 - Corrected the FNS integration ID used by the company comparison and added validation for comparison candidate references and maturity values.

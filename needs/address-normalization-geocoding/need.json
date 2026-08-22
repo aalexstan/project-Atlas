@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "address-normalization-geocoding",
   "name": "Address normalization, address registries and geocoding",
   "name_ru": "Нормализация адресов, адресные реестры и геокодирование",

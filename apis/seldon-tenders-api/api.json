@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "seldon-tenders-api",
   "name": "API.Seldon.Tenders",
   "provider": {"name": "Seldon", "website": "https://seldongroup.ru/system/1.7/api"},

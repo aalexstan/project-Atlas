@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "geoapify-geocoding-api",
   "name": "Geoapify Geocoding API",
   "provider": {

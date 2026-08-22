@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "2gis-routing-api",
   "name": "2GIS Routing API",
   "provider": {"name": "2GIS", "website": "https://2gis.ru/"},

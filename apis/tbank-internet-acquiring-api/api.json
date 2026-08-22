@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "tbank-internet-acquiring-api",
   "name": "T-Bank Internet Acquiring API",
   "maturity": "reviewed",

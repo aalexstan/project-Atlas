@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "messaging-notifications",
   "name": "Messaging and Notifications",
   "name_ru": "Сообщения и уведомления",

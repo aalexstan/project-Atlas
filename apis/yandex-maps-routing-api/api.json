@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "yandex-maps-routing-api",
   "name": "Yandex Maps Routing API",
   "provider": {"name": "Yandex", "website": "https://yandex.ru/maps-api/"},

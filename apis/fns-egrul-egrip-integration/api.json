@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "fns-egrul-egrip-integration",
   "name": "FTS EGRUL/EGRIP Data Integration",
   "provider": "Federal Tax Service of Russia",

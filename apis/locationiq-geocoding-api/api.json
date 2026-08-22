@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "locationiq-geocoding-api",
   "name": "LocationIQ Geocoding API",
   "provider": {

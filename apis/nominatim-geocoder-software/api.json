@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "nominatim-geocoder-software",
   "name": "Nominatim Geocoder Software",
   "provider": {

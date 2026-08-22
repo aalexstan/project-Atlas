@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "open-meteo-api",
   "name": "Open-Meteo API",
   "maturity": "reviewed",

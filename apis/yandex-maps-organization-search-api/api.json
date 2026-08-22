@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "yandex-maps-organization-search-api",
   "name": "Yandex Maps Organization Search API",
   "provider": {
