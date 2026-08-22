@@ -10,5 +10,6 @@
 | [Messaging and Notification APIs in Russia](comparisons/messaging-notifications-russia/README.md) | reviewed | 2026-08-22 |
 | [Payment Acceptance APIs in Russia](comparisons/payment-acceptance-russia/README.md) | reviewed | 2026-08-22 |
 | [Procurement and Tender Data Routes](comparisons/procurement-tender-data/README.md) | reviewed | 2026-08-22 |
+| [Real-estate and Cadastral Data Routes](comparisons/real-estate-cadastral-data/README.md) | reviewed | 2026-08-23 |
 | [Routing and Logistics APIs](comparisons/routing-logistics-apis/README.md) | reviewed | 2026-08-22 |
 | [Weather Data APIs](comparisons/weather-data-apis/README.md) | reviewed | 2026-08-22 |

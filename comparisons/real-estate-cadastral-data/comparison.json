@@ -1,0 +1,32 @@
+{
+  "id": "real-estate-cadastral-data",
+  "title": {
+    "en": "Real-estate and Cadastral Data Routes",
+    "ru": "Источники данных о недвижимости и кадастре"
+  },
+  "status": "reviewed",
+  "verified_on": "2026-08-23",
+  "live_testing": false,
+  "candidates": [
+    {"id": "rosreestr-egrn-access", "product_class": "official_registry_access_service", "best_for": ["official extracts", "registry evidence", "repeated extract packages"], "key_risk": "automation, current fees, limits and reuse rights need confirmation"},
+    {"id": "nspd-geoservices-route", "product_class": "official_spatial_data_portal", "best_for": ["map discovery", "spatial layers", "territory context"], "key_risk": "not proven as an unrestricted public production API"},
+    {"id": "dadata-address-api", "product_class": "commercial_address_enrichment_api", "best_for": ["address normalization", "cadastral-number enrichment", "fast application integration"], "key_risk": "not an official EGRN extract"},
+    {"id": "fias-gar-data-integration", "product_class": "official_address_registry_data_integration", "best_for": ["own address registry", "GAR provenance", "address ETL"], "key_risk": "address registry is not a property-rights registry"}
+  ],
+  "matrix": [
+    {"criterion": "legally_significant_egrn_extract", "rosreestr-egrn-access": "yes_by_extract_rules", "nspd-geoservices-route": "no", "dadata-address-api": "no", "fias-gar-data-integration": "no"},
+    {"criterion": "cadastral_map_and_spatial_layers", "rosreestr-egrn-access": "related_not_core", "nspd-geoservices-route": "yes", "dadata-address-api": "no", "fias-gar-data-integration": "no"},
+    {"criterion": "address_normalization", "rosreestr-egrn-access": "no", "nspd-geoservices-route": "not_core", "dadata-address-api": "yes", "fias-gar-data-integration": "requires_own_logic"},
+    {"criterion": "own_address_database", "rosreestr-egrn-access": "no_bulk_dump_confirmed", "nspd-geoservices-route": "unknown", "dadata-address-api": "contract_dependent", "fias-gar-data-integration": "yes_with_own_etl"},
+    {"criterion": "documented_unattended_api", "rosreestr-egrn-access": "unknown", "nspd-geoservices-route": "unknown", "dadata-address-api": "yes", "fias-gar-data-integration": "file_route_verified_api_details_unknown"},
+    {"criterion": "public_current_price", "rosreestr-egrn-access": "needs_recheck", "nspd-geoservices-route": "unknown", "dadata-address-api": "partially_public", "fias-gar-data-integration": "implementation_tco"},
+    {"criterion": "storage_saas_redistribution", "rosreestr-egrn-access": "legal_review_required", "nspd-geoservices-route": "legal_review_required", "dadata-address-api": "contract_review_required", "fias-gar-data-integration": "legal_review_required"},
+    {"criterion": "live_test", "rosreestr-egrn-access": "not_performed", "nspd-geoservices-route": "not_performed", "dadata-address-api": "not_performed", "fias-gar-data-integration": "file_inspection_only_no_live_integration"}
+  ],
+  "sources": [
+    "apis/rosreestr-egrn-access/api.json",
+    "apis/dadata-address-api/api.json",
+    "apis/fias-gar-data-integration/api.json",
+    "research/real-estate-cadastral/2026-08-23-rosreestr-egrn-nspd.md"
+  ]
+}

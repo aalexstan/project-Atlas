@@ -4,7 +4,9 @@
 
 - Separated official EGRN extracts, key-based package access, NSPD electronic services and inter-agency XML exchange.
 - Added bilingual research, profile decision and an official clarification checklist.
-- Did not create a generic `Rosreestr API` profile or treat cadastral-map frontend endpoints as a supported production API.
+- Added a reviewed EGRN access-service profile without claiming a generic REST API.
+- Added a scenario comparison, need route and procurement/test kit covering EGRN, NSPD, DaData enrichment and FIAS/GAR.
+- Did not treat cadastral-map frontend endpoints as a supported production API or claim live testing.
 
 ## 2026-08-23 — Vehicle history API
 

@@ -64,7 +64,7 @@
 - Дорожный трафик и пробки.
 - Погода и метеоистория.
 - История транспортных средств.
-- Недвижимость и кадастровые данные: official baseline и profile decision созданы; active API profile отложен до подтверждения supported commercial interface.
+- Недвижимость и кадастровые данные: reviewed official-access profile, comparison, need route и procurement kit созданы; дальнейший рост зависит от official clarification и lawful test access.
 - Платежи и финтех-транзакции.
 - Маркетинговые и телекоммуникационные аудитории.
 - Доставка, логистика и курьерские события.

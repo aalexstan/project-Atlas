@@ -30,7 +30,7 @@ Yandex Rasp API is reviewed for free public intercity timetable features; commer
 
 Avtocod Vehicle History API is reviewed as a commercial report route; independent data-quality evidence, pricing, limits and high-stakes use rights remain open.
 
-Real-estate/cadastral research now separates official EGRN extracts, key-based FGIS EGRN access, NSPD electronic services and inter-agency XML exchange. An active profile is deferred until a supported commercial integration interface, authentication, limits, SLA and reuse rights are confirmed.
+Real-estate/cadastral research now includes a reviewed official EGRN access profile, comparison, need route and procurement kit. It separates EGRN extracts, key-based access, NSPD, DaData enrichment and FIAS/GAR; unattended automation, current terms and reuse rights remain blockers.
 
 Initial comparisons: company and counterparty data, addresses and geocoding, procurement data, messaging, payments, and financial data.
 

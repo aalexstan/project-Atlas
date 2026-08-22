@@ -4,6 +4,7 @@
 
 | Задача | Статус | Последняя проверка |
 | --- | --- | --- |
+| [Выбрать источник данных о недвижимости или кадастре](needs/real-estate-cadastral-data/README.ru.md) | reviewed | 2026-08-23 |
 | [Данные о закупках и тендерах](needs/procurement-tender/README.ru.md) | reviewed | 2026-08-22 |
 | [Заказы доставки и отслеживание отправлений](needs/delivery-order-tracking/README.ru.md) | reviewed | 2026-08-22 |
 | [Маршрутизация и логистический расчёт](needs/routing-logistics/README.ru.md) | reviewed | 2026-08-22 |

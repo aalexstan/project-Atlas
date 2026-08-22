@@ -26,6 +26,7 @@
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.md) | reviewed | 2026-07-29 |
 | [OpenWeather API](apis/openweather-api/README.md) | reviewed | 2026-08-22 |
 | [OSRM Routing Engine](apis/osrm-routing-engine/README.md) | reviewed | 2026-08-22 |
+| [Rosreestr EGRN Access Service](apis/rosreestr-egrn-access/README.md) | reviewed | 2026-08-23 |
 | [Russian Post Tracking API](apis/russian-post-tracking-api/README.md) | reviewed | 2026-08-22 |
 | [Seldon.Basis API](apis/seldon-basis/README.md) | reviewed | 2026-07-23 |
 | [SMS.RU API](apis/smsru-api/README.md) | reviewed | 2026-08-22 |

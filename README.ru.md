@@ -49,6 +49,7 @@ Atlas помогает:
 - [Маршрутизация и логистический расчёт](needs/routing-logistics/README.ru.md)
 - [Данные о закупках и тендерах](needs/procurement-tender/README.ru.md)
 - [Заказы доставки и отслеживание отправлений](needs/delivery-order-tracking/README.ru.md)
+- [Недвижимость и кадастровые данные](needs/real-estate-cadastral-data/README.ru.md)
 
 Затем используйте связанные [индекс API](API_INDEX.ru.md), [индекс сравнений](COMPARISON_INDEX.ru.md) и procurement kits.
 

@@ -30,7 +30,7 @@ Yandex Rasp API проверен для бесплатных публичных 
 
 Avtocod Vehicle History API проверен как коммерческий маршрут отчётов; независимые доказательства качества данных, цены, лимиты и права high-stakes use остаются открытыми.
 
-Исследование недвижимости/кадастра теперь отделяет official EGRN extracts, key-based FGIS EGRN access, NSPD electronic services и межведомственный XML-обмен. Active profile отложен до подтверждения supported commercial interface, authentication, limits, SLA и reuse rights.
+Направление недвижимости/кадастра теперь включает reviewed profile official EGRN access, comparison, need route и procurement kit. Выписки ЕГРН, key-based access, НСПД, DaData enrichment и ФИАС/ГАР разделены; unattended automation, current terms и reuse rights остаются blockers.
 
 Первые сравнения: данные о компаниях и контрагентах, адреса и геокодирование, закупки, сообщения, платежи и финансовые данные.
 
