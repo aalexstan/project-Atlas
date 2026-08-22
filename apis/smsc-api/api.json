@@ -1,0 +1,17 @@
+{
+  "id": "smsc-api",
+  "name": "SMSC API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "SMSC", "website": "https://smsc.ru/"},
+  "status": "active",
+  "best_for": ["SMS delivery", "OTP and verification", "delivery status and callbacks"],
+  "pricing": {"model": "per_message_or_provider_tariff", "public_price_matrix": "not_profiled"},
+  "authentication": ["login_password", "api_key"],
+  "sandbox": "unknown_publicly",
+  "rate_limits": "unknown_publicly",
+  "openapi": "not_found_in_reviewed_sources",
+  "sources": ["https://smsc.ru/api/http/", "https://smsc.ru/api/smtp/"],
+  "open_questions": ["operator prices", "throughput", "sender approval", "delivery SLA", "OTP and data terms"]
+}
