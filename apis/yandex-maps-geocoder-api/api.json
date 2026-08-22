@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "yandex-maps-geocoder-api",
   "name": "Yandex Maps Geocoder API",
   "provider": {

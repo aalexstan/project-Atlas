@@ -17,3 +17,4 @@ For a user-oriented tour of the repository, see the [Repository Map](../REPOSITO
 | [Roadmap](ROADMAP.md) | Outcome-based product phases and explicitly deferred work |
 | [Glossary](GLOSSARY.md) | Shared terminology for API profiles, comparisons, evidence, and rights |
 | [Contributing](CONTRIBUTING.md) | Minimum standards for profile, comparison, source, and translation contributions |
+| [Data schemas](../schemas/README.md) | Machine-readable contracts for active API, comparison and need records |

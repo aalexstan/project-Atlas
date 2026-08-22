@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "2gis-places-api",
   "name": "2GIS Places API",
   "provider": {

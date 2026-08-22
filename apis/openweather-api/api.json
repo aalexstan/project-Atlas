@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "openweather-api",
   "name": "OpenWeather API",
   "maturity": "reviewed",

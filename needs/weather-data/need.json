@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "weather-data",
   "name": "Weather and Meteorological Data",
   "name_ru": "Погодные и метеорологические данные",

@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "company-verification",
   "name": "Company Verification",
   "name_ru": "Проверка контрагента",

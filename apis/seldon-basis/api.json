@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "seldon-basis-api",
   "name": "Seldon.Basis API",
   "provider": "Seldon",

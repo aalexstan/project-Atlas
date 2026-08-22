@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "dadata",
   "name": "DaData API",
   "maturity": "reviewed",

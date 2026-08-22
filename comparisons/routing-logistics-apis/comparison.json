@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "routing-logistics-apis",
   "title": {"en": "Routing and Logistics APIs", "ru": "API маршрутизации и логистики"},
   "status": "reviewed",

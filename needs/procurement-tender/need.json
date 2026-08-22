@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "procurement-tender",
   "name": "Procurement and tender data",
   "name_ru": "Данные о закупках и тендерах",

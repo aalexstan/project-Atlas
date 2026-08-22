@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "payment-acceptance",
   "name": "Online Payment Acceptance",
   "name_ru": "Приём онлайн-платежей",

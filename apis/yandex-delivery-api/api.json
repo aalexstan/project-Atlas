@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "yandex-delivery-api",
   "name": "Yandex Delivery API",
   "provider": {"name": "Yandex Delivery", "website": "https://dostavka.yandex.ru/integrations/api/"},

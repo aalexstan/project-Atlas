@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "kontur-focus-api",
   "name": "Kontur.Focus API",
   "provider": "JSC PF SKB Kontur",

@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "russian-post-tracking-api",
   "name": "Russian Post Tracking API",
   "provider": {"name": "Russian Post", "website": "https://tracking.pochta.ru/"},

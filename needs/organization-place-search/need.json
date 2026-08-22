@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "organization-place-search",
   "name": "Organization and place search",
   "name_ru": "Поиск организаций и мест",

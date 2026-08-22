@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "telegram-bot-api",
   "name": "Telegram Bot API",
   "maturity": "reviewed",

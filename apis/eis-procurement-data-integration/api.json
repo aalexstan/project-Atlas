@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "eis-procurement-data-integration",
   "name": "EIS Procurement Data Integration",
   "provider": {"name": "Federal Treasury of Russia", "website": "https://roskazna.gov.ru/gis/eis-zakupki-gov-ru"},

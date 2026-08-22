@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aalexstan/project-Atlas/blob/main/schemas/api-profile.schema.json",
+  "title": "Atlas API profile",
+  "type": "object",
+  "required": ["schema_version", "id", "name", "maturity", "last_verified", "live_tested", "sources"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "provider": {"oneOf": [{"type": "string"}, {"type": "object"}]},
+    "status": {"type": "string"},
+    "maturity": {"enum": ["discovered", "verified", "reviewed", "compared", "gold"]},
+    "last_verified": {"type": "string", "format": "date"},
+    "live_tested": {"type": "boolean"},
+    "best_for": {"type": "array", "items": {"type": "string"}},
+    "pricing": {},
+    "authentication": {},
+    "sandbox": {},
+    "rate_limits": {},
+    "openapi": {},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "open_questions": {"type": "array", "items": {"type": "string"}}
+  }
+}

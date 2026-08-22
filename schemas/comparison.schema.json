@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aalexstan/project-Atlas/blob/main/schemas/comparison.schema.json",
+  "title": "Atlas comparison",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "status", "verified_on", "candidates", "sources"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "object", "required": ["en", "ru"]},
+    "status": {"type": "string", "minLength": 1},
+    "verified_on": {"type": "string", "format": "date"},
+    "live_testing": {"type": "boolean"},
+    "candidates": {"type": "array", "items": {"type": "object", "required": ["id"]}},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}

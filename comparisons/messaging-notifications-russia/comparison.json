@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "messaging-notifications-russia",
   "title": {"en": "Messaging and Notification APIs in Russia", "ru": "API сообщений и уведомлений в России"},
   "status": "reviewed",

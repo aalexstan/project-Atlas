@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "2gis-geocoder-api",
   "name": "2GIS Geocoder API",
   "provider": {

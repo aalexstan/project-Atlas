@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "osrm-routing-engine",
   "name": "OSRM Routing Engine",
   "provider": {"name": "OSRM project", "website": "https://project-osrm.org/"},

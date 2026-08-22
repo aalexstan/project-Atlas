@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "id": "yandex-rasp-api",
   "name": "Yandex Rasp API",
   "provider": {"name": "Yandex", "website": "https://yandex.ru/dev/rasp/doc/ru/"},
