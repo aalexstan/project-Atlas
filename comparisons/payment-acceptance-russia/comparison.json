@@ -1,0 +1,30 @@
+{
+  "id": "payment-acceptance-russia",
+  "title": {
+    "en": "Payment Acceptance APIs in Russia",
+    "ru": "API приёма платежей в России"
+  },
+  "status": "reviewed",
+  "verified_on": "2026-08-22",
+  "region": ["RU"],
+  "live_testing": false,
+  "candidates": [
+    {"id": "yookassa-api", "product_class": "payment_gateway", "best_for": ["documented_payment_lifecycle", "refunds", "receipts", "webhooks"], "public_pricing": "commission_contract_specific", "verdict": "strong_documentation_shortlist"},
+    {"id": "cloudpayments-api", "product_class": "payment_gateway", "best_for": ["card_cryptograms", "two_stage_payments", "subscriptions", "notifications"], "public_pricing": "unknown_api_specific", "verdict": "strong_gateway_shortlist"},
+    {"id": "tbank-internet-acquiring-api", "product_class": "bank_acquiring_integration", "best_for": ["tbank_business_relationship", "crm_payment_status", "payment_links", "recurring_payments"], "public_pricing": "individual_commission", "verdict": "banking_relationship_dependent"}
+  ],
+  "recommendations": {
+    "fast_documented_start": "yookassa-api",
+    "two_stage_and_subscription_flow": "cloudpayments-api",
+    "tbank_settlement_and_business_account": "tbank-internet-acquiring-api",
+    "lowest_predictable_cost": "unknown_without_comparable_quotes",
+    "enterprise_procurement": ["yookassa-api", "cloudpayments-api", "tbank-internet-acquiring-api"]
+  },
+  "gold_blockers": ["merchant_quotes", "common_sandbox_test", "production_limits", "sla", "contract_and_data_rights_review"],
+  "sources": [
+    "https://yookassa.ru/developers",
+    "https://developers.cloudpayments.ru/",
+    "https://developer.tbank.ru/eacq/_README",
+    "https://www.tbank.ru/business/help/business-payments/internet-acquiring/how-work/price/"
+  ]
+}
