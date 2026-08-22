@@ -6,10 +6,12 @@
   "live_testing": false,
   "candidates": [
     {"id": "russian-post-tracking-api", "product_class": "official_postal_tracking_api", "best_for": ["Russian Post item history", "contracted batch tracking"], "public_pricing": "100_requests_daily_registered_access; contract_terms_unknown", "key_risk": "not order creation or carrier aggregation"},
+    {"id": "cdek-logistics-api", "product_class": "carrier_logistics_integration_api", "best_for": ["CDEK waybills", "status synchronisation", "contract-based carrier integration"], "public_pricing": "unknown_api_specific", "key_risk": "public endpoint, auth, schema, limit and rights details not captured"},
     {"id": "yandex-delivery-api", "product_class": "managed_delivery_order_api", "best_for": ["delivery order lifecycle", "delivery estimates", "customer order status"], "public_pricing": "unknown_api_specific", "key_risk": "not a multi-carrier tracking API; commercial terms account-dependent"}
   ],
   "matrix": [
     {"criterion": "shipment_tracking", "russian-post-tracking-api": "documented_registered_items", "yandex-delivery-api": "own_delivery_order_status_documented"},
+    {"criterion": "cdek_integration", "russian-post-tracking-api": "not_applicable", "cdek-logistics-api": "official_portal_described; API_mechanics_unknown", "yandex-delivery-api": "not_applicable"},
     {"criterion": "order_creation", "russian-post-tracking-api": "separate_product", "yandex-delivery-api": "documented"},
     {"criterion": "batch_tracking", "russian-post-tracking-api": "up_to_3000_contract_required", "yandex-delivery-api": "multiple_claim_info_documented; limits_unknown"},
     {"criterion": "courier_location_eta", "russian-post-tracking-api": "not_documented", "yandex-delivery-api": "documented"},

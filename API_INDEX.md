@@ -9,6 +9,7 @@
 | [2GIS Routing API](apis/2gis-routing-api/README.md) | reviewed | 2026-08-22 |
 | [2GIS Suggest API](apis/2gis-suggest-api/README.md) | reviewed | 2026-07-29 |
 | [API.Seldon.Tenders](apis/seldon-tenders-api/README.md) | reviewed | 2026-08-22 |
+| [CDEK Logistics API](apis/cdek-logistics-api/README.md) | reviewed | 2026-08-22 |
 | [CloudPayments API](apis/cloudpayments-api/README.md) | reviewed | 2026-08-22 |
 | [DaData Address APIs](apis/dadata-address-api/README.md) | reviewed | 2026-07-29 |
 | [DaData API](apis/dadata/README.md) | reviewed | 2026-07-23 |

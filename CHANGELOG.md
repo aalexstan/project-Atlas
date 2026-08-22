@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-22 — CDEK carrier integration route
+
+- Added a reviewed CDEK Logistics API profile and linked it to the delivery comparison and need route.
+- Kept endpoints, authentication, schemas, quotas, SLA, price and data rights as unknown pending technical documentation or contract evidence.
+
 ## 2026-08-22 — Intercity timetable API
 
 - Added a reviewed profile for Yandex Rasp API.
