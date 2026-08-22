@@ -1,0 +1,22 @@
+{
+  "id": "delivery-order-tracking-apis",
+  "title": {"en": "Delivery Order and Shipment Tracking APIs", "ru": "API заказов доставки и отслеживания отправлений"},
+  "status": "reviewed",
+  "verified_on": "2026-08-22",
+  "live_testing": false,
+  "candidates": [
+    {"id": "russian-post-tracking-api", "product_class": "official_postal_tracking_api", "best_for": ["Russian Post item history", "contracted batch tracking"], "public_pricing": "100_requests_daily_registered_access; contract_terms_unknown", "key_risk": "not order creation or carrier aggregation"},
+    {"id": "yandex-delivery-api", "product_class": "managed_delivery_order_api", "best_for": ["delivery order lifecycle", "delivery estimates", "customer order status"], "public_pricing": "unknown_api_specific", "key_risk": "not a multi-carrier tracking API; commercial terms account-dependent"}
+  ],
+  "matrix": [
+    {"criterion": "shipment_tracking", "russian-post-tracking-api": "documented_registered_items", "yandex-delivery-api": "own_delivery_order_status_documented"},
+    {"criterion": "order_creation", "russian-post-tracking-api": "separate_product", "yandex-delivery-api": "documented"},
+    {"criterion": "batch_tracking", "russian-post-tracking-api": "up_to_3000_contract_required", "yandex-delivery-api": "multiple_claim_info_documented; limits_unknown"},
+    {"criterion": "courier_location_eta", "russian-post-tracking-api": "not_documented", "yandex-delivery-api": "documented"},
+    {"criterion": "protocol", "russian-post-tracking-api": "SOAP_1_2", "yandex-delivery-api": "HTTP_bearer_token"},
+    {"criterion": "live_test", "russian-post-tracking-api": "not_performed", "yandex-delivery-api": "not_performed"}
+  ],
+  "recommendations": {"track_russian_post_items": ["russian-post-tracking-api"], "create_and_manage_yandex_delivery": ["yandex-delivery-api"], "multi_carrier_tracking": ["requires_separate_research"]},
+  "sources": ["research/delivery-tracking/2026-08-22-russian-post.md", "research/delivery-tracking/2026-08-22-yandex-delivery.md"],
+  "open_questions": ["Do we need tracking, order creation or carrier aggregation?", "What carrier geography and status freshness are required?", "What rights and SLA apply to customer-facing status display?"]
+}
