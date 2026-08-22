@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "cbr-exchange-rates-api",
+  "name": "Bank of Russia Exchange Rates Web Service",
+  "provider": {
+    "name": "Bank of Russia",
+    "website": "https://www.cbr.ru/"
+  },
+  "status": "active",
+  "maturity": "verified",
+  "last_verified": "2026-08-23",
+  "live_tested": false,
+  "product_class": "official_central_bank_data_web_service",
+  "best_for": [
+    "daily_rub_exchange_rates",
+    "financial_reporting",
+    "historical_rate_enrichment"
+  ],
+  "pricing": {
+    "status": "public_free_access_documented",
+    "api_price": "unknown_as_a_separate_commercial_product"
+  },
+  "authentication": {
+    "status": "public_route; credentials_not_documented_for_covered_daily_xml",
+    "method": "none_documented"
+  },
+  "sandbox": {
+    "status": "not_applicable; public_data_service"
+  },
+  "rate_limits": {
+    "status": "unknown_publicly"
+  },
+  "openapi": {
+    "status": "not_applicable; XML_web_service_documentation",
+    "schema": "XSD_referenced_by_official_documentation"
+  },
+  "capabilities": {
+    "daily_exchange_rates": "documented",
+    "historical_date_parameter": "documented",
+    "currency_code_reference": "documented",
+    "real_time_market_quotes": "not_confirmed",
+    "trading_execution": "not_provided"
+  },
+  "data_rights": {
+    "storage": "not separately specified in this review",
+    "redistribution": "unknown",
+    "customer_display": "unknown",
+    "saas": "unknown"
+  },
+  "sources": [
+    "https://www.cbr.ru/development/",
+    "https://www.cbr.ru/development/SXML/",
+    "https://www.cbr.ru/scripts/XML_daily.asp",
+    "https://www.cbr.ru/scripts/XML_val.asp?d=0",
+    "research/cbr-exchange-rates/2026-08-23.md"
+  ],
+  "open_questions": [
+    "What practical rate limits and availability expectations apply?",
+    "What is the operational change policy for endpoints and XML schemas?",
+    "What storage, redistribution, attribution and SaaS terms apply to commercial products?",
+    "Is a separate official route available for other data frequencies or market instruments?"
+  ]
+}

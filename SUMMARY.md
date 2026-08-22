@@ -23,7 +23,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 37 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history and cadastral profiles |
+| API profiles | 38 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history, cadastral and central-bank data profiles |
 | Comparisons | 9 | Includes company, address, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
 | Need routes | 10 | Includes company, address, place search, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
 | Procurement kits | 9 | Counterparty, address, payment, messaging, weather, routing, procurement, delivery and cadastral selection kits |
@@ -40,6 +40,7 @@ Atlas должен помогать проверять, сравнивать и 
 | 2GIS Places API | reviewed | 2026-07-29 | not performed |
 | 2GIS Routing API | reviewed | 2026-08-22 | not performed |
 | 2GIS Suggest API | reviewed | 2026-07-29 | not performed |
+| Bank of Russia Exchange Rates Web Service | verified | 2026-08-23 | not performed |
 | API.Seldon.Tenders | discovered | 2026-08-22 | not performed |
 | Avtocod Vehicle History API | reviewed | 2026-08-23 | not performed |
 | CDEK Logistics API | discovered | 2026-08-22 | not performed |

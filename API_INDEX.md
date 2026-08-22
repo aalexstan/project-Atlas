@@ -10,6 +10,7 @@
 | [2GIS Suggest API](apis/2gis-suggest-api/README.md) | reviewed | 2026-07-29 |
 | [API.Seldon.Tenders](apis/seldon-tenders-api/README.md) | discovered | 2026-08-22 |
 | [Avtocod Vehicle History API](apis/avtocod-vehicle-history-api/README.md) | reviewed | 2026-08-23 |
+| [Bank of Russia Exchange Rates Web Service](apis/cbr-exchange-rates-api/README.md) | verified | 2026-08-23 |
 | [CDEK Logistics API](apis/cdek-logistics-api/README.md) | discovered | 2026-08-22 |
 | [CloudPayments API](apis/cloudpayments-api/README.md) | reviewed | 2026-08-22 |
 | [DaData Address APIs](apis/dadata-address-api/README.md) | reviewed | 2026-07-29 |

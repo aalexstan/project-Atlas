@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-23 - Bank of Russia exchange-rates profile
+
+- Added a bounded API-first profile for the Bank of Russia's official daily exchange-rate XML web service.
+- Kept rate limits, SLA, commercial reuse terms and real-time market-data scope explicitly unknown.
+- Added bilingual evidence and research logs; no live request or credentialed test was performed.
+
 ## 2026-08-23 - Formalize active data contracts
 
 - Added `schema_version: 1` to active API, comparison and need JSON records.
