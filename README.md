@@ -46,6 +46,8 @@ If you know the user problem but not the API, start with the [Needs Index](NEEDS
 
 Then use the related [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and procurement kits.
 
+For a quick tour of the repository itself, use the [Repository Map](REPOSITORY_MAP.md).
+
 ## Core Product Model
 
 The primary public entity is the **API profile**.

@@ -4,6 +4,8 @@
 
 This index points to the active project rules, methodology, and roadmap.
 
+For a user-oriented tour of the repository, see the [Repository Map](../REPOSITORY_MAP.md).
+
 | Document | Purpose |
 |---|---|
 | [Vision](VISION.md) | Product mission, problem, positioning, and long-term outcome |
