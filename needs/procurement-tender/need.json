@@ -1,0 +1,18 @@
+{
+  "id": "procurement-tender",
+  "name": "Procurement and tender data",
+  "name_ru": "Данные о закупках и тендерах",
+  "status": "reviewed",
+  "last_verified": "2026-08-22",
+  "primary_question": "Should we build on official EIS procurement data or use a commercial aggregated API for tender workflows?",
+  "related_apis": ["eis-procurement-data-integration", "seldon-tenders-api"],
+  "related_comparisons": ["procurement-tender-data"],
+  "related_procurement": ["procurement/procurement-api-selection/README.md"],
+  "decision_paths": [
+    {"scenario": "own_primary_data_platform", "initial_shortlist": ["eis-procurement-data-integration"], "next_document": "apis/eis-procurement-data-integration/README.md"},
+    {"scenario": "filtered_crm_tender_workflow", "initial_shortlist": ["seldon-tenders-api"], "next_document": "apis/seldon-tenders-api/README.md"},
+    {"scenario": "commercial_selection", "initial_shortlist": ["eis-procurement-data-integration", "seldon-tenders-api"], "notes": "Request technical, commercial and data-rights evidence before selection.", "next_document": "procurement/procurement-api-selection/RFP.md"}
+  ],
+  "open_questions": ["Which procurement objects and history are needed?", "Is primary-source ownership more important than filtered workflow convenience?", "Can data be stored, redistributed or embedded in SaaS?", "What API access, quotas, update cadence and SLA are required?"],
+  "sources": ["comparisons/procurement-tender-data/comparison.json", "research/procurement-tender/2026-08-22-eis-seldon-recheck.md", "datasets/procurement_tender_contracts.md"]
+}
