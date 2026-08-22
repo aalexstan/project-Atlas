@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-22 — Messaging and notifications direction
+
+- Added reviewed profiles for Telegram Bot API, SMSC API and SMS.RU API.
+- Added a Russia-focused messaging comparison, need route and procurement kit.
+- Kept Telegram chat delivery separate from carrier SMS and left operator pricing, DLR, SLA and data terms open.
+
 ## 2026-08-22 — Payment acceptance direction
 
 - Added reviewed API profiles for YooKassa, CloudPayments and T-Bank Internet Acquiring API.

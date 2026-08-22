@@ -1,0 +1,17 @@
+{
+  "id": "messaging-notifications",
+  "name": "Messaging and Notifications",
+  "name_ru": "Сообщения и уведомления",
+  "status": "reviewed",
+  "last_verified": "2026-08-22",
+  "primary_question": "Which API should we use for bots, SMS, OTP, or transactional notifications?",
+  "related_apis": ["telegram-bot-api", "smsc-api", "smsru-api"],
+  "related_comparisons": ["messaging-notifications-russia"],
+  "related_procurement": ["procurement/messaging-api-selection/"],
+  "decision_paths": [
+    {"scenario": "chat_bot_and_interactive_product", "shortlist": ["telegram-bot-api"], "next_document": "apis/telegram-bot-api/README.md", "main_risk": "User must initiate or join the bot; not SMS delivery"},
+    {"scenario": "phone_number_sms_or_otp", "shortlist": ["smsc-api", "smsru-api"], "next_document": "comparisons/messaging-notifications-russia/README.md", "main_risk": "Operator route, price, throughput and delivery terms"}
+  ],
+  "open_questions": ["delivery benchmark", "operator coverage", "sender approval", "production quotas", "OTP/data terms", "SLA and support"],
+  "sources": ["apis/telegram-bot-api/README.md", "apis/smsc-api/README.md", "apis/smsru-api/README.md", "comparisons/messaging-notifications-russia/README.md", "procurement/messaging-api-selection/README.md"]
+}

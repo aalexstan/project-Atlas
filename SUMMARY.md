@@ -21,10 +21,10 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 20 | Existing company, registry, address/geocoding and GLOBAS profiles plus YooKassa API, CloudPayments API and T-Bank Internet Acquiring API |
-| Comparisons | 3 | Company and counterparty data; address normalization and geocoding; payment acceptance in Russia |
-| Need routes | 4 | Company Verification; Address normalization and geocoding; Organization and place search; Online Payment Acceptance |
-| Procurement kits | 3 | Counterparty; address/geocoding; payment API selection kits |
+| API profiles | 23 | Company, registry, address/geocoding, payment and messaging profiles |
+| Comparisons | 4 | Company/counterparty; address/geocoding; payment acceptance; messaging and notifications |
+| Need routes | 5 | Company Verification; address/geocoding; organization/place search; payment acceptance; messaging and notifications |
+| Procurement kits | 4 | Counterparty; address/geocoding; payment; messaging API selection kits |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
 | Needs indexes | 2 | English and Russian |
@@ -54,6 +54,9 @@ Atlas должен помогать проверять, сравнивать и 
 | YooKassa API | reviewed | 2026-08-22 | not performed |
 | CloudPayments API | reviewed | 2026-08-22 | not performed |
 | T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
+| Telegram Bot API | reviewed | 2026-08-22 | not performed |
+| SMSC API | reviewed | 2026-08-22 | not performed |
+| SMS.RU API | reviewed | 2026-08-22 | not performed |
 
 ## Legacy / Supporting Research
 
@@ -108,6 +111,7 @@ Atlas должен помогать проверять, сравнивать и 
 ## Нерешенные вопросы
 
 - Для payment acceptance нужны сопоставимые merchant quotes, production limits, SLA, lawful sandbox/live benchmark и письменные ответы по 54-ФЗ, PCI DSS, storage, SaaS и redistribution terms для YooKassa, CloudPayments и Т‑Банка.
+- Для messaging APIs нужны общий delivery benchmark, operator quotes, throughput, DLR/SLA, sender approval и письменные ответы по OTP, opt-out, персональным данным, retention и SaaS/redistribution terms.
 
 - Нужны credentialed live tests для API profiles.
 - Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.

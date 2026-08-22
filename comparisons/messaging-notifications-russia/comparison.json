@@ -1,0 +1,16 @@
+{
+  "id": "messaging-notifications-russia",
+  "title": {"en": "Messaging and Notification APIs in Russia", "ru": "API сообщений и уведомлений в России"},
+  "status": "reviewed",
+  "verified_on": "2026-08-22",
+  "region": ["RU"],
+  "live_testing": false,
+  "candidates": [
+    {"id": "telegram-bot-api", "product_class": "bot_platform", "best_for": ["bots", "interactive_notifications", "mini_apps"], "public_pricing": "platform_rules", "verdict": "best_for_chat_interface"},
+    {"id": "smsc-api", "product_class": "sms_gateway", "best_for": ["sms", "otp", "delivery_status"], "public_pricing": "route_and_operator_dependent", "verdict": "sms_gateway_shortlist"},
+    {"id": "smsru-api", "product_class": "sms_verification_api", "best_for": ["sms", "otp", "voice_verification", "webhooks"], "public_pricing": "route_and_operator_dependent", "verdict": "sms_gateway_shortlist"}
+  ],
+  "recommendations": {"chat_and_interaction": "telegram-bot-api", "phone_number_delivery": ["smsc-api", "smsru-api"], "lowest_predictable_cost": "unknown_without_common_quote", "enterprise_selection": ["telegram-bot-api", "smsc-api", "smsru-api"]},
+  "gold_blockers": ["common_delivery_benchmark", "operator_quotes", "throughput", "delivery_sla", "data_and_otp_terms"],
+  "sources": ["https://core.telegram.org/bots/api", "https://smsc.ru/api/http/", "https://sms.ru/docs/api"]
+}

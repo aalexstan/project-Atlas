@@ -44,6 +44,7 @@ If you know the user problem but not the API, start with the [Needs Index](NEEDS
 - [Address normalization, address registries and geocoding](needs/address-normalization-geocoding/README.md)
 - [Organization and place search](needs/organization-place-search/README.md)
 - [Online payment acceptance](needs/payment-acceptance/README.md)
+- [Messaging and notifications](needs/messaging-notifications/README.md)
 
 Then use the related [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and procurement kits.
 
@@ -144,7 +145,7 @@ Atlas will begin with a small number of high-value API categories:
 - payments and finance;
 - messaging and notifications.
 
-The first reference profile, **DaData**, is now published. The first company and counterparty information API comparison is also published. The address and geocoding direction now has active API profiles, a comparison, a need route, and a procurement checklist. The payment direction now has an initial Russia-focused comparison of YooKassa, CloudPayments, and T-Bank Internet Acquiring API.
+The first reference profile, **DaData**, is now published. The first company and counterparty information API comparison is also published. The address and geocoding direction now has active API profiles, a comparison, a need route, and a procurement checklist. The payment direction now has an initial Russia-focused comparison of YooKassa, CloudPayments, and T-Bank Internet Acquiring API. The messaging direction now has separate profiles for Telegram Bot API, SMSC API, and SMS.RU API.
 
 ## Business Direction
 

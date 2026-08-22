@@ -19,7 +19,10 @@
 | [Nominatim Geocoder Software](apis/nominatim-geocoder-software/README.md) | reviewed | 2026-07-29 |
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.md) | reviewed | 2026-07-29 |
 | [Seldon.Basis API](apis/seldon-basis/README.md) | reviewed | 2026-07-23 |
+| [SMS.RU API](apis/smsru-api/README.md) | reviewed | 2026-08-22 |
+| [SMSC API](apis/smsc-api/README.md) | reviewed | 2026-08-22 |
 | [T-Bank Internet Acquiring API](apis/tbank-internet-acquiring-api/README.md) | reviewed | 2026-08-22 |
+| [Telegram Bot API](apis/telegram-bot-api/README.md) | reviewed | 2026-08-22 |
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Organization Search API](apis/yandex-maps-organization-search-api/README.md) | reviewed | 2026-07-29 |
