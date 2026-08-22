@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | [2GIS Geocoder API](apis/2gis-geocoder-api/README.md) | reviewed | 2026-07-29 |
 | [2GIS Places API](apis/2gis-places-api/README.md) | reviewed | 2026-07-29 |
+| [2GIS Routing API](apis/2gis-routing-api/README.md) | reviewed | 2026-08-22 |
 | [2GIS Suggest API](apis/2gis-suggest-api/README.md) | reviewed | 2026-07-29 |
 | [CloudPayments API](apis/cloudpayments-api/README.md) | reviewed | 2026-08-22 |
 | [DaData Address APIs](apis/dadata-address-api/README.md) | reviewed | 2026-07-29 |
@@ -20,6 +21,7 @@
 | [Open-Meteo API](apis/open-meteo-api/README.md) | reviewed | 2026-08-22 |
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.md) | reviewed | 2026-07-29 |
 | [OpenWeather API](apis/openweather-api/README.md) | reviewed | 2026-08-22 |
+| [OSRM Routing Engine](apis/osrm-routing-engine/README.md) | reviewed | 2026-08-22 |
 | [Seldon.Basis API](apis/seldon-basis/README.md) | reviewed | 2026-07-23 |
 | [SMS.RU API](apis/smsru-api/README.md) | reviewed | 2026-08-22 |
 | [SMSC API](apis/smsc-api/README.md) | reviewed | 2026-08-22 |
@@ -29,4 +31,5 @@
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Organization Search API](apis/yandex-maps-organization-search-api/README.md) | reviewed | 2026-07-29 |
+| [Yandex Maps Routing API](apis/yandex-maps-routing-api/README.md) | reviewed | 2026-08-22 |
 | [YooKassa API](apis/yookassa-api/README.md) | reviewed | 2026-08-22 |

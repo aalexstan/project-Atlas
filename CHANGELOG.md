@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-22 — Routing and logistics direction
+
+- Added reviewed profiles for Yandex Maps Routing API, 2GIS Routing API and self-hosted OSRM Routing Engine.
+- Added a scenario-based routing/logistics comparison, need route and procurement kit.
+- Kept route calculation, distance matrices, delivery optimization, geocoding, places and map display as separate product decisions.
+- No live testing, production SLA or provider-specific commercial rights are claimed.
+
 ## 2026-08-22 — Weather data direction
 
 - Added reviewed profiles for Open-Meteo, WeatherAPI.com and OpenWeather.

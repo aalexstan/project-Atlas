@@ -26,6 +26,8 @@
 - Для payment acceptance сравнить YooKassa, CloudPayments и T-Bank Internet Acquiring API на общем lawful sandbox benchmark только после получения credentials; запросить merchant quotes, production limits, SLA, 54-ФЗ/PCI DSS responsibility split и storage/SaaS/redistribution terms.
 - Для messaging APIs сравнить SMSC и SMS.RU на одинаковых синтетических сценариях доставки; отдельно не смешивать Telegram Bot API с carrier SMS и запросить production limits, DLR, sender, SLA, OTP и data-rights terms.
 - Для weather APIs провести общий benchmark по Москве, Санкт-Петербургу и регионам только после получения допустимого тестового доступа; отдельно проверить model output против station observations, historical semantics, commercial licence, storage и derived-data rights.
+- Для Yandex Maps Routing API и 2GIS Routing API получить product-specific pricing, matrix limits, traffic/ETA semantics, truck restrictions, SLA и storage/display/SaaS/redistribution terms; провести общий lawful benchmark только после credentials.
+- Для OSRM провести self-hosting sizing/update benchmark на выбранном OSM extract, проверить attribution/licence obligations и operational SLO; public demo endpoint не использовать как production evidence.
 
 ## Средний приоритет
 
@@ -42,6 +44,7 @@
 - После ручной проверки перенести исторические-only материалы в `legacy/`, если это улучшит навигацию и не потеряет provenance.
 - Поддерживать индекс legacy-материалов и обновлять его при появлении новых исторических слоёв.
 - Расширять needs routes после появления новых сравнений и подтверждённых API profiles; следующий возможный кандидат - отдельный маршрут по self-hosted/open-data geocoding после legal/benchmark review.
+- Поддерживать отдельный маршрут `needs/routing-logistics/` и не смешивать routing с geocoding, places, map tiles или delivery optimization.
 
 ## Legacy Backlog
 
