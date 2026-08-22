@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-22 — Delivery orders and tracking direction
+
+- Added reviewed profiles for Russian Post Tracking API and Yandex Delivery API.
+- Added a comparison, need route and procurement kit.
+- Kept postal tracking, managed delivery orders, carrier aggregation and routing as separate product classes.
+
 ## 2026-08-22 — Procurement and tender data direction
 
 - Added reviewed profiles for official EIS procurement data integration and API.Seldon.Tenders.

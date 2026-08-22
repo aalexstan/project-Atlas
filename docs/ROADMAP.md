@@ -24,6 +24,8 @@ Routing/logistics is now a separate comparison direction: Yandex Maps route deta
 
 Procurement/tender now has reviewed EIS integration and Seldon.Tenders routes, with explicit blockers around current schemas, access, commercial terms and data rights.
 
+Delivery now has separate reviewed routes for Russian Post tracking and Yandex Delivery order lifecycle; carrier aggregation remains a future research class.
+
 Initial comparisons: company and counterparty data, addresses and geocoding, procurement data, messaging, payments, and financial data.
 
 **Success:** each comparison provides scenario-specific recommendations, evidence, and a review date. Need-based routes should connect common user questions to the relevant profiles, comparisons, and procurement kits.

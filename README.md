@@ -48,6 +48,7 @@ If you know the user problem but not the API, start with the [Needs Index](NEEDS
 - [Weather and meteorological data](needs/weather-data/README.md)
 - [Routing and logistics calculation](needs/routing-logistics/README.md)
 - [Procurement and tender data](needs/procurement-tender/README.md)
+- [Delivery orders and shipment tracking](needs/delivery-order-tracking/README.md)
 
 Then use the related [API Index](API_INDEX.md), [Comparison Index](COMPARISON_INDEX.md), and procurement kits.
 

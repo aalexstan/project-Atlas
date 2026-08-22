@@ -30,6 +30,8 @@
 - Для OSRM провести self-hosting sizing/update benchmark на выбранном OSM extract, проверить attribution/licence obligations и operational SLO; public demo endpoint не использовать как production evidence.
 - Для EIS получить актуальные interaction formats, endpoint/distribution catalog, authentication, schemas, quotas, update cadence, support и data-use terms.
 - Для Seldon.Tenders отправить provider request и получить endpoint catalog, protocol, schemas, source coverage, API-specific price, limits, SLA и storage/redistribution terms.
+- Для Russian Post Tracking API получить contract price, production throughput, SLA, retry semantics и rights for stored/customer-facing tracking data.
+- Для Yandex Delivery API получить target-account quote, quotas, SLA, webhook/retry guarantees и storage/customer-display/SaaS terms; проводить test order только с разрешённым доступом.
 
 ## Средний приоритет
 

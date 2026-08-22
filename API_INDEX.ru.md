@@ -24,12 +24,14 @@
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.ru.md) | reviewed | 2026-07-29 |
 | [OpenWeather API](apis/openweather-api/README.ru.md) | reviewed | 2026-08-22 |
 | [OSRM Routing Engine](apis/osrm-routing-engine/README.ru.md) | reviewed | 2026-08-22 |
+| [Russian Post Tracking API](apis/russian-post-tracking-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Seldon.Basis API](apis/seldon-basis/README.ru.md) | reviewed | 2026-07-23 |
 | [SMS.RU API](apis/smsru-api/README.ru.md) | reviewed | 2026-08-22 |
 | [SMSC API](apis/smsc-api/README.ru.md) | reviewed | 2026-08-22 |
 | [T-Bank Internet Acquiring API](apis/tbank-internet-acquiring-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Telegram Bot API](apis/telegram-bot-api/README.ru.md) | reviewed | 2026-08-22 |
 | [WeatherAPI.com API](apis/weatherapi-com-api/README.ru.md) | reviewed | 2026-08-22 |
+| [Yandex Delivery API](apis/yandex-delivery-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Organization Search API](apis/yandex-maps-organization-search-api/README.ru.md) | reviewed | 2026-07-29 |

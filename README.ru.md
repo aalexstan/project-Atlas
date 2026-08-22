@@ -48,6 +48,7 @@ Atlas помогает:
 - [Погодные и метеорологические данные](needs/weather-data/README.ru.md)
 - [Маршрутизация и логистический расчёт](needs/routing-logistics/README.ru.md)
 - [Данные о закупках и тендерах](needs/procurement-tender/README.ru.md)
+- [Заказы доставки и отслеживание отправлений](needs/delivery-order-tracking/README.ru.md)
 
 Затем используйте связанные [индекс API](API_INDEX.ru.md), [индекс сравнений](COMPARISON_INDEX.ru.md) и procurement kits.
 
