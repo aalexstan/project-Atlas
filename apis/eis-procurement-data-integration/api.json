@@ -1,0 +1,20 @@
+{
+  "id": "eis-procurement-data-integration",
+  "name": "EIS Procurement Data Integration",
+  "provider": {"name": "Federal Treasury of Russia", "website": "https://roskazna.gov.ru/gis/eis-zakupki-gov-ru"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["official procurement information", "registry and document provenance", "government-system integration research"],
+  "pricing": {"status": "public_access_role_confirmed; integration_cost_model_unknown", "api_price": "unknown"},
+  "authentication": {"status": "unknown_for_machine_to_machine_access", "notes": "Do not infer authentication from public web access."},
+  "sandbox": {"status": "unknown", "notes": "No Atlas credentialed or service test was performed."},
+  "rate_limits": {"status": "unknown"},
+  "openapi": {"status": "unknown", "documentation": "https://zakupki.gov.ru/epz/main/public/document/view.html?sectionId=1252"},
+  "product_class": "official_government_data_integration",
+  "capabilities": {"procurement_information": "official_site_role_verified", "external_system_formats": "official_navigation_confirmed", "notices_protocols_contracts_documents": "scope_requires_method_level_review", "search": "public_site_scope_not_api_catalog", "bulk_download": "unknown"},
+  "data_rights": {"public_access": "official_role_described", "storage": "legal_and_source_specific_review_required", "redistribution": "unknown", "saas": "unknown"},
+  "sources": ["https://roskazna.gov.ru/gis/eis-zakupki-gov-ru", "https://roskazna.gov.ru/gis/ehlektronnyj-byudzhet/formaty-informacionnogo-vzaimodejstviya", "https://zakupki.gov.ru/epz/main/public/document/view.html?sectionId=1252", "research/procurement-tender/2026-08-22-eis-seldon-recheck.md"],
+  "open_questions": ["What current endpoints or distribution channels are supported?", "What schemas, formats, versioning and authentication apply?", "What update cadence, quotas, support and availability commitments exist?", "What storage, caching, display, redistribution and SaaS use is allowed?"]
+}
