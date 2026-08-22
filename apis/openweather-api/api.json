@@ -1,0 +1,17 @@
+{
+  "id": "openweather-api",
+  "name": "OpenWeather API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "OpenWeather", "website": "https://openweathermap.org/"},
+  "status": "active",
+  "best_for": ["global weather data", "current and forecast APIs", "One Call timeline", "environmental products"],
+  "pricing": {"model": "subscriptions_and_pay_as_you_call", "one_call_4_free_daily_calls": 1000, "exact_overage": "product_specific"},
+  "authentication": "api_key",
+  "sandbox": "account_and_api_key_required",
+  "rate_limits": "plan_dependent",
+  "openapi": "not_found_in_reviewed_sources",
+  "sources": ["https://openweathermap.org/api", "https://openweathermap.org/api/one-call-3", "https://openweathermap.org/price", "https://openweathermap.org/faq"],
+  "open_questions": ["chosen product price", "license scope", "SLA", "storage and display rights", "regional accuracy"]
+}

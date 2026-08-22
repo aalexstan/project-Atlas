@@ -1,0 +1,17 @@
+{
+  "id": "weatherapi-com-api",
+  "name": "WeatherAPI.com API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "WeatherAPI.com", "website": "https://www.weatherapi.com/"},
+  "status": "active",
+  "best_for": ["current weather", "forecast", "historical weather", "air quality", "location search"],
+  "pricing": {"model": "public_subscription_plans", "free_calls_per_month": 100000, "starter_monthly_usd": 7, "pro_plus_monthly_usd": 25},
+  "authentication": "api_key",
+  "sandbox": "signup_and_api_key_required",
+  "rate_limits": "plan_dependent",
+  "openapi": "swagger_tool_documented; specification scope requires confirmation",
+  "sources": ["https://www.weatherapi.com/docs/", "https://www.weatherapi.com/pricing.aspx"],
+  "open_questions": ["SLA", "storage and redistribution", "regional accuracy", "historical data rights"]
+}

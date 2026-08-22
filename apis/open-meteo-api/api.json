@@ -1,0 +1,17 @@
+{
+  "id": "open-meteo-api",
+  "name": "Open-Meteo API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "Open-Meteo", "website": "https://open-meteo.com/"},
+  "status": "active",
+  "best_for": ["non-commercial prototypes", "model-based forecast", "historical weather research", "open-data exploration"],
+  "pricing": {"model": "free_non_commercial_tier_and_paid_customer_api", "free_daily_limit": 10000, "commercial_license": "customer_endpoint_required"},
+  "authentication": "none_for_free_api; api_key_for_customer_endpoint",
+  "sandbox": "free_evaluation_endpoint",
+  "rate_limits": "10000_calls_per_day_free_tier",
+  "openapi": "provider_repository_available; not independently inspected here",
+  "sources": ["https://open-meteo.com/en/docs", "https://open-meteo.com/en/pricing", "https://open-meteo.com/en/docs/historical-forecast-api"],
+  "open_questions": ["plan price", "regional accuracy", "data freshness", "support", "derived-data rights"]
+}
