@@ -34,7 +34,7 @@
 - Для Yandex Delivery API получить target-account quote, quotas, SLA, webhook/retry guarantees и storage/customer-display/SaaS terms; проводить test order только с разрешённым доступом.
 - Для Yandex Rasp API уточнить quotas, SLA, актуальную coverage/freshness и возможность письменной коммерческой лицензии для paid/closed SaaS; не использовать данные вне опубликованных terms.
 - Для CDEK Logistics API получить актуальные endpoints, authentication, schemas, prices, quotas, SLA и data-rights terms напрямую из технической документации или договора.
-- Для Avtocod Vehicle History API получить report-type/price matrix, production limits, SLA, source freshness/correction policy и storage/SaaS/redistribution/scoring terms; не запускать Swagger report без разрешённого paid access.
+- Для Avtocod Vehicle History API отправить `research/vehicle-history/provider-request*.md` и получить target report/source/field matrix, contract prices, numeric frequency limit, SLA/support response times, source freshness/correction policy и письменные storage/SaaS/redistribution/automated-decision/scoring/model-training terms; не запускать Swagger report без разрешённого paid access.
 
 ## Средний приоритет
 

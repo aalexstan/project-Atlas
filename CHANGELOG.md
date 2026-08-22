@@ -3,7 +3,8 @@
 ## 2026-08-23 — Vehicle history API
 
 - Added a reviewed Avtocod Vehicle History API profile with public JSON schema and token-based report workflow evidence.
-- Kept price, limits, SLA, source quality and data rights open; no paid report or live test was run.
+- Deep dive confirmed 10/11 RUB public B2B Autofill prices, account/report-specific quotas, `402/429` behavior, six-month report availability, paid regeneration and non-guaranteed webhooks.
+- Narrowed remaining blockers to contract-specific report/source scope, numerical limits/SLA, source freshness and written downstream-use rights; no paid report or live test was run.
 
 ## 2026-08-22 — CDEK carrier integration route
 

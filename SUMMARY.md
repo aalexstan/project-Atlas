@@ -122,6 +122,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Для weather APIs нужны общий benchmark по координатам и forecast horizons, актуальные model/station semantics, regional freshness, storage/derived-data rights, SLA и support terms.
 - Для routing APIs нужны benchmark маршрутов и матриц, проверка traffic/ETA/truck semantics, production limits, SLA и письменные storage/display/SaaS/redistribution terms. Для OSRM нужны OSM data pipeline, sizing, update, attribution и operational review.
 - Для procurement/tender APIs нужны актуальные EIS schemas/endpoints/access rules и provider request по Seldon.Tenders: source coverage, field matrix, limits, SLA, API price и data rights.
+- Avtocod deep dive подтвердил публичные цены двух B2B-отчётов, day/month/total quotas, `402/429`, шестимесячную доступность отчёта, платную перегенерацию и ненадёжные webhooks; договорные SLA, source freshness и downstream data rights остаются blockers.
 
 - Нужны credentialed live tests для API profiles.
 - Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.
