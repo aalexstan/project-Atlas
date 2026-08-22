@@ -9,7 +9,7 @@
 ## Официальные источники
 
 - [FAQ Роскадастра](https://roscadastre.ru/html/news_2024/67593ca59252f431e8639b07.pdf)
-- [Дайджест изменений 2025 года](https://roscadastre.ru/html/news_2025/67a453ef71101331420997e4f.pdf)
+- [Дайджест изменений 2025 года](https://roscadastre.ru/html/news_2025/67a453ef71101331420997e4.pdf)
 - [Материал о сервисах и форматах НСПД](https://www.roscadastre.ru/html/docs/2025/67808f9247208bdccde18ac6.pdf)
 - [Уведомление об XML-схемах](https://www.roscadastre.ru/docs/4192857/)
 - [Письмо о доступе к ЕГРН](https://www.roscadastre.ru/docs/rrdocs/4243559/)

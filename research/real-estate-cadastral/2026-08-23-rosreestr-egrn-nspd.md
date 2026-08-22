@@ -9,7 +9,7 @@ Determine whether Rosreestr or Roskadastr provides a supported public interface 
 ## Official Sources
 
 - [Roskadastr FAQ for cadastral engineers](https://roscadastre.ru/html/news_2024/67593ca59252f431e8639b07.pdf)
-- [Roskadastr 2025 legal-change digest](https://roscadastre.ru/html/news_2025/67a453ef71101331420997e4f.pdf)
+- [Roskadastr 2025 legal-change digest](https://roscadastre.ru/html/news_2025/67a453ef71101331420997e4.pdf)
 - [NSPD services and formats information issue](https://www.roscadastre.ru/html/docs/2025/67808f9247208bdccde18ac6.pdf)
 - [Rosreestr XML schema notice](https://www.roscadastre.ru/docs/4192857/)
 - [Rosreestr information letter on EGRN access](https://www.roscadastre.ru/docs/rrdocs/4243559/)
