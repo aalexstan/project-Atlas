@@ -14,7 +14,7 @@
 | Request docs Yandex Organization Search указывают endpoint, API key, required `text` и `lang`, JSON/XML format support. | https://yandex.com/maps-api/docs/geosearch-api/request.html | 2026-07-29 | verified | Отдельно от Geosuggest и Geocoder profiles. |
 | Commercial docs Yandex указывают public Organization Search request packages. | https://yandex.com/dev/commercial/doc/en/concepts/geosearch | 2026-07-29 | verified | API commercial terms, not web-product pricing. |
 | Places API docs Yandex указывают API request limit до 50 rps. | https://yandex.com/maps-api/docs/geosearch-api/index.html | 2026-07-29 | verified | Production suitability всё ещё требует contract/SLA review. |
-| Docs 2GIS Search разделяют Geocoder, Places и Suggest APIs. | https://docs.2gis.com/en/api/search/overview | 2026-07-29 | verified | Граница продукта. |
+| Docs 2GIS Search разделяют Geocoder, Places и Suggest APIs. | https://docs.2gis.com/en/api/search/suggest/tutorial | 2026-07-29 | verified | Граница продукта. |
 | 2GIS Suggest API документирует object, address, street и route-endpoint suggestions. | https://docs.2gis.com/en/api/search/suggest/overview | 2026-07-29 | verified | Сценарий Suggest/autocomplete. |
 | 2GIS Places API ищет организации, здания и места. | https://docs.2gis.com/en/api/search/places/overview | 2026-07-29 | verified | Place search отделён от geocoding. |
 | 2GIS Geocoder поддерживает direct/reverse geocoding. | https://docs.2gis.com/en/api/search/geocoder/overview | 2026-07-29 | verified | HTTP JSON с API key. |

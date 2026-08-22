@@ -16,7 +16,7 @@ from urllib.parse import quote, urlparse, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "sources" / "source-registry.json"
-ATTENTION_STATUSES = {"broken", "changed", "unavailable"}
+ATTENTION_STATUSES = {"broken", "changed", "restricted", "unavailable"}
 
 
 class MonitorConfigError(RuntimeError):

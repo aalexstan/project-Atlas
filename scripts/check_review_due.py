@@ -32,9 +32,23 @@ def parse_date(value: object, path: Path) -> dt.date:
         raise ValueError(f"Invalid review date in {path.relative_to(ROOT)}: {value}") from exc
 
 
+def explicit_review_dates(value: object) -> list[dt.date]:
+    values = value.values() if isinstance(value, dict) else (value,)
+    dates: list[dt.date] = []
+    for item in values:
+        if not isinstance(item, str):
+            continue
+        try:
+            dates.append(dt.date.fromisoformat(item))
+        except ValueError:
+            # Blocker states such as credential_required are intentionally not dates.
+            continue
+    return dates
+
+
 def load_items(root: Path, as_of: dt.date) -> list[ReviewItem]:
     definitions = (
-        ("api", "apis", "api.json", "last_verified", 180),
+        ("api", "apis", "api.json", "last_verified", 90),
         ("comparison", "comparisons", "comparison.json", "verified_on", 180),
         ("need", "needs", "need.json", "last_verified", 180),
     )
@@ -46,6 +60,9 @@ def load_items(root: Path, as_of: dt.date) -> list[ReviewItem]:
             maturity = data.get("maturity")
             days = 90 if maturity == "gold" else interval
             due_on = verified + dt.timedelta(days=days)
+            declared_dates = explicit_review_dates(data.get("next_review"))
+            if declared_dates:
+                due_on = min(due_on, *declared_dates)
             declared = str(data.get("status", ""))
             if declared == "needs_recheck":
                 state = "needs_recheck"

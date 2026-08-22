@@ -14,7 +14,7 @@
 | Yandex Organization Search request docs list endpoint, API key, required `text` and `lang`, and JSON/XML format support. | https://yandex.com/maps-api/docs/geosearch-api/request.html | 2026-07-29 | verified | Separate from Geosuggest and Geocoder profiles. |
 | Yandex commercial docs list public Organization Search request packages. | https://yandex.com/dev/commercial/doc/en/concepts/geosearch | 2026-07-29 | verified | API commercial terms, not web-product pricing. |
 | Yandex Places API docs list an API request limit of up to 50 rps. | https://yandex.com/maps-api/docs/geosearch-api/index.html | 2026-07-29 | verified | Production suitability still needs contract/SLA review. |
-| 2GIS Search docs separate Geocoder, Places and Suggest APIs. | https://docs.2gis.com/en/api/search/overview | 2026-07-29 | verified | Product boundary. |
+| 2GIS Search docs separate Geocoder, Places and Suggest APIs. | https://docs.2gis.com/en/api/search/suggest/tutorial | 2026-07-29 | verified | Product boundary. |
 | 2GIS Suggest API documents object, address, street and route-endpoint suggestions. | https://docs.2gis.com/en/api/search/suggest/overview | 2026-07-29 | verified | Suggest/autocomplete scenario. |
 | 2GIS Places API searches organizations, buildings and places. | https://docs.2gis.com/en/api/search/places/overview | 2026-07-29 | verified | Place search is separate from geocoding. |
 | 2GIS Geocoder supports direct and reverse geocoding. | https://docs.2gis.com/en/api/search/geocoder/overview | 2026-07-29 | verified | HTTP JSON with API key. |

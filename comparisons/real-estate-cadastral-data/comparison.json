@@ -9,7 +9,7 @@
   "live_testing": false,
   "candidates": [
     {"id": "rosreestr-egrn-access", "product_class": "official_registry_access_service", "best_for": ["official extracts", "registry evidence", "repeated extract packages"], "key_risk": "automation, current fees, limits and reuse rights need confirmation"},
-    {"id": "nspd-geoservices-route", "product_class": "official_spatial_data_portal", "best_for": ["map discovery", "spatial layers", "territory context"], "key_risk": "not proven as an unrestricted public production API"},
+    {"id": "nspd-geoservices-route", "reference": "research/real-estate-cadastral/2026-08-23-rosreestr-egrn-nspd.md", "product_class": "official_spatial_data_portal", "best_for": ["map discovery", "spatial layers", "territory context"], "key_risk": "not proven as an unrestricted public production API"},
     {"id": "dadata-address-api", "product_class": "commercial_address_enrichment_api", "best_for": ["address normalization", "cadastral-number enrichment", "fast application integration"], "key_risk": "not an official EGRN extract"},
     {"id": "fias-gar-data-integration", "product_class": "official_address_registry_data_integration", "best_for": ["own address registry", "GAR provenance", "address ETL"], "key_risk": "address registry is not a property-rights registry"}
   ],

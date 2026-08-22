@@ -30,6 +30,8 @@ Legacy materials keep provenance value, but they do not need the same cadence un
 
 Known external dates override the table. Example: the FTS EGRUL/EGRIP format migration scheduled for 2026-08-01 requires a targeted recheck after that date.
 
+The automated due-review check uses the shortest profile-wide interval of 90 days for API profiles, 180 days for comparisons and needs, and an earlier parseable `next_review` date when declared.
+
 ## Review Triggers
 
 Review immediately when any of these happens:

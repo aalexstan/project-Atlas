@@ -78,7 +78,7 @@
       "verdict": "additional_enterprise_candidate_requires_documentation_pilot_and_quote"
     },
     {
-      "id": "fts-egrul-egrip-integration",
+      "id": "fns-egrul-egrip-integration",
       "product_class": "primary_registry_bulk_data",
       "best_for": [
         "internal_registry_database",
@@ -109,7 +109,7 @@
     ],
     "cis_and_relationship_analytics": "seldon-basis-api",
     "additional_enterprise_candidate": "globas-api",
-    "internal_registry_platform": "fts-egrul-egrip-integration",
+    "internal_registry_platform": "fns-egrul-egrip-integration",
     "aml_115fz": "evaluate_kontur_compliance_api_separately"
   },
   "partial_updates": [

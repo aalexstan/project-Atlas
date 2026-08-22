@@ -3,7 +3,7 @@
   "name": "API.Seldon.Tenders",
   "provider": {"name": "Seldon", "website": "https://seldongroup.ru/system/1.7/api"},
   "status": "active",
-  "maturity": "reviewed",
+  "maturity": "discovered",
   "last_verified": "2026-08-22",
   "live_tested": false,
   "best_for": ["procurement data integration into CRM", "filtered tender discovery", "notices, protocols, contracts and documents subject to contract scope"],

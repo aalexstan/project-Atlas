@@ -14,6 +14,6 @@
   "openapi": {"status": "unknown", "documentation": "https://yandex.ru/maps-api/docs"},
   "capabilities": {"route_details": "documented", "distance_matrix": "documented", "traffic": "unknown", "vehicle_routing_optimization": "separate_yandex_routing_product", "geocoding": "separate_product"},
   "data_rights": {"storage": "contract_review_required", "caching": "contract_review_required", "display": "map/product coupling requires review", "redistribution": "unknown"},
-  "sources": ["https://yandex.ru/maps-api/docs", "https://yandex.ru/maps-api/docs/ru/concepts/route-details", "https://yandex.ru/maps-api/docs/ru/concepts/matrix", "https://yandex.ru/routing/doc/ru/"],
+  "sources": ["https://yandex.ru/maps-api/docs", "https://yandex.ru/maps-api/docs/router-api/index.html", "https://yandex.ru/maps-api/docs/distancematrix-api/index.html", "https://yandex.ru/routing/doc/ru/"],
   "open_questions": ["Which Yandex product and tariff cover the target use?", "Are traffic, vehicle restrictions and production RPS available?", "What storage, caching, display, SaaS and redistribution rights apply?", "Is a multi-stop optimizer required instead of route details/matrix?"]
 }

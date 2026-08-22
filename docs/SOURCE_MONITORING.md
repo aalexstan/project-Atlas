@@ -9,7 +9,7 @@ Atlas uses a scheduled monitor to detect evidence that may need review. The moni
 - external URLs are discovered from active `apis/*/api.json` sources;
 - availability, HTTP status and configured content markers are checked;
 - API, comparison and need review dates are compared with the review cadence;
-- an existing maintenance issue is updated, or one issue is created when attention is required.
+- one maintenance issue is synchronized with current findings and closed when no attention remains.
 
 ## Source States
 
@@ -19,11 +19,13 @@ Atlas uses a scheduled monitor to detect evidence that may need review. The moni
 - `unavailable` - timeout, network error, unexpected status or server failure;
 - `changed` - a required marker disappeared or a configured fingerprint changed.
 
-Restricted and changed sources are not automatically declared obsolete. A researcher must review the official source and update evidence before changing conclusions.
+Restricted and changed sources require attention but are not automatically declared obsolete. A researcher must review the official source and update evidence before changing conclusions.
 
 ## Configuration
 
 [`sources/source-registry.json`](../sources/source-registry.json) contains monitor defaults and optional per-URL markers or fingerprints. URLs do not need to be copied into the registry: active profile sources are discovered automatically.
+
+Availability is checked for every discovered URL. Content-change detection applies only to sources with configured markers or fingerprints; marker coverage should be expanded for decision-critical pricing, limits and product documentation.
 
 Validate without network access:
 

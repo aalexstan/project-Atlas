@@ -24,6 +24,7 @@
 - Поддерживать `API_INDEX*`, `COMPARISON_INDEX*` и `NEEDS_INDEX*` через `python3 scripts/generate_indexes.py`; CI должен проходить `python3 scripts/generate_indexes.py --check`.
 - Поддерживать взаимные языковые ссылки в активных двуязычных Markdown-парах.
 - Разбирать GitHub Issues от weekly source monitor: подтверждать изменения по official evidence, расширять markers для важных pricing/docs pages и не обновлять facts/`last_verified` автоматически.
+- Постепенно расширить content markers за пределы текущих критичных источников; HTTP `200` без marker/fingerprint подтверждает только доступность, а не неизменность содержания.
 - Для payment acceptance сравнить YooKassa, CloudPayments и T-Bank Internet Acquiring API на общем lawful sandbox benchmark только после получения credentials; запросить merchant quotes, production limits, SLA, 54-ФЗ/PCI DSS responsibility split и storage/SaaS/redistribution terms.
 - Для messaging APIs сравнить SMSC и SMS.RU на одинаковых синтетических сценариях доставки; отдельно не смешивать Telegram Bot API с carrier SMS и запросить production limits, DLR, sender, SLA, OTP и data-rights terms.
 - Для weather APIs провести общий benchmark по Москве, Санкт-Петербургу и регионам только после получения допустимого тестового доступа; отдельно проверить model output против station observations, historical semantics, commercial licence, storage и derived-data rights.

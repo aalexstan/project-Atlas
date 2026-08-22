@@ -56,10 +56,11 @@ jobs:
             echo "attention=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create or update review issue
-        if: steps.monitor.outputs.attention == 'true'
+      - name: Synchronize review issue
+        if: always() && steps.monitor.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ATTENTION: ${{ steps.monitor.outputs.attention }}
         shell: bash
         run: |
           title="[Atlas monitor] Source or review attention required"
@@ -75,9 +76,11 @@ jobs:
           } > "$body_file"
 
           issue_number=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number // empty')
-          if [[ -n "$issue_number" ]]; then
-            gh issue comment "$issue_number" --body-file "$body_file"
-          else
+          if [[ "$ATTENTION" == "true" && -n "$issue_number" ]]; then
+            gh issue edit "$issue_number" --body-file "$body_file"
+          elif [[ "$ATTENTION" == "true" ]]; then
             gh issue create --title "$title" --body-file "$body_file" --label "maintenance" 2>/dev/null || \
               gh issue create --title "$title" --body-file "$body_file"
+          elif [[ -n "$issue_number" ]]; then
+            gh issue close "$issue_number" --comment "The scheduled Atlas monitor no longer reports an item requiring attention."
           fi

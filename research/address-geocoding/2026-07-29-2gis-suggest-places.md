@@ -8,7 +8,7 @@ This log checks 2GIS Suggest API and Places API as separate products from 2GIS G
 
 ## Official Sources Reviewed
 
-- https://docs.2gis.com/en/api/search/overview
+- https://docs.2gis.com/en/api/search/suggest/tutorial
 - https://docs.2gis.com/en/api/search/suggest/overview
 - https://docs.2gis.com/en/api/search/places/overview
 - https://docs.2gis.com/en/platform-manager/subscription/pricing

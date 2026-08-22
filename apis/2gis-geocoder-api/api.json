@@ -72,12 +72,11 @@
     "display": "needs_contract_review"
   },
   "sources": [
-    "https://docs.2gis.com/en/api/search/overview",
     "https://docs.2gis.com/en/api/search/geocoder/overview",
     "https://docs.2gis.com/en/api/search/places/overview",
     "https://docs.2gis.com/en/platform-manager/subscription/services",
     "https://docs.2gis.com/en/platform-manager/subscription/pricing",
-    "https://docs.2gis.com/en/platform-manager/keys",
+    "https://docs.2gis.com/en/platform-manager/subscription/keys",
     "https://law.2gis.ru/offer-license-agreement-webapi"
   ],
   "open_questions": [

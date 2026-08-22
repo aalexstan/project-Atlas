@@ -8,13 +8,13 @@
 | [2GIS Places API](apis/2gis-places-api/README.md) | reviewed | 2026-07-29 |
 | [2GIS Routing API](apis/2gis-routing-api/README.md) | reviewed | 2026-08-22 |
 | [2GIS Suggest API](apis/2gis-suggest-api/README.md) | reviewed | 2026-07-29 |
-| [API.Seldon.Tenders](apis/seldon-tenders-api/README.md) | reviewed | 2026-08-22 |
+| [API.Seldon.Tenders](apis/seldon-tenders-api/README.md) | discovered | 2026-08-22 |
 | [Avtocod Vehicle History API](apis/avtocod-vehicle-history-api/README.md) | reviewed | 2026-08-23 |
-| [CDEK Logistics API](apis/cdek-logistics-api/README.md) | reviewed | 2026-08-22 |
+| [CDEK Logistics API](apis/cdek-logistics-api/README.md) | discovered | 2026-08-22 |
 | [CloudPayments API](apis/cloudpayments-api/README.md) | reviewed | 2026-08-22 |
 | [DaData Address APIs](apis/dadata-address-api/README.md) | reviewed | 2026-07-29 |
 | [DaData API](apis/dadata/README.md) | reviewed | 2026-07-23 |
-| [EIS Procurement Data Integration](apis/eis-procurement-data-integration/README.md) | reviewed | 2026-08-22 |
+| [EIS Procurement Data Integration](apis/eis-procurement-data-integration/README.md) | discovered | 2026-08-22 |
 | [FIAS/GAR Data Integration](apis/fias-gar-data-integration/README.md) | reviewed | 2026-07-29 |
 | [FTS EGRUL/EGRIP Data Integration](apis/fns-egrul-egrip-integration/README.md) | reviewed | 2026-08-15 |
 | [Geoapify Geocoding API](apis/geoapify-geocoding-api/README.md) | reviewed | 2026-07-29 |

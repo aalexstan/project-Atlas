@@ -9,7 +9,7 @@ Atlas использует scheduled monitor, чтобы находить eviden
 - внешние URL собираются из sources активных `apis/*/api.json`;
 - проверяются доступность, HTTP status и настроенные content markers;
 - даты review API, comparisons и needs сравниваются с review cadence;
-- при необходимости обновляется существующая maintenance issue или создаётся одна новая.
+- одна maintenance issue синхронизируется с текущими findings и закрывается, когда внимание больше не требуется.
 
 ## Статусы источника
 
@@ -19,11 +19,13 @@ Atlas использует scheduled monitor, чтобы находить eviden
 - `unavailable` - timeout, network error, unexpected status или server failure;
 - `changed` - исчез required marker или изменился configured fingerprint.
 
-Restricted или changed source не объявляется устаревшим автоматически. Researcher должен проверить official evidence до изменения выводов.
+Restricted или changed source требует внимания, но не объявляется устаревшим автоматически. Researcher должен проверить official evidence до изменения выводов.
 
 ## Конфигурация
 
 [`sources/source-registry.json`](../sources/source-registry.json) хранит defaults и optional per-URL markers/fingerprints. URL не нужно дублировать: sources активных profiles обнаруживаются автоматически.
+
+Доступность проверяется для каждого найденного URL. Content-change detection работает только для sources с настроенными markers или fingerprints; coverage следует расширять для критичных pricing, limits и product documentation.
 
 Проверка без сети:
 

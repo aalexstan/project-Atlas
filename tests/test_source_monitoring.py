@@ -24,6 +24,7 @@ class SourceMonitoringTests(unittest.TestCase):
         source = check_sources.Source("https://example.test", ("demo",))
         result = check_sources.evaluate_response(source, 403, b"")
         self.assertEqual(result.status, "restricted")
+        self.assertIn(result.status, check_sources.ATTENTION_STATUSES)
 
     def test_unicode_url_is_percent_encoded(self) -> None:
         encoded = check_sources.network_url("https://example.test/документы?name=тариф")
@@ -59,6 +60,38 @@ class SourceMonitoringTests(unittest.TestCase):
             )
             items = check_review_due.load_items(root, dt.date(2026, 1, 2))
             self.assertEqual(items[0].status, "needs_recheck")
+
+    def test_api_review_uses_ninety_day_interval(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profile = root / "apis" / "demo"
+            profile.mkdir(parents=True)
+            (profile / "api.json").write_text(
+                json.dumps({"id": "demo", "last_verified": "2026-01-01", "status": "active"}),
+                encoding="utf-8",
+            )
+            items = check_review_due.load_items(root, dt.date(2026, 4, 2))
+            self.assertEqual(items[0].due_on, dt.date(2026, 4, 1))
+            self.assertEqual(items[0].status, "overdue")
+
+    def test_explicit_review_date_takes_precedence(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            comparison = root / "comparisons" / "demo"
+            comparison.mkdir(parents=True)
+            (comparison / "comparison.json").write_text(
+                json.dumps(
+                    {
+                        "id": "demo",
+                        "verified_on": "2026-01-01",
+                        "next_review": {"full": "2026-02-01", "blocked": "credentials_required"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            items = check_review_due.load_items(root, dt.date(2026, 2, 1))
+            self.assertEqual(items[0].due_on, dt.date(2026, 2, 1))
+            self.assertEqual(items[0].status, "due")
 
 
 if __name__ == "__main__":

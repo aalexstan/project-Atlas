@@ -74,7 +74,6 @@
     "saas_embedding": "needs_contract_review"
   },
   "sources": [
-    "https://docs.2gis.com/en/api/search/overview",
     "https://docs.2gis.com/en/api/search/suggest/overview",
     "https://docs.2gis.com/en/platform-manager/subscription/pricing",
     "https://law.2gis.ru/offer-license-agreement-webapi"

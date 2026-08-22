@@ -26,6 +26,41 @@
       "url": "https://dadata.ru/pricing/",
       "label": "DaData pricing",
       "required_markers": ["тариф"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/api/search/geocoder/overview",
+      "label": "2GIS Geocoder overview",
+      "required_markers": ["Geocoder API", "reverse geocoding"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/api/search/suggest/overview",
+      "label": "2GIS Suggest overview",
+      "required_markers": ["Suggest API", "suggestions"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/api/search/places/overview",
+      "label": "2GIS Places overview",
+      "required_markers": ["Places API"]
+    },
+    {
+      "url": "https://docs.2gis.com/en/platform-manager/subscription/keys",
+      "label": "2GIS access keys",
+      "required_markers": ["Creating access keys"]
+    },
+    {
+      "url": "https://opencagedata.com/gdpr",
+      "label": "OpenCage data protection",
+      "required_markers": ["Data Protection", "GDPR"]
+    },
+    {
+      "url": "https://yandex.ru/maps-api/docs/router-api/index.html",
+      "label": "Yandex route details documentation",
+      "required_markers": ["Получение деталей маршрута"]
+    },
+    {
+      "url": "https://yandex.ru/maps-api/docs/distancematrix-api/index.html",
+      "label": "Yandex distance matrix documentation",
+      "required_markers": ["Матрицы расстояний"]
     }
   ]
 }

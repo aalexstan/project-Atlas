@@ -155,7 +155,14 @@ def validate_markdown_links() -> None:
 
 
 def validate_local_paths_and_secrets() -> None:
-    local_path_patterns = [r"/mnt/data/", r"sandbox:/", r"file_000000"]
+    local_path_patterns = [
+        r"/mnt/data/",
+        r"(?<![A-Za-z0-9:/])/Users/[^/]+/",
+        r"(?<![A-Za-z0-9:/])/home/[^/]+/",
+        r"[A-Za-z]:\\Users\\",
+        r"sandbox:/",
+        r"file_000000",
+    ]
     secret_patterns = [
         r"(?i)(api[_ -]?key|secret|token)\s*[:=]\s*[\"'][A-Za-z0-9_\-]{16,}",
         r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----",
@@ -190,6 +197,7 @@ def validate_active_api_metadata() -> None:
         return
 
     required_fields = ("id", "name", "maturity", "last_verified", "live_tested", "sources")
+    maturity_levels = {"discovered", "verified", "reviewed", "compared", "gold"}
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "api.json"
         if not json_path.exists():
@@ -216,6 +224,10 @@ def validate_active_api_metadata() -> None:
         if "sources" in data and (not isinstance(sources, list) or not sources):
             error(f"Expected non-empty sources list in {json_path.relative_to(ROOT)}")
 
+        maturity = data.get("maturity")
+        if isinstance(maturity, str) and maturity not in maturity_levels:
+            error(f"Invalid maturity in {json_path.relative_to(ROOT)}: {maturity}")
+
 
 def validate_comparison_metadata() -> None:
     base = ROOT / "comparisons"
@@ -223,6 +235,7 @@ def validate_comparison_metadata() -> None:
         return
 
     required_fields = ("id", "title", "status", "verified_on", "candidates", "sources")
+    api_ids = json_id_map("apis", "api.json")
     for directory in sorted(path for path in base.iterdir() if path.is_dir()):
         json_path = directory / "comparison.json"
         if not json_path.exists():
@@ -238,6 +251,22 @@ def validate_comparison_metadata() -> None:
             error(f"Expected candidates list in {json_path.relative_to(ROOT)}")
         if "sources" in data and (not isinstance(data["sources"], list) or not data["sources"]):
             error(f"Expected non-empty sources list in {json_path.relative_to(ROOT)}")
+        for candidate in data.get("candidates", []):
+            if not isinstance(candidate, dict):
+                error(f"Invalid candidate in {json_path.relative_to(ROOT)}: expected object")
+                continue
+            candidate_id = candidate.get("id")
+            if not isinstance(candidate_id, str) or not candidate_id:
+                error(f"Invalid candidate id in {json_path.relative_to(ROOT)}")
+                continue
+            if candidate_id in api_ids:
+                continue
+            reference = candidate.get("reference")
+            if not isinstance(reference, str) or not path_exists(reference):
+                error(
+                    f"Unknown candidate id without a valid research reference in "
+                    f"{json_path.relative_to(ROOT)}: {candidate_id}"
+                )
 
 
 def validate_needs_metadata() -> None:

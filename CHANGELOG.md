@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-23 - Audit consistency fixes
+
+- Corrected the FNS integration ID used by the company comparison and added validation for comparison candidate references and maturity values.
+- Downgraded CDEK, EIS and Seldon.Tenders to `discovered` until they satisfy the Verified gate.
+- Replaced five obsolete official source URLs, expanded critical source markers and made restricted responses actionable.
+- Aligned automated API review cadence with the 90-day policy and explicit `next_review` dates.
+- Changed the scheduled maintenance issue from repeated comments to synchronized open/close state.
+
 ## 2026-08-23 - Automated source monitoring
 
 - Added automatic discovery and weekly availability checks for external sources referenced by active API profiles.

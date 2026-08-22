@@ -1,6 +1,6 @@
 # Summary
 
-Дата обновления: 2026-08-21
+Дата обновления: 2026-08-23
 Статус: API-first foundation integrated; legacy dataset research retained
 
 ## Активное направление Atlas
@@ -21,10 +21,10 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 36 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable and vehicle-history profiles |
-| Comparisons | 8 | Company/counterparty; address/geocoding; payment; messaging; weather; routing/logistics; procurement/tender; delivery/tracking |
-| Need routes | 9 | Company Verification; address/geocoding; organization/place search; payment; messaging; weather; routing/logistics; procurement/tender; delivery/tracking |
-| Procurement kits | 8 | Counterparty; address/geocoding; payment; messaging; weather; routing; procurement; delivery API selection kits |
+| API profiles | 37 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history and cadastral profiles |
+| Comparisons | 9 | Includes company, address, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
+| Need routes | 10 | Includes company, address, place search, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
+| Procurement kits | 9 | Counterparty, address, payment, messaging, weather, routing, procurement, delivery and cadastral selection kits |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
 | Needs indexes | 2 | English and Russian |
@@ -36,33 +36,41 @@ Atlas должен помогать проверять, сравнивать и 
 |---|---|---|---|
 | 2GIS Geocoder API | reviewed | 2026-07-29 | not performed |
 | 2GIS Places API | reviewed | 2026-07-29 | not performed |
+| 2GIS Routing API | reviewed | 2026-08-22 | not performed |
 | 2GIS Suggest API | reviewed | 2026-07-29 | not performed |
+| API.Seldon.Tenders | discovered | 2026-08-22 | not performed |
+| Avtocod Vehicle History API | reviewed | 2026-08-23 | not performed |
+| CDEK Logistics API | discovered | 2026-08-22 | not performed |
+| CloudPayments API | reviewed | 2026-08-22 | not performed |
 | DaData Address APIs | reviewed | 2026-07-29 | not performed |
 | DaData API | reviewed | 2026-07-23 | not performed |
+| EIS Procurement Data Integration | discovered | 2026-08-22 | not performed |
 | FIAS/GAR Data Integration | reviewed | 2026-07-29 | not performed |
 | FTS EGRUL/EGRIP Data Integration | reviewed | 2026-08-15 | not performed |
-| GLOBAS.API | reviewed | 2026-07-28 | not performed |
 | Geoapify Geocoding API | reviewed | 2026-07-29 | not performed |
+| GLOBAS.API | reviewed | 2026-07-28 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
 | LocationIQ Geocoding API | reviewed | 2026-07-29 | not performed |
 | Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed |
+| Open-Meteo API | reviewed | 2026-08-22 | not performed |
 | OpenCage Geocoding API | reviewed | 2026-07-29 | not performed |
+| OpenWeather API | reviewed | 2026-08-22 | not performed |
+| OSRM Routing Engine | reviewed | 2026-08-22 | not performed |
+| Rosreestr EGRN Access Service | reviewed | 2026-08-23 | not performed |
+| Russian Post Tracking API | reviewed | 2026-08-22 | not performed |
 | Seldon.Basis API | reviewed | 2026-07-23 | not performed |
-| Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed |
-| Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
-| Yandex Maps Organization Search API | reviewed | 2026-07-29 | not performed |
-| YooKassa API | reviewed | 2026-08-22 | not performed |
-| CloudPayments API | reviewed | 2026-08-22 | not performed |
-| T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
-| Telegram Bot API | reviewed | 2026-08-22 | not performed |
 | SMSC API | reviewed | 2026-08-22 | not performed |
 | SMS.RU API | reviewed | 2026-08-22 | not performed |
-| Open-Meteo API | reviewed | 2026-08-22 | not performed |
+| T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
+| Telegram Bot API | reviewed | 2026-08-22 | not performed |
 | WeatherAPI.com API | reviewed | 2026-08-22 | not performed |
-| OpenWeather API | reviewed | 2026-08-22 | not performed |
+| Yandex Delivery API | reviewed | 2026-08-22 | not performed |
+| Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
+| Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed |
+| Yandex Maps Organization Search API | reviewed | 2026-07-29 | not performed |
 | Yandex Maps Routing API | reviewed | 2026-08-22 | not performed |
-| 2GIS Routing API | reviewed | 2026-08-22 | not performed |
-| OSRM Routing Engine | reviewed | 2026-08-22 | not performed |
+| Yandex Rasp API | reviewed | 2026-08-22 | not performed |
+| YooKassa API | reviewed | 2026-08-22 | not performed |
 
 ## Legacy / Supporting Research
 
@@ -85,7 +93,7 @@ Atlas должен помогать проверять, сравнивать и 
 - API Portal остается полезным discovery source, но не считается final source of truth.
 - История проверки домена `api-seldon.ru` сохранена как исторический риск источника.
 - Активная карточка Seldon.Basis связана с официальными источниками `seldongroup.ru`.
-- Для Seldon.Tenders создано решение сохранить legacy-only статус: официальные страницы подтверждают `API.Seldon.Tenders` как Seldon 1.7 integration route, но публичной specification/auth/pricing evidence недостаточно для активной карточки.
+- Первоначальное решение сохраняло Seldon.Tenders как legacy-only; повторная проверка официальной продуктовой страницы позволила создать только `discovered`-профиль. Authentication, protocol, endpoints и API pricing всё ещё не подтверждены.
 - Legacy dataset note `datasets/procurement_tender_contracts.md` связана с Seldon.Tenders decision memo и procurement/tender research baseline; она оставлена как supporting evidence для будущего procurement/tender API comparison.
 - Для procurement/tender направления добавлен research baseline `research/procurement-tender/`: ЕИС / `zakupki.gov.ru`, agency open-data datasets и Seldon.Tenders пока не повышаются до активного comparison без endpoint/auth/schema/rights evidence. Официальный EIS technical-information hub и subsection `Требования к информационному взаимодействию ЕИС с другими информационными системами` найдены, но actual documents/schemas не captured.
 - Для Kontur.Focus API и Seldon.Basis API подготовлены provider-request checklists, чтобы запросить API-specific price/spec/limits/SLA/data-rights evidence без смешивания с web-product pricing.
