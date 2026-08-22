@@ -7,6 +7,7 @@
 | [2GIS Geocoder API](apis/2gis-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [2GIS Places API](apis/2gis-places-api/README.ru.md) | reviewed | 2026-07-29 |
 | [2GIS Suggest API](apis/2gis-suggest-api/README.ru.md) | reviewed | 2026-07-29 |
+| [CloudPayments API](apis/cloudpayments-api/README.ru.md) | reviewed | 2026-08-22 |
 | [DaData Address APIs](apis/dadata-address-api/README.ru.md) | reviewed | 2026-07-29 |
 | [DaData API](apis/dadata/README.ru.md) | reviewed | 2026-07-23 |
 | [FIAS/GAR Data Integration](apis/fias-gar-data-integration/README.ru.md) | reviewed | 2026-07-29 |
@@ -18,6 +19,8 @@
 | [Nominatim Geocoder Software](apis/nominatim-geocoder-software/README.ru.md) | reviewed | 2026-07-29 |
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Seldon.Basis API](apis/seldon-basis/README.ru.md) | reviewed | 2026-07-23 |
+| [T-Bank Internet Acquiring API](apis/tbank-internet-acquiring-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Yandex Maps Geocoder API](apis/yandex-maps-geocoder-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Organization Search API](apis/yandex-maps-organization-search-api/README.ru.md) | reviewed | 2026-07-29 |
+| [YooKassa API](apis/yookassa-api/README.ru.md) | reviewed | 2026-08-22 |

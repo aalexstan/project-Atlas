@@ -21,10 +21,10 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 17 | DaData, DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, OpenCage Geocoding API, LocationIQ Geocoding API, Nominatim Geocoder Software, FIAS/GAR Data Integration, FTS EGRUL/EGRIP integration, GLOBAS.API, Kontur.Focus API, Seldon.Basis API |
-| Comparisons | 2 | Company and counterparty data APIs in Russia; address normalization and geocoding APIs |
-| Need routes | 3 | Company Verification; Address normalization, address registries and geocoding; Organization and place search |
-| Procurement kits | 2 | Counterparty API selection kit; address/geocoding API selection kit |
+| API profiles | 20 | Existing company, registry, address/geocoding and GLOBAS profiles plus YooKassa API, CloudPayments API and T-Bank Internet Acquiring API |
+| Comparisons | 3 | Company and counterparty data; address normalization and geocoding; payment acceptance in Russia |
+| Need routes | 4 | Company Verification; Address normalization and geocoding; Organization and place search; Online Payment Acceptance |
+| Procurement kits | 3 | Counterparty; address/geocoding; payment API selection kits |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
 | Needs indexes | 2 | English and Russian |
@@ -51,6 +51,9 @@ Atlas должен помогать проверять, сравнивать и 
 | Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed |
 | Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
 | Yandex Maps Organization Search API | reviewed | 2026-07-29 | not performed |
+| YooKassa API | reviewed | 2026-08-22 | not performed |
+| CloudPayments API | reviewed | 2026-08-22 | not performed |
+| T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
 
 ## Legacy / Supporting Research
 
@@ -103,6 +106,8 @@ Atlas должен помогать проверять, сравнивать и 
 - Создан review cadence policy с ролевым ownership, review states и правилами обновления `last_verified`.
 
 ## Нерешенные вопросы
+
+- Для payment acceptance нужны сопоставимые merchant quotes, production limits, SLA, lawful sandbox/live benchmark и письменные ответы по 54-ФЗ, PCI DSS, storage, SaaS и redistribution terms для YooKassa, CloudPayments и Т‑Банка.
 
 - Нужны credentialed live tests для API profiles.
 - Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.

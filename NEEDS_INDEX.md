@@ -6,4 +6,5 @@
 | --- | --- | --- |
 | [Address normalization, address registries and geocoding](needs/address-normalization-geocoding/README.md) | reviewed | 2026-07-29 |
 | [Company Verification](needs/company-verification/README.md) | reviewed | 2026-07-23 |
+| [Online Payment Acceptance](needs/payment-acceptance/README.md) | reviewed | 2026-08-22 |
 | [Organization and place search](needs/organization-place-search/README.md) | reviewed | 2026-07-29 |

@@ -23,6 +23,7 @@
 - Не использовать `ratings/` как действующий Atlas Score. Любая новая оценка должна следовать `docs/METHODOLOGY.md` и иметь публичные критерии.
 - Поддерживать `API_INDEX*`, `COMPARISON_INDEX*` и `NEEDS_INDEX*` через `python3 scripts/generate_indexes.py`; CI должен проходить `python3 scripts/generate_indexes.py --check`.
 - Поддерживать взаимные языковые ссылки в активных двуязычных Markdown-парах.
+- Для payment acceptance сравнить YooKassa, CloudPayments и T-Bank Internet Acquiring API на общем lawful sandbox benchmark только после получения credentials; запросить merchant quotes, production limits, SLA, 54-ФЗ/PCI DSS responsibility split и storage/SaaS/redistribution terms.
 
 ## Средний приоритет
 

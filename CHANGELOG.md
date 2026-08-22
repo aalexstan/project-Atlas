@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-22 — Payment acceptance direction
+
+- Added reviewed API profiles for YooKassa, CloudPayments and T-Bank Internet Acquiring API.
+- Added the Russia-focused payment acceptance comparison, need route and procurement kit.
+- Kept merchant-specific pricing, production quotas, SLA and legal terms explicit as unknown or contract-dependent.
+
 ## 2026-08-21 — Moscow Open Data blocker status alignment
 
 ### Что добавлено

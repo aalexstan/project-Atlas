@@ -43,6 +43,7 @@ Atlas помогает:
 - [Проверка контрагента](needs/company-verification/README.ru.md)
 - [Нормализация адресов, адресные реестры и геокодирование](needs/address-normalization-geocoding/README.ru.md)
 - [Поиск организаций и мест](needs/organization-place-search/README.ru.md)
+- [Приём онлайн-платежей](needs/payment-acceptance/README.ru.md)
 
 Затем используйте связанные [индекс API](API_INDEX.ru.md), [индекс сравнений](COMPARISON_INDEX.ru.md) и procurement kits.
 
@@ -143,7 +144,7 @@ Atlas начинает с небольшого числа ценных кате�
 - платежи и финансы;
 - сообщения и уведомления.
 
-Первая эталонная карточка, **DaData**, уже опубликована. Первое сравнение API для получения информации о компаниях и контрагентах также опубликовано. Направление адресов и геокодирования теперь имеет активные API profiles, comparison, need route и procurement checklist.
+Первая эталонная карточка, **DaData**, уже опубликована. Первое сравнение API для получения информации о компаниях и контрагентах также опубликовано. Направление адресов и геокодирования теперь имеет активные API profiles, comparison, need route и procurement checklist. Платёжное направление получило первое сравнение ЮKassa, CloudPayments и API интернет-эквайринга Т‑Банка для России.
 
 ## Направления монетизации
 
