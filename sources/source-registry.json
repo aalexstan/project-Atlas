@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "defaults": {
+    "timeout_seconds": 15,
+    "max_bytes": 262144,
+    "workers": 8,
+    "user_agent": "Project-Atlas-Source-Monitor/1.0 (+https://github.com/aalexstan/project-Atlas)"
+  },
+  "overrides": [
+    {
+      "url": "https://b2bapi.avtocod.ru/docs/about/overview",
+      "label": "Avtocod API overview",
+      "required_markers": ["API Автокод"]
+    },
+    {
+      "url": "https://avtocod.ru/for-business-tariffs",
+      "label": "Avtocod B2B tariffs",
+      "required_markers": ["Тариф"]
+    },
+    {
+      "url": "https://dadata.ru/api/suggest/address/",
+      "label": "DaData address suggestions",
+      "required_markers": ["адрес"]
+    },
+    {
+      "url": "https://dadata.ru/pricing/",
+      "label": "DaData pricing",
+      "required_markers": ["тариф"]
+    }
+  ]
+}

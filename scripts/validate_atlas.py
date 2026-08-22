@@ -16,6 +16,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import generate_indexes  # noqa: E402
+import check_sources  # noqa: E402
 
 ERRORS: list[str] = []
 WARNINGS: list[str] = []
@@ -361,6 +362,17 @@ def validate_index_freshness() -> None:
             error(f"Generated index is stale: {path.relative_to(ROOT)}")
 
 
+def validate_source_monitor_config() -> None:
+    try:
+        _, overrides = check_sources.load_registry()
+        sources = check_sources.collect_sources(ROOT, overrides)
+    except check_sources.MonitorConfigError as exc:
+        error(str(exc))
+        return
+    if not sources:
+        error("Source monitor discovered no external URLs in active API profiles")
+
+
 def main() -> int:
     validate_json()
     validate_language_pairs()
@@ -371,6 +383,7 @@ def main() -> int:
     validate_needs_metadata()
     validate_need_references()
     validate_index_freshness()
+    validate_source_monitor_config()
 
     for item in WARNINGS:
         print(f"WARNING: {item}")
