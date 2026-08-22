@@ -32,6 +32,7 @@
 - Для Seldon.Tenders отправить provider request и получить endpoint catalog, protocol, schemas, source coverage, API-specific price, limits, SLA и storage/redistribution terms.
 - Для Russian Post Tracking API получить contract price, production throughput, SLA, retry semantics и rights for stored/customer-facing tracking data.
 - Для Yandex Delivery API получить target-account quote, quotas, SLA, webhook/retry guarantees и storage/customer-display/SaaS terms; проводить test order только с разрешённым доступом.
+- Для Yandex Rasp API уточнить quotas, SLA, актуальную coverage/freshness и возможность письменной коммерческой лицензии для paid/closed SaaS; не использовать данные вне опубликованных terms.
 
 ## Средний приоритет
 

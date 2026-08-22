@@ -26,6 +26,8 @@ Procurement/tender now has reviewed EIS integration and Seldon.Tenders routes, w
 
 Delivery now has separate reviewed routes for Russian Post tracking and Yandex Delivery order lifecycle; carrier aggregation remains a future research class.
 
+Yandex Rasp API is reviewed for free public intercity timetable features; commercial and long-term storage use remains blocked by published terms unless Yandex agrees otherwise.
+
 Initial comparisons: company and counterparty data, addresses and geocoding, procurement data, messaging, payments, and financial data.
 
 **Success:** each comparison provides scenario-specific recommendations, evidence, and a review date. Need-based routes should connect common user questions to the relevant profiles, comparisons, and procurement kits.

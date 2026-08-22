@@ -36,4 +36,5 @@
 | [Yandex Maps Geosuggest API](apis/yandex-maps-geosuggest-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Organization Search API](apis/yandex-maps-organization-search-api/README.ru.md) | reviewed | 2026-07-29 |
 | [Yandex Maps Routing API](apis/yandex-maps-routing-api/README.ru.md) | reviewed | 2026-08-22 |
+| [Yandex Rasp API](apis/yandex-rasp-api/README.ru.md) | reviewed | 2026-08-22 |
 | [YooKassa API](apis/yookassa-api/README.ru.md) | reviewed | 2026-08-22 |

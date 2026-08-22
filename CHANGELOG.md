@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-22 — Intercity timetable API
+
+- Added a reviewed profile for Yandex Rasp API.
+- Recorded its API-key REST/JSON/XML model and the published free-public-use, attribution and temporary-caching restrictions.
+- Did not claim live testing, commercial use rights, quotas or SLA.
+
 ## 2026-08-22 — Delivery orders and tracking direction
 
 - Added reviewed profiles for Russian Post Tracking API and Yandex Delivery API.
