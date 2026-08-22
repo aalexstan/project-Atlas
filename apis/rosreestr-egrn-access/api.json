@@ -1,0 +1,70 @@
+{
+  "id": "rosreestr-egrn-access",
+  "name": "Rosreestr EGRN Access Service",
+  "provider": {
+    "name": "Rosreestr / Roskadastr",
+    "website": "https://rosreestr.gov.ru/"
+  },
+  "status": "needs_recheck",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-23",
+  "live_tested": false,
+  "product_class": "official_registry_access_service",
+  "best_for": [
+    "official EGRN extracts",
+    "legally significant real-estate registry evidence",
+    "repeated extract requests through official package access"
+  ],
+  "pricing": {
+    "status": "needs_recheck",
+    "model": "individual_extract_or_prepaid_package",
+    "official_2025_material_package_extract_rub": "116-290",
+    "caveat": "Current applicant, extract type, package and fee conditions require confirmation; this is not a generic API per-call price."
+  },
+  "authentication": {
+    "official_service": "access_key_and_personal_account_reported_in_official_material",
+    "unattended_api_flow": "unknown"
+  },
+  "sandbox": {
+    "status": "unknown",
+    "notes": "No non-billable developer sandbox was confirmed."
+  },
+  "rate_limits": {
+    "status": "unknown",
+    "package_operations": "prepaid_and_valid_for_one_year_in_reviewed_official_material"
+  },
+  "openapi": {
+    "status": "unknown"
+  },
+  "capabilities": {
+    "individual_egrn_extract": "verified_official_route",
+    "package_egrn_access": "verified_official_service_route",
+    "legally_significant_output": "depends_on_extract_and_delivery_rules",
+    "public_cadastral_map": "related_user_service_not_an_api_capability",
+    "nspd_geoservices": "related_product_class",
+    "bulk_registry_dump": "not_confirmed",
+    "generic_rest_api": "not_confirmed"
+  },
+  "data_rights": {
+    "public_information": "subject_to_egrn_access_rules",
+    "restricted_information": "applicant_specific_legal_basis_required",
+    "storage": "unknown_for_commercial_product",
+    "customer_display": "unknown_for_commercial_product",
+    "redistribution": "unknown",
+    "saas": "unknown",
+    "valuation_scoring_model_training": "legal_review_required"
+  },
+  "sources": [
+    "https://roscadastre.ru/html/news_2024/67593ca59252f431e8639b07.pdf",
+    "https://roscadastre.ru/html/news_2025/67a453ef71101331420997e4f.pdf",
+    "https://www.roscadastre.ru/docs/rrdocs/4243559/",
+    "research/real-estate-cadastral/2026-08-23-rosreestr-egrn-nspd.md",
+    "research/real-estate-cadastral/decision.md"
+  ],
+  "open_questions": [
+    "Does the access-key service support documented unattended integration for ordinary commercial legal entities?",
+    "What current extract types, package prices, quotas and rate limits apply?",
+    "What SLA, support, storage, customer-display, SaaS and redistribution terms apply?",
+    "Which information requires applicant-specific legal grounds?"
+  ]
+}

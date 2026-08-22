@@ -4,13 +4,13 @@
 
 ## Decision
 
-Do **not** create an active API-first profile yet.
+Create a reviewed profile for **Rosreestr EGRN Access Service** with product class `official_registry_access_service`. Do not describe it as a generic REST API.
 
 Official sources confirm electronic EGRN access, access-key packages, machine-readable NSPD outputs and XML schemas. They do not confirm one supported public API for ordinary commercial developers with a complete endpoint catalog, authentication flow, quotas, SLA and downstream-use terms.
 
-A generic `Rosreestr API` profile would incorrectly merge legally significant extracts, package access, NSPD geoservices, inter-agency exchange and public-map frontend endpoints.
+A generic `Rosreestr API` profile would incorrectly merge legally significant extracts, package access, NSPD geoservices, inter-agency exchange and public-map frontend endpoints. The active profile therefore covers only the official EGRN request/access route and keeps unattended automation as unknown.
 
-## Reopen Conditions
+## Maturity Conditions
 
 - Confirm the product identity, intended audience, base URL and methods.
 - Confirm onboarding, authentication, formats and schemas.
