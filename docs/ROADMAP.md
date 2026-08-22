@@ -22,6 +22,8 @@ Initial targets: DaData, relevant Kontur and Seldon products, official registry 
 
 Routing/logistics is now a separate comparison direction: Yandex Maps route details/matrix, 2GIS Routing API and self-hosted OSRM are kept distinct from geocoding, places and delivery optimization.
 
+Procurement/tender now has reviewed EIS integration and Seldon.Tenders routes, with explicit blockers around current schemas, access, commercial terms and data rights.
+
 Initial comparisons: company and counterparty data, addresses and geocoding, procurement data, messaging, payments, and financial data.
 
 **Success:** each comparison provides scenario-specific recommendations, evidence, and a review date. Need-based routes should connect common user questions to the relevant profiles, comparisons, and procurement kits.

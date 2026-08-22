@@ -4,6 +4,7 @@
 
 | Задача | Статус | Последняя проверка |
 | --- | --- | --- |
+| [Данные о закупках и тендерах](needs/procurement-tender/README.ru.md) | reviewed | 2026-08-22 |
 | [Маршрутизация и логистический расчёт](needs/routing-logistics/README.ru.md) | reviewed | 2026-08-22 |
 | [Нормализация адресов, адресные реестры и геокодирование](needs/address-normalization-geocoding/README.ru.md) | reviewed | 2026-07-29 |
 | [Погодные и метеорологические данные](needs/weather-data/README.ru.md) | reviewed | 2026-08-22 |

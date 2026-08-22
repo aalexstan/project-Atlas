@@ -10,3 +10,4 @@
 | [API погодных и метеоданных](comparisons/weather-data-apis/README.ru.md) | reviewed | 2026-08-22 |
 | [API приёма платежей в России](comparisons/payment-acceptance-russia/README.ru.md) | reviewed | 2026-08-22 |
 | [API сообщений и уведомлений в России](comparisons/messaging-notifications-russia/README.ru.md) | reviewed | 2026-08-22 |
+| [Источники данных о закупках и тендерах](comparisons/procurement-tender-data/README.ru.md) | reviewed | 2026-08-22 |

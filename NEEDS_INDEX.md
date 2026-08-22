@@ -9,5 +9,6 @@
 | [Messaging and Notifications](needs/messaging-notifications/README.md) | reviewed | 2026-08-22 |
 | [Online Payment Acceptance](needs/payment-acceptance/README.md) | reviewed | 2026-08-22 |
 | [Organization and place search](needs/organization-place-search/README.md) | reviewed | 2026-07-29 |
+| [Procurement and tender data](needs/procurement-tender/README.md) | reviewed | 2026-08-22 |
 | [Routing and logistics calculation](needs/routing-logistics/README.md) | reviewed | 2026-08-22 |
 | [Weather and Meteorological Data](needs/weather-data/README.md) | reviewed | 2026-08-22 |

@@ -28,6 +28,8 @@
 - Для weather APIs провести общий benchmark по Москве, Санкт-Петербургу и регионам только после получения допустимого тестового доступа; отдельно проверить model output против station observations, historical semantics, commercial licence, storage и derived-data rights.
 - Для Yandex Maps Routing API и 2GIS Routing API получить product-specific pricing, matrix limits, traffic/ETA semantics, truck restrictions, SLA и storage/display/SaaS/redistribution terms; провести общий lawful benchmark только после credentials.
 - Для OSRM провести self-hosting sizing/update benchmark на выбранном OSM extract, проверить attribution/licence obligations и operational SLO; public demo endpoint не использовать как production evidence.
+- Для EIS получить актуальные interaction formats, endpoint/distribution catalog, authentication, schemas, quotas, update cadence, support и data-use terms.
+- Для Seldon.Tenders отправить provider request и получить endpoint catalog, protocol, schemas, source coverage, API-specific price, limits, SLA и storage/redistribution terms.
 
 ## Средний приоритет
 
@@ -45,6 +47,7 @@
 - Поддерживать индекс legacy-материалов и обновлять его при появлении новых исторических слоёв.
 - Расширять needs routes после появления новых сравнений и подтверждённых API profiles; следующий возможный кандидат - отдельный маршрут по self-hosted/open-data geocoding после legal/benchmark review.
 - Поддерживать отдельный маршрут `needs/routing-logistics/` и не смешивать routing с geocoding, places, map tiles или delivery optimization.
+- Сохранить `datasets/procurement_tender_contracts.md` как provenance; не выдавать старые API Portal claims за current API evidence.
 
 ## Legacy Backlog
 

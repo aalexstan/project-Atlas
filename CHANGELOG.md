@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-22 — Procurement and tender data direction
+
+- Added reviewed profiles for official EIS procurement data integration and API.Seldon.Tenders.
+- Added a scenario comparison, need route and procurement API selection kit.
+- Kept EIS as an official data/integration route and Seldon as a commercial aggregated route; endpoint mechanics, limits, SLA, prices and data rights remain open.
+- Preserved legacy procurement dataset research and the old Seldon domain as provenance/risk notes.
+
 ## 2026-08-22 — Routing and logistics direction
 
 - Added reviewed profiles for Yandex Maps Routing API, 2GIS Routing API and self-hosted OSRM Routing Engine.

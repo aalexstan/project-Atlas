@@ -21,10 +21,10 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 29 | Company, registry, address/geocoding, payment, messaging, weather and routing profiles |
-| Comparisons | 6 | Company/counterparty; address/geocoding; payment; messaging; weather data; routing/logistics |
-| Need routes | 7 | Company Verification; address/geocoding; organization/place search; payment; messaging; weather data; routing/logistics |
-| Procurement kits | 6 | Counterparty; address/geocoding; payment; messaging; weather and routing API selection kits |
+| API profiles | 31 | Company, registry, address/geocoding, payment, messaging, weather, routing and procurement profiles |
+| Comparisons | 7 | Company/counterparty; address/geocoding; payment; messaging; weather; routing/logistics; procurement/tender |
+| Need routes | 8 | Company Verification; address/geocoding; organization/place search; payment; messaging; weather; routing/logistics; procurement/tender |
+| Procurement kits | 7 | Counterparty; address/geocoding; payment; messaging; weather; routing; procurement API selection kits |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
 | Needs indexes | 2 | English and Russian |
@@ -121,6 +121,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Для messaging APIs нужны общий delivery benchmark, operator quotes, throughput, DLR/SLA, sender approval и письменные ответы по OTP, opt-out, персональным данным, retention и SaaS/redistribution terms.
 - Для weather APIs нужны общий benchmark по координатам и forecast horizons, актуальные model/station semantics, regional freshness, storage/derived-data rights, SLA и support terms.
 - Для routing APIs нужны benchmark маршрутов и матриц, проверка traffic/ETA/truck semantics, production limits, SLA и письменные storage/display/SaaS/redistribution terms. Для OSRM нужны OSM data pipeline, sizing, update, attribution и operational review.
+- Для procurement/tender APIs нужны актуальные EIS schemas/endpoints/access rules и provider request по Seldon.Tenders: source coverage, field matrix, limits, SLA, API price и data rights.
 
 - Нужны credentialed live tests для API profiles.
 - Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.
