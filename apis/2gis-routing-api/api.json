@@ -1,0 +1,20 @@
+{
+  "id": "2gis-routing-api",
+  "name": "2GIS Routing API",
+  "provider": {"name": "2GIS", "website": "https://2gis.ru/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["route building", "multiple origin-destination pairs", "cloud or on-premise navigation integration"],
+  "pricing": {"status": "public_tariffs_and_contract_scope_require_review", "api_price": "unknown"},
+  "authentication": {"type": "developer_api_key", "parameter": "key"},
+  "sandbox": {"status": "demo_key_or_subscription_scope_requires_confirmation", "notes": "No Atlas credentialed live test was performed."},
+  "rate_limits": {"status": "key_and_subscription_specific; verify current tariff"},
+  "openapi": {"status": "public_reference_documentation", "documentation": "https://docs.2gis.com/api/navigation/routing/overview"},
+  "capabilities": {"driving": "documented", "walking": "documented", "public_transport": "documented_separately", "multiple_pairs": "documented", "route_planner": "separate_related_product", "geocoding": "separate_product", "suggest": "separate_product", "places": "separate_product"},
+  "deployment": {"cloud": "documented", "on_premise": "documented_api_platform_option"},
+  "data_rights": {"storage": "contract_review_required", "caching": "contract_review_required", "display": "contract_review_required", "redistribution": "unknown"},
+  "sources": ["https://docs.2gis.com/api/navigation/routing/overview", "https://docs.2gis.com/en/api/navigation/routing/releases", "https://docs.2gis.com/en/api/navigation/route-planner/reference/route-planner"],
+  "open_questions": ["What tariff and quota apply to the target methods?", "Are truck restrictions, traffic and matrix limits suitable for production?", "What SLA, storage, caching, display, SaaS and redistribution rights apply?", "Is Route Planner needed instead of basic Routing API?"]
+}
