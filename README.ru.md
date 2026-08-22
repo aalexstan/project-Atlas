@@ -45,6 +45,7 @@ Atlas помогает:
 - [Поиск организаций и мест](needs/organization-place-search/README.ru.md)
 - [Приём онлайн-платежей](needs/payment-acceptance/README.ru.md)
 - [Сообщения и уведомления](needs/messaging-notifications/README.ru.md)
+- [Погодные и метеорологические данные](needs/weather-data/README.ru.md)
 
 Затем используйте связанные [индекс API](API_INDEX.ru.md), [индекс сравнений](COMPARISON_INDEX.ru.md) и procurement kits.
 
@@ -145,7 +146,7 @@ Atlas начинает с небольшого числа ценных кате�
 - платежи и финансы;
 - сообщения и уведомления.
 
-Первая эталонная карточка, **DaData**, уже опубликована. Первое сравнение API для получения информации о компаниях и контрагентах также опубликовано. Направление адресов и геокодирования теперь имеет активные API profiles, comparison, need route и procurement checklist. Платёжное направление получило первое сравнение ЮKassa, CloudPayments и API интернет-эквайринга Т‑Банка для России. Для сообщений и уведомлений созданы отдельные профили Telegram Bot API, SMSC API и SMS.RU API.
+Первая эталонная карточка, **DaData**, уже опубликована. Первое сравнение API для получения информации о компаниях и контрагентах также опубликовано. Направление адресов и геокодирования теперь имеет активные API profiles, comparison, need route и procurement checklist. Платёжное направление получило первое сравнение ЮKassa, CloudPayments и API интернет-эквайринга Т‑Банка для России. Для сообщений и уведомлений созданы отдельные профили Telegram Bot API, SMSC API и SMS.RU API. Для погодных данных созданы отдельные профили Open-Meteo, WeatherAPI.com и OpenWeather.
 
 ## Направления монетизации
 

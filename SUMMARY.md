@@ -21,10 +21,10 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 23 | Company, registry, address/geocoding, payment and messaging profiles |
-| Comparisons | 4 | Company/counterparty; address/geocoding; payment acceptance; messaging and notifications |
-| Need routes | 5 | Company Verification; address/geocoding; organization/place search; payment acceptance; messaging and notifications |
-| Procurement kits | 4 | Counterparty; address/geocoding; payment; messaging API selection kits |
+| API profiles | 26 | Company, registry, address/geocoding, payment, messaging and weather profiles |
+| Comparisons | 5 | Company/counterparty; address/geocoding; payment; messaging; weather data |
+| Need routes | 6 | Company Verification; address/geocoding; organization/place search; payment; messaging; weather data |
+| Procurement kits | 5 | Counterparty; address/geocoding; payment; messaging; weather API selection kits |
 | API indexes | 2 | English and Russian |
 | Comparison indexes | 2 | English and Russian |
 | Needs indexes | 2 | English and Russian |
@@ -57,6 +57,9 @@ Atlas должен помогать проверять, сравнивать и 
 | Telegram Bot API | reviewed | 2026-08-22 | not performed |
 | SMSC API | reviewed | 2026-08-22 | not performed |
 | SMS.RU API | reviewed | 2026-08-22 | not performed |
+| Open-Meteo API | reviewed | 2026-08-22 | not performed |
+| WeatherAPI.com API | reviewed | 2026-08-22 | not performed |
+| OpenWeather API | reviewed | 2026-08-22 | not performed |
 
 ## Legacy / Supporting Research
 
@@ -112,6 +115,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 - Для payment acceptance нужны сопоставимые merchant quotes, production limits, SLA, lawful sandbox/live benchmark и письменные ответы по 54-ФЗ, PCI DSS, storage, SaaS и redistribution terms для YooKassa, CloudPayments и Т‑Банка.
 - Для messaging APIs нужны общий delivery benchmark, operator quotes, throughput, DLR/SLA, sender approval и письменные ответы по OTP, opt-out, персональным данным, retention и SaaS/redistribution terms.
+- Для weather APIs нужны общий benchmark по координатам и forecast horizons, актуальные model/station semantics, regional freshness, storage/derived-data rights, SLA и support terms.
 
 - Нужны credentialed live tests для API profiles.
 - Для Kontur и Seldon нужны письменные ответы или официальные приложения к подготовленным provider-request checklists: commercial quote, production limits, SLA и права хранения/redistribution.

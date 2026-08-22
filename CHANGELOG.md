@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-22 — Weather data direction
+
+- Added reviewed profiles for Open-Meteo, WeatherAPI.com and OpenWeather.
+- Added a weather data comparison, need route and procurement benchmark kit.
+- Kept model data, historical forecast archives, actual observations, commercial licences and derived-data rights explicitly separate.
+
 ## 2026-08-22 — Messaging and notifications direction
 
 - Added reviewed profiles for Telegram Bot API, SMSC API and SMS.RU API.

@@ -25,6 +25,7 @@
 - Поддерживать взаимные языковые ссылки в активных двуязычных Markdown-парах.
 - Для payment acceptance сравнить YooKassa, CloudPayments и T-Bank Internet Acquiring API на общем lawful sandbox benchmark только после получения credentials; запросить merchant quotes, production limits, SLA, 54-ФЗ/PCI DSS responsibility split и storage/SaaS/redistribution terms.
 - Для messaging APIs сравнить SMSC и SMS.RU на одинаковых синтетических сценариях доставки; отдельно не смешивать Telegram Bot API с carrier SMS и запросить production limits, DLR, sender, SLA, OTP и data-rights terms.
+- Для weather APIs провести общий benchmark по Москве, Санкт-Петербургу и регионам только после получения допустимого тестового доступа; отдельно проверить model output против station observations, historical semantics, commercial licence, storage и derived-data rights.
 
 ## Средний приоритет
 
