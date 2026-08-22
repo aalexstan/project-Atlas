@@ -1,0 +1,23 @@
+{
+  "id": "tbank-internet-acquiring-api",
+  "name": "T-Bank Internet Acquiring API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "T-Bank", "website": "https://www.tbank.ru/business/online-payments/internet-acquiring/"},
+  "status": "active",
+  "best_for": ["online acquiring for Russian business", "CRM payment status", "payment links", "recurring payments"],
+  "pricing": {"model": "individual_commission", "subscription_fee": 0, "failed_authorization_fee_rub": 1, "successful_payment_commission": "individual"},
+  "authentication": "provider_onboarding_required; exact acquiring API authentication requires confirmation",
+  "sandbox": "unknown_publicly",
+  "rate_limits": "unknown_publicly",
+  "openapi": "developer_portal_materials_present; exact acquiring contract requires confirmation",
+  "sources": [
+    "https://developer.tbank.ru/eacq/_README",
+    "https://developer.tbank.ru/docs/api",
+    "https://developer.tbank.ru/docs/intro/webhooks/",
+    "https://www.tbank.ru/business/help/business-payments/internet-acquiring/",
+    "https://www.tbank.ru/business/help/business-payments/internet-acquiring/how-work/price/"
+  ],
+  "open_questions": ["exact acquiring API base URL", "authentication contract", "merchant commission table", "production quotas", "SLA", "storage and SaaS rights"]
+}

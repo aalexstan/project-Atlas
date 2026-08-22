@@ -1,0 +1,24 @@
+{
+  "id": "yookassa-api",
+  "name": "YooKassa API",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "provider": {"name": "YooKassa", "website": "https://yookassa.ru/"},
+  "status": "active",
+  "best_for": ["online payments", "refunds", "receipts", "recurring payments", "payment webhooks"],
+  "pricing": {"model": "contract_commission", "public_subscription_fee": false, "exact_commission": "unknown_contract_specific"},
+  "authentication": ["HTTP Basic Auth", "OAuth for selected partner scenarios"],
+  "sandbox": "documented_test_mode; credentials_required",
+  "rate_limits": "unknown_publicly_for_production",
+  "openapi": true,
+  "sources": [
+    "https://yookassa.ru/developers",
+    "https://yookassa.ru/developers/api",
+    "https://yookassa.ru/developers/using-api/interaction-format",
+    "https://yookassa.ru/developers/using-api/openapi-specification",
+    "https://yookassa.ru/developers/using-api/webhooks",
+    "https://yookassa.ru/docs/support/payments/fees"
+  ],
+  "open_questions": ["merchant-specific commission", "production quotas", "SLA", "storage and SaaS rights", "payment-method eligibility"]
+}
