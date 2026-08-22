@@ -35,6 +35,7 @@
 - Для Yandex Rasp API уточнить quotas, SLA, актуальную coverage/freshness и возможность письменной коммерческой лицензии для paid/closed SaaS; не использовать данные вне опубликованных terms.
 - Для CDEK Logistics API получить актуальные endpoints, authentication, schemas, prices, quotas, SLA и data-rights terms напрямую из технической документации или договора.
 - Для Avtocod Vehicle History API отправить `research/vehicle-history/provider-request*.md` и получить target report/source/field matrix, contract prices, numeric frequency limit, SLA/support response times, source freshness/correction policy и письменные storage/SaaS/redistribution/automated-decision/scoring/model-training terms; не запускать Swagger report без разрешённого paid access.
+- Для ЕГРН/НСПД получить official clarification по `research/real-estate-cadastral/provider-request*.md`: отделить key-based FGIS EGRN access, NSPD electronic services, межведомственный обмен и frontend карты; уточнить supported endpoints, auth, тарифы, quotas, SLA и reuse rights.
 
 ## Средний приоритет
 
@@ -63,7 +64,7 @@
 - Дорожный трафик и пробки.
 - Погода и метеоистория.
 - История транспортных средств.
-- Недвижимость и кадастровые данные.
+- Недвижимость и кадастровые данные: official baseline и profile decision созданы; active API profile отложен до подтверждения supported commercial interface.
 - Платежи и финтех-транзакции.
 - Маркетинговые и телекоммуникационные аудитории.
 - Доставка, логистика и курьерские события.

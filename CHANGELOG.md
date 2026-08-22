@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-23 - Real-estate and cadastral integration baseline
+
+- Separated official EGRN extracts, key-based package access, NSPD electronic services and inter-agency XML exchange.
+- Added bilingual research, profile decision and an official clarification checklist.
+- Did not create a generic `Rosreestr API` profile or treat cadastral-map frontend endpoints as a supported production API.
+
 ## 2026-08-23 — Vehicle history API
 
 - Added a reviewed Avtocod Vehicle History API profile with public JSON schema and token-based report workflow evidence.
