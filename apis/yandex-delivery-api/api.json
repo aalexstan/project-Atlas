@@ -1,0 +1,20 @@
+{
+  "id": "yandex-delivery-api",
+  "name": "Yandex Delivery API",
+  "provider": {"name": "Yandex Delivery", "website": "https://dostavka.yandex.ru/integrations/api/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-22",
+  "live_tested": false,
+  "best_for": ["managed delivery order creation", "order status tracking", "delivery price and customer-status workflows"],
+  "pricing": {"status": "api_specific_public_price_unknown", "delivery_price_estimation": "documented capability; commercial terms require account review"},
+  "authentication": {"type": "bearer_token", "issued_by": "Yandex Delivery business account"},
+  "sandbox": {"status": "test_environment_documented_for_some_delivery_api_flows", "notes": "Atlas did not use the documented test environment or credentials."},
+  "rate_limits": {"status": "unknown_publicly_in_reviewed_sources"},
+  "openapi": {"status": "public_reference", "documentation": "https://yandex.ru/support/delivery-profile/ru/api/express/openapi/"},
+  "product_class": "managed_delivery_order_api",
+  "capabilities": {"order_creation": "documented", "status_tracking": "documented", "order_search": "documented", "courier_location": "documented", "eta": "documented", "delivery_estimate": "documented", "carrier_aggregation": "not_provided"},
+  "data_rights": {"storage": "unknown", "customer_display": "contract_review_required", "saas": "unknown", "redistribution": "unknown"},
+  "sources": ["https://yandex.ru/support/delivery-profile/ru/api/express/quickstart", "https://yandex.ru/support/delivery-profile/ru/api/express/openapi/", "https://dostavka.yandex.ru/integrations/api/", "research/delivery-tracking/2026-08-22-yandex-delivery.md"],
+  "open_questions": ["What commercial price, service geography, quotas and SLA apply to the target account?", "What customer-display, storage, SaaS and redistribution rights apply?", "What webhook/callback and production retry guarantees are available?"]
+}
