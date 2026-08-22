@@ -22,6 +22,7 @@ Atlas turns fragmented provider documentation into decision-ready research:
 - compares competing APIs for a concrete task;
 - records sources and verification dates;
 - tracks important changes over time.
+- runs scheduled source and review-cadence monitoring without rewriting facts automatically.
 
 ## How Atlas Is Different
 

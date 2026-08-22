@@ -113,6 +113,7 @@ Atlas должен помогать проверять, сравнивать и 
 - Индексы API, comparisons и needs теперь воспроизводятся через `scripts/generate_indexes.py`.
 - CI проверяет актуальность индексов перед запуском основного validator.
 - Создан review cadence policy с ролевым ownership, review states и правилами обновления `last_verified`.
+- Добавлен weekly source monitor: он автоматически собирает official URLs из active API profiles, проверяет availability/markers, находит due reviews и создаёт одну maintenance issue без автоматического изменения фактов.
 - Направление маршрутизации и логистики добавило reviewed profiles для Yandex Maps Routing API, 2GIS Routing API и self-hosted OSRM; route calculation, matrices и delivery optimization не смешиваются.
 
 ## Нерешенные вопросы

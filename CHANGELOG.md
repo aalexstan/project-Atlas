@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-23 - Automated source monitoring
+
+- Added automatic discovery and weekly availability checks for external sources referenced by active API profiles.
+- Added due-review detection for APIs, comparisons and need routes.
+- Added a scheduled GitHub workflow that creates or updates one maintenance issue when review is required.
+- Added offline configuration validation and standard-library unit tests; automation never rewrites facts or verification dates.
+
 ## 2026-08-23 - Real-estate and cadastral integration baseline
 
 - Separated official EGRN extracts, key-based package access, NSPD electronic services and inter-agency XML exchange.
