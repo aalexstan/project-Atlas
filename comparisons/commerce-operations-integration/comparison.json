@@ -8,10 +8,10 @@
   "live_testing": false,
   "candidates": [
     {"id": "moysklad-json-api", "product_class": "cloud_erp_integration_api", "best_for": ["inventory_and_orders", "business_documents", "multi-channel_operations"], "verdict": "operational_core_shortlist"},
-    {"id": "wildberries-seller-api", "product_class": "marketplace_seller_integration_api", "best_for": ["wildberries_seller_operations", "marketplace_reports", "prices_and_catalog"], "verdict": "channel_integration_shortlist"}
+    {"id": "wildberries-seller-api", "product_class": "marketplace_seller_integration_api", "best_for": ["wildberries_seller_operations", "marketplace_reports", "prices_and_catalog"], "verdict": "channel_integration_shortlist"},
+    {"id": "ozon-seller-api", "product_class": "marketplace_seller_integration_api", "best_for": ["ozon_seller_operations", "seller_orders_and_stocks", "marketplace_analytics"], "verdict": "reviewed_channel_candidate"}
   ],
   "adjacent_not_compared": [
-    {"id": "ozon", "reason": "No active Atlas profile yet; do not treat Ozon as researched in this comparison."},
     {"id": "dadata", "reason": "Company and address data enrichment, not an operational inventory or order system."},
     {"id": "fts-egrul-egrip-integration", "reason": "Official registry data integration, not commerce operations."}
   ],
@@ -20,22 +20,23 @@
     "orders_and_sales": {"moysklad-json-api": "documented", "wildberries-seller-api": "seller_scope_documented"},
     "catalog_and_prices": {"moysklad-json-api": "documented", "wildberries-seller-api": "documented"},
     "documents_and_finance": {"moysklad-json-api": "documented", "wildberries-seller-api": "documented_categories"},
-    "analytics": {"moysklad-json-api": "possible_via_entities_and_reports; exact_scope_open", "wildberries-seller-api": "documented_categories"},
-    "multi_channel_core": {"moysklad-json-api": "best_fit_candidate", "wildberries-seller-api": "single_channel"},
-    "authentication": {"moysklad-json-api": "Basic Auth or access token", "wildberries-seller-api": "seller API token"},
-    "public_api_price": {"moysklad-json-api": "free_access_claim_with_plan_limits", "wildberries-seller-api": "unknown"},
-    "production_limits": {"moysklad-json-api": "endpoint_and_plan_specific_unknown", "wildberries-seller-api": "method_specific_partial"},
-    "sla_and_support": {"moysklad-json-api": "unknown", "wildberries-seller-api": "unknown"},
-    "saas_and_redistribution": {"moysklad-json-api": "application_model_documented; terms_open", "wildberries-seller-api": "unknown"},
-    "live_test": {"moysklad-json-api": "not performed", "wildberries-seller-api": "not performed"}
+    "analytics": {"moysklad-json-api": "possible_via_entities_and_reports; exact_scope_open", "wildberries-seller-api": "documented_categories", "ozon-seller-api": "documented_category; scope_open"},
+    "multi_channel_core": {"moysklad-json-api": "best_fit_candidate", "wildberries-seller-api": "single_channel", "ozon-seller-api": "single_channel"},
+    "authentication": {"moysklad-json-api": "Basic Auth or access token", "wildberries-seller-api": "seller API token", "ozon-seller-api": "Client ID + API key; OAuth for applications"},
+    "public_api_price": {"moysklad-json-api": "free_access_claim_with_plan_limits", "wildberries-seller-api": "unknown", "ozon-seller-api": "unknown"},
+    "production_limits": {"moysklad-json-api": "endpoint_and_plan_specific_unknown", "wildberries-seller-api": "method_specific_partial", "ozon-seller-api": "unknown_pending_primary_reference_recheck"},
+    "sla_and_support": {"moysklad-json-api": "unknown", "wildberries-seller-api": "unknown", "ozon-seller-api": "unknown"},
+    "saas_and_redistribution": {"moysklad-json-api": "application_model_documented; terms_open", "wildberries-seller-api": "unknown", "ozon-seller-api": "unknown"},
+    "live_test": {"moysklad-json-api": "not performed", "wildberries-seller-api": "not performed", "ozon-seller-api": "not performed"}
   },
   "recommendations": {
     "operational_core_for_multiple_channels": "moysklad-json-api",
     "wildberries_only_seller_automation": "wildberries-seller-api",
+    "ozon_only_seller_automation": "ozon-seller-api; reviewed confidence",
     "unified_marketplace_control_panel": "start_with_moysklad_json_api_and_add_channel_connectors",
     "lowest_predictable_cost": "unknown_without_plan_and_contract_review",
     "enterprise_procurement": ["moysklad-json-api", "wildberries-seller-api"]
   },
-  "gold_blockers": ["target_account_access", "endpoint_and_plan_limits", "commercial_terms", "sla", "storage_and_redistribution_rights", "common_synthetic_benchmark"],
-  "sources": ["apis/moysklad-json-api/api.json", "apis/wildberries-seller-api/api.json", "research/moysklad-json-api/2026-08-23.md", "research/wildberries-seller-api/2026-08-23.md"]
+  "gold_blockers": ["target_account_access", "endpoint_and_plan_limits", "commercial_terms", "sla", "storage_and_redistribution_rights", "common_synthetic_benchmark", "ozon_primary_reference_recheck"],
+  "sources": ["apis/moysklad-json-api/api.json", "apis/wildberries-seller-api/api.json", "apis/ozon-seller-api/api.json", "research/moysklad-json-api/2026-08-23.md", "research/wildberries-seller-api/2026-08-23.md", "research/ozon-seller-api/2026-08-23.md"]
 }

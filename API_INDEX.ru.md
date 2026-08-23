@@ -28,6 +28,7 @@
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.ru.md) | reviewed | 2026-07-29 |
 | [OpenWeather API](apis/openweather-api/README.ru.md) | reviewed | 2026-08-22 |
 | [OSRM Routing Engine](apis/osrm-routing-engine/README.ru.md) | reviewed | 2026-08-22 |
+| [Ozon Seller API](apis/ozon-seller-api/README.ru.md) | reviewed | 2026-08-23 |
 | [Rosreestr EGRN Access Service](apis/rosreestr-egrn-access/README.ru.md) | reviewed | 2026-08-23 |
 | [Russian Post Tracking API](apis/russian-post-tracking-api/README.ru.md) | reviewed | 2026-08-22 |
 | [Seldon.Basis API](apis/seldon-basis/README.ru.md) | reviewed | 2026-07-23 |

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "ozon-seller-api",
+  "name": "Ozon Seller API",
+  "provider": {"name": "Ozon", "website": "https://www.ozon.ru/"},
+  "status": "active",
+  "maturity": "reviewed",
+  "last_verified": "2026-08-23",
+  "live_tested": false,
+  "product_class": "marketplace_seller_integration_api",
+  "best_for": ["ozon_seller_catalog_and_prices", "seller_orders_and_postings", "stock_and_supply_automation", "seller_analytics_and_finance"],
+  "pricing": {"status": "api_specific_price_not_confirmed", "api_price": "unknown"},
+  "authentication": {"status": "documented_in_official_materials", "methods": ["client_id_and_api_key", "oauth_2_0_for_applications"], "base_url": "https://api-seller.ozon.ru"},
+  "sandbox": {"status": "not_confirmed_in_this_review"},
+  "rate_limits": {"status": "method_specific; exact current limits require documentation recheck"},
+  "openapi": {"status": "official_reference_exists; machine_readable_export_not_confirmed"},
+  "capabilities": {"seller_products": "documented", "prices_and_stocks": "documented", "orders_and_postings": "documented", "supplies_and_returns": "documented_categories", "analytics": "documented", "finance": "documented_category", "consumer_marketplace_api": "not_this_profile"},
+  "data_rights": {"storage": "unknown", "redistribution": "unknown", "customer_display": "not_core_to_this_profile", "saas": "unknown"},
+  "sources": ["https://docs.ozon.ru/api/seller/", "https://dev.ozon.ru/community/", "https://dev.ozon.ru/community/2154-Avtorizatsiia-cherez-OAuth-token/", "research/ozon-seller-api/2026-08-23.md"],
+  "open_questions": ["What is the current complete method and field matrix for Seller API?", "What current method-level quotas and error/retry semantics apply?", "Is an official sandbox available for the intended seller workflows?", "What API-specific pricing, SLA and support terms apply?", "What storage, SaaS, customer-facing and redistribution rights apply to seller data?"]
+}
