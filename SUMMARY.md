@@ -23,7 +23,7 @@ Atlas должен помогать проверять, сравнивать и 
 
 | Материал | Количество | Комментарий |
 |---|---:|---|
-| API profiles | 39 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history, marketplace, cadastral and central-bank data profiles |
+| API profiles | 40 | Company, registry, address/geocoding, payment, messaging, weather, routing, procurement, delivery, timetable, vehicle-history, ERP, marketplace, cadastral and central-bank data profiles |
 | Comparisons | 9 | Includes company, address, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
 | Need routes | 10 | Includes company, address, place search, payment, messaging, weather, routing, procurement, delivery and cadastral routes |
 | Procurement kits | 9 | Counterparty, address, payment, messaging, weather, routing, procurement, delivery and cadastral selection kits |
@@ -54,6 +54,7 @@ Atlas должен помогать проверять, сравнивать и 
 | GLOBAS.API | reviewed | 2026-07-28 | not performed |
 | Kontur.Focus API | reviewed | 2026-07-23 | not performed |
 | LocationIQ Geocoding API | reviewed | 2026-07-29 | not performed |
+| MoySklad JSON API | verified | 2026-08-23 | not performed |
 | Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed |
 | Open-Meteo API | reviewed | 2026-08-22 | not performed |
 | OpenCage Geocoding API | reviewed | 2026-07-29 | not performed |

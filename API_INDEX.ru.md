@@ -22,6 +22,7 @@
 | [GLOBAS.API](apis/globas-api/README.ru.md) | reviewed | 2026-07-28 |
 | [Kontur.Focus API](apis/kontur-focus/README.ru.md) | reviewed | 2026-07-23 |
 | [LocationIQ Geocoding API](apis/locationiq-geocoding-api/README.ru.md) | reviewed | 2026-07-29 |
+| [MoySklad JSON API](apis/moysklad-json-api/README.ru.md) | verified | 2026-08-23 |
 | [Nominatim Geocoder Software](apis/nominatim-geocoder-software/README.ru.md) | reviewed | 2026-07-29 |
 | [Open-Meteo API](apis/open-meteo-api/README.ru.md) | reviewed | 2026-08-22 |
 | [OpenCage Geocoding API](apis/opencage-geocoding-api/README.ru.md) | reviewed | 2026-07-29 |

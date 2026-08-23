@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "moysklad-json-api",
+  "name": "MoySklad JSON API",
+  "provider": {"name": "MoySklad", "website": "https://www.moysklad.ru/"},
+  "status": "active",
+  "maturity": "verified",
+  "last_verified": "2026-08-23",
+  "live_tested": false,
+  "product_class": "cloud_erp_integration_api",
+  "best_for": ["inventory_and_catalog_integrations", "orders_and_document_automation", "external_store_and_marketplace_connectors", "business_apps_for_moysklad_users"],
+  "pricing": {"status": "api_access_publicly_documented_as_free_with_plan_limits", "api_price": "unknown_as_a_separate_commercial_product", "product_subscription": "separate_from_api_access"},
+  "authentication": {"status": "documented", "methods": ["basic_auth", "access_token"], "vendor_application_token": "documented_for_server_solutions"},
+  "sandbox": {"status": "developer_access_documented", "notes": "Developer accounts and application development access are documented; Atlas did not obtain an account or execute requests."},
+  "rate_limits": {"status": "documented_as_existing; exact limits require endpoint and plan review"},
+  "openapi": {"status": "not_confirmed", "documentation_format": "official JSON API reference and workbook documentation"},
+  "capabilities": {"products_and_services": "documented", "stock_and_warehouses": "documented", "sales_and_purchases": "documented", "counterparties": "documented", "payments_and_documents": "documented", "custom_attributes_and_metadata": "documented", "webhooks": "documented_in_official_developer_materials", "vendor_applications": "documented"},
+  "data_rights": {"storage": "contract_and_account_context_required", "redistribution": "unknown", "customer_display": "application_specific", "saas": "public_solution_model_documented; commercial_terms_require_review"},
+  "sources": ["https://dev.moysklad.ru/", "https://dev.moysklad.ru/doc/api/remap/1.2/", "https://dev.moysklad.ru/doc/api/vendor/1.0/", "research/moysklad-json-api/2026-08-23.md"],
+  "open_questions": ["What exact per-endpoint and per-plan limits apply to the intended integration?", "Which account and tariff restrictions apply to the planned application?", "What review, publication, support and commercial terms apply to a public Vendor solution?", "What storage, caching, customer-data and redistribution rights apply to an external SaaS integration?", "Which current JSON API 1.2 changes and deprecations affect long-lived integrations?"]
+}

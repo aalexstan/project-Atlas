@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-23 - MoySklad JSON API profile
+
+- Added a verified core profile for the official MoySklad JSON API and Vendor application model.
+- Recorded external integration, authentication, plan-access and business-entity evidence.
+- Kept endpoint limits, publication terms and downstream data rights explicitly open; no live testing was performed.
+
 ## 2026-08-23 - Wildberries Seller API profile
 
 - Added a verified core profile for the official Wildberries seller integration API.
