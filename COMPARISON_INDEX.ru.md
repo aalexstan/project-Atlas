@@ -5,6 +5,7 @@
 | Сравнение | Статус | Последняя проверка |
 | --- | --- | --- |
 | [API данных о компаниях и проверки контрагентов в России](comparisons/company-counterparty-data-russia/README.ru.md) | reviewed | 2026-07-23 |
+| [API для интеграции торговых операций](comparisons/commerce-operations-integration/README.ru.md) | reviewed | 2026-08-23 |
 | [API заказов доставки и отслеживания отправлений](comparisons/delivery-order-tracking-apis/README.ru.md) | reviewed | 2026-08-22 |
 | [API маршрутизации и логистики](comparisons/routing-logistics-apis/README.ru.md) | reviewed | 2026-08-22 |
 | [API нормализации адресов, адресных реестров и геокодирования](comparisons/address-normalization-geocoding/README.ru.md) | reviewed | 2026-07-29 |

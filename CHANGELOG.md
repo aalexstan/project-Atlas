@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-23 - Commerce operations comparison
+
+- Added a scenario-based comparison of MoySklad JSON API as an operational core and Wildberries Seller API as a channel connector.
+- Explicitly excluded unprofiled Ozon and non-operational DaData/FNS routes from the candidate table.
+
 ## 2026-08-23 - MoySklad JSON API profile
 
 - Added a verified core profile for the official MoySklad JSON API and Vendor application model.
