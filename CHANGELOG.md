@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-24 - WeatherAPI.com bounded live test
+
+- Added a five-request authorized live-test with raw JSON payloads and paired procedural review.
+- Confirmed bounded current, forecast, search and missing-parameter behavior while retaining findings for field filtering and fuzzy location matching.
+- Set `live_tested: true` through `2026-11-22`; kept maturity `reviewed` because quota, SLA, accuracy, pricing and data rights remain unverified.
+
 ## 2026-08-24 - WeatherAPI.com auth boundary probe
 
 - Added a credential-free HTTP 401 probe and raw bilingual evidence for WeatherAPI.com.

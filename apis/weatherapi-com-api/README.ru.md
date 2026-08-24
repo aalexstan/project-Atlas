@@ -7,9 +7,9 @@
 | Поле | Значение |
 |---|---|
 | Зрелость | Reviewed |
-| Последняя проверка | 2026-08-22 |
+| Последняя проверка | 2026-08-24 |
 | Класс продукта | Commercial weather API |
-| Live testing | Не проводился |
+| Live testing | Ограниченный тест проведён; см. evidence |
 
 ## Краткий вывод
 
@@ -37,3 +37,5 @@
 Использовать для широкого API и public self-service onboarding. До применения в страховании, логистике или регулируемых решениях подтвердить semantics historical, commercial rights, SLA и regional quality.
 
 См. [evidence](evidence.ru.md) и [журнал исследования](../../research/weather/2026-08-22-weatherapi.ru.md).
+
+См. [запись live-test от 2026-08-24](../../research/weatherapi-com-api/live-test-2026-08-24.ru.md) и [процедурное ревью](../../reviews/weatherapi-com-live-test-2026-08-24.ru.md). Тест не повысил maturity выше `reviewed`; квота, SLA, цена, точность и data rights не подтверждены.

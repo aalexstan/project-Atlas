@@ -7,9 +7,9 @@
 | Field | Value |
 |---|---|
 | Maturity | Reviewed |
-| Last verified | 2026-08-22 |
+| Last verified | 2026-08-24 |
 | Product class | Commercial weather API |
-| Live testing | Not performed |
+| Live testing | Bounded test performed; see research evidence |
 
 ## Quick Verdict
 
@@ -37,3 +37,5 @@ The official pricing page lists public plan prices and allowances. These are pro
 Use for broad API coverage and public self-service onboarding. Confirm historical semantics, commercial rights, SLA and regional quality before using it for insurance, logistics or regulated decisions.
 
 See [evidence](evidence.md) and the [research log](../../research/weather/2026-08-22-weatherapi.md).
+
+See the [2026-08-24 live-test record](../../research/weatherapi-com-api/live-test-2026-08-24.md) and its [procedural review](../../reviews/weatherapi-com-live-test-2026-08-24.md). The test kept maturity at `reviewed`; quotas, SLA, pricing, accuracy and data rights remain unverified.
