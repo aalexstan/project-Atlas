@@ -8,4 +8,4 @@
 | Public plans and allowances are listed | https://www.weatherapi.com/pricing.aspx | provider_reported |
 | Historical data is forecast archive, not actuals | https://www.weatherapi.com/pricing.aspx | provider_reported |
 
-The [credential-free auth probe](../../research/weatherapi-com-api/auth-probe-2026-08-24.md) returned HTTP 401 with structured error code 1002 and confirms only the authentication boundary. No valid API request was performed; `live_tested` remains false.
+The [credential-free and user-provided credential probes](../../research/weatherapi-com-api/auth-probe-2026-08-24.md) returned HTTP 401 with structured error codes 1002 and 2006. They confirm only the authentication boundary. No valid API request was performed; `live_tested` remains false.

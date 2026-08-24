@@ -16,13 +16,14 @@ Confirm the authentication boundary without registering an account, using a key,
 ## Legal and safety boundary
 
 - No account was created.
-- No API key, paid credential or production token was used.
-- The request was a single safe GET without a key.
-- This is an authentication probe, not a live-test record and not evidence of valid forecast behavior.
+- No paid credential or production token was used.
+- Two user-provided candidate keys were tested once each; their values are intentionally not recorded.
+- The requests were safe GETs for the documented current-weather endpoint and were not repeated as a load test.
+- This remains an authentication probe, not a live-test record and not evidence of valid forecast behavior.
 
 ## Probe
 
-Request:
+Credential-free request:
 
 `GET https://api.weatherapi.com/v1/current.json?q=Moscow`
 
@@ -34,12 +35,23 @@ Raw payload:
 {"error":{"code":1002,"message":"API key is invalid or not provided."}}
 ```
 
+## User-provided credential probes
+
+The two values supplied by the user were tested once each. They are identified only as `key_a` and `key_b`; the values are not stored in Atlas.
+
+| Probe | Request shape | HTTP | Time | Response |
+|---|---|---:|---:|---|
+| `key_a` | `GET https://api.weatherapi.com/v1/current.json?key=<redacted>&q=Moscow` | 401 | 0.181132 s | error code `2006`, `API key is invalid.` |
+| `key_b` | `GET https://api.weatherapi.com/v1/current.json?key=<redacted>&q=Moscow` | 401 | 0.318189 s | error code `2006`, `API key is invalid.` |
+
+The response was a structured JSON authentication error in both probes. The key values were not printed, committed or retained in the repository.
+
 ## Finding
 
-The no-key request confirms an auth boundary and a structured JSON error. It does not test a valid request, response contract, quota, rate-limit headers, data freshness, accuracy or commercial use.
+The no-key request confirms an auth boundary and a structured JSON error. The two provided values were also rejected as invalid. These probes do not test a valid request, response contract, quota, rate-limit headers, data freshness, accuracy or commercial use.
 
 ## Blocker for a full live-test
 
-A valid test requires a key issued to an authorized account. Atlas must not register an account or use a key without the owner's explicit authorization. After lawful access is available, use the live-test template, review the applicable free-tier Terms of Service, freeze diverse core claims, and preserve raw payloads.
+A valid test requires a currently active key issued to an authorized account. Atlas must not register an account or use a key without the owner's explicit authorization. After lawful access is available, use the live-test template, review the applicable free-tier Terms of Service, freeze diverse core claims, and preserve raw payloads.
 
 `live_tested` remains `false`; maturity remains `reviewed`.
