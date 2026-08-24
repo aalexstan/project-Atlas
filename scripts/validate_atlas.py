@@ -233,6 +233,29 @@ def validate_active_api_metadata() -> None:
         if "live_tested" in data and not isinstance(data["live_tested"], bool):
             error(f"Expected boolean live_tested in {json_path.relative_to(ROOT)}")
 
+        if data.get("live_tested") is True:
+            for field in ("live_tested_on", "live_test_valid_until"):
+                value = data.get(field)
+                if not isinstance(value, str) or not value.strip():
+                    error(f"Missing non-empty {field} for live-tested API in {json_path.relative_to(ROOT)}")
+                    continue
+                try:
+                    parsed = dt.date.fromisoformat(value)
+                except ValueError:
+                    error(f"Invalid {field} date in {json_path.relative_to(ROOT)}")
+                    continue
+                if field == "live_test_valid_until" and parsed < dt.date.today():
+                    error(f"Expired live-test evidence in {json_path.relative_to(ROOT)}: {value}")
+
+            tested_on = data.get("live_tested_on")
+            valid_until = data.get("live_test_valid_until")
+            if isinstance(tested_on, str) and isinstance(valid_until, str):
+                try:
+                    if dt.date.fromisoformat(valid_until) < dt.date.fromisoformat(tested_on):
+                        error(f"live_test_valid_until precedes live_tested_on in {json_path.relative_to(ROOT)}")
+                except ValueError:
+                    pass
+
         sources = data.get("sources")
         if "sources" in data and (not isinstance(sources, list) or not sources):
             error(f"Expected non-empty sources list in {json_path.relative_to(ROOT)}")

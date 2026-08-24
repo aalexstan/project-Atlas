@@ -94,6 +94,7 @@ An API may be marked `live_tested: true` only when a repository file named `rese
 - a legal access statement: public/free endpoint or explicitly authorized test credentials;
 - confirmation that the applicable free-tier or test-access Terms of Service permit the specific automated test, or a reference to the written authorization;
 - a pre-test list of `core claims`, each with a stable identifier and a link to the relevant `api.json`, README, evidence or open-question entry; the list must be written before requests are executed and must not be selected retrospectively to fit the results;
+- core claims spanning all three required dimensions: (1) identity/purpose, (2) primary response contract, and (3) at least one commercial, quota, rate-limit or other procurement-block claim, including an explicit `unknown` where it cannot be empirically tested;
 - three to five realistic requests covering the core claims;
 - at least one intentional invalid-input request;
 - raw response payloads, HTTP codes, latency and observed error behavior;
@@ -104,7 +105,11 @@ An API may be marked `live_tested: true` only when a repository file named `rese
 
 The pre-merge review is a required paired artifact at `reviews/<slug>-live-test-YYYY-MM-DD.md` (and its Russian pair). The review must be linked from the live-test record, inspect the staged diff, verify that the pre-test core-claim list was not changed after execution, and record a merge recommendation.
 
+The profile must record `live_tested_on` and `live_test_valid_until` when `live_tested: true`. The validity date follows the shortest applicable review cadence among the tested claims; for pricing, limits and access rights this is normally 90 days. Once the validity date passes, the live-test evidence is historical and the profile must not present it as current: rerun the test or set `live_tested: false` and mark the claims `needs_recheck`.
+
 Live testing does not automatically promote `reviewed` to `verified`. Promotion is allowed only after the required human-readable review confirms that the tested core claims match the profile and every untested quota, SLA, accuracy, pricing, licensing or data-rights claim remains explicit. If an ordinary test request unexpectedly returns `429` or `Retry-After`, record it as a valid rate-limit finding; do not hide it by repeating the test until it succeeds.
+
+This pre-merge review is a procedural consistency gate, not independent review. It does not satisfy the independent-review requirement for `Gold`.
 
 Use this conflict rule:
 

@@ -18,6 +18,8 @@ What core factual claims of the API profile are being tested?
 - Client and version:
 - API version/account scope:
 - Test data policy:
+- Live-test evidence date:
+- Live-test valid until:
 
 ## Pre-test Core Claims
 
@@ -26,6 +28,8 @@ Freeze this list before executing requests. Give each claim a stable ID and link
 | ID | Core claim | Profile reference | Why core to the API purpose |
 |---|---|---|---|
 | C1 |  |  |  |
+
+The frozen list must contain at least one claim in each category: identity/purpose, primary response contract, and commercial/quota/rate-limit/procurement block. A block claim may be explicitly `unknown` if the public test cannot establish it.
 
 ## Legal Access and Terms
 
@@ -69,6 +73,8 @@ Record whether `429`, `Retry-After`, quota headers or documented limit signals a
 ## Decision
 
 State separately whether `live_tested` may become true and whether maturity remains `reviewed` or must be downgraded. Link `reviews/<slug>-live-test-YYYY-MM-DD.md` and its Russian pair. Never promote automatically.
+
+The pre-merge review is procedural and does not count as independent review for Gold.
 
 ## Reproduction
 

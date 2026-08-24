@@ -5,6 +5,8 @@
   "maturity": "reviewed",
   "last_verified": "2026-08-24",
   "live_tested": true,
+  "live_tested_on": "2026-08-24",
+  "live_test_valid_until": "2026-11-22",
   "provider": {"name": "Open-Meteo", "website": "https://open-meteo.com/"},
   "status": "active",
   "best_for": ["non-commercial prototypes", "model-based forecast", "historical weather research", "open-data exploration"],

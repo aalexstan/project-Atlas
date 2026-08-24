@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-24 - Add live-test freshness and claim diversity gates
+
+- Required live-test validity dates and expiry-aware validation.
+- Required pre-registered claims to cover identity/purpose, response contract and a commercial or limits block.
+- Clarified that procedural self-review is not independent Gold review.
+
 ## 2026-08-24 - Refine live-test gate after review
 
 - Required pre-test core-claim freezing, free-tier Terms of Service confirmation and a mandatory paired pre-merge review artifact.

@@ -10,6 +10,8 @@ Human-readable pre-merge review of the first `research/<slug>/live-test-YYYY-MM-
 
 - [x] Separate branch used.
 - [x] Core claims were frozen before requests and linked to profile references.
+- [x] Core claims cover identity/purpose, response contract and a commercial/limits block.
+- [x] Live-test validity date is recorded.
 - [x] Applicable public/free access terms were checked and the test stayed within the stated boundary.
 - [x] Public free endpoints only; no credentials or paid customer endpoint.
 - [x] Three realistic successful requests and one intentional invalid-input request.
@@ -24,6 +26,8 @@ Human-readable pre-merge review of the first `research/<slug>/live-test-YYYY-MM-
 ## Review conclusion
 
 The evidence format is readable and reproducible enough to use as the first live-test precedent. The test supports `live_tested: true` for the bounded public request shapes, but it does not support `reviewed` to `verified` promotion because quota, accuracy, SLA and commercial rights remain untested or contractual.
+
+This is a procedural self-review gate, not independent review for Gold.
 
 ## Merge recommendation
 
