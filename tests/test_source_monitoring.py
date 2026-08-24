@@ -18,13 +18,22 @@ class SourceMonitoringTests(unittest.TestCase):
     def test_response_marker_detects_change(self) -> None:
         source = check_sources.Source("https://example.test", ("demo",), required_markers=("API docs",))
         result = check_sources.evaluate_response(source, 200, b"renamed product")
-        self.assertEqual(result.status, "changed")
+        self.assertEqual(result.status, "unknown")
 
-    def test_restricted_source_is_not_broken(self) -> None:
+    def test_auth_required_source_is_not_broken(self) -> None:
         source = check_sources.Source("https://example.test", ("demo",))
         result = check_sources.evaluate_response(source, 403, b"")
-        self.assertEqual(result.status, "restricted")
+        self.assertEqual(result.status, "auth_required")
         self.assertIn(result.status, check_sources.ATTENTION_STATUSES)
+
+    def test_public_statuses_are_explicit(self) -> None:
+        self.assertEqual(check_sources.PUBLIC_STATUSES, {"healthy", "auth_required", "rate_limited", "server_error", "timeout", "dns_error", "unknown"})
+
+    def test_status_mapping(self) -> None:
+        source = check_sources.Source("https://example.test", ("demo",))
+        self.assertEqual(check_sources.evaluate_response(source, 429, b"").status, "rate_limited")
+        self.assertEqual(check_sources.evaluate_response(source, 503, b"").status, "server_error")
+        self.assertEqual(check_sources.evaluate_response(source, 404, b"").status, "unknown")
 
     def test_unicode_url_is_percent_encoded(self) -> None:
         encoded = check_sources.network_url("https://example.test/документы?name=тариф")
@@ -33,9 +42,11 @@ class SourceMonitoringTests(unittest.TestCase):
 
     def test_report_omits_success_rows(self) -> None:
         source = check_sources.Source("https://example.test", ("demo",))
-        report = check_sources.render_report([check_sources.Result(source, "ok", "HTTP 200")])
-        self.assertIn("ok: 1", report)
-        self.assertNotIn("https://example.test", report)
+        result = check_sources.Result(source, "healthy", "HTTP 200", 200, response_time_ms=12, checked_at="2026-08-24T00:00:00Z")
+        report = check_sources.render_report([result])
+        self.assertIn("healthy: 1", report)
+        self.assertIn("2026-08-24T00:00:00Z", report)
+        self.assertIn("12 ms", report)
 
     def test_collects_external_api_sources_only(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

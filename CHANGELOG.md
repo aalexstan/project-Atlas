@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-24 - Public source monitoring statuses
+
+- Updated the source monitor to use explicit public-check statuses: `healthy`, `auth_required`, `rate_limited`, `server_error`, `timeout`, `dns_error` and `unknown`.
+- Added last-checked time, HTTP code, response time and error fields to Markdown and JSON reports.
+- Kept monitoring credential-free and limited to safe public HTTP GET checks; no paid API method is invoked.
+
 ## 2026-08-24 - Commerce operations procurement kit
 
 - Added bilingual RFP, test protocol, data-rights checklist and scenario scorecard for MoySklad, Wildberries and Ozon operations.

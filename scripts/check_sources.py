@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
-"""Monitor official URLs referenced by active Atlas API profiles."""
+"""Monitor official URLs with credential-free public HTTP GET checks.
+
+The monitor never sends credentials, POST requests or paid method calls. It only
+checks URLs already declared as official sources by active profiles.
+"""
 
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import concurrent.futures
 import hashlib
 import json
+import socket
 import sys
+import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -16,7 +23,8 @@ from urllib.parse import quote, urlparse, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "sources" / "source-registry.json"
-ATTENTION_STATUSES = {"broken", "changed", "restricted", "unavailable"}
+ATTENTION_STATUSES = {"auth_required", "rate_limited", "server_error", "timeout", "dns_error", "unknown"}
+PUBLIC_STATUSES = {"healthy", "auth_required", "rate_limited", "server_error", "timeout", "dns_error", "unknown"}
 
 
 class MonitorConfigError(RuntimeError):
@@ -32,13 +40,19 @@ class Source:
     expected_sha256: str = ""
 
 
-@dataclass(frozen=True)
+@dataclass
 class Result:
     source: Source
     status: str
     detail: str
     http_status: int | None = None
     sha256: str = ""
+    response_time_ms: int | None = None
+    checked_at: str = ""
+
+    @property
+    def error(self) -> str:
+        return "" if self.status == "healthy" else self.detail
 
 
 def read_json(path: Path) -> dict:
@@ -113,22 +127,22 @@ def collect_sources(root: Path, overrides: dict[str, dict]) -> list[Source]:
 
 def evaluate_response(source: Source, status: int, body: bytes) -> Result:
     digest = hashlib.sha256(body).hexdigest()
-    if status in {401, 403, 429}:
-        return Result(source, "restricted", f"HTTP {status}; source may block automated checks", status, digest)
-    if status in {404, 410}:
-        return Result(source, "broken", f"HTTP {status}", status, digest)
+    if status in {401, 403}:
+        return Result(source, "auth_required", f"HTTP {status}; authentication or access permission required", status, digest)
+    if status == 429:
+        return Result(source, "rate_limited", "HTTP 429; public check was rate limited", status, digest)
     if status >= 500:
-        return Result(source, "unavailable", f"HTTP {status}", status, digest)
+        return Result(source, "server_error", f"HTTP {status}", status, digest)
     if status < 200 or status >= 400:
-        return Result(source, "unavailable", f"HTTP {status}", status, digest)
+        return Result(source, "unknown", f"HTTP {status}", status, digest)
 
     text = body.decode("utf-8", errors="replace").casefold()
     missing = [marker for marker in source.required_markers if marker.casefold() not in text]
     if missing:
-        return Result(source, "changed", f"Missing marker(s): {', '.join(missing)}", status, digest)
+        return Result(source, "unknown", f"Missing marker(s): {', '.join(missing)}", status, digest)
     if source.expected_sha256 and digest != source.expected_sha256:
-        return Result(source, "changed", "Content fingerprint changed", status, digest)
-    return Result(source, "ok", f"HTTP {status}", status, digest)
+        return Result(source, "unknown", "Content fingerprint changed", status, digest)
+    return Result(source, "healthy", f"HTTP {status}", status, digest)
 
 
 def network_url(url: str) -> str:
@@ -147,6 +161,8 @@ def network_url(url: str) -> str:
 
 
 def check_source(source: Source, defaults: dict) -> Result:
+    checked_at = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    started = time.monotonic()
     request = urllib.request.Request(
         network_url(source.url),
         headers={"User-Agent": str(defaults["user_agent"]), "Accept": "*/*"},
@@ -154,12 +170,24 @@ def check_source(source: Source, defaults: dict) -> Result:
     try:
         with urllib.request.urlopen(request, timeout=float(defaults["timeout_seconds"])) as response:
             body = response.read(int(defaults["max_bytes"]))
-            return evaluate_response(source, int(response.status), body)
+            result = evaluate_response(source, int(response.status), body)
     except urllib.error.HTTPError as exc:
         body = exc.read(int(defaults["max_bytes"]))
-        return evaluate_response(source, int(exc.code), body)
-    except (urllib.error.URLError, TimeoutError, OSError, UnicodeError, ValueError) as exc:
-        return Result(source, "unavailable", str(exc))
+        result = evaluate_response(source, int(exc.code), body)
+    except (TimeoutError, socket.timeout) as exc:
+        result = Result(source, "timeout", str(exc) or "request timed out")
+    except urllib.error.URLError as exc:
+        reason = exc.reason
+        if isinstance(reason, socket.gaierror) or "nodename" in str(reason).lower() or "name or service" in str(reason).lower():
+            result = Result(source, "dns_error", str(reason))
+        else:
+            result = Result(source, "unknown", str(reason))
+    except (OSError, UnicodeError, ValueError) as exc:
+        result = Result(source, "unknown", str(exc))
+
+    result.response_time_ms = round((time.monotonic() - started) * 1000)
+    result.checked_at = checked_at
+    return result
 
 
 def render_report(results: list[Result]) -> str:
@@ -167,15 +195,14 @@ def render_report(results: list[Result]) -> str:
     for result in results:
         counts[result.status] = counts.get(result.status, 0) + 1
     summary = ", ".join(f"{key}: {counts[key]}" for key in sorted(counts)) or "no sources"
-    visible = [result for result in results if result.status != "ok"]
     lines = ["# Atlas Source Monitor", "", f"Checked {len(results)} source(s): {summary}.", ""]
-    if not visible:
-        return "\n".join(lines + ["No source requires attention.\n"])
-    lines.extend(["| Status | Source | Profiles | Detail |", "|---|---|---|---|"])
-    for result in sorted(visible, key=lambda item: (item.status, item.source.url)):
+    lines.extend(["| Last checked | Status | HTTP code | Response time | Error | Source | Profiles |", "|---|---|---:|---:|---|---|---|"])
+    for result in sorted(results, key=lambda item: item.source.url):
         label = result.source.label or result.source.url
         link = f"[{label}]({result.source.url})"
-        lines.append(f"| {result.status} | {link} | {', '.join(result.source.profiles)} | {result.detail} |")
+        http_code = str(result.http_status) if result.http_status is not None else "-"
+        response_time = f"{result.response_time_ms} ms" if result.response_time_ms is not None else "-"
+        lines.append(f"| {result.checked_at or '-'} | {result.status} | {http_code} | {response_time} | {result.error or '-'} | {link} | {', '.join(result.source.profiles)} |")
     return "\n".join(lines) + "\n"
 
 
@@ -206,7 +233,15 @@ def main() -> int:
         args.report.write_text(report, encoding="utf-8")
     if args.json_report:
         payload = [
-            {"url": item.source.url, "profiles": item.source.profiles, "status": item.status, "detail": item.detail}
+            {
+                "url": item.source.url,
+                "profiles": item.source.profiles,
+                "last_checked": item.checked_at,
+                "status": item.status,
+                "http_code": item.http_status,
+                "response_time_ms": item.response_time_ms,
+                "error": item.error,
+            }
             for item in results
         ]
         args.json_report.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
