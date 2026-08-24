@@ -60,6 +60,26 @@ class SourceMonitoringTests(unittest.TestCase):
             sources = check_sources.collect_sources(root, {})
             self.assertEqual([item.url for item in sources], ["https://example.test/docs"])
 
+    def test_collects_explicit_public_checks(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profile = root / "apis" / "demo"
+            profile.mkdir(parents=True)
+            (profile / "api.json").write_text(
+                json.dumps(
+                    {
+                        "id": "demo",
+                        "sources": [],
+                        "public_checks": [
+                            {"url": "https://example.test/health", "kind": "documentation", "paid_request": False}
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            sources = check_sources.collect_sources(root, {})
+            self.assertEqual([item.url for item in sources], ["https://example.test/health"])
+
     def test_review_due_and_needs_recheck(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

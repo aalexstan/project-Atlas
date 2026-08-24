@@ -8,6 +8,11 @@
   "last_verified": "2026-08-23",
   "live_tested": false,
   "product_class": "marketplace_seller_integration_api",
+  "public_checks": [
+    {"url": "https://dev.wildberries.ru/", "kind": "documentation", "paid_request": false},
+    {"url": "https://dev.wildberries.ru/en/docs/openapi/api-information", "kind": "documentation", "paid_request": false},
+    {"url": "https://dev.wildberries.ru/en/openapi-other/sandbox-environment", "kind": "sandbox_documentation", "paid_request": false}
+  ],
   "best_for": ["seller_erp_wms_oms_crm_integration", "catalog_and_price_operations", "seller_analytics_and_reports", "supplies_returns_and_documents_workflows"],
   "pricing": {"status": "api_specific_price_not_confirmed", "api_price": "unknown"},
   "authentication": {"status": "documented", "primary_method": "seller_api_token", "oauth_2_0": "mentioned_in_connection_guidance; exact scope model requires method review"},

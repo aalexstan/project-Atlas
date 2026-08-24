@@ -5,6 +5,7 @@
 - Updated the source monitor to use explicit public-check statuses: `healthy`, `auth_required`, `rate_limited`, `server_error`, `timeout`, `dns_error` and `unknown`.
 - Added last-checked time, HTTP code, response time and error fields to Markdown and JSON reports.
 - Kept monitoring credential-free and limited to safe public HTTP GET checks; no paid API method is invoked.
+- Added explicit free documentation/developer-portal checks for MoySklad, Wildberries and Ozon profiles; no public health endpoint is claimed without evidence.
 
 ## 2026-08-24 - Commerce operations procurement kit
 

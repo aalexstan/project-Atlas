@@ -8,6 +8,18 @@
   },
   "overrides": [
     {
+      "url": "https://dev.moysklad.ru/",
+      "label": "MoySklad developer portal"
+    },
+    {
+      "url": "https://dev.wildberries.ru/",
+      "label": "Wildberries developer portal"
+    },
+    {
+      "url": "https://dev.ozon.ru/",
+      "label": "Ozon developer portal"
+    },
+    {
       "url": "https://b2bapi.avtocod.ru/docs/about/overview",
       "label": "Avtocod API overview",
       "required_markers": ["API Автокод"]

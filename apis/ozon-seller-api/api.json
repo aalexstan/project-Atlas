@@ -8,6 +8,11 @@
   "last_verified": "2026-08-23",
   "live_tested": false,
   "product_class": "marketplace_seller_integration_api",
+  "public_checks": [
+    {"url": "https://dev.ozon.ru/", "kind": "developer_portal", "paid_request": false},
+    {"url": "https://dev.ozon.ru/community/", "kind": "documentation_and_support", "paid_request": false},
+    {"url": "https://docs.ozon.ru/api/seller/", "kind": "documentation", "paid_request": false}
+  ],
   "best_for": ["ozon_seller_catalog_and_prices", "seller_orders_and_postings", "stock_and_supply_automation", "seller_analytics_and_finance"],
   "pricing": {"status": "api_specific_price_not_confirmed", "api_price": "unknown"},
   "authentication": {"status": "documented_in_official_materials", "methods": ["client_id_and_api_key", "oauth_2_0_for_applications"], "base_url": "https://api-seller.ozon.ru"},

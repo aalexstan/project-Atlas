@@ -109,6 +109,12 @@ def collect_sources(root: Path, overrides: dict[str, dict]) -> list[Source]:
         for value in data.get("sources", []):
             if isinstance(value, str) and urlparse(value).scheme in {"http", "https"}:
                 owners.setdefault(value, set()).add(str(profile_id))
+        for check in data.get("public_checks", []):
+            if not isinstance(check, dict):
+                continue
+            value = check.get("url")
+            if isinstance(value, str) and urlparse(value).scheme in {"http", "https"}:
+                owners.setdefault(value, set()).add(str(profile_id))
 
     sources: list[Source] = []
     for url, profile_ids in sorted(owners.items()):

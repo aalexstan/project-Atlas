@@ -8,6 +8,10 @@
   "last_verified": "2026-08-23",
   "live_tested": false,
   "product_class": "cloud_erp_integration_api",
+  "public_checks": [
+    {"url": "https://dev.moysklad.ru/", "kind": "documentation", "paid_request": false},
+    {"url": "https://dev.moysklad.ru/doc/api/remap/1.2/", "kind": "documentation", "paid_request": false}
+  ],
   "best_for": ["inventory_and_catalog_integrations", "orders_and_document_automation", "external_store_and_marketplace_connectors", "business_apps_for_moysklad_users"],
   "pricing": {"status": "api_access_publicly_documented_as_free_with_plan_limits", "api_price": "unknown_as_a_separate_commercial_product", "product_subscription": "separate_from_api_access"},
   "authentication": {"status": "documented", "methods": ["basic_auth", "access_token"], "vendor_application_token": "documented_for_server_solutions"},
