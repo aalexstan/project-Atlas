@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-24 - Commerce operations procurement kit
+
+- Added bilingual RFP, test protocol, data-rights checklist and scenario scorecard for MoySklad, Wildberries and Ozon operations.
+- Kept the scorecard scenario-specific and evidence-based; it does not create an Atlas Score or claim live testing.
+
 ## 2026-08-23 - Commerce operations comparison
 
 - Added a scenario-based comparison of MoySklad JSON API as an operational core and Wildberries Seller API as a channel connector.

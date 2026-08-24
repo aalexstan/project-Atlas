@@ -56,4 +56,4 @@ There is no universal winner. These APIs occupy different architectural layers.
 - Add Wildberries as a channel connector when the business specifically sells on Wildberries.
 - For a unified marketplace panel, define a common internal model first and add Ozon only after the primary Ozon reference is rechecked and comparable evidence is captured.
 
-See the [MoySklad evidence](../../apis/moysklad-json-api/evidence.md), [Wildberries evidence](../../apis/wildberries-seller-api/evidence.md) and [Atlas evidence files](evidence.md).
+See the [MoySklad evidence](../../apis/moysklad-json-api/evidence.md), [Wildberries evidence](../../apis/wildberries-seller-api/evidence.md), [Ozon evidence](../../apis/ozon-seller-api/evidence.md), [commerce procurement kit](../../procurement/commerce-operations-api-selection/README.md) and [Atlas evidence files](evidence.md).

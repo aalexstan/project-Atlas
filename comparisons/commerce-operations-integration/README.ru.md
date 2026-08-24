@@ -56,4 +56,4 @@
 - Добавляйте Wildberries как коннектор канала, если бизнес действительно продаёт на Wildberries.
 - Для единой панели маркетплейсов сначала определите внутреннюю общую модель, а Ozon используйте после повторной проверки основного reference и получения сопоставимых доказательств.
 
-См. [evidence MoySklad](../../apis/moysklad-json-api/evidence.ru.md), [evidence Wildberries](../../apis/wildberries-seller-api/evidence.ru.md) и [файлы evidence Atlas](evidence.ru.md).
+См. [evidence MoySklad](../../apis/moysklad-json-api/evidence.ru.md), [evidence Wildberries](../../apis/wildberries-seller-api/evidence.ru.md), [evidence Ozon](../../apis/ozon-seller-api/evidence.ru.md), [пакет закупки торговых API](../../procurement/commerce-operations-api-selection/README.ru.md) и [файлы evidence Atlas](evidence.ru.md).
