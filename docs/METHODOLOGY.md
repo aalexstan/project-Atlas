@@ -92,6 +92,8 @@ Live testing and source monitoring are different mechanisms. The weekly source m
 An API may be marked `live_tested: true` only when a repository file named `research/<slug>/live-test-YYYY-MM-DD.md` (and its Russian pair) contains:
 
 - a legal access statement: public/free endpoint or explicitly authorized test credentials;
+- confirmation that the applicable free-tier or test-access Terms of Service permit the specific automated test, or a reference to the written authorization;
+- a pre-test list of `core claims`, each with a stable identifier and a link to the relevant `api.json`, README, evidence or open-question entry; the list must be written before requests are executed and must not be selected retrospectively to fit the results;
 - three to five realistic requests covering the core claims;
 - at least one intentional invalid-input request;
 - raw response payloads, HTTP codes, latency and observed error behavior;
@@ -100,7 +102,15 @@ An API may be marked `live_tested: true` only when a repository file named `rese
 - separate findings for every mismatch, unknown or untested commercial/legal claim;
 - reproduction instructions without secrets or personal data.
 
-Live testing does not automatically promote `reviewed` to `verified`. Promotion is allowed only after a human-readable review of the diff confirms that the tested core claims match the profile and every untested quota, SLA, accuracy, pricing, licensing or data-rights claim remains explicit. If a core claim conflicts with observation, retain the prior fact, record the finding and keep `reviewed` or downgrade as appropriate.
+The pre-merge review is a required paired artifact at `reviews/<slug>-live-test-YYYY-MM-DD.md` (and its Russian pair). The review must be linked from the live-test record, inspect the staged diff, verify that the pre-test core-claim list was not changed after execution, and record a merge recommendation.
+
+Live testing does not automatically promote `reviewed` to `verified`. Promotion is allowed only after the required human-readable review confirms that the tested core claims match the profile and every untested quota, SLA, accuracy, pricing, licensing or data-rights claim remains explicit. If an ordinary test request unexpectedly returns `429` or `Retry-After`, record it as a valid rate-limit finding; do not hide it by repeating the test until it succeeds.
+
+Use this conflict rule:
+
+- a material conflict with core identity, purpose, authentication, primary response contract or primary capability is a mandatory maturity downgrade: the profile may not exceed `discovered` until resolved; if product identity itself is unsupported, retain only a discovery/decision record;
+- a conflict limited to a secondary claim is a finding that blocks promotion until explained, but the current maturity may be retained with the conflict explicit;
+- an unmeasured quota, SLA, accuracy, pricing, licensing or data-rights claim remains `unknown` and is not treated as a conflict merely because it was not tested.
 
 Public empirical evidence can confirm a request contract and observed error behavior. It cannot by itself confirm a contractual SLA, paid quota, commercial license, production accuracy or rights to store and redistribute data; those require official terms, provider confirmation or a separate lawful benchmark.
 

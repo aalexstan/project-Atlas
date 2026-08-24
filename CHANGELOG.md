@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-24 - Refine live-test gate after review
+
+- Required pre-test core-claim freezing, free-tier Terms of Service confirmation and a mandatory paired pre-merge review artifact.
+- Defined unexpected rate limiting as a preserved finding and made material conflicts on core identity/purpose/auth/response contract trigger a mandatory downgrade.
+
 ## 2026-08-24 - Formalize reproducible live-test review
 
 - Added bilingual live-test templates and an explicit pre-merge review record for the Open-Meteo precedent.

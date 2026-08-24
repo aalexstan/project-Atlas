@@ -9,10 +9,13 @@ Human-readable pre-merge review of the first `research/<slug>/live-test-YYYY-MM-
 ## Checklist
 
 - [x] Separate branch used.
+- [x] Core claims were frozen before requests and linked to profile references.
+- [x] Applicable public/free access terms were checked and the test stayed within the stated boundary.
 - [x] Public free endpoints only; no credentials or paid customer endpoint.
 - [x] Three realistic successful requests and one intentional invalid-input request.
 - [x] Raw response payloads, HTTP codes and latency are preserved.
 - [x] Rate-limit behavior is recorded without exhausting the quota.
+- [x] An unexpected 429, if present, would be retained as a finding rather than hidden by retries.
 - [x] Findings compare observations with existing profile claims.
 - [x] Maturity remains `reviewed`; `live_tested` is separate.
 - [x] Evidence has English and Russian files and links from the profile.
