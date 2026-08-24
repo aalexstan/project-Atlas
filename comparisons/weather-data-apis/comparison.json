@@ -3,9 +3,20 @@
   "id": "weather-data-apis",
   "title": {"en": "Weather Data APIs", "ru": "API погодных и метеоданных"},
   "status": "reviewed",
-  "verified_on": "2026-08-22",
+  "verified_on": "2026-08-24",
   "region": ["Global", "RU candidate coverage requires benchmark"],
-  "live_testing": false,
+  "live_testing": true,
+  "evidence_status": {
+    "observed_on": "2026-08-24",
+    "observed_claims": ["tested endpoint availability", "JSON response shape", "bounded invalid-input behavior"],
+    "provider_reported_claims": ["public pricing", "free allowance", "commercial licence", "historical semantics"],
+    "unknown_claims": ["quota thresholds", "SLA", "accuracy", "production suitability", "storage and redistribution rights"],
+    "profile_live_tests": {
+      "open-meteo-api": "../../research/open-meteo-api/live-test-2026-08-24.md",
+      "weatherapi-com-api": "../../research/weatherapi-com-api/live-test-2026-08-24.md",
+      "openweather-api": "../../research/weather/openweather-live-test-2026-08-24.md"
+    }
+  },
   "candidates": [
     {"id": "open-meteo-api", "product_class": "open_data_weather_api", "best_for": ["non_commercial_prototypes", "historical_model_data"], "public_pricing": "free_non_commercial_and_paid_customer_api", "verdict": "best_open_evaluation_route"},
     {"id": "weatherapi-com-api", "product_class": "commercial_weather_api", "best_for": ["current_forecast_history", "air_quality", "location_search"], "public_pricing": true, "verdict": "broad_self_service_scope"},
