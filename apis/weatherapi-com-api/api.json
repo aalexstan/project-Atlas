@@ -3,7 +3,7 @@
   "id": "weatherapi-com-api",
   "name": "WeatherAPI.com API",
   "maturity": "reviewed",
-  "last_verified": "2026-08-22",
+  "last_verified": "2026-08-24",
   "live_tested": false,
   "provider": {"name": "WeatherAPI.com", "website": "https://www.weatherapi.com/"},
   "status": "active",

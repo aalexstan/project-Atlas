@@ -43,6 +43,7 @@
 - Для commerce operations procurement kit запросить у MoySklad, Wildberries и Ozon одинаковые method matrix, plan limits, SLA, data rights и тестовый доступ; не превращать scorecard в глобальный рейтинг.
 - Для source monitor добавить отдельные безопасные health/documentation URL там, где provider публикует их; не расширять мониторинг на credential-gated или платные методы.
 - Для второго live-test кейса выбрать free-tier API с разрешёнными ключами только при наличии легального доступа; сначала применить `templates/live-test-template*`, не выбивать rate limit и не повышать maturity автоматически.
+- Для WeatherAPI.com получить собственный разрешённый free-tier key и подтвердить применимые ToS перед валидным live-test; текущий no-key auth probe не считать live testing.
 - Для MoySklad, Wildberries и Ozon повторно проверить доступность добавленных public documentation checks из CI; health endpoint добавлять только по официальному подтверждению.
 - Для CDEK Logistics API получить актуальные endpoints, authentication, schemas, prices, quotas, SLA и data-rights terms напрямую из технической документации или договора.
 - Для Avtocod Vehicle History API отправить `research/vehicle-history/provider-request*.md` и получить target report/source/field matrix, contract prices, numeric frequency limit, SLA/support response times, source freshness/correction policy и письменные storage/SaaS/redistribution/automated-decision/scoring/model-training terms; не запускать Swagger report без разрешённого paid access.

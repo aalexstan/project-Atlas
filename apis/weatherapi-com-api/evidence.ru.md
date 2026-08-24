@@ -8,4 +8,4 @@
 | Публичные планы и allowances опубликованы | https://www.weatherapi.com/pricing.aspx | provider_reported |
 | Historical data — архив forecast, а не фактические наблюдения | https://www.weatherapi.com/pricing.aspx | provider_reported |
 
-Live testing не проводился.
+В [auth probe без credentials](../../research/weatherapi-com-api/auth-probe-2026-08-24.ru.md) получен HTTP 401 со структурированной ошибкой code 1002; подтверждена только граница аутентификации. Валидный API-запрос не выполнялся; `live_tested` остаётся false.

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-24 - WeatherAPI.com auth boundary probe
+
+- Added a credential-free HTTP 401 probe and raw bilingual evidence for WeatherAPI.com.
+- Kept `live_tested: false` and maturity `reviewed`; a valid free-tier key and Terms of Service confirmation are still required for a full test.
+
 ## 2026-08-24 - Add live-test freshness and claim diversity gates
 
 - Required live-test validity dates and expiry-aware validation.

@@ -68,7 +68,7 @@ Atlas должен помогать проверять, сравнивать и 
 | SMS.RU API | reviewed | 2026-08-22 | not performed |
 | T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
 | Telegram Bot API | reviewed | 2026-08-22 | not performed |
-| WeatherAPI.com API | reviewed | 2026-08-22 | not performed |
+| WeatherAPI.com API | reviewed | 2026-08-24 | auth probe only; live test blocked |
 | Wildberries Seller API | verified | 2026-08-23 | not performed |
 | Yandex Delivery API | reviewed | 2026-08-22 | not performed |
 | Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
