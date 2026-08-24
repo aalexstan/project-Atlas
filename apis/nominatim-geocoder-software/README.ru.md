@@ -12,7 +12,7 @@
 | Последняя проверка | 2026-07-29 |
 | Поставщик | Nominatim project / OpenStreetMap ecosystem |
 | Статус продукта | Active |
-| Live credential test | Не проводился |
+| Live credential test | Тест public instance проведён; validity ожидает human review |
 
 ## Краткий вывод
 

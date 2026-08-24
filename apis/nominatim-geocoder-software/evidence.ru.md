@@ -28,4 +28,4 @@
 
 ## Live Testing
 
-Atlas не проводил live test, import или benchmark.
+В [ограниченном live-test public instance от 2026-08-24](../../research/nominatim-geocoder-software/live-test-2026-08-24.ru.md) проверены три policy-compliant отдельных geocoding-запроса. Raw responses показали OpenStreetMap attribution и ODbL signals; unknown query вернул empty result. `live_tested` остаётся `false` до human review и установки validity dates. Импорт и benchmark не проводились.
