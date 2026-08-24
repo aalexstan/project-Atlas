@@ -85,6 +85,25 @@ Every profile must display its last verified date.
 
 Operational ownership, stale-risk states and review triggers are defined in [Review Cadence](REVIEW_CADENCE.md).
 
+## Reproducible Live-Test Gate
+
+Live testing and source monitoring are different mechanisms. The weekly source monitor checks whether public documentation or health URLs respond over credential-free HTTP; it does not establish API behavior, data quality, quotas or commercial rights. A live-test record is an empirical research artifact with raw responses and a bounded test protocol.
+
+An API may be marked `live_tested: true` only when a repository file named `research/<slug>/live-test-YYYY-MM-DD.md` (and its Russian pair) contains:
+
+- a legal access statement: public/free endpoint or explicitly authorized test credentials;
+- three to five realistic requests covering the core claims;
+- at least one intentional invalid-input request;
+- raw response payloads, HTTP codes, latency and observed error behavior;
+- a rate-limit observation that does not require deliberately exhausting a quota;
+- a claim-by-claim comparison against the existing profile;
+- separate findings for every mismatch, unknown or untested commercial/legal claim;
+- reproduction instructions without secrets or personal data.
+
+Live testing does not automatically promote `reviewed` to `verified`. Promotion is allowed only after a human-readable review of the diff confirms that the tested core claims match the profile and every untested quota, SLA, accuracy, pricing, licensing or data-rights claim remains explicit. If a core claim conflicts with observation, retain the prior fact, record the finding and keep `reviewed` or downgrade as appropriate.
+
+Public empirical evidence can confirm a request contract and observed error behavior. It cannot by itself confirm a contractual SLA, paid quota, commercial license, production accuracy or rights to store and redistribute data; those require official terms, provider confirmation or a separate lawful benchmark.
+
 ## Definition of Done
 
 A profile reaches **Verified** when it includes confirmed identity, purpose, authentication, public pricing status, limits or explicit unknown states, commercial-use notes, at least two realistic alternatives, sources, and a verification date.

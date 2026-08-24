@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-24 - Formalize reproducible live-test review
+
+- Added bilingual live-test templates and an explicit pre-merge review record for the Open-Meteo precedent.
+- Defined the `reviewed` to `verified` live-test gate, including raw evidence, intentional errors, rate-limit observation and contractual blockers.
+- Documented the separation between weekly source monitoring and empirical live testing.
+
 ## 2026-08-24 - Open-Meteo reproducible public test
 
 - Added raw bilingual live-test records with three successful public GET requests, one invalid-input response, latency and rate-limit observation.
