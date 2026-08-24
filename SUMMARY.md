@@ -1,6 +1,6 @@
 # Summary
 
-Дата обновления: 2026-08-23
+Дата обновления: 2026-08-24
 Статус: API-first foundation integrated; legacy dataset research retained
 
 ## Активное направление Atlas
@@ -19,6 +19,8 @@ Atlas должен помогать проверять, сравнивать и 
 - `docs/MIGRATION.md` / `docs/MIGRATION.ru.md`
 - `docs/VISION.md` / `docs/VISION.ru.md`
 
+В репозитории есть три bounded live-test профиля: Open-Meteo, WeatherAPI.com и OpenWeather. Их эмпирические claims не заменяют provider-reported или unknown сведения о квотах, SLA, цене, точности и правах использования.
+
 ## Активные API-first материалы
 
 | Материал | Количество | Комментарий |
@@ -34,49 +36,49 @@ Atlas должен помогать проверять, сравнивать и 
 
 ## Активные API profiles
 
-| API | Maturity | Last verified | Live test |
-|---|---|---|---|
-| 2GIS Geocoder API | reviewed | 2026-07-29 | not performed |
-| 2GIS Places API | reviewed | 2026-07-29 | not performed |
-| 2GIS Routing API | reviewed | 2026-08-22 | not performed |
-| 2GIS Suggest API | reviewed | 2026-07-29 | not performed |
-| Bank of Russia Exchange Rates Web Service | verified | 2026-08-23 | not performed |
-| API.Seldon.Tenders | discovered | 2026-08-22 | not performed |
-| Avtocod Vehicle History API | reviewed | 2026-08-23 | not performed |
-| CDEK Logistics API | discovered | 2026-08-22 | not performed |
-| CloudPayments API | reviewed | 2026-08-22 | not performed |
-| DaData Address APIs | reviewed | 2026-07-29 | not performed |
-| DaData API | reviewed | 2026-07-23 | not performed |
-| EIS Procurement Data Integration | discovered | 2026-08-22 | not performed |
-| FIAS/GAR Data Integration | reviewed | 2026-07-29 | not performed |
-| FTS EGRUL/EGRIP Data Integration | reviewed | 2026-08-15 | not performed |
-| Geoapify Geocoding API | reviewed | 2026-07-29 | not performed |
-| GLOBAS.API | reviewed | 2026-07-28 | not performed |
-| Kontur.Focus API | reviewed | 2026-07-23 | not performed |
-| LocationIQ Geocoding API | reviewed | 2026-07-29 | not performed |
-| MoySklad JSON API | verified | 2026-08-23 | not performed |
-| Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed |
-| Open-Meteo API | reviewed | 2026-08-24 | public GET test performed |
-| Ozon Seller API | reviewed | 2026-08-23 | not performed |
-| OpenCage Geocoding API | reviewed | 2026-07-29 | not performed |
-| OpenWeather API | reviewed | 2026-08-24 | bounded current/forecast test; One Call 3.0 subscription blocked |
-| OSRM Routing Engine | reviewed | 2026-08-22 | not performed |
-| Rosreestr EGRN Access Service | reviewed | 2026-08-23 | not performed |
-| Russian Post Tracking API | reviewed | 2026-08-22 | not performed |
-| Seldon.Basis API | reviewed | 2026-07-23 | not performed |
-| SMSC API | reviewed | 2026-08-22 | not performed |
-| SMS.RU API | reviewed | 2026-08-22 | not performed |
-| T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed |
-| Telegram Bot API | reviewed | 2026-08-22 | not performed |
-| WeatherAPI.com API | reviewed | 2026-08-24 | bounded live test; findings retained |
-| Wildberries Seller API | verified | 2026-08-23 | not performed |
-| Yandex Delivery API | reviewed | 2026-08-22 | not performed |
-| Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed |
-| Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed |
-| Yandex Maps Organization Search API | reviewed | 2026-07-29 | not performed |
-| Yandex Maps Routing API | reviewed | 2026-08-22 | not performed |
-| Yandex Rasp API | reviewed | 2026-08-22 | not performed |
-| YooKassa API | reviewed | 2026-08-22 | not performed |
+| API | Maturity | Last verified | Live test | live_tested_on | live_test_valid_until |
+|---|---|---|---|---|---|
+| 2GIS Geocoder API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| 2GIS Places API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| 2GIS Routing API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| 2GIS Suggest API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| Bank of Russia Exchange Rates Web Service | verified | 2026-08-23 | not performed | unknown | unknown |
+| API.Seldon.Tenders | discovered | 2026-08-22 | not performed | unknown | unknown |
+| Avtocod Vehicle History API | reviewed | 2026-08-23 | not performed | unknown | unknown |
+| CDEK Logistics API | discovered | 2026-08-22 | not performed | unknown | unknown |
+| CloudPayments API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| DaData Address APIs | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| DaData API | reviewed | 2026-07-23 | not performed | unknown | unknown |
+| EIS Procurement Data Integration | discovered | 2026-08-22 | not performed | unknown | unknown |
+| FIAS/GAR Data Integration | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| FTS EGRUL/EGRIP Data Integration | reviewed | 2026-08-15 | not performed | unknown | unknown |
+| Geoapify Geocoding API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| GLOBAS.API | reviewed | 2026-07-28 | not performed | unknown | unknown |
+| Kontur.Focus API | reviewed | 2026-07-23 | not performed | unknown | unknown |
+| LocationIQ Geocoding API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| MoySklad JSON API | verified | 2026-08-23 | not performed | unknown | unknown |
+| Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| Open-Meteo API | reviewed | 2026-08-24 | public GET test performed | 2026-08-24 | 2026-11-22 |
+| Ozon Seller API | reviewed | 2026-08-23 | not performed | unknown | unknown |
+| OpenCage Geocoding API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| OpenWeather API | reviewed | 2026-08-24 | bounded current/forecast test; One Call 3.0 subscription blocked | 2026-08-24 | 2026-11-22 |
+| OSRM Routing Engine | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| Rosreestr EGRN Access Service | reviewed | 2026-08-23 | not performed | unknown | unknown |
+| Russian Post Tracking API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| Seldon.Basis API | reviewed | 2026-07-23 | not performed | unknown | unknown |
+| SMSC API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| SMS.RU API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| T-Bank Internet Acquiring API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| Telegram Bot API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| WeatherAPI.com API | reviewed | 2026-08-24 | bounded live test; findings retained | 2026-08-24 | 2026-11-22 |
+| Wildberries Seller API | verified | 2026-08-23 | not performed | unknown | unknown |
+| Yandex Delivery API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| Yandex Maps Geocoder API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| Yandex Maps Geosuggest API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| Yandex Maps Organization Search API | reviewed | 2026-07-29 | not performed | unknown | unknown |
+| Yandex Maps Routing API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| Yandex Rasp API | reviewed | 2026-08-22 | not performed | unknown | unknown |
+| YooKassa API | reviewed | 2026-08-22 | not performed | unknown | unknown |
 
 ## Legacy / Supporting Research
 
