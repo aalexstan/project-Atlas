@@ -17,6 +17,7 @@ Procedural pre-merge review of the first address/geocoding live-test, including 
 - [x] Raw JSON payloads, HTTP codes and latency are preserved.
 - [x] The unknown query returned an empty result and was not treated as proof of accuracy.
 - [x] Attribution/licence values were observed in raw responses and compared with OSMF copyright guidance.
+- [x] The review distinguishes observed direct geocoding from documented-only reverse geocoding.
 - [x] Storage, caching, redistribution, SLA, accuracy and quota threshold remain unknown.
 - [x] No credentials, personal data or binary files were added.
 
@@ -26,6 +27,7 @@ Procedural pre-merge review of the first address/geocoding live-test, including 
 2. The unknown query returned HTTP 200 with an empty array; this is bounded behavior only, not a general accuracy guarantee.
 3. Raw responses exposed OpenStreetMap attribution and ODbL signals.
 4. The test did not and must not establish autocomplete, bulk suitability, quota threshold, storage, caching or redistribution rights.
+5. Reverse geocoding was not tested and is not included in the observed capability evidence for this run.
 
 ## Review conclusion
 

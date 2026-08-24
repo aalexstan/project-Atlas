@@ -17,6 +17,7 @@
 - [x] Raw JSON payloads, HTTP-коды и latency сохранены.
 - [x] Unknown query вернул empty result и не использован как доказательство accuracy.
 - [x] Attribution/licence values наблюдались в raw responses и сопоставлены с OSM copyright guidance.
+- [x] Ревью различает наблюдаемое прямое геокодирование и подтверждённое только документацией обратное геокодирование.
 - [x] Storage, caching, redistribution, SLA, accuracy и quota threshold остаются unknown.
 - [x] Credentials, персональные данные и бинарные файлы не добавлялись.
 
@@ -26,6 +27,7 @@
 2. Unknown query вернул HTTP 200 с пустым массивом; это bounded behavior, а не общая гарантия accuracy.
 3. Raw responses показали OpenStreetMap attribution и ODbL signals.
 4. Тест не устанавливал и не должен устанавливать пригодность для autocomplete, bulk, quota threshold, storage, caching или redistribution rights.
+5. Обратное геокодирование не тестировалось и не включено в observed evidence этого прогона.
 
 ## Вывод ревью
 

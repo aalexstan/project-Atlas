@@ -51,6 +51,19 @@
     "routing": "not_applicable",
     "batch": "not_allowed_on_public_instance_for_large_or_regular_workloads_self_host_needed"
   },
+  "capability_evidence": {
+    "direct_geocoding": {
+      "documented": "verified",
+      "live_test": "observed",
+      "observed_on": "2026-08-24",
+      "evidence": "../../research/nominatim-geocoder-software/live-test-2026-08-24.md"
+    },
+    "reverse_geocoding": {
+      "documented": "verified",
+      "live_test": "not_tested",
+      "evidence": "evidence.md"
+    }
+  },
   "coverage": {
     "geography": "openstreetmap_data_coverage_varies_by_region",
     "data_source": "OpenStreetMap",
