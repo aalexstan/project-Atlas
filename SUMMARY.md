@@ -56,7 +56,7 @@ Atlas должен помогать проверять, сравнивать и 
 | LocationIQ Geocoding API | reviewed | 2026-07-29 | not performed |
 | MoySklad JSON API | verified | 2026-08-23 | not performed |
 | Nominatim Geocoder Software | reviewed | 2026-07-29 | not performed |
-| Open-Meteo API | reviewed | 2026-08-22 | not performed |
+| Open-Meteo API | reviewed | 2026-08-24 | public GET test performed |
 | Ozon Seller API | reviewed | 2026-08-23 | not performed |
 | OpenCage Geocoding API | reviewed | 2026-07-29 | not performed |
 | OpenWeather API | reviewed | 2026-08-22 | not performed |

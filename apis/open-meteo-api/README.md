@@ -7,9 +7,9 @@
 | Field | Value |
 |---|---|
 | Maturity | Reviewed |
-| Last verified | 2026-08-22 |
+| Last verified | 2026-08-24 |
 | Product class | Open-data/model weather API |
-| Live testing | Not performed |
+| Live testing | Public GET test performed; no credentials used |
 
 ## Quick Verdict
 
@@ -34,4 +34,4 @@
 
 Use the free endpoint for evaluation and non-commercial prototypes. Use the customer endpoint and confirm attribution/derived-data obligations before commercial launch. Do not claim measured accuracy without a benchmark.
 
-See [evidence](evidence.md) and the [research log](../../research/weather/2026-08-22-open-meteo.md).
+See [evidence](evidence.md), the [raw live-test evidence](../../research/open-meteo-api/live-test-2026-08-24.md) and the [research log](../../research/weather/2026-08-22-open-meteo.md).

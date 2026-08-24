@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-24 - Open-Meteo reproducible public test
+
+- Added raw bilingual live-test records with three successful public GET requests, one invalid-input response, latency and rate-limit observation.
+- Marked Open-Meteo `live_tested` true while keeping maturity `reviewed`; quota, accuracy, SLA and commercial rights remain unverified.
+
 ## 2026-08-24 - Public source monitoring statuses
 
 - Updated the source monitor to use explicit public-check statuses: `healthy`, `auth_required`, `rate_limited`, `server_error`, `timeout`, `dns_error` and `unknown`.

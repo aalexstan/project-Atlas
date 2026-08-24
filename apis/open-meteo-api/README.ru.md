@@ -7,9 +7,9 @@
 | Поле | Значение |
 |---|---|
 | Зрелость | Reviewed |
-| Последняя проверка | 2026-08-22 |
+| Последняя проверка | 2026-08-24 |
 | Класс продукта | Open-data/model weather API |
-| Live testing | Не проводился |
+| Live testing | Публичный GET-тест проведён, credentials не использовались |
 
 ## Краткий вывод
 
@@ -34,4 +34,4 @@
 
 Использовать free endpoint для оценки и некоммерческих прототипов. Перед коммерческим запуском перейти на customer endpoint и подтвердить attribution/derived-data obligations. Accuracy без benchmark не заявлять.
 
-См. [evidence](evidence.ru.md) и [журнал исследования](../../research/weather/2026-08-22-open-meteo.ru.md).
+См. [evidence](evidence.ru.md), [сырые доказательства live test](../../research/open-meteo-api/live-test-2026-08-24.ru.md) и [журнал исследования](../../research/weather/2026-08-22-open-meteo.ru.md).
