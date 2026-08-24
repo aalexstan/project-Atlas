@@ -15,17 +15,17 @@ Procedural pre-merge review of the WeatherAPI.com live-test evidence and raw res
 - [x] An intentional unknown-location request and a missing-parameter request were retained.
 - [x] Raw JSON payloads, HTTP codes and latency are preserved.
 - [x] No quota exhaustion or load test was attempted.
-- [x] The `current_fields` response discrepancy is recorded as a finding.
-- [x] The fuzzy location match is recorded as a finding.
+- [x] The `current_fields` response discrepancy and four syntax variants are recorded as an open finding.
+- [x] The fuzzy location match is recorded as an open false-positive/accuracy finding.
 - [x] Maturity remains `reviewed`; live evidence does not automatically promote it to `verified`.
 - [x] English and Russian evidence pairs exist; no credentials or binary files were added.
 
 ## Review conclusion
 
-The evidence confirms bounded access and tested request shapes, while retaining the two observed integration risks. Quota, rate limits, SLA, accuracy, pricing and data rights remain unmeasured or contractual. This supports `live_tested: true` for the bounded evidence window, not a maturity promotion.
+The evidence confirms bounded access and tested request shapes, while retaining two open integration findings. Quota, rate limits, SLA, accuracy, pricing and data rights remain unmeasured or contractual. This supports `live_tested: true` for the bounded evidence window, not a maturity promotion.
 
 This is a procedural self-review gate, not independent review for Gold.
 
 ## Merge recommendation
 
-Human review should confirm the raw payloads and the two findings before merging. Do not treat the WeatherAPI key as repository data.
+Human review should confirm the raw payloads and the two open findings before merging. The field-filtering finding must not be closed without provider/account clarification. Do not treat the WeatherAPI key as repository data.
