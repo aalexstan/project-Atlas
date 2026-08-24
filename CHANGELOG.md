@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-24 - OpenWeather bounded live test
+
+- Corrected the stale One Call 4.0/3.0 product boundary in the OpenWeather profile.
+- Added bounded current/forecast API 2.5 evidence and recorded the separate One Call API 3.0 subscription-required response.
+- Kept maturity `reviewed`; quota, SLA, accuracy, pricing and licensing remain unverified.
+
 ## 2026-08-24 - WeatherAPI.com bounded live test
 
 - Added a five-request authorized live-test with raw JSON payloads and paired procedural review.

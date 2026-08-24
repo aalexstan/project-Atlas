@@ -59,7 +59,7 @@ Atlas должен помогать проверять, сравнивать и 
 | Open-Meteo API | reviewed | 2026-08-24 | public GET test performed |
 | Ozon Seller API | reviewed | 2026-08-23 | not performed |
 | OpenCage Geocoding API | reviewed | 2026-07-29 | not performed |
-| OpenWeather API | reviewed | 2026-08-22 | not performed |
+| OpenWeather API | reviewed | 2026-08-24 | bounded current/forecast test; One Call 3.0 subscription blocked |
 | OSRM Routing Engine | reviewed | 2026-08-22 | not performed |
 | Rosreestr EGRN Access Service | reviewed | 2026-08-23 | not performed |
 | Russian Post Tracking API | reviewed | 2026-08-22 | not performed |
