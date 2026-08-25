@@ -10,7 +10,7 @@
 |---|---|
 | Последняя проверка | 2026-07-29 |
 | Рынок / регион | Россия плюс выбранный international/open-data geocoding context |
-| Live testing | Не проводился |
+| Live testing | Один ограниченный тест Geoapify выполнен 2026-08-25; профильная validity pending human review |
 | Проверенные кандидаты | DaData Address APIs, Yandex Maps Geosuggest API, Yandex Maps Geocoder API, Yandex Maps Organization Search API, 2GIS Suggest API, 2GIS Places API, 2GIS Geocoder API, Geoapify Geocoding API, OpenCage Geocoding API, LocationIQ Geocoding API, Nominatim Geocoder Software, FIAS/GAR Data Integration |
 
 ## Краткое решение
@@ -77,7 +77,7 @@
 | SLA | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | Unknown publicly | 99.5% monthly availability on paid plans | Custom SLAs on Enterprise; exact public SLA unknown | Custom SLAs on Enterprise provider-reported; exact public SLA unknown | No public OSMF SLA found | Unknown |
 | Privacy | Contract review | Yandex terms review | Yandex terms review | Yandex terms review | Contract review | Contract review | Contract review | Provider-reported GDPR/EU endpoints; DPA review | GDPR/no_record; DPA review | DPA/privacy review | Public policy says not to submit confidential/personal data | Legal review |
 | Operational ownership | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium | Low/medium; batch ops and attribution | Low/medium; parallel high-volume design | Low/medium; concurrency, cache and legal design | High: import, updates, deployment, security и ODbL review | High for registry route |
-| Live test status | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed |
+| Live test status | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Not performed | Observed 2026-08-25; validity pending review | Not performed | Not performed | Not performed | Not performed |
 | Key unknowns | SLA, async batch, data rights | RPS, SLA, exact rights | RPS, SLA, exact rights | SLA, rights, license wording, batch | SLA, OpenAPI, rights | SLA, on-demand fields, rights | SLA, OpenAPI, rights | ODbL/legal, DPA, benchmark, batch failures | ODbL/legal, DPA, SLA, benchmark, redistribution/SaaS | ODbL/legal, DPA, SLA, benchmark, batch fee, plan scope | Sizing, ODbL, benchmark | API specs, auth, schemas, support, ZIP package contents |
 
 ## Рекомендации по сценариям

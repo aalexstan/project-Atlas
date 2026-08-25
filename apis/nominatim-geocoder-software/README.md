@@ -12,7 +12,7 @@
 | Last verified | 2026-07-29 |
 | Provider | Nominatim project / OpenStreetMap ecosystem |
 | Product status | Active |
-| Live credential test | Not performed |
+| Live credential test | Public-instance test performed; validity pending human review |
 
 ## Quick Verdict
 

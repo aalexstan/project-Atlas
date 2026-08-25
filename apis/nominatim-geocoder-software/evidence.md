@@ -28,4 +28,4 @@
 
 ## Live Testing
 
-No Atlas live test, import or benchmark was performed.
+The [2026-08-24 bounded public-instance live-test](../../research/nominatim-geocoder-software/live-test-2026-08-24.md) tested three policy-compliant individual direct-geocoding requests. Raw responses exposed OpenStreetMap attribution and ODbL signals; the unknown query returned an empty result. `capability_evidence.direct_geocoding.live_test` is `observed`; `reverse_geocoding` was not tested and remains documented-only. Profile-level `live_tested` remains `false` until human review sets the validity dates. No import or benchmark was performed.
