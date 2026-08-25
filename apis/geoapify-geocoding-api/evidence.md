@@ -21,4 +21,4 @@
 
 ## Live Testing
 
-No Atlas credentialed request, benchmark or live API test was performed.
+The [2026-08-25 bounded live test](../../research/geoapify-geocoding-api/live-test-2026-08-25.md) observed authenticated forward, reverse and unknown-input JSON behavior. Raw responses exposed OpenStreetMap attribution and an Open Database License signal. Quota threshold, accuracy, SLA, storage, caching, redistribution and SaaS rights remain unknown; profile-level `live_tested` remains `false` pending human review and account-terms confirmation.
